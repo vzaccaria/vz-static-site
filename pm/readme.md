@@ -36,6 +36,9 @@ Initial planned stack:
   builds, and private source data kept outside the repo.
 - Preview: GitHub Pages custom domain `preview.vittoriozaccaria.net`, with
   Dynadot `preview CNAME vzaccaria.github.io`.
+- Temporary Pages test: GitHub Pages project URL
+  `https://vzaccaria.github.io/vz-static-site/`, built with
+  `SITE_BASE=/vz-static-site`. Local development remains rooted at `/`.
 - Production: GitHub Pages custom domain `www.vittoriozaccaria.net`, with
   Dynadot `www CNAME vzaccaria.github.io` and apex `A` records pointing to
   GitHub Pages.

@@ -2,11 +2,15 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { primaryNavigation } from "../data/navigation";
 import { siteMetadata } from "../data/site";
+
+const basePath = import.meta.env.BASE_URL.endsWith("/")
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
 ---
 
 <BaseLayout>
   <header class="site-header" aria-label="Primary">
-    <a class="brand" href="/" aria-label={siteMetadata.title}>
+    <a class="brand" href={basePath} aria-label={siteMetadata.title}>
       <span class="brand-mark">VZ</span>
       <span>{siteMetadata.title}</span>
     </a>

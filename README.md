@@ -28,5 +28,18 @@ Set `SITE_URL` during CI or deployment to change the canonical site URL:
 SITE_URL=https://www.vittoriozaccaria.net npm run build
 ```
 
+For the temporary GitHub Pages project URL, the deployment workflow builds with:
+
+```bash
+SITE_URL=https://vzaccaria.github.io SITE_BASE=/vz-static-site npm run build
+```
+
+After a push to `main`, the `Deploy GitHub Pages` workflow publishes the test
+site at:
+
+```text
+https://vzaccaria.github.io/vz-static-site/
+```
+
 Private source data must stay outside this repository. Only public,
 allowlisted generated data should be committed here.

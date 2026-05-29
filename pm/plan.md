@@ -11,7 +11,9 @@ Last updated: 2026-05-29
 
 **Status:** Open. `vz-site0` accepted the initial architecture and environment
 contract in ADR 001. `vz-site1` added the Astro/npm scaffold and CI. `vz-site2`
-is the next major ready item for the public data pipeline.
+is the next major ready item for the public data pipeline. `vz-site12` adds a
+temporary GitHub Pages project deploy for early testing before the later custom
+preview domain deploy.
 
 ## Planned sequence
 
@@ -31,6 +33,8 @@ is the next major ready item for the public data pipeline.
   upstream has a non-breaking fix.
 - `vz-site11` tracks the beads issue-prefix mismatch discovered during new issue
   intake.
+- `vz-site12` tracks the temporary GitHub Pages project URL deploy test:
+  `https://vzaccaria.github.io/vz-static-site/`.
 
 ## Completed (recent)
 - `vz-site1` - Scaffold Astro e toolchain locale, completed 2026-05-29 with
