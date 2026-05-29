@@ -11,6 +11,9 @@ Author: Codex
 - Made Astro `site` and `base` configurable with `SITE_URL` and `SITE_BASE`.
 - Made root links and the favicon base-aware for the project URL
   `https://vzaccaria.github.io/vz-static-site/`.
+- Removed the stale `www.vittoriozaccaria.net` custom domain from the
+  `vzaccaria.github.io` GitHub Pages repository and documented the decision in
+  [ADR 002](adr/002-github-pages-project-preview-routing.md).
 - Claimed and closed `vz-site1`.
 - Added the Astro 6 static scaffold with npm scripts, strict TypeScript config,
   `src/pages`, `src/layouts`, `src/styles`, `src/content`, and `src/data`.
@@ -28,6 +31,11 @@ Author: Codex
 - The temporary GitHub Pages deploy workflow builds with
   `SITE_URL=https://vzaccaria.github.io` and `SITE_BASE=/vz-static-site`.
 - Local development still defaults to `/`.
+- `www.vittoriozaccaria.net` still returns HTTP 200 from Vercel after removing
+  the GitHub Pages custom-domain mapping.
+- GitHub API reports `cname: null` for the `vzaccaria.github.io` Pages site, but
+  GitHub's edge cache may still redirect
+  `https://vzaccaria.github.io/vz-static-site/` to `www` for a short time.
 - `npm ci` works from `package-lock.json`.
 - `npm run check`, `npm run build`, and `npm run ci` pass.
 - `npm run dev` served `http://127.0.0.1:4321/` and `npm run preview` served
@@ -52,7 +60,7 @@ Author: Codex
 
 ## Recommended next steps
 
-1. Verify the GitHub Pages workflow URL:
+1. Retest the GitHub Pages workflow URL after cache expiry:
    `https://vzaccaria.github.io/vz-static-site/`.
 2. Start `vz-site2` and define the allowlist-based public data export pipeline.
 3. Resolve `vz-site11` soon so future issue intake does not require explicit

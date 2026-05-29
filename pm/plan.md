@@ -35,6 +35,10 @@ preview domain deploy.
   intake.
 - `vz-site12` tracks the temporary GitHub Pages project URL deploy test:
   `https://vzaccaria.github.io/vz-static-site/`.
+- [ADR 002](adr/002-github-pages-project-preview-routing.md) records the
+  decision to remove the old GitHub Pages custom-domain mapping from
+  `vzaccaria.github.io` while keeping `www.vittoriozaccaria.net` on the current
+  production host.
 
 ## Completed (recent)
 - `vz-site1` - Scaffold Astro e toolchain locale, completed 2026-05-29 with
