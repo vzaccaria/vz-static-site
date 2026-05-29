@@ -1,33 +1,46 @@
 # Session Handoff
 
-Written: 2026-04-30 18:35 CEST
+Written: 2026-05-29 14:56 CEST
 Author: Codex
 
 ## What was done this session
-- Initialized beads in the new public repository `vz-static-site`.
-- Created PM structure under `pm/`.
-- Created the main epic `vz-site` and child beads `vz-site0` through `vz-site9`.
-- Linked the child beads with dependency ordering: architecture first, scaffold/data pipeline, content model, views/blog, feeds/SEO, preview, parity, production cutover.
+
+- Claimed and closed `vz-site0`.
+- Added [ADR 001](adr/001-static-public-site-architecture.md) accepting a
+  separate public static-site repo, Astro static output, npm, GitHub Actions to
+  GitHub Pages, and Dynadot-managed DNS.
+- Documented local, preview, and production environment contracts in
+  `pm/readme.md`.
+- Updated `pm/plan.md` so `vz-site1` and `vz-site2` are the next planned work.
 
 ## Current state
-- Repository is still initial/bootstrap only; no Astro scaffold exists yet.
-- `vz-site0` is the first ready bead.
-- `bd init` attempted an initial commit but hung in the pre-commit export hook; the process was stopped and files remain staged/uncommitted.
-- Beads auto-push warnings are expected until the repo has an initial branch/commit on the remote.
 
-## In progress (not yet completed)
-- None claimed.
+- No Astro scaffold exists yet.
+- `vz-site1` and `vz-site2` are now ready; `vz-site3` remains blocked until both
+  are complete.
+- `git diff --check` passed for the documentation changes.
+
+## In progress
+
+- None.
 
 ## Blockers & open questions
-- Confirm whether `vz-site0` should record Astro as the accepted architecture immediately, or compare Astro briefly against Eleventy/Hugo before accepting.
-- Decide whether preview deploy will use GitHub Pages with `preview.vittoriozaccaria.net` or another preview host.
+
+- No active bead is in progress.
+- Preview and production are documented as two phases for the same GitHub Pages
+  site. If simultaneous long-lived custom domains are needed after cutover, add
+  a follow-up ADR for a second Pages site or another static host.
 
 ## Recommended next steps
-1. Commit and push this bootstrap state.
-2. Start `vz-site0` and write the first ADR for repo/public SSG/DNS/deploy architecture.
-3. Start `vz-site1` after `vz-site0` closes and scaffold Astro.
+
+1. Start `vz-site1` and scaffold Astro/npm/GitHub Pages tooling from ADR 001.
+2. Start `vz-site2` and define the allowlist-based public data export pipeline.
+3. Keep private source data outside this public repository.
 
 ## Context the next agent should know
-- The private repo `vz-personal-store` contains the legacy website audit at `website/docs/audit.md`; use it for route parity.
-- Private data must never be copied wholesale into this public repo. Use an allowlist-based export pipeline.
-- The user plans to try Dynadot because Namecheap/card payment is failing and PayPal support matters.
+
+- The private repo `vz-personal-store` contains the legacy website audit at
+  `website/docs/audit.md`; use it for route parity later.
+- Private data must never be copied wholesale into this public repo.
+- DNS expectations are in ADR 001; do not use wildcard DNS records and preserve
+  unrelated records such as mail `MX`/`TXT` entries.
