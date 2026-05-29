@@ -52,18 +52,33 @@ bd close <id>         # Complete work
 
 ## Build & Test
 
-_Add your build and test commands here_
-
 ```bash
-# Example:
-# npm install
-# npm test
+npm install
+npm run dev
+npm run check
+npm run build
+npm run preview
 ```
+
+Use Node.js 22.12 or newer. The npm scripts disable Astro telemetry so agent
+runs do not write outside the repository.
 
 ## Architecture Overview
 
-_Add a brief overview of your project architecture_
+This is an Astro static site. Source pages live under `src/pages`, shared page
+chrome under `src/layouts`, CSS under `src/styles`, public data helpers under
+`src/data`, and future content collections under `src/content`.
+
+Production output is static files in `dist/`; no runtime server is required.
+Private source data must stay outside this public repository and enter only via
+the allowlist pipeline owned by `vz-site2`.
 
 ## Conventions & Patterns
+
+- Track work with beads (`bd`) and keep PM context in `pm/`.
+- Use npm and commit `package-lock.json`.
+- Keep canonical site URL configurable through `SITE_URL`; preview defaults to
+  `https://preview.vittoriozaccaria.net`.
+- Preserve unrelated DNS and private-data boundaries documented in ADR 001.
 
 _Add your project-specific conventions here_

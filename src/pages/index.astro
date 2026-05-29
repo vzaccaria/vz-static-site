@@ -1,0 +1,77 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { primaryNavigation } from "../data/navigation";
+import { siteMetadata } from "../data/site";
+---
+
+<BaseLayout>
+  <header class="site-header" aria-label="Primary">
+    <a class="brand" href="/" aria-label={siteMetadata.title}>
+      <span class="brand-mark">VZ</span>
+      <span>{siteMetadata.title}</span>
+    </a>
+    <nav aria-label="Main navigation">
+      {
+        primaryNavigation.map((item) => (
+          <a href={item.href}>{item.label}</a>
+        ))
+      }
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Politecnico di Milano</p>
+        <h1>Vittorio Zaccaria</h1>
+        <p class="lede">
+          Academic profile, research, teaching, theses, and writing in a public
+          static site.
+        </p>
+      </div>
+      <aside class="hero-panel" aria-label="Build status">
+        <dl>
+          <div>
+            <dt>Generator</dt>
+            <dd>Astro static</dd>
+          </div>
+          <div>
+            <dt>Preview</dt>
+            <dd>GitHub Pages</dd>
+          </div>
+          <div>
+            <dt>Data</dt>
+            <dd>Public allowlist</dd>
+          </div>
+        </dl>
+      </aside>
+    </section>
+
+    <section class="section-grid" aria-label="Site areas">
+      <article id="research">
+        <p class="section-kicker">Research</p>
+        <h2>Projects and publications</h2>
+        <p>
+          Research pages will use public structured data exported by the
+          sanitization pipeline.
+        </p>
+      </article>
+      <article id="teaching">
+        <p class="section-kicker">Teaching</p>
+        <h2>Courses and theses</h2>
+        <p>
+          Course and thesis pages will be generated as static routes from the
+          validated content model.
+        </p>
+      </article>
+      <article id="writing">
+        <p class="section-kicker">Writing</p>
+        <h2>Blog and tags</h2>
+        <p>
+          Blog posts will live under the Astro content collection in
+          <code>src/content/blog</code>.
+        </p>
+      </article>
+    </section>
+  </main>
+</BaseLayout>

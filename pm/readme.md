@@ -42,7 +42,7 @@ Initial planned stack:
 - No wildcard DNS records. Preserve unrelated DNS such as mail records.
 
 ## Build & Run
-Expected commands after scaffold:
+Local commands:
 
 ```bash
 npm install
@@ -52,10 +52,17 @@ npm run preview
 npm run check
 ```
 
-These commands do not exist yet; `vz-site1` owns the initial scaffold and toolchain.
+The Astro scaffold and npm toolchain were added by `vz-site1`. `npm run build`
+emits static files in `dist/`; no runtime server is required for deployment.
+
+The CI workflow in `.github/workflows/ci.yml` runs on pull requests and pushes
+to `main`, installs with `npm ci`, then runs `npm run check` and
+`npm run build`.
 
 ## Key Conventions
 - Track work with beads in this repository, using IDs prefixed `vz-site`.
 - Use `pm/` for stable project context, roadmap, and session handoff.
 - Keep private data out of the public repository. Data import must use an allowlist-based sanitization pipeline.
 - Preserve current website routes where practical, using the audit in the private repo at `website/docs/audit.md` as migration reference.
+- Astro telemetry is disabled in npm scripts so local agent runs do not need to
+  write outside the repository.

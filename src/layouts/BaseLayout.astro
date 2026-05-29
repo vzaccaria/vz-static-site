@@ -1,0 +1,33 @@
+---
+import { siteMetadata } from "../data/site";
+import "../styles/global.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = siteMetadata.title,
+  description = siteMetadata.description
+} = Astro.props;
+
+const pageTitle =
+  title === siteMetadata.title ? title : `${title} | ${siteMetadata.shortName}`;
+const canonical = new URL(Astro.url.pathname, Astro.site ?? siteMetadata.url);
+---
+
+<!doctype html>
+<html lang={siteMetadata.locale}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical.toString()} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
