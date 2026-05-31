@@ -12,3 +12,8 @@ dist/
 .env.*
 !.env.example
 npm-debug.log*
+
+# Local private data imports
+data/private/
+data/imports/
+*.private.json

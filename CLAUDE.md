@@ -55,6 +55,8 @@ bd close <id>         # Complete work
 ```bash
 npm install
 npm run dev
+npm run data:check
+npm run data:sync -- --source /absolute/path/to/private-export.json
 npm run check
 npm run build
 npm run preview
@@ -73,6 +75,10 @@ Production output is static files in `dist/`; no runtime server is required.
 Private source data must stay outside this public repository and enter only via
 the allowlist pipeline owned by `vz-site2`.
 
+The public data pipeline is documented in `docs/public-data-pipeline.md`.
+Allowed fields are listed in `data/public-data.allowlist.json`; generated public
+data is committed at `src/data/generated/public-data.json`.
+
 ## Conventions & Patterns
 
 - Track work with beads (`bd`) and keep PM context in `pm/`.
@@ -80,5 +86,5 @@ the allowlist pipeline owned by `vz-site2`.
 - Keep canonical site URL configurable through `SITE_URL`; preview defaults to
   `https://preview.vittoriozaccaria.net`.
 - Preserve unrelated DNS and private-data boundaries documented in ADR 001.
-
-_Add your project-specific conventions here_
+- Do not commit raw private exports. Use `npm run data:sync -- --source <path>`
+  with a source outside this repository.

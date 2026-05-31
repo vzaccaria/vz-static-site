@@ -53,10 +53,15 @@ npm run dev
 npm run build
 npm run preview
 npm run check
+npm run data:check
+npm run data:sync -- --source /absolute/path/to/private-export.json
 ```
 
 The Astro scaffold and npm toolchain were added by `vz-site1`. `npm run build`
 emits static files in `dist/`; no runtime server is required for deployment.
+The public data pipeline was added by `vz-site2`; it copies only fields listed
+in `data/public-data.allowlist.json` into
+`src/data/generated/public-data.json`.
 
 The CI workflow in `.github/workflows/ci.yml` runs on pull requests and pushes
 to `main`, installs with `npm ci`, then runs `npm run check` and

@@ -7,11 +7,14 @@
     "node": ">=22.12.0"
   },
   "scripts": {
+    "data:sync": "node scripts/sync-public-data.mjs",
+    "data:sync:example": "node scripts/sync-public-data.mjs --source data/private-export.example.json",
+    "data:check": "node scripts/sync-public-data.mjs --check",
     "dev": "ASTRO_TELEMETRY_DISABLED=1 astro dev",
     "start": "ASTRO_TELEMETRY_DISABLED=1 astro dev",
     "build": "ASTRO_TELEMETRY_DISABLED=1 astro build",
     "preview": "ASTRO_TELEMETRY_DISABLED=1 astro preview",
-    "check": "ASTRO_TELEMETRY_DISABLED=1 astro check",
+    "check": "npm run data:check && ASTRO_TELEMETRY_DISABLED=1 astro check",
     "ci": "npm run check && npm run build"
   },
   "devDependencies": {

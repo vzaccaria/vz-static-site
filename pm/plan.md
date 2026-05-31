@@ -11,20 +11,19 @@ Last updated: 2026-05-29
 
 **Status:** Open. `vz-site0` accepted the initial architecture and environment
 contract in ADR 001. `vz-site1` added the Astro/npm scaffold and CI. `vz-site2`
-is the next major ready item for the public data pipeline. `vz-site12` adds a
+added the allowlisted public data pipeline in ADR 003. `vz-site12` adds a
 temporary GitHub Pages project deploy for early testing before the later custom
-preview domain deploy.
+preview domain deploy. `vz-site3` is next for the content model and validation.
 
 ## Planned sequence
 
-1. `vz-site2` - Pipeline dati pubblici sanitizzati
-2. `vz-site3` - Content model e validazione
-3. `vz-site4` - Viste statiche core
-4. `vz-site5` - Blog, tag e compatibilita URL
-5. `vz-site6` - Feed sitemap SEO e asset
-6. `vz-site7` - Preview deploy
-7. `vz-site8` - Parity check con sito attuale
-8. `vz-site9` - Cutover produzione
+1. `vz-site3` - Content model e validazione
+2. `vz-site4` - Viste statiche core
+3. `vz-site5` - Blog, tag e compatibilita URL
+4. `vz-site6` - Feed sitemap SEO e asset
+5. `vz-site7` - Preview deploy
+6. `vz-site8` - Parity check con sito attuale
+7. `vz-site9` - Cutover produzione
 
 ## Parked / future
 - Framework alternatives to Astro - only revisit if `vz-site0` finds a concrete blocker.
@@ -41,6 +40,9 @@ preview domain deploy.
   production host.
 
 ## Completed (recent)
+- `vz-site2` - Pipeline dati pubblici sanitizzati, completed 2026-05-31 with
+  [ADR 003](adr/003-allowlisted-public-data-pipeline.md), npm scripts, fixture,
+  allowlist, sanitizer, and validation.
 - `vz-site1` - Scaffold Astro e toolchain locale, completed 2026-05-29 with
   Astro 6, npm scripts, `src/content`, `src/data`, static pages, and CI.
 - `vz-site0` - Decisione architetturale e setup ambienti, completed 2026-05-29

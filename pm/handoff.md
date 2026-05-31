@@ -1,10 +1,21 @@
 # Session Handoff
 
-Written: 2026-05-29 17:07 CEST
+Written: 2026-05-31 17:42 CEST
 Author: Codex
 
 ## What was done this session
 
+- Claimed and closed `vz-site2`.
+- Added the allowlisted public data pipeline:
+  `scripts/sync-public-data.mjs`, `data/public-data.allowlist.json`,
+  `src/data/generated/public-data.json`, and
+  `docs/public-data-pipeline.md`.
+- Added npm scripts `data:sync`, `data:sync:example`, and `data:check`.
+- Updated `npm run check` so CI validates generated public data before
+  `astro check`.
+- Added [ADR 003](adr/003-allowlisted-public-data-pipeline.md) for the
+  public/private data boundary.
+- Updated `README.md`, `CLAUDE.md`, `pm/readme.md`, and `pm/plan.md`.
 - Added `vz-site12` for the temporary GitHub Pages project deploy test.
 - Added `.github/workflows/pages.yml` to publish `dist/` with GitHub Pages
   Actions on push to `main` and manual dispatch.
@@ -28,14 +39,19 @@ Author: Codex
 
 ## Current state
 
+- The public data pipeline refuses to run without an explicit `--source` path.
+- The safe fixture `data/private-export.example.json` demonstrates that fake
+  private fields are stripped before writing
+  `src/data/generated/public-data.json`.
+- `npm run data:check`, `npm run data:sync:example`, `npm run data:sync --
+  --source data/private-export.example.json --dry-run`, and `npm run ci` pass.
 - The temporary GitHub Pages deploy workflow builds with
   `SITE_URL=https://vzaccaria.github.io` and `SITE_BASE=/vz-static-site`.
 - Local development still defaults to `/`.
 - `www.vittoriozaccaria.net` still returns HTTP 200 from Vercel after removing
   the GitHub Pages custom-domain mapping.
-- GitHub API reports `cname: null` for the `vzaccaria.github.io` Pages site, but
-  GitHub's edge cache may still redirect
-  `https://vzaccaria.github.io/vz-static-site/` to `www` for a short time.
+- `https://vzaccaria.github.io/vz-static-site/` returns HTTP 200 from GitHub
+  Pages.
 - `npm ci` works from `package-lock.json`.
 - `npm run check`, `npm run build`, and `npm run ci` pass.
 - `npm run dev` served `http://127.0.0.1:4321/` and `npm run preview` served
@@ -51,7 +67,7 @@ Author: Codex
 
 ## Blockers & open questions
 
-- `vz-site3` is now blocked only by `vz-site2`.
+- `vz-site3` should become ready after `vz-site2` is closed.
 - `npm audit` reports 5 moderate dev-only vulnerabilities through
   `@astrojs/check`; `npm audit --omit=dev` reports 0 vulnerabilities. Do not run
   `npm audit fix --force` casually because it would downgrade `@astrojs/check`.
@@ -60,12 +76,11 @@ Author: Codex
 
 ## Recommended next steps
 
-1. Retest the GitHub Pages workflow URL after cache expiry:
-   `https://vzaccaria.github.io/vz-static-site/`.
-2. Start `vz-site2` and define the allowlist-based public data export pipeline.
-3. Resolve `vz-site11` soon so future issue intake does not require explicit
+1. Start `vz-site3` and build content model validation on top of
+   `src/data/generated/public-data.json`.
+2. Resolve `vz-site11` soon so future issue intake does not require explicit
    forced IDs.
-4. Revisit `vz-site10` when upstream Astro tooling has a non-breaking audit fix.
+3. Revisit `vz-site10` when upstream Astro tooling has a non-breaking audit fix.
 
 ## Context the next agent should know
 

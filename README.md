@@ -43,3 +43,20 @@ https://vzaccaria.github.io/vz-static-site/
 
 Private source data must stay outside this repository. Only public,
 allowlisted generated data should be committed here.
+
+## Public Data
+
+Validate the committed public data:
+
+```bash
+npm run data:check
+```
+
+Regenerate it from a private export outside this repository:
+
+```bash
+npm run data:sync -- --source /absolute/path/to/private-export.json
+```
+
+The allowlist lives in `data/public-data.allowlist.json`; the generated public
+artifact lives in `src/data/generated/public-data.json`.
