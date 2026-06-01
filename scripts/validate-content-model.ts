@@ -2,7 +2,6 @@
 
 import { readdir, readFile } from "node:fs/promises";
 import path from "node:path";
-import { pathToFileURL } from "node:url";
 import { parse as parseYaml } from "yaml";
 import type { z } from "astro/zod";
 import {
@@ -10,7 +9,6 @@ import {
   bibliographySchema,
   blogFrontmatterSchema,
   markdownBodySchema,
-  projectsSchema,
   publicCvSchema,
   thesesSchema
 } from "../src/data/content-model";
@@ -127,14 +125,6 @@ async function validateBlogPosts(authorIds: Set<string>): Promise<ValidationResu
   return { label: "blog posts", count: files.length };
 }
 
-async function validateProjects(): Promise<ValidationResult> {
-  const filePath = path.join(IMPORT_ROOT, "projectsData.js");
-  const url = pathToFileURL(path.resolve(filePath)).href;
-  const module = await import(`${url}?content-model=${Date.now()}`);
-  validateSchema(filePath, projectsSchema, module.default);
-  return { label: "projects", count: module.default.length };
-}
-
 async function main() {
   const results: ValidationResult[] = [];
 
@@ -159,7 +149,6 @@ async function main() {
   );
   results.push({ label: "theses", count: theses.theses.length });
 
-  results.push(await validateProjects());
   results.push(await validateMarkdownFile(path.join(IMPORT_ROOT, "group.md"), "group markdown"));
   results.push(
     await validateMarkdownFile(path.join(IMPORT_ROOT, "thesis-short.md"), "thesis intro markdown")

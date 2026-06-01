@@ -1,6 +1,6 @@
 # Session Handoff
 
-Written: 2026-06-01 10:33 CEST
+Written: 2026-06-01 10:42 CEST
 Author: Codex
 
 ## What was done this session
@@ -18,8 +18,8 @@ Author: Codex
 - Claimed `vz-site3` after the private repo export populated `data/imported/`.
 - Added the exported sanitized `data/imported/` tree to this public repo.
 - Added strict public content schemas in `src/data/content-model.ts` for CV,
-  blog frontmatter, authors, publications, courses, theses, projects, and
-  required markdown bodies.
+  blog frontmatter, authors, publications, courses, theses, and required
+  markdown bodies.
 - Added `scripts/validate-content-model.ts` and `npm run content:check`.
 - Updated `npm run check` to require `data/imported/` via `data:check:strict`,
   run `content:check`, then run `astro check`.
@@ -29,6 +29,12 @@ Author: Codex
   whitespace while still allowing `git diff --check` to pass.
 - Added [content model docs](../docs/content-model.md) and updated homepage copy.
 - Closed `vz-site3`.
+- Corrected `vz-site3` via `vz-site14`: removed the erroneous
+  `data/imported/projectsData.js` import from the expected tree, content model,
+  validator, docs, and committed imported data. `vz-site14` is now closed.
+- Diagnosed the failing GitHub Actions runs on commit `6885156`: `astro check`
+  type-checked `scripts/validate-content-model.ts` without Node types. Added
+  `@types/node` pinned to the Node 22 major used by `.node-version`.
 - Previously claimed and closed `vz-site2`.
 - Updated `README.md`, `CLAUDE.md`, `pm/readme.md`, and `pm/plan.md`.
 - Added `vz-site12` for the temporary GitHub Pages project deploy test.
@@ -59,10 +65,11 @@ Author: Codex
 - `npm run data:check:strict` fails if `data/imported/` is missing; use it after
   running the private exporter from `../vz-personal-store`.
 - `npm run content:check` validates the content model and currently reports:
-  public CV, 112 bibliography records, 3 theses, 2 projects, 2 authors, and 10
-  blog posts.
+  public CV, 112 bibliography records, 3 theses, 2 authors, and 10 blog posts.
 - `npm run check` now requires `data/imported/`; CI should fail if the imported
   tree is missing or if imported objects contain missing/unexpected fields.
+- The CI/Pages failures for `6885156` should be fixed by the follow-up commit
+  that removes `projectsData.js` and adds Node type definitions.
 - There is no second allowlist in this repo. The canonical manifest is
   `../vz-personal-store/pm/website/export-allowlist.yaml`.
 - There is no public deny-string or redaction rule list in this repo; those

@@ -19,7 +19,6 @@ The model currently validates:
   research records, work history, education, languages, and profile basics.
 - `data/imported/bibliov2.json` as publications.
 - `data/imported/theses.json` as thesis topics.
-- `data/imported/projectsData.js` as project cards.
 - `data/imported/blog/*.md` as blog posts.
 - `data/imported/authors/*.md` as author profiles.
 - `data/imported/group.md` and `data/imported/thesis-short.md` as required

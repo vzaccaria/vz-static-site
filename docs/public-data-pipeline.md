@@ -37,7 +37,6 @@ data/imported/
 ├── bibliov2.json
 ├── cv-jr.yaml
 ├── group.md
-├── projectsData.js
 ├── theses.json
 └── thesis-short.md
 ```

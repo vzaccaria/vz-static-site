@@ -491,15 +491,6 @@ export const thesesSchema = strictObject({
     .min(1)
 });
 
-export const projectSchema = strictObject({
-  title: text,
-  description: text,
-  imgSrc: text,
-  href: text
-});
-
-export const projectsSchema = z.array(projectSchema).min(1);
-
 export const markdownBodySchema = text;
 
 export type PublicCv = z.infer<typeof publicCvSchema>;
@@ -507,4 +498,3 @@ export type Bibliography = z.infer<typeof bibliographySchema>;
 export type ThesisCatalog = z.infer<typeof thesesSchema>;
 export type BlogFrontmatter = z.infer<typeof blogFrontmatterSchema>;
 export type AuthorFrontmatter = z.infer<typeof authorFrontmatterSchema>;
-export type Project = z.infer<typeof projectSchema>;

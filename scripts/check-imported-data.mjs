@@ -11,7 +11,6 @@ const EXPECTED_FILES = [
   "biblio.bib",
   "bibliov2.json",
   "theses.json",
-  "projectsData.js",
   "group.md",
   "thesis-short.md",
   "assets/Logo.svg",
