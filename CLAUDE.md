@@ -56,7 +56,7 @@ bd close <id>         # Complete work
 npm install
 npm run dev
 npm run data:check
-npm run data:sync -- --source /absolute/path/to/private-export.json
+npm run data:check:strict
 npm run check
 npm run build
 npm run preview
@@ -73,11 +73,11 @@ chrome under `src/layouts`, CSS under `src/styles`, public data helpers under
 
 Production output is static files in `dist/`; no runtime server is required.
 Private source data must stay outside this public repository and enter only via
-the allowlist pipeline owned by `vz-site2`.
+the sanitized export produced by `../vz-personal-store`.
 
-The public data pipeline is documented in `docs/public-data-pipeline.md`.
-Allowed fields are listed in `data/public-data.allowlist.json`; generated public
-data is committed at `src/data/generated/public-data.json`.
+The public data handoff is documented in `docs/public-data-pipeline.md`.
+The private repo `../vz-personal-store` owns sanitization and exports generated
+data to `data/imported/`; this repo validates and consumes that tree.
 
 ## Conventions & Patterns
 
@@ -86,5 +86,5 @@ data is committed at `src/data/generated/public-data.json`.
 - Keep canonical site URL configurable through `SITE_URL`; preview defaults to
   `https://preview.vittoriozaccaria.net`.
 - Preserve unrelated DNS and private-data boundaries documented in ADR 001.
-- Do not commit raw private exports. Use `npm run data:sync -- --source <path>`
-  with a source outside this repository.
+- Do not create a second public sanitizer unless ADR 003 is superseded.
+- Treat `data/imported/` as generated read-only data from the private exporter.

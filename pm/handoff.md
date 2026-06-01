@@ -1,20 +1,21 @@
 # Session Handoff
 
-Written: 2026-05-31 17:42 CEST
+Written: 2026-06-01 09:56 CEST
 Author: Codex
 
 ## What was done this session
 
-- Claimed and closed `vz-site2`.
-- Added the allowlisted public data pipeline:
-  `scripts/sync-public-data.mjs`, `data/public-data.allowlist.json`,
-  `src/data/generated/public-data.json`, and
-  `docs/public-data-pipeline.md`.
-- Added npm scripts `data:sync`, `data:sync:example`, and `data:check`.
-- Updated `npm run check` so CI validates generated public data before
-  `astro check`.
-- Added [ADR 003](adr/003-allowlisted-public-data-pipeline.md) for the
-  public/private data boundary.
+- Corrected `vz-site2` via `vz-site13`: removed the duplicate public sanitizer
+  and second allowlist; `vz-site13` is now closed.
+- Replaced the public data pipeline with an imported-tree validator:
+  `scripts/check-imported-data.mjs`.
+- Updated npm scripts to `data:check` and `data:check:strict`.
+- Rewrote [ADR 003](adr/003-imported-public-data-contract.md): the private repo
+  owns sanitization and writes `data/imported/`; this repo validates and
+  consumes that generated tree.
+- Updated `docs/public-data-pipeline.md`, `README.md`, `CLAUDE.md`,
+  `pm/readme.md`, and `pm/plan.md`.
+- Previously claimed and closed `vz-site2`.
 - Updated `README.md`, `CLAUDE.md`, `pm/readme.md`, and `pm/plan.md`.
 - Added `vz-site12` for the temporary GitHub Pages project deploy test.
 - Added `.github/workflows/pages.yml` to publish `dist/` with GitHub Pages
@@ -39,12 +40,14 @@ Author: Codex
 
 ## Current state
 
-- The public data pipeline refuses to run without an explicit `--source` path.
-- The safe fixture `data/private-export.example.json` demonstrates that fake
-  private fields are stripped before writing
-  `src/data/generated/public-data.json`.
-- `npm run data:check`, `npm run data:sync:example`, `npm run data:sync --
-  --source data/private-export.example.json --dry-run`, and `npm run ci` pass.
+- `npm run data:check` validates `data/imported/` when present and passes with a
+  warning if the private export has not been run yet.
+- `npm run data:check:strict` fails if `data/imported/` is missing; use it after
+  running the private exporter from `../vz-personal-store`.
+- There is no second allowlist in this repo. The canonical manifest is
+  `../vz-personal-store/pm/website/export-allowlist.yaml`.
+- There is no public deny-string or redaction rule list in this repo; those
+  checks belong to the private exporter.
 - The temporary GitHub Pages deploy workflow builds with
   `SITE_URL=https://vzaccaria.github.io` and `SITE_BASE=/vz-static-site`.
 - Local development still defaults to `/`.
@@ -77,7 +80,7 @@ Author: Codex
 ## Recommended next steps
 
 1. Start `vz-site3` and build content model validation on top of
-   `src/data/generated/public-data.json`.
+   `data/imported/`.
 2. Resolve `vz-site11` soon so future issue intake does not require explicit
    forced IDs.
 3. Revisit `vz-site10` when upstream Astro tooling has a non-breaking audit fix.

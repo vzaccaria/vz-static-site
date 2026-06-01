@@ -1,61 +1,76 @@
 # Public Data Pipeline
 
-The public site must never copy private source data directly into this
-repository. `vz-site2` defines a narrow export contract:
+The private repository `../vz-personal-store` owns sanitization. This public
+repository consumes the sanitized export tree and validates that it is usable by
+the static site.
 
-1. A private repository produces a JSON export outside this repository.
-2. `data/public-data.allowlist.json` lists every field that may become public.
-3. `scripts/sync-public-data.mjs` copies only those fields.
-4. `npm run data:check` validates the committed public output.
+## Upstream Export
 
-## Commands
+Run this from the root of `../vz-personal-store`:
 
-Validate the public data currently committed in this repository:
+```bash
+bun run website/scripts/export-public/index.ts \
+  --manifest pm/website/export-allowlist.yaml
+```
+
+The private manifest is the canonical allowlist. It writes the sanitized output
+to this repository under:
+
+```text
+data/imported/
+```
+
+Treat `data/imported/` as generated read-only data in this repository. Do not
+edit files there by hand.
+
+## Expected Imported Tree
+
+The current export contract is documented in
+`../vz-personal-store/pm/website/handoff-vz-static-site.md` and includes:
+
+```text
+data/imported/
+├── assets/Logo.{svg,png,pdf}
+├── authors/
+├── blog/
+├── biblio.bib
+├── bibliov2.json
+├── cv-jr.yaml
+├── group.md
+├── projectsData.js
+├── theses.json
+└── thesis-short.md
+```
+
+`cv-jr.json` is intentionally not exported. The public site should derive any
+JSON representation from `cv-jr.yaml` in the content-model/build layer.
+
+## Public Repo Validation
+
+Validate whatever sanitized export is currently present:
 
 ```bash
 npm run data:check
 ```
 
-Run the pipeline against the safe example fixture:
+For CI before the first real export, `npm run data:check` passes with a warning
+if `data/imported/` is absent. After running the private export, use strict mode:
 
 ```bash
-npm run data:sync:example
+npm run data:check:strict
 ```
 
-Run the pipeline against a real private export:
+The validator checks:
 
-```bash
-npm run data:sync -- --source /absolute/path/to/private-export.json
-```
+- expected files/directories are present,
+- expected files are not empty,
+- JSON files parse.
 
-Use `--dry-run` to inspect the sanitized JSON without writing it:
+## Responsibility Split
 
-```bash
-npm run data:sync -- --source /absolute/path/to/private-export.json --dry-run
-```
-
-## Safety Rules
-
-- Keep real private exports outside this repository.
-- If a temporary local copy is needed, put it under `data/private/` or
-  `data/imports/`; both paths are ignored by Git.
-- Add new public fields only by editing `data/public-data.allowlist.json`.
-- Do not commit raw private exports, screenshots, logs, or database dumps.
-- Treat `src/data/generated/public-data.json` as the only public generated data
-  artifact from this pipeline.
-
-## Output
-
-The generated file is:
-
-```text
-src/data/generated/public-data.json
-```
-
-The validator rejects:
-
-- fields not present in the allowlist,
-- required public fields that are missing,
-- blocked key names such as `private`, `secret`, `token`, `password`,
-  `credential`, `internal`, `confidential`, or `notes`,
-- common secret-looking string values.
+- Private repo: choose source files, apply allowlist, strip/redact private data,
+  and write `data/imported/`.
+- Public repo: validate the imported tree, derive content models, render static
+  pages, and deploy.
+- Cross-repo beads are referenced in notes only; do not create Beads
+  dependencies across repositories.

@@ -1,19 +1,20 @@
 # Development Plan
 
-Last updated: 2026-05-29
+Last updated: 2026-06-01
 
 ## Active epics
 
 ### 1. Nuovo sito statico pubblico (`vz-site`)
 **Why:** The personal website should be rebuilt as a fully static public site with a simple local workflow, safe public data import, preview deployment, and a controlled production cutover to `www.vittoriozaccaria.net`.
 
-**Scope:** Build the new public `vz-static-site` repository, define the architecture, scaffold the SSG toolchain, implement an allowlist-based public data pipeline, reproduce the current views, generate feeds/sitemap/SEO, deploy preview, check parity with the existing site, and perform production cutover.
+**Scope:** Build the new public `vz-static-site` repository, define the architecture, scaffold the SSG toolchain, consume the sanitized public data export from the private repo, reproduce the current views, generate feeds/sitemap/SEO, deploy preview, check parity with the existing site, and perform production cutover.
 
 **Status:** Open. `vz-site0` accepted the initial architecture and environment
 contract in ADR 001. `vz-site1` added the Astro/npm scaffold and CI. `vz-site2`
-added the allowlisted public data pipeline in ADR 003. `vz-site12` adds a
-temporary GitHub Pages project deploy for early testing before the later custom
-preview domain deploy. `vz-site3` is next for the content model and validation.
+now consumes the sanitized `data/imported/` tree from the private repo, as
+recorded in ADR 003. `vz-site12` adds a temporary GitHub Pages project deploy
+for early testing before the later custom preview domain deploy. `vz-site3` is
+next for the content model and validation.
 
 ## Planned sequence
 
@@ -40,9 +41,10 @@ preview domain deploy. `vz-site3` is next for the content model and validation.
   production host.
 
 ## Completed (recent)
-- `vz-site2` - Pipeline dati pubblici sanitizzati, completed 2026-05-31 with
-  [ADR 003](adr/003-allowlisted-public-data-pipeline.md), npm scripts, fixture,
-  allowlist, sanitizer, and validation.
+- `vz-site2` - Pipeline dati pubblici sanitizzati, completed 2026-05-31 and
+  corrected 2026-06-01 with
+  [ADR 003](adr/003-imported-public-data-contract.md): the private repo owns
+  sanitization, this repo validates/consumes `data/imported/`.
 - `vz-site1` - Scaffold Astro e toolchain locale, completed 2026-05-29 with
   Astro 6, npm scripts, `src/content`, `src/data`, static pages, and CI.
 - `vz-site0` - Decisione architetturale e setup ambienti, completed 2026-05-29

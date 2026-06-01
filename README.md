@@ -46,17 +46,19 @@ allowlisted generated data should be committed here.
 
 ## Public Data
 
-Validate the committed public data:
+The private repo `../vz-personal-store` exports sanitized public data into
+`data/imported/`. Validate the imported tree:
 
 ```bash
 npm run data:check
 ```
 
-Regenerate it from a private export outside this repository:
+After running the private exporter, use strict validation:
 
 ```bash
-npm run data:sync -- --source /absolute/path/to/private-export.json
+npm run data:check:strict
 ```
 
-The allowlist lives in `data/public-data.allowlist.json`; the generated public
-artifact lives in `src/data/generated/public-data.json`.
+The canonical export allowlist lives in
+`../vz-personal-store/pm/website/export-allowlist.yaml`. This repository should
+not maintain a second sanitizer.

@@ -11,7 +11,8 @@ Planned architecture:
 - Static-site generator: Astro in static/pre-rendered mode, accepted by
   [ADR 001](adr/001-static-public-site-architecture.md).
 - Public content and generated public data live in this repository.
-- Private source data remains outside this repository and is imported only through an explicit sanitization/export pipeline.
+- Private source data remains outside this repository and is imported only
+  through the sanitized export produced by `../vz-personal-store`.
 - The site exposes static routes for profile, bio/research, courses, theses, blog, tags, feeds, sitemap, and SEO metadata.
 - Preview deployment targets `preview.vittoriozaccaria.net`.
 - Production cutover targets `www.vittoriozaccaria.net` after parity checks pass,
@@ -54,14 +55,13 @@ npm run build
 npm run preview
 npm run check
 npm run data:check
-npm run data:sync -- --source /absolute/path/to/private-export.json
+npm run data:check:strict
 ```
 
 The Astro scaffold and npm toolchain were added by `vz-site1`. `npm run build`
 emits static files in `dist/`; no runtime server is required for deployment.
-The public data pipeline was added by `vz-site2`; it copies only fields listed
-in `data/public-data.allowlist.json` into
-`src/data/generated/public-data.json`.
+The public data handoff was added by `vz-site2`; the private repo exports a
+sanitized generated tree to `data/imported/`, and this repo validates that tree.
 
 The CI workflow in `.github/workflows/ci.yml` runs on pull requests and pushes
 to `main`, installs with `npm ci`, then runs `npm run check` and
@@ -70,7 +70,9 @@ to `main`, installs with `npm ci`, then runs `npm run check` and
 ## Key Conventions
 - Track work with beads in this repository, using IDs prefixed `vz-site`.
 - Use `pm/` for stable project context, roadmap, and session handoff.
-- Keep private data out of the public repository. Data import must use an allowlist-based sanitization pipeline.
+- Keep private data out of the public repository. Data import must consume the
+  sanitized allowlist export from `../vz-personal-store`; do not add a second
+  sanitizer here.
 - Preserve current website routes where practical, using the audit in the private repo at `website/docs/audit.md` as migration reference.
 - Astro telemetry is disabled in npm scripts so local agent runs do not need to
   write outside the repository.
