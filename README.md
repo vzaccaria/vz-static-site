@@ -7,6 +7,7 @@ Public static website for Vittorio Zaccaria.
 ```bash
 npm install
 npm run dev
+npm run content:check
 npm run check
 npm run build
 npm run preview
@@ -41,8 +42,8 @@ site at:
 https://vzaccaria.github.io/vz-static-site/
 ```
 
-Private source data must stay outside this repository. Only public,
-allowlisted generated data should be committed here.
+Private source data must stay outside this repository. Only the sanitized public
+export under `data/imported/` should be committed here.
 
 ## Public Data
 
@@ -57,8 +58,12 @@ After running the private exporter, use strict validation:
 
 ```bash
 npm run data:check:strict
+npm run content:check
 ```
 
 The canonical export allowlist lives in
 `../vz-personal-store/pm/website/export-allowlist.yaml`. This repository should
 not maintain a second sanitizer.
+
+`npm run check` requires `data/imported/` and validates the public content model
+defined in `src/data/content-model.ts`.

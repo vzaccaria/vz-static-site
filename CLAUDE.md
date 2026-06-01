@@ -57,6 +57,7 @@ npm install
 npm run dev
 npm run data:check
 npm run data:check:strict
+npm run content:check
 npm run check
 npm run build
 npm run preview
@@ -78,6 +79,10 @@ the sanitized export produced by `../vz-personal-store`.
 The public data handoff is documented in `docs/public-data-pipeline.md`.
 The private repo `../vz-personal-store` owns sanitization and exports generated
 data to `data/imported/`; this repo validates and consumes that tree.
+
+The public content model is documented in `docs/content-model.md` and enforced
+by `src/data/content-model.ts` plus `scripts/validate-content-model.ts`.
+`npm run check` requires `data/imported/`.
 
 ## Conventions & Patterns
 

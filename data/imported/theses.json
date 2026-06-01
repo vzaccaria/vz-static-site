@@ -1,0 +1,72 @@
+{
+  "theses": [
+    {
+      "level": "MS",
+      "title": "Topics in secure and safe operating systems",
+      "institution": "Politecnico di Milano",
+      "institutionLogo": null,
+      "additional": [
+        "1 thesis in developing a software virtualisation approach for retargetability and long term sustainability of IoT software systems",
+        "2 theses in measurement and characterisation of virtualisation (XEN) on an embedded hardware board (ARM/RISCV)",
+        "1 thesis in DDoS attacks in mixed-criticality, real-time operating systems"
+      ],
+      "image": null,
+      "topic": "security",
+      "subtopic": "operating systems",
+      "maturity": "low",
+      "maturityColor": "red",
+      "skills": [
+        "various"
+      ],
+      "prio": 7,
+      "__content": "\n\nThis is a general umbrella topic --- valid even if you are thinking of a Ph.d. **Bring your own ideas!**\n\n\n  "
+    },
+    {
+      "level": "MS",
+      "title": "Cryptography and Security",
+      "support": "internship",
+      "additional": [
+        "1 MS thesis in formal verification of a new protocol for securing on-chip physical communication"
+      ],
+      "institution": "Security Pattern",
+      "institutionLogo": null,
+      "image": "./images/logos-2.png",
+      "imageData": "bg left:25% w:450",
+      "topic": "security",
+      "subtopic": "cryptography",
+      "maturity": "high",
+      "maturityColor": "green",
+      "skills": [
+        "various"
+      ],
+      "prio": 8,
+      "created": "2024-05-15T00:00:00.000Z",
+      "__content": "\n\n**Formal Verification of a new Protocol for Securing Physical Communication between an Embedded System and a Secure Element**\n\nThis thesis aims to formally verify a new protocol, designed to enhance the security of physical communication between an embedded microcontroller and a **secure element**. The proposed new protocol employs lightweight cryptographic techniques tailored to the constraints of embedded systems, while leveraging the security features of the secure element. Formal verification techniques, such as model checking and theorem proving, will be utilized to rigorously analyse the algorithm's correctness and resilience against potential attacks.\n\n\n\n"
+    },
+    {
+      "level": "MS",
+      "support": "internship",
+      "where": "STMicroelectronics' Agrate Brianza plant",
+      "additional": [
+        "1 thesis in Automatic generation of multicore embedded code.",
+        "1 thesis in Linux-based Continuous Integration (CI) framework for Model-Based Design workflows.",
+        "1 thesis in Integration of NEON SIMD intrinsic functions into the Embedded Coder workflow for Model-Based Design."
+      ],
+      "title": "Embedded systems for automotive",
+      "institution": "STMicroelectronics",
+      "institutionLogo": "https://upload.wikimedia.org/wikipedia/commons/1/1b/ST_logo_2020_blue_V.svg",
+      "image": "./images/logos-1.png",
+      "imageData": "bg left:25% w:450",
+      "topic": "automotive",
+      "subtopic": "hw & sw design",
+      "maturity": "varies",
+      "maturityColor": "yellow",
+      "prio": 11,
+      "skills": [
+        "various skills"
+      ],
+      "created": "2022-12-13 09:26",
+      "__content": "\n\nEngage in the [HAL4SDV](https://www.linkedin.com/company/hal4sdv/about/) project, a pioneering European initiative in software-defined vehicles, where you will collaborate with semiconductor providers like STMicroelectronics and connect with giants such as Mercedes, and BMW, to harmonize and innovate software interfaces and development methodologies, thereby shaping the future of both safety-critical and non-safety-critical applications in next-generation vehicles.\n\n\n\n"
+    }
+  ]
+}

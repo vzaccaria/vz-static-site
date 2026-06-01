@@ -1,17 +1,18 @@
 import { glob } from "astro/loaders";
 import { defineCollection } from "astro:content";
-import { z } from "astro/zod";
+import {
+  authorFrontmatterSchema,
+  blogFrontmatterSchema
+} from "./data/content-model";
 
 const blog = defineCollection({
-  loader: glob({ pattern: "**/*.md", base: "./src/content/blog" }),
-  schema: z.object({
-    title: z.string(),
-    description: z.string(),
-    pubDate: z.coerce.date(),
-    updatedDate: z.coerce.date().optional(),
-    tags: z.array(z.string()).default([]),
-    draft: z.boolean().default(false)
-  })
+  loader: glob({ pattern: "**/*.md", base: "./data/imported/blog" }),
+  schema: blogFrontmatterSchema
 });
 
-export const collections = { blog };
+const authors = defineCollection({
+  loader: glob({ pattern: "**/*.md", base: "./data/imported/authors" }),
+  schema: authorFrontmatterSchema
+});
+
+export const collections = { authors, blog };

@@ -1,6 +1,6 @@
 # Session Handoff
 
-Written: 2026-06-01 09:56 CEST
+Written: 2026-06-01 10:33 CEST
 Author: Codex
 
 ## What was done this session
@@ -15,6 +15,20 @@ Author: Codex
   consumes that generated tree.
 - Updated `docs/public-data-pipeline.md`, `README.md`, `CLAUDE.md`,
   `pm/readme.md`, and `pm/plan.md`.
+- Claimed `vz-site3` after the private repo export populated `data/imported/`.
+- Added the exported sanitized `data/imported/` tree to this public repo.
+- Added strict public content schemas in `src/data/content-model.ts` for CV,
+  blog frontmatter, authors, publications, courses, theses, projects, and
+  required markdown bodies.
+- Added `scripts/validate-content-model.ts` and `npm run content:check`.
+- Updated `npm run check` to require `data/imported/` via `data:check:strict`,
+  run `content:check`, then run `astro check`.
+- Pointed Astro content collections at `data/imported/blog` and
+  `data/imported/authors`.
+- Added `.gitattributes` so generated `data/imported/**` preserves upstream
+  whitespace while still allowing `git diff --check` to pass.
+- Added [content model docs](../docs/content-model.md) and updated homepage copy.
+- Closed `vz-site3`.
 - Previously claimed and closed `vz-site2`.
 - Updated `README.md`, `CLAUDE.md`, `pm/readme.md`, and `pm/plan.md`.
 - Added `vz-site12` for the temporary GitHub Pages project deploy test.
@@ -44,6 +58,11 @@ Author: Codex
   warning if the private export has not been run yet.
 - `npm run data:check:strict` fails if `data/imported/` is missing; use it after
   running the private exporter from `../vz-personal-store`.
+- `npm run content:check` validates the content model and currently reports:
+  public CV, 112 bibliography records, 3 theses, 2 projects, 2 authors, and 10
+  blog posts.
+- `npm run check` now requires `data/imported/`; CI should fail if the imported
+  tree is missing or if imported objects contain missing/unexpected fields.
 - There is no second allowlist in this repo. The canonical manifest is
   `../vz-personal-store/pm/website/export-allowlist.yaml`.
 - There is no public deny-string or redaction rule list in this repo; those
@@ -61,8 +80,8 @@ Author: Codex
   `http://127.0.0.1:4322/`; both were verified with `curl` and stopped.
 - The Pages-style preview was also verified locally at
   `http://127.0.0.1:4324/vz-static-site/`.
-- Astro warns that `src/content/blog` has no markdown files yet. This is
-  expected until real public content is imported.
+- Astro content now syncs imported blog and author collections without the old
+  empty `src/content/blog` warning.
 
 ## In progress
 
@@ -70,7 +89,6 @@ Author: Codex
 
 ## Blockers & open questions
 
-- `vz-site3` should become ready after `vz-site2` is closed.
 - `npm audit` reports 5 moderate dev-only vulnerabilities through
   `@astrojs/check`; `npm audit --omit=dev` reports 0 vulnerabilities. Do not run
   `npm audit fix --force` casually because it would downgrade `@astrojs/check`.
@@ -79,8 +97,8 @@ Author: Codex
 
 ## Recommended next steps
 
-1. Start `vz-site3` and build content model validation on top of
-   `data/imported/`.
+1. Start `vz-site4` for the core static views on top of the validated content
+   model.
 2. Resolve `vz-site11` soon so future issue intake does not require explicit
    forced IDs.
 3. Revisit `vz-site10` when upstream Astro tooling has a non-breaking audit fix.

@@ -56,12 +56,15 @@ npm run preview
 npm run check
 npm run data:check
 npm run data:check:strict
+npm run content:check
 ```
 
 The Astro scaffold and npm toolchain were added by `vz-site1`. `npm run build`
 emits static files in `dist/`; no runtime server is required for deployment.
 The public data handoff was added by `vz-site2`; the private repo exports a
 sanitized generated tree to `data/imported/`, and this repo validates that tree.
+The content model added by `vz-site3` lives in `src/data/content-model.ts` and
+is enforced by `npm run content:check` and `npm run check`.
 
 The CI workflow in `.github/workflows/ci.yml` runs on pull requests and pushes
 to `main`, installs with `npm ci`, then runs `npm run check` and

@@ -1,0 +1,1779 @@
+basics:
+  name: Vittorio Zaccaria
+  label: Associate professor
+  picture: https://dl.dropboxusercontent.com/u/5867765/avatars/avatar-vz.jpg
+  phone: +39 02 2399 3642
+  email: vittorio.zaccaria@polimi.it
+  website: www.vittoriozaccaria.net
+  docs:
+    cv: https://drive.google.com/file/d/1S7dqOcdIzBFWg1yRDuRVeLkT0U0SO_Ue/view?usp=sharing
+    thesis: https://drive.google.com/file/d/1QQyec3J5oGw8yM3c2oo88suivZzJzirt/view?usp=sharing
+  coverPageSummary: |
+    I am an associate professor at Politecnico di Milano and I have worked
+    in processor architecture research and development for one of the top
+    semiconductor companies in the world. My background is rooted in modeling
+    and simulation of digital systems although I have expanded my interests
+    to functional programming and domain specific languages.
+    In 2016 I've helped introduce some novel theoretical results
+    in the field of cryptography and (in 2015 and 2017) I've been awarded
+    with several grants from industrial partners for devising a reliable
+    design methodology for cryptographic circuits.
+  websiteSummary: |
+    Welcome to my website.
+    I am an associate professor at Politecnico di Milano and I have worked
+    in embedded processor architecture R&D for one of the top
+    semiconductor companies in the world.
+
+    My group is currently working on topics 
+    related to embedded systems (hardware and software), 
+    security, cryptography, operating systems. If you
+    are inclined to work on these topics feel free to get in touch for a
+    possible collaboration or a thesis.
+  officialDeptPage: |
+    He received the Laurea degree in Computer Engineering
+    in 1998 and the Ph. D. degree in Computer Engineering in 2002 at the
+    Politecnico di Milano, Italy. He is currently associate Professor at the
+    Dipartimento di Elettronica e Informazione, Politecnico di Milano where he
+    currently investigates novel techniques for computer aided design of digital
+    circuits with emphasis on cryptography. From 2003 until 2007, he held various positions
+    in the Advanced System Technology group at STMicroelectronics where he was
+    involved in the architectural specification and design of multi-threaded
+    processors with particular emphasis on emerging stream-programming
+    paradigms. He has also been involved in the development of tools and
+    methodologies for designing low-power industrial networks on chip (NoC). 
+    He has published a book, over 80 papers in either international journals 
+    or conference proceedings and he holds two US
+    patents. He has also been appointed as Principal Investigator for industrial 
+    collaboration grants from STMicroelectronics related to the design cryptographic 
+    hardware using functional programming languages.
+  shortBio: |
+    Vittorio Zaccaria is an associate professor at Politecnico di Milano where he
+    currently investigates novel techniques for computer aided design of digital
+    circuits with emphasis on cryptography. He has published a book, over 80 papers
+    in international journals and conference proceedings and he holds two US
+    patents.
+  mur:
+    lessThan2000c:
+      ita: |
+        Vittorio Zaccaria è Professore Associato di Sistemi Operativi Avanzati per il corso di studi in Ingegneria Informatica al Politecnico di Milano. E' attualmente referente del Politecnico di Milano presso la RISC-V International association ed è impegnato nella ricerca su architetture di calcolo ad alta efficienza energetica, sistemi operativi, sicurezza, crittografia ed electronic design automation. Ha conseguito la Laurea in Ingegneria Informatica nel 1998 e il titolo di Dottore di Ricerca in Ingegneria Informatica nel 2002 presso il Politecnico di Milano, Italia e dal 2011 al 2020 è stato ricercatore presso il Dipartimento DEIB del Politecnico di Milano.  E' stato referente scientifico per progetti industriali finanziati da STMicroelectronics ed è stato coinvolto in diversi progetti europei come 2PARMA (2010-2013) e MULTICUBE (2008-2010). Precedentemente ha ricoperto varie posizioni di ricerca industriale nel gruppo Advanced System Technology di STMicroelectronics ad Agrate Brianza e Lugano dove è stato coinvolto nella specifica architettura e design di processori paralleli, con particolare attenzione su architetture streaming e network a bassa potenza su chip (NOC). Ha pubblicato un libro, oltre 90 pubblicazioni su riviste internazionali e atti di conferenze e ha ottenuto due brevetti americani.
+      eng: |
+        Vittorio Zaccaria received the Laurea degree in Computer Engineering in
+        1998 and the Ph. D. degree in Computer Engineering in 2002 at the
+        Politecnico di Milano, Italy. He is currently associate professor at the
+        Politecnico di Milano where he currently investigates novel techniques for
+        computer aided design of digital circuits. From 2003 until 2007, he held
+        various positions in the Advanced System Technology group at
+        STMicroelectronics where he was involved in the architectural
+        specification and design of multi-threaded processors with particular
+        emphasis on emerging stream-programming paradigms. He has also been
+        involved in the development of tools and methodologies for designing
+        low-power industrial networks on chip (NoC).
+  location:
+    address: Politecnico di Milano - Piazza Leonardo da Vinci, 32
+    shortAddress: Politecnico di Milano, Italy
+    postalCode: '20133'
+    city: Milano (MI)
+    countryCode: Italy
+  office:
+    department: Dept. of Electronics, Information and Bioengineering
+    addressShort: Building 20, Floor 1
+    address: Via Ponzio 34/5
+    postalCode: 20133
+    city: Milano
+    geo:
+      lat: 45.478828
+      long: 9.232421
+  social:
+    - network: Twitter
+      icon: fa-twitter-square
+      url: https://twitter.com/vzaccaria_en
+    - network: LinkedIn
+      icon: fa-linkedin-square
+      url: https://www.linkedin.com/in/vzaccaria
+    - network: Github
+      icon: fa-github-square
+      url: https://github.com/vzaccaria
+languages:
+  - language: Italian
+    fluency: Native
+  - language: English
+    fluency: Fluent
+education:
+  - startDate: '1992-09-01'
+    endDate: '1998-06-08'
+    institution: Politecnico di Milano, Italy
+    area: Computer engineering
+    studyType: Master
+    topic: Java agents for a distributed file system.
+    department: DEI
+    dichiara: |
+      Di essere in possesso del titolo di studio di Laurea in Ingegneria
+      Informatica, conseguito il 8 giugno 1998 presso il Politecnico di Milano
+      con votazione 96/100.
+  - startDate: '1998-09-01'
+    endDate: '2002-11-15'
+    institution: Politecnico di Milano, Italy
+    area: Computer engineering
+    studyType: Ph.D
+    department: DEI
+    topic: |
+      "Power consumption estimation and optimization of VLIW processors.
+      Sponsored by STMicroelectronics."
+    dichiara: |
+      Di essere in possesso del titolo di studio di Dottorato di Ricerca in
+      Ingegneria Informatica e Automatica rilasciato il 15 novembre 2002 dal
+      Politecnico di Milano.
+work:
+  current:
+    position: Associate Professor
+    startDate: 2020-07-06T00:00:00.000Z
+    company: Politecnico di Milano
+    address: Milan, Italy
+    posizione: Professore Associato
+  previous:
+    - position: Associate Professor
+      startDate: 2020-07-06T00:00:00.000Z
+      company: Politecnico di Milano
+      address: Milan, Italy
+      posizione: Professore Associato
+      index: 4
+      highlights:
+        - Appointed as professor of Advanced Operating Systems (Laurea Magistrale in Ingegneria Informatica)
+        - Appointed as professor of Principi di Architetture dei Calcolatori (Laurea Triennale in Ingegneria Elettronica)
+        - Rector's referent c/o the International RISC-V association
+        - Associate member and secretary for the state qualification exams for the practice of the Information Engineering profession, sections A and B.
+        - Member of the GdR ("Gruppo del riesame") for the teaching quality of the CdS (Corso di studi) in Computer Engineering (2023)
+        - Principal investigator for Politecnico di Milano in the Chips-JU project HAL4SDV
+      dichiara: di prestare servizio come professore associato dal 6 luglio 2020 presso il Dipartimento di Elettronica e Informazione del Politecnico di Milano.
+    - position: Assistant Professor
+      startDate: '2009-11-01'
+      endDate: 2020-07-05T00:00:00.000Z
+      company: Politecnico di Milano
+      address: Milan, Italy
+      posizione: RTD (fino febbraio 2011) poi RTI
+      index: 3
+      highlights:
+        - Appointed as Principal Investigator for an industrial collaboration grant from STMicroelectronics related to the design cryptographic hardware using functional programming languages.
+        - Specified and developed the ReSPIR optimization algorithm for processor/SoC optimization. It enables efficient IP reuse in the context of virtual platforms (10x reduction in time, less than 1 percent error w.r.t. ideal).
+        - Succesfully brought a team of 5 people to prototype a new type of video-surveillance system in the context of the 2PARMA FP7 European Project.
+        - Led a team of 3 engineers to prototype a research software tool for processor customization. Prototypes were delivered on-time and within budget of several european FP7 projects.
+      dichiara: di aver prestato servizio come ricercatore a tempo indeterminato dal 1 marzo 2011 al 5 Luglio 2020 presso il Dipartimento di Elettronica e Informazione del Politecnico di Milano, e di avere prestato servizio come ricercatore a tempo determinato dal 1 novembre 2009 a fine Febbraio 2011 presso il Dipartimento di Elettronica e Informazione del Politecnico di Milano.
+    - startDate: 2004-05-01T00:00:00.000Z
+      endDate: 2007-03-27T00:00:00.000Z
+      position: R\&D Engineer
+      positionLong: Research and Development Engineer
+      company: STMicroelectronics
+      address: Lugano, Switzerland
+      posizione: Ingegnere di ricerca e sviluppo
+      index: 1
+      highlights:
+        - Specified, prototyped and validated several ST200 processor architectural extensions. Vertical validation of the extensions from the ISA up to the application-layer/OS.
+        - Enabled secure co-hosting of more operating systems by means of secure storage extensions of the ST200 architecture.
+        - Collaborated to the specification, validation (by means of functional and timing simulation) and architectural exploration for symmetric multi-processing based on ST200.
+        - Architectural specification and design of multi-threaded architectures based on stream-programming paradigms.
+      dichiara: di avere prestato servizio come Research and Development Engineer presso l’Advanced Architecture Research group, AST-STMicroelectronics, Lugano (Svizzera), dal 1 maggio 2004 fino al 27 marzo 2007. In tale periodo si è occupato della ricerca e lo sviluppo di estensioni di processori industriali, co-hosting, esplorazione architetturale e paradigmi di programmazione streaming.
+    - startDate: 2003-04-01T00:00:00.000Z
+      endDate: 2004-03-31T00:00:00.000Z
+      position: Research Consultant
+      company: STMicroelectronics
+      address: Milan, Italy
+      posizione: Consulente ricerca e sviluppo
+      index: 0
+      highlights:
+        - Pioneered the field of Power Modeling of VLIW Cores (10 percent error RTL vs Gate-level).
+        - Introduced an effective methodology to minimize the effort of design of experiments for NoC power models (10x reduction in characterization time, 33 percent error).
+      dichiara: di avere prestato servizio come Research Consultant presso il gruppo Low Power System Design, AST-STMicroelectronics, Agrate Brianza (Italia), dal 1 aprile 2003 al 31 marzo 2004. In tale periodo si è occupato della ricerca e sviluppo di modelli di consumo di potenza dei processori digitali e networks-on-chip.
+    - startDate: 2007-11-01T00:00:00.000Z
+      endDate: 2009-10-31T00:00:00.000Z
+      position: Research Associate
+      company: Politecnico di Milano
+      address: Milan, Italy
+      posizione: Assegnista di ricerca
+      index: 2
+      highlights:
+        - Introduced advanced techniques for managing design of experiments and response surface methods in automatic design space exploration for multi-processors.
+        - Extended classical design space exploration to tackle the problem of process-variability-aware design of multi-processors.
+      dichiara: di avere usufruito di un assegno di ricerca presso il Dipartimento di Elettronica e Informazione del Politecnico di Milano dal 1 novembre 2007 al 31 ottobre 2009 per ricerche concernenti l'esplorazione dello spazio architetturale dei multi-processori.
+  other:
+    institutional:
+      - roleIt: Delegato rappresentante del Politecnico di Milano presso la International RISC-V Association
+        roleEn: Rector's referent c/o the International RISC-V association
+        dichiara: di aver ricevuto la nomina di delegato rappresentante del Politecnico di Milano presso la International RISC-V Association
+        address: Politecnico di Milano
+        intervals:
+          - name: Prima nomina
+            start: 2023-07-26T00:00:00.000Z
+            end: 2025-12-31T00:00:00.000Z
+            haspdf: T5.pdf
+          - name: Seconda nomina
+            start: 2026-01-01T00:00:00.000Z
+            end: 2028-12-31T00:00:00.000Z
+            haspdf: T6.pdf
+      - roleIt: Partecipazione al gruppo del riesame (GdR)  della scheda di monitoraggio annuale del CdS in Ing. Informatica del Politecnico di Milano
+        roleEn: Member of the GdR ("Gruppo del riesame") for the teaching quality of the CdS (Corso di studi) in Computer Engineering
+        dichiara: di aver partecipato al gruppo del riesame (GdR) per la scheda di monitoraggio annuale (SMA) per il corso di studi in Ingegneria Informatica presso il Politecnico di Milano
+        address: Politecnico di Milano
+        intervals:
+          - name: Riesame 2023
+            start: 2023-09-07T00:00:00.000Z
+            end: 2023-12-31T00:00:00.000Z
+      - roleIt: 'Membro aggregato e segretario Commissione esami di stato di abilitazione alla professione di Ingegnere Dell''Informazione Sezione A e Sezione B '
+        roleEn: Associate member and secretary for the state qualification exams for the practice of the Information Engineering profession, sections A and B.
+        dichiara: di essere stato Membro aggregato e segretario Commissione esami di stato di abilitazione alla professione di Ingegnere Dell'Informazione Sezione A e Sezione B
+        address: Politecnico di Milano
+        intervals:
+          - name: Seconda sessione - 2023
+            start: 2023-11-16T00:00:00.000Z
+            end: 2023-12-31T00:00:00.000Z
+          - name: Prima sessione - 2023
+            start: 2023-07-26T00:00:00.000Z
+            end: 2023-07-31T00:00:00.000Z
+          - name: Seconda sessione - 2022
+            start: 2022-11-17T00:00:00.000Z
+            end: 2022-12-05T00:00:00.000Z
+          - name: Prima sessione - 2022
+            start: 2022-07-25T00:00:00.000Z
+            end: 2022-07-27T00:00:00.000Z
+          - name: Seconda sessione - 2021
+            start: 2021-11-17T00:00:00.000Z
+            end: 2021-12-17T00:00:00.000Z
+          - name: Prima sessione - 2021
+            start: 2021-06-16T00:00:00.000Z
+            end: 2021-07-14T00:00:00.000Z
+          - name: Seconda sessione - 2020
+            start: 2020-11-16T00:00:00.000Z
+            end: 2020-12-03T00:00:00.000Z
+          - name: Prima sessione - 2020
+            start: 2020-07-08T00:00:00.000Z
+            end: 2020-07-28T00:00:00.000Z
+    projects:
+      - name: CASCA
+        description: |
+          A language for designing hardware countermeasures against side channel attacks. 
+          It is based on a final tagless approach for embedding domain specific languages.
+        link: https://github.com/vzaccaria/polimi-casca-todaes2018
+        type: open source
+        role: project supervision and development
+        where: Politecnico di Milano
+        timeframe: 2016-2018
+      - name: Polimi at Home (PAH)
+        description: |
+          An experiment in MOOC for my students of Informatica B. It allows to learn
+          a Matlab-like language through a set of small lectures and 
+          automatically graded exercises. It uses the EDX stack.
+        link: http://www.pah.polimi.it/
+        type: online
+        role: project supervision and development
+        where: Politecnico di Milano
+        timeframe: 2015-2016
+      - name: 2PARMA Use case n. 6
+        description: |
+          Integration of various technologies from different project partners to create
+          a video-analytics application.
+        link: https://www.youtube.com/embed/hyAeoI2qsbg
+        type: closed source
+        role: project supervision
+        where: Politecnico di Milano
+        timeframe: 2010-2013
+      - name: Multicube Explorer
+        description: |
+          Architectural exploration framework retargetable to different processor-based 
+          architectures and exploration algorithms. The tool contains also advanced algorithms 
+          for DoE generation and response surface modeling.
+        link: http://home.deib.polimi.it/zaccaria/multicube_explorer_v1/Home.html
+        type: open source
+        where: Politecnico di Milano
+        role: project management and development
+        timeframe: 2007-2010
+      - name: xSTreamC compiler and nSTream simulator
+        description: |
+          Development toolchain for applications based on the stream oriented programming 
+          model.
+        type: open source
+        link: http://xstreamc.sourceforge.net/
+        where: STMicroelectronics
+        role: development
+        timeframe: 2004-2007
+      - name: ST200-ISS
+        description: |
+          Production-grade instruction set simulator for the ST200 VLIW processor family 
+          (functional and timing behavior models). Kernel, device components, 
+          cache-coherency, secure-storage, co-hosting
+        type: proprietary
+        where: STMicroelectronics
+        role: development
+        timeframe: 2004-2007
+      - name: STBus Power estimation
+        description: |
+          Tools for run-time power estimation of STBus proprietary bus 
+          technology (C/SystemC). These tools are currently part of the internal STBus 
+          product work-flow
+        type: proprietary
+        where: STMicroelectronics
+        role: development
+        timeframe: 2003-2004
+    skills:
+      - name: General software design
+        keywords:
+          - version control (SVN/GIT)
+          - semantic versioning
+          - agile development
+          - test driven design
+          - DSL and fluent interface design
+          - web services
+          - representational state transfer interfaces
+          - shared memory multi-processing
+          - message passing multiprocessing
+          - dataflow programming
+          - object oriented programming
+          - asynchronous programming
+          - functional programming
+          - dependent type programming
+      - name: General hardware design
+        keywords:
+          - processor-platform and IP selection and customization
+          - benchmarking and application customization
+          - strategic and emergent R\&D directions for platform development
+          - functional programming languages for hardware design
+      - name: Artificial languages
+        keywords:
+          - C
+          - C++
+          - Haskell
+          - Javascript
+          - JSON
+          - RISC-V assembly
+          - ST200 Assembly
+          - Python
+      - name: Processor architecture design
+        keywords:
+          - Instruction set simulation
+          - Event-driven simulation
+          - Virtual platforms
+          - Cache simulation
+          - Instruction-level power modeling
+      - name: Embedded Systems Design
+        keywords:
+          - Interrupt programming
+          - Supervisor-mode programming
+          - Co-hosting
+          - Virtual Memory
+          - Linux internals
+          - System virtualisation
+          - Notions of device driver programming
+          - Notions of system bring up
+          - Notions of CPU scheduling algorithms
+    specializations:
+      - side channel attacks (cryptography)
+      - computer aided design of digital circuits
+      - multi-processor design space exploration
+      - low-power and high-performance design
+      - parallel processor architectures
+      - advanced parallel programming paradigms
+      - compilation and simulation methodologies for multi-processor-based systems
+      - system virtualisation
+    recommendations:
+      - name: Giuseppe Desoli
+        title: Director
+        institution: STMicroelectronics
+        where: Castelletto, Milan (Italy)
+        email: giuseppe.desoli@st.com
+      - name: Cristina Silvano
+        title: Professor
+        institution: Politecnico di Milano
+        where: Milan (Italy)
+        email: cristina.silvano@polimi.it
+      - name: Luca Benini
+        title: Professor
+        institution: ETH Zurich
+        where: Zurich (Switzerland)
+        email: lbenini@iis.ee.ethz.ch
+      - name: Guido Bertoni
+        title: CEO
+        institution: Security Pattern
+        where: Brescia (Italy)
+        email: g.bertoni@securitypattern.com
+      - name: Roberto Zafalon
+        title: Director
+        institution: STMicroelectronics
+        where: Agrate Brianza (Italy)
+        email: roberto.zafalon@st.com
+research:
+  citations:
+    date: 2025-04-23T00:00:00.000Z
+    source: Google Scholar profile
+    all:
+      citations: 2637
+      highest: 178
+      hindex: 27
+    since2012:
+      citations: 756
+      hindex: 16
+    since2014:
+      citations: 741
+      hindex: 15
+    since2016:
+      citations: 689
+      hindex: 16
+    since2020:
+      citations: 469
+      hindex: 11
+  productivity:
+    total: 91
+    coauthors: 122
+    transactions: 13
+    journals: 24
+    books: 1
+    conferences: 48
+    patents: 2
+  impact:
+    scholar:
+      hindex: 27
+      citations: 2637
+      date: 2025-04-23T00:00:00.000Z
+      since: 2000-01-01T00:00:00.000Z
+    scopus:
+      npubs: 76
+      hindex: 18
+      citations: 979
+      date: 2019-11-22T00:00:00.000Z
+      since: 2000-01-01T00:00:00.000Z
+  currentGoals:
+    short: |
+      I love studying and innovating all aspects of software and hardware
+      development. In 2015 I have started working with
+      STMicroelectronics on using functional programming languages for
+      hardware design. In particular, I am investigating how deeply embedded
+      DSLs can be used to produce a diverse set of artifacts (actual hardware
+      specification, high-level simulators, functional and non-functional
+      property proving).
+
+      I am also interested into applying functional programming and category
+      theory into the general context of asynchronous systems with a specific
+      emphasis on web technologies.
+    itemized:
+      - area: Cryptography
+        keywords:
+          - side channel attacks and countermeasures
+          - masking and probing security
+      - area: Hardware
+        keywords:
+          - design space exploration
+          - modeling and simulation
+          - hardware description languages
+      - area: Software
+        keywords:
+          - embedded operating systems
+          - virtualisation
+          - domain specific languages
+          - functional programming
+  awards:
+    - date: 2002-08-31T00:00:00.000Z
+      title: Dimitris N. Chorafas Award
+      summary: for the exceptional contribution to the state of the art of research in processor architecture.
+      sommario: per l'eccezionale contributo allo stato dell'arte dell'architettura dei processori
+      institution: Dimitris N. Chorafas Foundation
+      show: true
+      intro: dalla
+    - date: 2010-05-31T00:00:00.000Z
+      title: HiPEAC Award
+      summary: as a co-author of 'A Correlation-Based Design Space Exploration Methodology for Multiprocessor Systems-on-Chip' published at DAC 2010.
+      sommario: come coautore del lavoro 'A Correlation-Based Design Space Exploration Methodology for Multiprocessor Systems-on-Chip' pubblicato a DAC 2010.
+      institution: HiPEAC (High Performance and Embedded Architecture and Compilation)
+      show: true
+      intro: dal progetto
+    - date: 2012-11-16T00:00:00.000Z
+      title: Idea2Product, 2nd runner up
+      summary: for creating a valuable opportunity for product commercialization of research results.
+  grants:
+    - from: 2017-03-29T00:00:00.000Z
+      to: 2018-03-29T00:00:00.000Z
+      role: Principal investigator
+      type: Grant from industrial partner
+      institution: STMicroelectronics
+      project: Metodologia e Strumenti per la Valutazione di Circuiti Crittografici
+      funding:
+        amount: 30000
+        unit: EUR
+      highlight: true
+      ruolo: Responsabile della ricerca
+      tipologia: Ente privato
+      haspdf: T2.pdf
+    - from: 2015-07-10T00:00:00.000Z
+      to: 2016-07-10T00:00:00.000Z
+      role: Principal investigator
+      type: Grant from industrial partner
+      institution: STMicroelectronics
+      funding:
+        amount: 30000
+        unit: EUR
+      project: Strumenti di Progettazione e Verifica per Circuiti Crittografici
+      highlight: true
+      ruolo: Responsabile della ricerca
+      tipologia: Ente privato
+      haspdf: T1.pdf
+    - from: 2024-06-25T00:00:00.000Z
+      to: 2025-06-24T00:00:00.000Z
+      role: Principal investigator
+      type: Grant from industrial partner
+      institution: Security Pattern
+      funding:
+        amount: 10000
+        unit: EUR
+      project: Cybersecurity
+      highlight: true
+      ruolo: Responsabile della ricerca
+      tipologia: Ente privato
+    - from: 2001-12-16T00:00:00.000Z
+      to: 2003-03-16T00:00:00.000Z
+      role: Post Doc
+      type: Post-Doc Grant
+      institution: Politecnico di Milano
+      project: Power estimation and exploration of the architectural space at the system level for systems-on-chip
+      highlight: true
+      ruolo: Assegnista post-dottorato
+      tipologia: Ente pubblico
+    - from: 2007-11-01T00:00:00.000Z
+      to: 2009-10-31T00:00:00.000Z
+      type: Research Grant
+      institution: Politecnico di Milano
+      project: Multi-Objective Design Space Exploration of Multi-Processor SOC Architectures for Embedded Multimedia Applications
+      ruolo: Assegnista di ricerca
+      tipologia: Ente pubblico
+    - from: 1999-03-01T00:00:00.000Z
+      to: 2001-12-31T00:00:00.000Z
+      type: Ph.D. Fellowship
+      institution: STMicroelectronics
+      project: Methodologies for Power Estimation for VLIW Machines
+      ruolo: Borsista ricerca
+      tipologia: Ente privato
+  projectParticipations:
+    - name: Hardware Abstraction Layer for a European Software Defined Vehicle Approach
+      acronym: HAL4SDV
+      dateStart: 2024-04-01T00:00:00.000Z
+      dateEnd: 2027-03-30T00:00:00.000Z
+      number: 101139789
+      type: ChipsJU
+      role: Principal investigator
+      haspdf: T3.pdf
+      consortium:
+        - name: TTTech
+        - name: AVL
+        - name: Virtual Vehicle
+        - name: Technical university of Ostrava
+        - name: NXP
+        - name: University of Oulu
+        - name: DIMECC
+        - name: Unikie
+        - name: Renault
+        - name: Inria
+        - name: Université Cote d'Azur
+        - name: Valeo
+        - name: Dassault Systemes
+        - name: CEA
+        - name: Statinf
+        - name: Trust-in-soft
+        - name: SYSGO
+        - name: ZF Group
+        - name: ETAS
+        - name: BMW Group
+        - name: Mercedes Benz
+        - name: Infineon
+        - name: Bosch
+        - name: Cariad
+        - name: Continental
+        - name: Electrobit
+        - name: KIT
+        - name: FZI
+        - name: STTech
+        - name: Politecnico di Torino
+        - name: TUM
+        - name: University of Stuttgart - Germany
+        - name: Eclipse foundation
+        - name: Tensor embedded
+        - name: TeraGlobus
+        - name: TU Eindoven
+        - name: ISEP
+        - name: Critical software
+        - name: Ford Otosan
+        - name: Rovimatica
+        - name: CSIC
+        - name: Resiltech
+        - name: STMicroelectronics
+        - name: UNIMORE
+        - name: Politecnico di Milano
+        - name: Università di Bologna
+    - name: Design of embedded mixed-criticality CONTRol systems under consideration of EXtra-functional properties (CONTREX)
+      type: FP7
+      dateStart: 2013-10-01T00:00:00.000Z
+      dateEnd: 2016-09-30T00:00:00.000Z
+      acronym: CONTREX
+      consortium:
+        - name: Politecnico di Milano
+          country: Italy
+        - name: STMicroelectronics
+          country: Italy
+        - name: Offis e.V
+          country: Germany
+        - name: GMV Aerospace and Defence SA
+          country: Spain)
+        - name: Cobra
+          country: Switzerland
+        - name: EUROTECH Group S.p.A.
+          country: Italy
+        - name: Intecs SpA
+          country: Italy
+        - name: iXtronics GmbH
+          country: Germany
+        - name: EDALab s.r.l.
+          country: Italy
+        - name: DOCEA Power
+          country: France
+        - name: Politecnico di Torino
+          country: Italy
+        - name: University of Cantabria
+          country: Spain
+        - name: KTH (Royal Institute of Technology)
+          country: Sweden
+        - name: The European Electronic Chips and Systems design Initiative
+          country: France
+        - name: ST-PoliTo s.c.a.r.l.
+          country: Italy
+      role: Technical team member
+    - type: FP7
+      dateStart: 2009-12-01T00:00:00.000Z
+      dateEnd: 2013-03-31T00:00:00.000Z
+      name: CO-design and Power Management in PLatform-based Design Space EXploration (COMPLEX)
+      acronym: COMPLEX
+      consortium:
+        - name: Politecnico di Milano
+          country: Italy
+        - name: STMicroelectronics
+          country: Italy
+        - name: STMicroelectronics
+          country: China
+        - name: Offis e.V
+          country: Germany
+        - name: Thales Communications SA
+          country: France
+        - name: GMV Aerospace and Defence SA
+          country: Spain
+        - name: Synopsys Belgium NV
+          country: Belgium
+        - name: ChipVision Design Systems AG
+          country: Germany
+        - name: EDALab srl
+          country: Italy
+        - name: Magillem Design Services SAS
+          country: France
+        - name: Politecnico di Milano
+          country: Italy
+        - name: Universidad de Cantabria
+          country: Spain
+        - name: Politecnico di Torino
+          country: Italy
+        - name: Interuniversitair Micro-Electronica Centrum vzw
+          country: Blegium
+        - name: The European Electronic Chips and Systems design Initiative
+          country: France
+      role: Technical team member
+    - type: FP7
+      dateStart: 2010-01-01T00:00:00.000Z
+      dateEnd: 2012-12-31T00:00:00.000Z
+      coordinator: Cristina Silvano
+      acronym: 2PARMA
+      name: PARallel PAradigms and Run-time MAnagement techniques for Many-core Architectures
+      consortium:
+        - name: Politecnico di Milano
+          country: Italy
+        - name: STMicroelectronics
+          country: Italy
+        - name: STMicroelectronics
+          country: France
+        - name: Fraunhofer Institute for Telecommunications Heinrich Hertz Institute (HHI)
+          country: Germany
+        - name: Institute of Communication and Computer Systems
+          country: Greece
+        - name: Rheinisch-Westfaelische Technische Hochschule Aachen
+          country: Germany
+        - name: Synopsys
+          country: Belgium
+      role: Technical team member
+      highlights:
+        - development team leader for an advanced production-grade language and interpreter supporting design space exploration
+        - integration activities of design space exploration tools within the context of the project itself.
+    - type: FP7
+      dateStart: 2008-01-01T00:00:00.000Z
+      dateEnd: 2010-06-01T00:00:00.000Z
+      coordinator: Cristina Silvano
+      acronym: Multicube
+      consortium:
+        - name: Politecnico di Milano
+          country: Italy
+        - name: DS2
+          country: Spain
+        - name: STMicroelectronics
+          country: Italy
+        - name: STMicroelectronics
+          country: China
+        - name: Imec
+          country: Belgium
+        - name: Esteco
+          country: Italy
+        - name: ALaRI
+          country: Switzerland
+        - name: ICT
+          country: China
+      role: Technical team member
+      name: Multi-objective design space exploration of multi-processor SoC architectures for embedded multimedia applications
+  students:
+    - name: Joan Bushi
+      year: 2023
+      title: 'Subject: A new secure channel protocol based on sponge functions'
+      company: Security Pattern
+    - name: Davide Grazioli
+      year: 2023
+      title: 'Subject: Implementation of PQC signatures using sponge functions'
+      company: Security Pattern
+    - name: Matteo Carrara
+      year: 2023
+      title: 'Subject: A DSL language for chip assembly'
+      company: STMicroelectronics
+    - name: Francesco Aristei
+      year: 2023
+      title: 'Subject: Extension of OsNoise hardware tracing to virtualised guests'
+      company: RedHat
+    - name: Edoardo Poggi
+      year: 2023
+      title: 'Subject: Design space exploration of automotive systems'' memory management units'
+      company: STMicroelectronics
+    - name: Giorgio Maria Grandi
+      year: 2023
+      title: 'Subject: Security in automotive NoCs'
+      company: STMicroelectronics
+    - name: Davide Pozzi
+      year: 2023
+      title: 'Subject: Automotive functional safety libraries'
+      company: STMicroelectronics
+    - name: Daniele Carta
+      year: 2022
+      title: Efficient attack-surface exploration for electromagnetic fault injection
+      company: Security Pattern
+    - name: Andrea Aspesi
+      year: 2022
+      title: 'ConceptOS: a micro-kernel approach to over-the-air firmware updates on resource constrained IoT systems'
+    - name: Giuseppe Manzoni
+      year: 2022
+      title: An Analysis of Random Probing Security Properties in Masked Cryptographic Circuits
+    - name: Davide Li Calsi
+      year: 2022
+      title: Interruptible Remote Attestation via Performance Counters
+    - name: Alessandro Elio Cantini
+      year: 2019
+      title: Progetto e valutazione di una rete neurale eseguita su un sistema embedded a bassa potenza
+      company: STMicroelectronics
+    - name: Marco Redaelli
+      year: 2019
+      title: '(provisional): A side channel attack methodology'
+      company: Security pattern
+    - name: Nicola Castaldo
+      year: 2019
+      title: A conceptual modeling approach for the rapid development of chatbots for conversational data exploration
+    - name: Stefano Gianelli and Valerio Cassani
+      year: 2016
+      title: Progettazione di mashup per dispositivi mobili un metodo basato sulla modellazione di contesto
+    - name: Stefano Lucchi and Davide Fava
+      year: 2017
+      title: Mash-up based service and data integration in the CAMUS framework
+    - name: Lorenzo Delledonne
+      year: 2017
+      title: A methodology based on functional languages for the design of hardware cryptographic primitives resistant to side-channel attacks
+    - name: Simone Borgio and Davide Bosisio
+      title: OpenStreamC - a development framework for streaming applications
+    - name: Zhong Yi Hu
+      title: Power modeling of Networks-on-chip
+    - name: Fabrizio Lucini
+      title: Specification and design of a prefetch unit for translating code at run-time
+    - name: Simone Valsecchi
+      title: An algorithm for the efficient exploration of the architectural design space for microprocessor-based systems
+    - name: Gianluca Palermo
+      title: A methodology for architectural exploration and information encoding for low-power digital systems
+    - name: Alessandro Molgora and Claudio Lozza
+      title: Low-power state encoding techniques for finite state machines
+    - name: Marco Gavazzi
+      title: Low-power VLIW re-scheduling algorithms
+    - name: Lorenzo Salvemini
+      title: An architectural exploration methodology for low-power digital systems
+    - name: Andrea Bona
+      title: A design of experiments methodology in a power estimation flow for VLIW processors
+  phdStudents:
+    - name: Maria Chiara Molteni
+      institution: Università di Milano
+      role: co-advisor
+      init: 2018-11-01T00:00:00.000Z
+      end: 2021-11-01T00:00:00.000Z
+      ruolo: correlatore
+      titolo: 'On the security of cryptographic circuits: protection against probing attacks and performance improvement of garbled circuits'
+      relatore: Stelvio Cimato
+      correlatori: Vittorio Zaccaria, Valentina Ciriani
+  mentorship:
+    - name: Edoardo Paone
+      institution: Politecnico di Milano
+      role: mentor
+    - name: Giovanni Mariani
+      institution: ALaRI - University of Lugano
+      role: mentor
+  stages:
+    - name: Matteo Cairoli
+      init: 2018-10-01T00:00:00.000Z
+      end: 2018-11-19T00:00:00.000Z
+      company: Kalpa
+      credits: 5
+      hours: 256
+      mand: true
+    - name: Lorenzo Sanvito
+      init: 2018-04-26T00:00:00.000Z
+      end: 2018-07-20T00:00:00.000Z
+      company:Sfelab: null
+      credits: 0
+      hours: 540
+      mand: false
+    - name: Dario Cressoni
+      init: 2018-05-01T00:00:00.000Z
+      end: 2017-07-24T00:00:00.000Z
+      credits 10: null
+      hours: 350
+      mand: true
+    - name: Alessandro Macchi
+      init: 2017-10-02T00:00:00.000Z
+      end: 2018-01-02T00:00:00.000Z
+      credits: 10
+      hours: 960
+      mand: true
+    - name: Andrea Masi
+      init: 2018-03-16T00:00:00.000Z
+      end: 2018-06-16T00:00:00.000Z
+      credits: 10
+      hours: 350
+      mand: true
+    - name: Dario Messina
+      init: 2018-10-04T00:00:00.000Z
+      end: 2019-01-04T00:00:00.000Z
+      company: Outsystems
+      credits: 10
+      hours: 480
+      mand: true
+    - name: Alessandro Borgonovo
+      init: 2018-10-01T00:00:00.000Z
+      end: 2019-03-31T00:00:00.000Z
+      company: Ideatech
+      credits: 10
+      hours: 960
+      mand: true
+    - name: Panzeri Ruggero
+      init: 2019-02-27T00:00:00.000Z
+      end: 2019-08-26T00:00:00.000Z
+      company: Solunica
+      credits: 10
+      hours: 960
+      mand: true
+  committees:
+    - name: PARMA-DITAM Workshop
+      year: 2021
+      date: '2022-06-22'
+      role: member of TPC
+      ruolo: membro del TPC
+      address: Budapest, Hungary and Virtual
+      h: true
+    - name: COMPSAC (SEPT)
+      year: 2021
+      date: '2021-07-12'
+      role: member of TPC
+      ruolo: membro del TPC
+      address: Virtual
+      h: true
+    - name: COSADE
+      year: 2021
+      date: '2021-10-20'
+      role: member of TPC
+      ruolo: membro del TPC
+      address: Lugano, Switzerland
+      h: true
+    - name: PARMA-DITAM Workshop
+      year: 2021
+      date: '2021-01-19'
+      role: member of TPC
+      ruolo: membro del TPC
+      address: Budapest, Hungary
+      h: true
+    - name: PARMA-DITAM Workshop
+      year: 2020
+      date: '2020-01-21'
+      role: member of TPC
+      ruolo: membro del TPC
+      address: Bologna, Italy
+      h: true
+    - name: PARMA-DITAM Workshop
+      year: 2018
+      date: '2018-01-23'
+      role: member of TPC
+      ruolo: membro del TPC
+      address: Manchester, United Kingdom
+      h: true
+    - name: DITAM Workshop
+      year: 2013
+      date: '2013-01-22'
+      role: member of TPC
+      ruolo: membro del TPC e web chair
+      address: Berlin, Germany
+    - name: DITAM Workshop
+      year: 2012
+      date: '2012-12-24'
+      role: member of TPC
+      ruolo: membro del TPC e poster session chair
+      address: Paris, France
+    - name: ADAPT Workshop
+      year: 2016
+      date: '2016-01-18'
+      role: member of TPC
+      ruolo: membro del TPC
+      address: Prague, Czech Republic
+      h: true
+    - name: ADAPT Workshop
+      year: 2015
+      date: '2015-01-21'
+      role: member of TPC
+      ruolo: membro del TPC
+      address: Amsterdam, The Netherlands
+    - name: ADAPT Workshop
+      year: 2014
+      date: '2014-01-22'
+      role: member of TPC
+      ruolo: membro del TPC
+      address: Vienna, Austria
+    - name: PARMA Workshop (co-located with ARCS)
+      year: 2012
+      date: '2012-02-29'
+      role: program co-chair
+      ruolo: program co-chair
+      address: Munich, Germany
+      h: true
+    - name: PARMA Workshop (co-located with ARCS)
+      year: 2011
+      date: '2011-02-23'
+      role: member of TPC
+      ruolo: membro del TPC
+      address: Como, Italy
+    - name: PARMA Workshop (co-located with ARCS)
+      year: 2010
+      date: '2010-02-22'
+      role: member of TPC
+      ruolo: membro del TPC
+      address: Hannover, Germany
+    - name: NoCArc Workshop
+      year: 2012
+      date: '2012-12-01'
+      role: member of TPC
+      ruolo: membro del TPC
+      address: Vancouver, Canada
+    - name: NoCArc Workshop
+      year: 2010
+      date: '2010-12-04'
+      role: member of TPC
+      ruolo: membro del TPC
+      address: Atlanta, USA
+    - name: NoCArc Workshop
+      year: 2009
+      date: '2009-12-12'
+      role: member of TPC
+      ruolo: membro del TPC
+      address: New York City, USA
+    - name: NoCArc Workshop
+      year: 2008
+      date: '2008-11-08'
+      role: member of TPC
+      ruolo: membro del TPC
+      address: Como, Italy
+    - name: Trust Workshop
+      year: 2014
+      date: '2014-06-12'
+      role: member of TPC
+      ruolo: membro del TPC
+      address: Edinburgh, UK
+    - name: Micro Conference
+      year: 2008
+      date: '2008-11-10'
+      role: member of local committee
+      ruolo: membro del local committee
+      address: Como, Italy
+      end: '2008-11-12'
+      h: true
+    - name: DATE Conference - Track A8 (Multi-Core Platforms)
+      year: 2009
+      date: '2009-04-20'
+      role: member of TPC and session chair
+      ruolo: membro del TPC e session chair
+      address: Nice, France
+      end: '2009-04-24'
+      h: true
+    - name: DATE Conference - Track A8 (Multi-Core Platforms)
+      year: 2008
+      date: '2008-03-10'
+      role: member of TPC
+      ruolo: membro del TPC
+      address: Munich, Germany
+      end: '2008-03-14'
+      h: true
+  talks:
+    - name: Date Conference
+      year: 2025
+      role: speaker
+      ruolo: speaker
+      address: Lyon, France
+      date: '2025-03-31'
+      title: 'Design, implementation and validation of NSCP: a new secure channel protocol for hardened iot'
+    - name: TII Cryptoseminar
+      year: 2021
+      role: speaker
+      ruolo: speaker
+      address: Abu Dhabi, United Arab Emirates
+      date: '2021-01-27'
+      title: An F-algebra for analysing information leaks in the presence of glitches
+    - name: ESTIMEDIA Workshop
+      year: 2012
+      role: Keynote speaker
+      ruolo: Keynote speaker
+      address: Tampere, Finland
+      date: '2012-10-11'
+      title: Design space exploration and run-time resource management in the embedded multi-core era
+      ref: K0
+    - name: HPSC Conference
+      year: 2013
+      role: Keynote speaker
+      ruolo: Keynote speaker
+      address: Taipei, Taiwan
+      date: '2013-03-29'
+      title: Principles of Design Space Exploration in the Embedded Multi-core Era
+      ref: K1
+    - name: Platform 2012 / STHORM Workshop
+      year: 2013
+      role: speaker
+      ruolo: relatore
+      address: Grenoble, France
+      date: '2013-03-22'
+      title: An Exploration Methodology for a Customizable OpenCL Stereo-Matching Application Targeted to P2012
+    - name: RMC Challenge
+      year: 2016
+      role: speaker
+      ruolo: relatore
+      address: Lugano, Switzerland
+      date: '2016-06-06'
+      title: On the Role of Context in the Design of Mobile Mashups
+    - name: SASP Symposium
+      year: 2008
+      role: speaker
+      ruolo: relatore
+      address: Anaheim, USA
+      date: '2008-09-08'
+      title: An efficient design space exploration methodology for on-chip multiprocessors subject to application-specific constraints
+    - name: CODES 2001 Symposium
+      year: 2001
+      role: speaker
+      ruolo: relatore
+      address: Copenhagen, Denmark
+      date: '2001-04-27'
+      title: A Design Framework to Efficiently Explore Energy-Delay Tradeoffs
+    - name: DAC Conference
+      year: 2002
+      role: speaker
+      ruolo: relatore
+      address: New Orleans, USA
+      date: '2002-06-13'
+      title: Energy estimation and optimization of embedded VLIW processors based on instruction clustering
+    - name: ISCAS Conference
+      year: 2001
+      role: speaker
+      ruolo: relatore
+      address: Sydney, Australia
+      date: '2001-05-09'
+      title: Fast system-level exploration of memory architectures driven by energy-delay metrics
+  boards:
+    - name: Electronics
+      type: journal
+      start: 2021-02-09T00:00:00.000Z
+      end: 2023-02-09T00:00:00.000Z
+      role: editorial board member
+      section: Computer Science & Engineering Section
+      publisher: MDPI
+    - name: Electronics - Special Issue on Operating Systems and Hardware Security
+      type: journal
+      start: 2022-09-01T00:00:00.000Z
+      end: 2023-05-01T00:00:00.000Z
+      role: guest editor
+      section: Computer Science & Engineering Section
+      publisher: MDPI
+  peerReview:
+    - date: '2022-03-01'
+      name: ISC HPC
+      type: conference
+    - date: '2021-08-30'
+      name: IEEE Embedded Systems Letters
+      type: journal
+      onpublons: true
+    - date: '2021-02-01'
+      name: Design Automation for Embedded Systems
+      type: journal
+      onpublons: true
+    - date: '2020-11-03'
+      name: IEEE Transactions on Computers
+      type: journal
+      onpublons: true
+    - date: '2019-07-10'
+      name: IEEE Transactions on Dependable and Secure Computing
+      type: journal
+      onpublons: true
+    - date: '2016-08-01'
+      name: IEEE Transactions on Computers
+      type: journal
+      onpublons: true
+    - date: '2016-05-19'
+      name: 'Concurrency and Computation: Practice and Experience'
+      type: journal
+      onpublons: true
+    - date: '2014-11-12'
+      name: IEEE Transactions on Emerging Topics in Computing
+      type: journal
+      onpublons: true
+    - date: '2013-04-29'
+      name: Transactions on Embedded Computing Systems
+      type: journal
+      onpublons: true
+    - date: '2011-05-17'
+      name: Transactions on Embedded Computing Systems
+      type: journal
+      onpublons: true
+    - date: '2011-05-09'
+      name: Transactions on Embedded Computing Systems
+      type: journal
+      onpublons: true
+    - date: '2011-05-11'
+      name: IEEE Transactions on Very Large Scale Integration Systems
+      type: journal
+    - date: '2011-12-31'
+      name: Journal of Low Power Electronics JOLPE
+      type: journal
+    - date: '2013-05-01'
+      name: Transactions on Parallel and Distributed Systems
+      type: journal
+    - date: '2012-01-09'
+      name: Design Automation Conference
+      type: conference
+  patents:
+    - title: Process for translating instructions for an arm-type processor into instructions for a LX-type processor; relative translator device and computer program product
+      authors:
+        - Andrea Pagni
+        - Fabrizio Lucini
+        - Danilo Pietro Pau
+        - Antonio Maria Borneo
+        - Vittorio Zaccaria
+      date: 2007-07-10T00:00:00.000Z
+      number: '7243213'
+      type: US
+      haspdf: P2.pdf
+      link: http://www.patentlens.net/patentlens/patent/US_7243213/en
+    - title: Processor architecture
+      authors:
+        - Mariagiovanna Sami
+        - Donatella Sciuto
+        - Cristina Silvano
+        - Vittorio Zaccaria
+        - Danilo Pau
+        - Roberto Zafalon
+      date: 2005-05-03T00:00:00.000Z
+      type: US
+      number: '6889317'
+      link: http://www.patentlens.net/patentlens/patent/US_6889317/en
+      haspdf: P1.pdf
+  videos:
+    - title: Past and current research
+      recordedOn: January 13th, 2014, Milano (IT)
+      link: //player.vimeo.com/video/98439511
+      description: ' Here is the talk I gave about my research interests in computer modeling and architecture, focusing on the lessons I''ve learnt along the way.'
+      languages:
+        - 'spoken: italian'
+        - 'slides: english'
+    - title: DAC 2012 University Booth
+      recordedOn: June 2012, San Francisco (US)
+      link: //www.youtube.com/embed/Ne6Y8Pg6MfY
+      description: The video we presented at the Design Automation Conference on June 2012.
+    - title: '2PARMA Project: a success story'
+      recordedOn: 2012, Milan
+      link: //www.youtube.com/embed/hyAeoI2qsbg
+      description: Wrapping up the work done in the 2PARMA project.
+  history:
+    - from: 2015
+      title: Countermeasures against side-channel attacks
+      description: |
+        This project started from an actual industrial need, i.e., providing
+        the designer of cryptographic algorithms with guidelines and tools
+        that make it possible to implement and validate the primitive while
+        assessing the desired level of protection.
+
+        The problems with existing methods and tools that brought us to seek
+        new approaches are just a few; first, high level
+        specification/prototyping of the algorithm is decoupled from low level
+        implementation. This brings a host of issues, among which the fact
+        that manual translation can introduce subtle bugs and unanticipated
+        behavior. Besides this, the specification is usually done in weakly
+        typed languages, bringing additional source of unexpected behavior,
+        test and refactoring complexity.
+
+        My main goal is to investigate how a strongly typed functional
+        programming language could be used to build a DSLs to synthesize these
+        kind of algorithms in hardware, by bridging the gap between spec and
+        implementation with automatic tools.
+      achievements:
+        - The POLIMI-CASCA methodology, based on the Haskell programming language
+    - from: 1999
+      title: Power estimation and optimization of processor-based systems
+      description: |
+        Since 1999, I have been interested into estimating and optimizing
+        the power consumption of microprocessors and microprocessor-based
+        systems.
+      achievements:
+        - Developed an analytical model that takes into account software-level parameters (instruction ordering, pipeline stall probability and instruction cache miss probability) and micro-architectural-level ones (pipeline stage power per instruction).
+        - Validated the model on an industrial VLIW processor jointly designed by HPLabs and STMicroelectronics.
+        - Defined a register file write inhibition scheme that exploits the forwarding paths in VLIW processors.
+        - Designed a dynamic power management policy for general purpose operating systems.
+        - Designed a method for the exploration of the architectural parameters of the memory sub-systems, from the energy-delay joint perspective.
+        - Developed Multicube Explorer, a tool for experimenting with multi-objective exploration.
+        - Developed accurate performance and power modeling characterization of applications with emphasis on parallel processors architectures and network-on-chips.
+        - Developed optimal tuning of the memory hierarchy, processor parallelism (intra and inter-task) and processor interconnection network.
+        - Developed optimal software task mapping and scheduling onto the target processor units and optimal communication scheduling.
+        - Designed run-time design space exploration for trading-off quality-of-service with actual power constraints.
+        - Robust optimization with respect to several levels of uncertainties such as workload variability, model estimation accuracy and manufacturing process variability.
+        - Specified and implemented power characterization and high-level power estimation  work-flows for the STBus Network on Chip.  The STBus is a high-performance, low-latency on chip parameterizable network supported by production grade specification and synthesis tools.
+    - from: 2004
+      to: 2008
+      title: Task Level Parallelism
+      description: |
+        During my 4 years stint in the industry, I have worked on
+        a variety of projects related to exploiting task level parallelism.
+        I have had the opportunity to work within an international team
+        on the entire stack of hardware and software design tools for
+        an embedded processor.
+      achievements:
+        - Specified and validated embedded shared-memory multi-processor systems.
+        - Designed run-time and operating system components including embedded co-hosting technology for the ST230 microprocessor.
+        - Studied and created a parallel programming framework for industrial multi-processor architectures.
+        - Specified secure storage extensions for embedded processors.
+        - Developed secure co-hosting solutions for industrial applications.
+        - Involved in the study and implementation of novel cryptographic power attack techniques based on cache-miss induction.
+teaching:
+  currentGoals: ''
+  courses:
+    - aaInit: 2025
+      aaEnd: 2026
+      position: Titolare
+      crediti: 5
+      ore: 50
+      courseName: Advanced Operating Systems
+      titolare: Vittorio Zaccaria
+      level: Laurea Magistrale in Ingegneria Informatica
+      institution: Politecnico di Milano
+      students: 100+
+      short: PoliMi - Ing. Inf. LM
+      link: https://vzaccaria.notion.site/Advanced-Operating-Systems-A-A-2025-2026-Polimi-23ef43ba76ac80efb9d4de6ea6503b83
+    - aaInit: 2024
+      aaEnd: 2025
+      position: Titolare
+      crediti: 5
+      ore: 25
+      courseName: Virtualisation for embedded and real-time systems
+      titolare: Vittorio Zaccaria
+      co-titolare: Federico Reghenzani
+      type: phd
+      level: Ph.D. in Ingegneria dell'informazione e Laurea Magistrale in Ingegneria Informatica
+      institution: Politecnico di Milano
+      students: '10'
+      short: PoliMi - Phd. Ing. Inf e LM Ing. Inf.
+      link: https://vzaccaria.notion.site/Virtualisation-for-embedded-and-real-time-systems-A-A-2024-2025-6534cd433360489e9789125d4a25a615
+      haspdf: T4.pdf
+    - aaInit: 2024
+      aaEnd: 2025
+      position: Titolare
+      crediti: 5
+      ore: 50
+      courseName: Advanced Operating Systems
+      titolare: Vittorio Zaccaria
+      level: Laurea Magistrale in Ingegneria Informatica
+      institution: Politecnico di Milano
+      students: 100+
+      short: PoliMi - Ing. Inf. LM
+      link: https://vzaccaria.notion.site/Advanced-Operating-Systems-A-A-2024-2025-Polimi-875d80ff46c84db3b659383cb8c8f832
+    - aaInit: 2024
+      aaEnd: 2025
+      position: Titolare
+      crediti: 5
+      ore: 50
+      courseName: Principi di Architetture dei Calcolatori
+      titolare: Vittorio Zaccaria
+      level: Laurea di primo livello in Ingegneria Elettronica
+      institution: Politecnico di Milano
+      students: 200+
+      short: PoliMi - Ing. Elett. - 1 Liv
+      link: https://vzaccaria.notion.site/Principi-di-Architetture-dei-Calcolatori-A-A-2024-2025-Polimi-191f43ba76ac80e2913edec6d0f555c5
+    - aaInit: 2023
+      aaEnd: 2024
+      position: Titolare
+      crediti: 5
+      ore: 50
+      courseName: Principi di Architetture dei Calcolatori
+      titolare: Vittorio Zaccaria
+      level: Laurea di primo livello in Ingegneria Elettronica
+      institution: Politecnico di Milano
+      students: 200+
+      short: PoliMi - Ing. Elett. - 1 Liv
+      link: https://vzaccaria.notion.site/Principi-di-Architetture-dei-Calcolatori-A-A-2023-2024-Polimi-96738a328a534b74895101c5c65db484
+    - aaInit: 2023
+      aaEnd: 2024
+      position: Titolare
+      crediti: 5
+      ore: 50
+      courseName: Advanced Operating Systems
+      titolare: Vittorio Zaccaria
+      level: Laurea Magistrale in Ingegneria Informatica
+      institution: Politecnico di Milano
+      students: 100+
+      short: PoliMi - Ing. Inf. LM
+      link: https://vzaccaria.notion.site/Advanced-Operating-Systems-A-A-2023-2024-Polimi-554bcf13590542d4bd65c8901f7f8a8c
+    - aaInit: 2022
+      aaEnd: 2023
+      position: Titolare
+      crediti: 5
+      ore: 50
+      courseName: Principi di Architetture dei Calcolatori
+      titolare: Vittorio Zaccaria
+      level: Laurea di primo livello in Ingegneria Elettronica
+      institution: Politecnico di Milano
+      students: 200+
+      short: PoliMi - Ing. Elett. - 1 Liv
+      link: https://vzaccaria.notion.site/Principi-di-Architetture-dei-Calcolatori-A-A-2022-2023-Polimi-d4eb6ef1912845c0b02db0decad55729
+    - aaInit: 2022
+      aaEnd: 2023
+      position: Titolare
+      crediti: 5
+      ore: 50
+      courseName: Advanced Operating Systems
+      titolare: Vittorio Zaccaria
+      level: Laurea Magistrale in Ingegneria Informatica
+      institution: Politecnico di Milano
+      students: 100+
+      short: PoliMi - Ing. Inf. LM
+      link: https://www.notion.so/vzaccaria/Advanced-Operating-Systems-A-A-2022-2023-Polimi-2bb28d40797f46edb1f23848eca05a59
+    - aaInit: 2021
+      aaEnd: 2022
+      position: Titolare
+      crediti: 5
+      ore: 50
+      courseName: Principi di Architetture dei Calcolatori
+      titolare: Vittorio Zaccaria
+      level: Laurea di primo livello in Ingegneria Elettronica
+      institution: Politecnico di Milano
+      students: 200+
+      short: PoliMi - Ing. Elett. - 1 Liv
+      link: https://www.notion.so/vzaccaria/Principi-di-Architetture-dei-Calcolatori-A-A-2021-2022-Polimi-d2a61d9aef074e84b504445ebba6cd1c
+    - aaInit: 2021
+      aaEnd: 2022
+      position: Titolare
+      crediti: 5
+      ore: 50
+      courseName: Advanced Operating Systems
+      titolare: Vittorio Zaccaria
+      level: Laurea Magistrale in Ingegneria Informatica
+      institution: Politecnico di Milano
+      students: 100+
+      short: PoliMi - Ing. Inf. LM
+      link: https://www.notion.so/vzaccaria/Advanced-Operating-Systems-A-A-2021-2022-Polimi-f77b9fb8c9ea43ea953f40c35b84593a
+    - aaInit: 2020
+      aaEnd: 2021
+      position: Titolare
+      crediti: 5
+      ore: 50
+      courseName: Principi di Architetture dei Calcolatori
+      titolare: Vittorio Zaccaria
+      level: Laurea di primo livello in Ingegneria Elettronica
+      institution: Politecnico di Milano
+      students: 200+
+      short: PoliMi - Ing. Elett. - 1 Liv
+      link: https://www.notion.so/vzaccaria/Principi-di-Architetture-dei-Calcolatori-A-A-2020-2021-Polimi-555365146c5a4190af475232ffda158c
+    - aaInit: 2020
+      aaEnd: 2021
+      position: Esercitatore
+      crediti: 'N'
+      ore: 20
+      courseName: Principi di Architetture dei Calcolatori
+      titolare: Vittorio Zaccaria
+      level: Laurea di primo livello in Ingegneria Elettronica
+      institution: Politecnico di Milano
+    - aaInit: 2020
+      aaEnd: 2021
+      position: Titolare
+      crediti: 7
+      ore: 29
+      courseName: Informatica B
+      titolare: Vittorio Zaccaria
+      level: Laurea di primo livello in Ingegneria Meccanica ed Energetica
+      institution: Politecnico di Milano
+      students: 200+
+      short: PoliMi - Ing. Mec. e Ener. - 1 Liv
+      link: https://www.notion.so/vzaccaria/Informatica-B-BV-A-A-2020-2021-Polimi-bcfb8a89ecab4687b00d1f02d7b142ac
+    - aaInit: 2019
+      aaEnd: 2020
+      position: Titolare
+      crediti: 5
+      ore: 50
+      courseName: Principi di Architetture dei Calcolatori
+      titolare: Vittorio Zaccaria
+      level: Laurea di primo livello in Ingegneria Elettronica
+      institution: Politecnico di Milano
+      students: 200+
+      short: PoliMi - Ing. Elett. - 1 Liv
+    - aaInit: 2019
+      aaEnd: 2020
+      position: Esercitatore
+      crediti: 'N'
+      ore: 20
+      courseName: Principi di Architetture dei Calcolatori
+      titolare: Vittorio Zaccaria
+      level: Laurea di primo livello in Ingegneria Elettronica
+      institution: Politecnico di Milano
+    - aaInit: 2019
+      aaEnd: 2020
+      position: Titolare
+      crediti: 7
+      ore: 29
+      courseName: Informatica B
+      titolare: Vittorio Zaccaria
+      level: Laurea di primo livello in Ingegneria Meccanica ed Energetica
+      institution: Politecnico di Milano
+      students: 200+
+      short: PoliMi - Ing. Mec. e Ener. - 1 Liv
+    - aaInit: 2019
+      aaEnd: 2020
+      position: Esercitatore
+      crediti: 'N'
+      ore: 26
+      courseName: Informatica B
+      titolare: Vittorio Zaccaria
+      level: Laurea di primo livello in Ingegneria Meccanica ed Energetica
+      institution: Politecnico di Milano
+    - aaInit: 2018
+      aaEnd: 2019
+      position: Esercitatore
+      crediti: 'N'
+      ore: 20
+      courseName: Hypermedia Applications (Web and multimedia)
+      titolare: Franca Garzotto
+      level: Laurea magistrale in Ingegneria Informatica
+      institution: Politecnico di Milano
+    - aaInit: 2018
+      aaEnd: 2019
+      position: Titolare
+      crediti: 3
+      ore: 30
+      courseName: Technologies for Connected Products and Systems
+      titolare: Vittorio Zaccaria
+      level: Laurea Magistrale in Digital and Interaction Design
+      institution: Politecnico di Milano
+      students: 20+
+      short: PoliMi - Design - LM
+    - aaInit: 2018
+      aaEnd: 2019
+      position: Titolare
+      crediti: 7
+      ore: 33
+      courseName: Informatica B
+      titolare: Vittorio Zaccaria
+      level: Laurea di primo livello in Ingegneria Meccanica ed Energetica
+      institution: Politecnico di Milano
+      students: 200+
+      short: PoliMi - Ing. Mec. e Ener. - 1 Liv
+    - aaInit: 2018
+      aaEnd: 2019
+      position: Esercitatore
+      crediti: 'N'
+      ore: 28
+      courseName: Informatica B
+      titolare: Vittorio Zaccaria
+      level: Laurea di primo livello in Ingegneria Meccanica ed Energetica
+      institution: Politecnico di Milano
+    - aaInit: 2017
+      aaEnd: 2018
+      position: Esercitatore
+      crediti: 'N'
+      ore: 20
+      courseName: Hypermedia Applications (Web and multimedia)
+      titolare: Franca Garzotto
+      level: Laurea magistrale in Ingegneria Informatica
+      institution: Politecnico di Milano
+    - aaInit: 2017
+      aaEnd: 2018
+      position: Titolare
+      crediti: 7
+      ore: 36
+      courseName: Informatica B
+      titolare: Vittorio Zaccaria
+      level: Laurea di primo livello in Ingegneria Meccanica ed Energetica
+      institution: Politecnico di Milano
+      students: 200+
+      short: PoliMi - Ing. Mec. e Ener. - 1 Liv
+    - aaInit: 2017
+      aaEnd: 2018
+      position: Esercitatore
+      crediti: 'N'
+      ore: 28
+      courseName: Informatica B
+      titolare: Vittorio Zaccaria
+      level: Laurea di primo livello in Ingegneria Meccanica ed Energetica
+      institution: Politecnico di Milano
+    - aaInit: 2016
+      aaEnd: 2017
+      position: Esercitatore
+      crediti: 'N'
+      ore: 20
+      courseName: Hypermedia Applications (Web and multimedia)
+      titolare: Franca Garzotto
+      level: Laurea magistrale in Ingegneria Informatica
+      institution: Politecnico di Milano
+    - aaInit: 2016
+      aaEnd: 2017
+      position: Titolare
+      crediti: 7
+      ore: 36
+      courseName: Informatica B
+      titolare: Vittorio Zaccaria
+      level: Laurea di primo livello in Ingegneria Meccanica ed Energetica
+      institution: Politecnico di Milano
+      students: 200+
+      short: PoliMi - Ing. Mec. e Ener. - 1 Liv
+    - aaInit: 2016
+      aaEnd: 2017
+      position: Esercitatore
+      crediti: 'N'
+      ore: 28
+      courseName: Informatica B
+      titolare: Vittorio Zaccaria
+      level: Laurea di primo livello in Ingegneria Meccanica ed Energetica
+      institution: Politecnico di Milano
+    - aaInit: 2015
+      aaEnd: 2016
+      position: Titolare
+      crediti: 7
+      ore: 36
+      courseName: Informatica B
+      titolare: Vittorio Zaccaria
+      level: Laurea di primo livello in Ingegneria Meccanica ed Energetica
+      institution: Politecnico di Milano
+      students: 200+
+      short: PoliMi - Ing. Mec. e Ener. - 1 Liv
+    - aaInit: 2014
+      aaEnd: 2015
+      position: Titolare
+      crediti: 7
+      ore: 39
+      courseName: Informatica B
+      titolare: Vittorio Zaccaria
+      level: Laurea di primo livello in Ingegneria Meccanica ed Energetica
+      institution: Politecnico di Milano
+      students: 200+
+      short: PoliMi - Ing. Mec. e Ener. - 1 Liv
+    - aaInit: 2014
+      aaEnd: 2015
+      position: Esercitatore
+      crediti: 'N'
+      ore: 18
+      courseName: Informatica B
+      titolare: Vittorio Zaccaria
+      level: Laurea di primo livello in Ingegneria Meccanica ed Energetica
+      institution: Politecnico di Milano
+    - aaInit: 2014
+      aaEnd: 2015
+      position: Esercitatore
+      crediti: 'N'
+      ore: 10
+      courseName: Architettura dei Calcolatori e Sistemi Operativi
+      titolare: Roberto Negrini
+      level: Laurea di primo livello in Ingegneria Informatica
+      institution: Politecnico di Milano
+    - aaInit: 2013
+      aaEnd: 2014
+      position: Esercitatore
+      crediti: 'N'
+      ore: 11
+      courseName: Architettura dei Calcolatori e Sistemi Operativi
+      titolare: Roberto Negrini
+      level: Laurea di primo livello in Ingegneria Informatica
+      institution: Politecnico di Milano
+    - aaInit: 2013
+      aaEnd: 2014
+      position: Titolare
+      crediti: 7
+      ore: 39
+      courseName: Informatica B
+      titolare: Vittorio Zaccaria
+      level: Laurea di primo livello in Ingegneria Meccanica ed Energetica
+      institution: Politecnico di Milano
+    - aaInit: 2012
+      aaEnd: 2013
+      position: Titolare
+      crediti: 7
+      ore: 39
+      courseName: Informatica B
+      titolare: Vittorio Zaccaria
+      level: Laurea di primo livello in Ingegneria Meccanica ed Energetica
+      institution: Politecnico di Milano
+    - aaInit: 2011
+      aaEnd: 2012
+      position: Titolare
+      crediti: 7
+      ore: 39
+      courseName: Informatica B
+      titolare: Vittorio Zaccaria
+      level: Laurea di primo livello in Ingegneria Meccanica ed Energetica
+      institution: Politecnico di Milano
+    - aaInit: 2010
+      aaEnd: 2011
+      position: Esercitatore
+      crediti: 'N'
+      ore: 24
+      courseName: Informatica ed Elementi di Informatica Medica
+      titolare: Gianluca Palermo.
+      level: Laurea di primo livello in Ingegneria Biomedica
+      institution: Politecnico di Milano
+    - aaInit: 2010
+      aaEnd: 2011
+      position: Titolare
+      crediti: 7
+      ore: 39
+      courseName: Informatica B
+      titolare: Vittorio Zaccaria
+      level: Laurea di primo livello in Ingegneria Meccanica ed Energetica
+      institution: Politecnico di Milano
+    - aaInit: 2009
+      aaEnd: 2010
+      position: Esercitatore
+      crediti: 'N'
+      ore: 17
+      courseName: Informatica ed Elementi di Informatica Medica
+      titolare: Gianluca Palermo.
+      level: Laurea di primo livello in Ingegneria Biomedica
+      institution: Politecnico di Milano
+    - aaInit: 2009
+      aaEnd: 2010
+      position: Esercitatore
+      crediti: 'N'
+      ore: 20
+      courseName: Architectures for Multimedia Systems
+      titolare: Cristina Silvano
+      level: Laurea specialistica in Ingegneria Informatica
+      institution: Politecnico di Milano
+    - aaInit: 2009
+      aaEnd: 2010
+      position: Esercitatore
+      crediti: 'N'
+      ore: 11
+      courseName: Informatica B
+      titolare: Danilo Ardagna
+      level: Laurea di primo livello in Ingegneria Elettrica
+      institution: Politecnico di Milano
+    - aaInit: 2009
+      aaEnd: 2010
+      position: Esercitatore
+      crediti: 'N'
+      ore: 38
+      courseName: Architettura dei Calcolatori e Sistemi Operativi
+      titolare: Cristina Silvano
+      level: Laurea di primo livello in Ingegneria Informatica
+      institution: Politecnico di Milano
+    - aaInit: 2008
+      aaEnd: 2009
+      position: Esercitatore
+      crediti: 'N'
+      ore: 15
+      courseName: Informatica B
+      titolare: Danilo Ardagna
+      level: Laurea di primo livello in Ingegneria Elettrica
+      institution: Politecnico di Milano
+    - aaInit: 2003
+      aaEnd: 2003
+      position: Esercitatore
+      crediti: 'N'
+      ore: 20
+      courseName: Calcolatori Elettronici
+      titolare: Anna Antola
+      level: Laurea quinquennale in Ingegneria Informatica
+      institution: Politecnico di Milano
+    - aaInit: 2002
+      aaEnd: 2002
+      position: Esercitatore
+      crediti: 'N'
+      ore: NA
+      courseName: Architectures
+      titolare: Mariagiovanna Sami
+      level: Master of Engineering of Embedded Systems
+      institution: Advanced Learning Institute - Lugano
+    - aaInit: 2001
+      aaEnd: 2001
+      position: Esercitatore
+      crediti: 'N'
+      ore: NA
+      courseName: Architectures
+      titolare: Mariagiovanna Sami
+      level: Master of Engineering of Embedded Systems
+      institution: Advanced Learning Institute - Lugano
+    - aaInit: 2001
+      aaEnd: 2002
+      position: Esercitatore
+      crediti: 'N'
+      ore: 20
+      courseName: Advanced Computer Architectures
+      titolare: Donatella Sciuto
+      level: Master of Science in Electrical Engineering
+      institution: University of Illinois at Chicago and Politecnico di Milano
+    - aaInit: 2001
+      aaEnd: 2002
+      position: Esercitatore
+      crediti: 'N'
+      ore: 20
+      courseName: Calcolatori Elettronici
+      titolare: Mariagiovanna Sami
+      level: Laurea quinquennale in Ingegneria Informatica
+      institution: Politecnico di Milano
+    - aaInit: 2000
+      aaEnd: 2001
+      position: Esercitatore
+      crediti: 'N'
+      ore: 15
+      courseName: Sistemi Operativi 1
+      titolare: William Fornaciari
+      level: Laurea quinquennale in Ingegneria Informatica
+      institution: Politecnico di Milano
+    - aaInit: 2000
+      aaEnd: 2001
+      position: Esercitatore
+      crediti: 'N'
+      ore: 20
+      courseName: Advanced Computer Architectures
+      titolare: Donatella Sciuto
+      level: Master of Science in Electrical Engineering
+      institution: University of Illinois at Chicago and Politecnico di Milano
+    - aaInit: 1999
+      aaEnd: 2000
+      position: Esercitatore
+      crediti: 'N'
+      ore: 20
+      courseName: Advanced Computer Architectures
+      titolare: Donatella Sciuto
+      level: Master of Science in Electrical Engineering
+      institution: University of Illinois at Chicago and Politecnico di Milano

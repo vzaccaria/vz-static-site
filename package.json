@@ -9,16 +9,19 @@
   "scripts": {
     "data:check": "node scripts/check-imported-data.mjs",
     "data:check:strict": "node scripts/check-imported-data.mjs --require-imported",
+    "content:check": "tsx scripts/validate-content-model.ts",
     "dev": "ASTRO_TELEMETRY_DISABLED=1 astro dev",
     "start": "ASTRO_TELEMETRY_DISABLED=1 astro dev",
     "build": "ASTRO_TELEMETRY_DISABLED=1 astro build",
     "preview": "ASTRO_TELEMETRY_DISABLED=1 astro preview",
-    "check": "npm run data:check && ASTRO_TELEMETRY_DISABLED=1 astro check",
+    "check": "npm run data:check:strict && npm run content:check && ASTRO_TELEMETRY_DISABLED=1 astro check",
     "ci": "npm run check && npm run build"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.9",
     "astro": "^6.4.2",
-    "typescript": "^6.0.3"
+    "tsx": "^4.22.4",
+    "typescript": "^6.0.3",
+    "yaml": "^2.9.0"
   }
 }

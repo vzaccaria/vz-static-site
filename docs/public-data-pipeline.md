@@ -58,6 +58,7 @@ if `data/imported/` is absent. After running the private export, use strict mode
 
 ```bash
 npm run data:check:strict
+npm run content:check
 ```
 
 The validator checks:
@@ -65,6 +66,9 @@ The validator checks:
 - expected files/directories are present,
 - expected files are not empty,
 - JSON files parse.
+
+The content-model validator then checks the public schemas documented in
+[Content Model](content-model.md).
 
 ## Responsibility Split
 
