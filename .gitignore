@@ -16,3 +16,6 @@ npm-debug.log*
 # Local private data imports
 data/private/
 *.private.json
+
+# Non-published generated blog drafts/legacy posts
+data/imported/blog/.other/

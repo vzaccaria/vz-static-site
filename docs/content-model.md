@@ -23,6 +23,7 @@ The model currently validates:
 - `data/imported/authors/*.md` as author profiles.
 - `data/imported/group.md` and `data/imported/thesis-short.md` as required
   markdown bodies.
+- `data/imported/blog/images/**` as blog assets, not content entries.
 
 ## Validation Rules
 
@@ -33,8 +34,16 @@ Blog posts and authors are also registered as Astro content collections from
 `data/imported/blog` and `data/imported/authors`, so Astro validates them during
 `astro check` and `astro build`.
 
+Only top-level markdown files in `data/imported/blog/*.md` are blog posts.
+Nested markdown files under `data/imported/blog/images/`, including Excalidraw
+sources, are treated as assets.
+
 Blog author references are checked against author file names. For example,
 `authors: ["default"]` requires `data/imported/authors/default.md`.
+
+Relative image links in blog post bodies are checked against files in the
+imported tree. For example, `![](images/example.png)` must resolve relative to
+the post file.
 
 ## Boundaries
 

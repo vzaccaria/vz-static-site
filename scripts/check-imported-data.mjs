@@ -12,10 +12,7 @@ const EXPECTED_FILES = [
   "bibliov2.json",
   "theses.json",
   "group.md",
-  "thesis-short.md",
-  "assets/Logo.svg",
-  "assets/Logo.png",
-  "assets/Logo.pdf"
+  "thesis-short.md"
 ];
 
 const EXPECTED_DIRS = ["blog", "authors"];

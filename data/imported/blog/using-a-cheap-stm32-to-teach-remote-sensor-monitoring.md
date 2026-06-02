@@ -21,7 +21,7 @@ In this small post, I'll sum up how I've built an embedded system for temperatur
 
 For this tutorial, I'll use an an [ST Nucleo L053R8](https://developer.mbed.org/platforms/ST-Nucleo-L053R8/) as a main board and a [X-NUCLEO-IKS01A1Motion](http://www.st.com/web/catalog/tools/FM116/SC1248/PF261191) sensor shield for measuring room temperature. For the remote connection, I am going to use the PC as a bridge, by using a small custom proxy to forward data to the remote service. As a future step, this can be substituted by a wifi shield, to make the system completely autonomous.
 
-![stacked_boards](/static/images/stacked_boards.jpeg)
+![stacked_boards](images/stacked_boards.jpeg)
 
 Both boards can be bought at [Mouser](http://www2.mouser.com) for approximately $26, so they are pretty cheap, even for a student. The boards are also compatible with the Arduino eco-system so there is no risk of vendor locking, in the case you want to take this experiment a little bit further.
 
@@ -51,7 +51,7 @@ Ideally, we would send HTTP packets directly from the STM32 by relying on a simp
 
 So I turned out to slightly different solution: using Google's [protobuf](https://developers.google.com/protocol-buffers/) over the serial interface and relaying packets through a Nodejs proxy.
 
-![](/static/images/arch-1.png)
+![](images/arch-1.png)
 # Protobuf
 
 Protobuf is basically a nifty DSL to:

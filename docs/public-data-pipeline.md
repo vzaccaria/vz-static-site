@@ -30,9 +30,9 @@ The current export contract is documented in
 
 ```text
 data/imported/
-├── assets/Logo.{svg,png,pdf}
 ├── authors/
 ├── blog/
+│   └── images/
 ├── biblio.bib
 ├── bibliov2.json
 ├── cv-jr.yaml

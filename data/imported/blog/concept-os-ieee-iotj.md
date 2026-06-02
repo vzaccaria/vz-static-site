@@ -20,11 +20,11 @@ Our breakthrough with ConceptOS transcends these conventional methods by offerin
 
 At its core, ConceptOS adopts a novel component-based approach. In this, each component—comprising a set of related functions and data—is built separately and seamlessly integrated into the system. This allows us to apply updates without necessitating a restart. Remarkably, this method minimizes overhead to a level that is comparable to the time it takes to erase a single page, offering an efficient and practical solution for always-on devices.
 
-![ConceptOS flash memory address space format](/static/images/Pasted%20image%2020240210161836.png)
+![ConceptOS flash memory address space format](images/Pasted%20image%2020240210161836.png)
 
 In our publication, we delve into the current OTA updates landscape, highlighting the limitations and inefficiencies faced, especially by low-resource devices operating as unikernels. We also bring to light the challenges encountered in generating correct Position-Independent Code (PIC) for embedded systems and address the inefficiency surrounding the storage and transmission of entire system images for updates.
 
-![The zoo of data relocation mechanisms for microcontrollers](/static/images/Pasted%20image%2020240210161949.png)
+![The zoo of data relocation mechanisms for microcontrollers](images/Pasted%20image%2020240210161949.png)
 To showcase the effectiveness of ConceptOS, Andrea and I conducted a comparative analysis against traditional OTA methods, concentrating on actual memory requirements and overhead, including system unavailability and syscall latency. The results emphatically demonstrate ConceptOS’s superiority in enabling smoother and more resource-efficient updates.
 
 As the IoT ecosystem continues to burgeon, the introduction of ConceptOS represents a significant leap forward in addressing the pressing firmware update issues in embedded systems. Our work not only exemplifies the spirit of innovation within embedded systems engineering but also paves the way for future advancements in IoT device management and efficiency.

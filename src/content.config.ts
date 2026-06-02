@@ -6,7 +6,7 @@ import {
 } from "./data/content-model";
 
 const blog = defineCollection({
-  loader: glob({ pattern: "**/*.md", base: "./data/imported/blog" }),
+  loader: glob({ pattern: "*.md", base: "./data/imported/blog" }),
   schema: blogFrontmatterSchema
 });
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env tsx
 
-import { readdir, readFile } from "node:fs/promises";
+import { readdir, readFile, stat } from "node:fs/promises";
 import path from "node:path";
 import { parse as parseYaml } from "yaml";
 import type { z } from "astro/zod";
@@ -70,6 +70,27 @@ async function validateMarkdownFile(filePath: string, label: string) {
   return { label };
 }
 
+async function assertLocalMarkdownAssets(filePath: string, body: string) {
+  const assetLinks = body.matchAll(/!\[[^\]]*\]\(([^)]+)\)/g);
+  for (const match of assetLinks) {
+    const rawLink = match[1].split(/[?#]/)[0];
+    if (/^[a-z]+:/i.test(rawLink) || rawLink.startsWith("/")) continue;
+
+    const target = path.join(path.dirname(filePath), decodeURIComponent(rawLink));
+    try {
+      const info = await stat(target);
+      if (!info.isFile()) {
+        throw new Error(`${filePath}: local asset is not a file: ${rawLink}`);
+      }
+    } catch (error) {
+      if (error instanceof Error && "code" in error && error.code === "ENOENT") {
+        throw new Error(`${filePath}: missing local asset: ${rawLink}`);
+      }
+      throw error;
+    }
+  }
+}
+
 async function validateAuthors(): Promise<{
   result: ValidationResult;
   authorIds: Set<string>;
@@ -110,6 +131,7 @@ async function validateBlogPosts(authorIds: Set<string>): Promise<ValidationResu
     );
     const parsed = validateSchema(filePath, blogFrontmatterSchema, frontmatter);
     validateSchema(`${filePath} body`, markdownBodySchema, body);
+    await assertLocalMarkdownAssets(filePath, body);
 
     for (const authorId of parsed.authors) {
       if (!authorIds.has(authorId)) {

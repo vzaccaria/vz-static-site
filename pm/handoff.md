@@ -1,6 +1,6 @@
 # Session Handoff
 
-Written: 2026-06-01 10:42 CEST
+Written: 2026-06-02 18:31 CEST
 Author: Codex
 
 ## What was done this session
@@ -35,6 +35,16 @@ Author: Codex
 - Diagnosed the failing GitHub Actions runs on commit `6885156`: `astro check`
   type-checked `scripts/validate-content-model.ts` without Node types. Added
   `@types/node` pinned to the Node 22 major used by `.node-version`.
+- Started `vz-site15` after the private export was updated to filter assets.
+- Updated the public imported-tree contract: `data/imported/assets/Logo.*` is no
+  longer required, and `data/imported/blog/images/**` is treated as blog assets.
+- Restricted the Astro blog collection to top-level `data/imported/blog/*.md`
+  so nested Excalidraw markdown assets are not parsed as posts.
+- Added validation that relative image links in blog post bodies resolve to
+  files in the imported tree.
+- Ignored `data/imported/blog/.other/`, which the export currently emits but the
+  public content model does not publish.
+- Closed `vz-site15` after `npm run ci` passed.
 - Previously claimed and closed `vz-site2`.
 - Updated `README.md`, `CLAUDE.md`, `pm/readme.md`, and `pm/plan.md`.
 - Added `vz-site12` for the temporary GitHub Pages project deploy test.
@@ -66,6 +76,7 @@ Author: Codex
   running the private exporter from `../vz-personal-store`.
 - `npm run content:check` validates the content model and currently reports:
   public CV, 112 bibliography records, 3 theses, 2 authors, and 10 blog posts.
+- `npm run content:check` also checks that relative blog image links resolve.
 - `npm run check` now requires `data/imported/`; CI should fail if the imported
   tree is missing or if imported objects contain missing/unexpected fields.
 - The CI/Pages failures for `6885156` should be fixed by the follow-up commit
