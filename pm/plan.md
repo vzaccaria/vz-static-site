@@ -1,6 +1,6 @@
 # Development Plan
 
-Last updated: 2026-06-01
+Last updated: 2026-06-04
 
 ## Active epics
 
@@ -31,8 +31,6 @@ project deploy for early testing before the later custom preview domain deploy.
 - Production cutover details - defer until preview and parity checks are complete.
 - `vz-site10` tracks the current dev-only `@astrojs/check` audit advisory until
   upstream has a non-breaking fix.
-- `vz-site11` tracks the beads issue-prefix mismatch discovered during new issue
-  intake.
 - `vz-site12` tracks the temporary GitHub Pages project URL deploy test:
   `https://vzaccaria.github.io/vz-static-site/`.
 - [ADR 002](adr/002-github-pages-project-preview-routing.md) records the
@@ -41,6 +39,9 @@ project deploy for early testing before the later custom preview domain deploy.
   production host.
 
 ## Completed (recent)
+- `vz-site11` - Beads issue-prefix alignment, completed 2026-06-04 by setting
+  database `issue_prefix` to `vz-site` and verifying `vz-site.*` dry-run issue
+  creation without `--force`.
 - `vz-site3` - Content model e validazione, completed 2026-06-01 with strict
   Zod schemas, imported blog/author Astro collections, and CI validation for
   `data/imported/`.
