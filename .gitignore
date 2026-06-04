@@ -19,3 +19,4 @@ data/private/
 
 # Non-published generated blog drafts/legacy posts
 data/imported/blog/.other/
+.claude
