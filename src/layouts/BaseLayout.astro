@@ -1,6 +1,6 @@
 ---
 import { primaryNavigation } from "../data/navigation";
-import { siteMetadata } from "../data/site";
+import { siteMetadata, withBasePath } from "../data/site";
 import "../styles/global.css";
 
 interface Props {
@@ -16,16 +16,6 @@ const {
 const pageTitle =
   title === siteMetadata.title ? title : `${title} | ${siteMetadata.shortName}`;
 const canonical = new URL(Astro.url.pathname, Astro.site ?? siteMetadata.url);
-const basePath = import.meta.env.BASE_URL.endsWith("/")
-  ? import.meta.env.BASE_URL
-  : `${import.meta.env.BASE_URL}/`;
-
-const withBasePath = (href: string) => {
-  if (/^[a-z]+:/i.test(href) || href.startsWith("#")) return href;
-  if (href === "/") return basePath;
-
-  return `${basePath}${href.replace(/^\//, "")}`;
-};
 ---
 
 <!doctype html>
@@ -36,7 +26,7 @@ const withBasePath = (href: string) => {
     <title>{pageTitle}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical.toString()} />
-    <link rel="icon" href={`${basePath}favicon.svg`} type="image/svg+xml" />
+    <link rel="icon" href={withBasePath("favicon.svg")} type="image/svg+xml" />
   </head>
   <body>
     <a class="skip-link" href="#content">Skip to content</a>
