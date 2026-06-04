@@ -84,3 +84,6 @@ to `main`, installs with `npm ci`, then runs `npm run check` and
 - Keep assets that must be served reliably by Astro in `public/`, not in `data/imported/`.
 - Astro telemetry is disabled in npm scripts so local agent runs do not need to
   write outside the repository.
+- Always use `withBasePath()` from `src/data/site.ts` for internal links and
+  asset paths — never compute `basePath` locally in pages. Required for correct
+  behaviour when `SITE_BASE=/vz-static-site/` (GitHub Pages project deploy).
