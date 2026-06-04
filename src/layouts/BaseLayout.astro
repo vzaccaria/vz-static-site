@@ -1,4 +1,5 @@
 ---
+import { primaryNavigation } from "../data/navigation";
 import { siteMetadata } from "../data/site";
 import "../styles/global.css";
 
@@ -18,6 +19,13 @@ const canonical = new URL(Astro.url.pathname, Astro.site ?? siteMetadata.url);
 const basePath = import.meta.env.BASE_URL.endsWith("/")
   ? import.meta.env.BASE_URL
   : `${import.meta.env.BASE_URL}/`;
+
+const withBasePath = (href: string) => {
+  if (/^[a-z]+:/i.test(href) || href.startsWith("#")) return href;
+  if (href === "/") return basePath;
+
+  return `${basePath}${href.replace(/^\//, "")}`;
+};
 ---
 
 <!doctype html>
@@ -31,6 +39,22 @@ const basePath = import.meta.env.BASE_URL.endsWith("/")
     <link rel="icon" href={`${basePath}favicon.svg`} type="image/svg+xml" />
   </head>
   <body>
-    <slot />
+    <a class="skip-link" href="#content">Skip to content</a>
+    <header class="site-header" aria-label="Primary">
+      <a class="brand" href={withBasePath("/")} aria-label={siteMetadata.title}>
+        <span class="brand-mark">VZ</span>
+        <span>{siteMetadata.title}</span>
+      </a>
+      <nav aria-label="Main navigation">
+        {
+          primaryNavigation.map((item) => (
+            <a href={withBasePath(item.href)}>{item.label}</a>
+          ))
+        }
+      </nav>
+    </header>
+    <div id="content">
+      <slot />
+    </div>
   </body>
 </html>

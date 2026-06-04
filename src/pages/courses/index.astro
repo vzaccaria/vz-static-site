@@ -1,0 +1,117 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import {
+  coursesByAcademicYear,
+  currentCourses,
+  formatAcademicYear,
+  publicCv,
+  sortedCourses
+} from "../../data/public-content";
+---
+
+<BaseLayout
+  title="Courses"
+  description="Current and past courses taught by Vittorio Zaccaria."
+>
+  <main class="page-shell">
+    <section class="page-hero">
+      <p class="eyebrow">Courses</p>
+      <h1>Teaching at Politecnico di Milano.</h1>
+      <p class="lede">
+        Current and past course appointments across operating systems,
+        virtualisation, embedded systems, computer architecture, and
+        introductory computing.
+      </p>
+    </section>
+
+    <section class="metric-strip" aria-label="Teaching summary">
+      <div>
+        <strong>{currentCourses.length}</strong>
+        <span>current course</span>
+      </div>
+      <div>
+        <strong>{sortedCourses.length}</strong>
+        <span>teaching records</span>
+      </div>
+      <div>
+        <strong>{coursesByAcademicYear.length}</strong>
+        <span>academic years</span>
+      </div>
+      <div>
+        <strong>{publicCv.teaching.courses.filter((course) => course.position === "Titolare").length}</strong>
+        <span>lead roles</span>
+      </div>
+    </section>
+
+    <section class="content-band">
+      <div class="section-heading">
+        <p class="section-kicker">Current</p>
+        <h2>Latest academic year</h2>
+      </div>
+      <div class="item-grid item-grid--two">
+        {
+          currentCourses.map((course) => (
+            <article class="detail-card detail-card--accent">
+              <p class="meta">{formatAcademicYear(course)} · {course.position}</p>
+              <h3>
+                {
+                  course.link ? (
+                    <a href={course.link}>{course.courseName}</a>
+                  ) : (
+                    course.courseName
+                  )
+                }
+              </h3>
+              <p>{course.level}</p>
+              <p>{course.ore} hours · {course.crediti} credits</p>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="content-band">
+      <div class="section-heading">
+        <p class="section-kicker">Archive</p>
+        <h2>Teaching history</h2>
+      </div>
+      <div class="course-archive">
+        {
+          coursesByAcademicYear.map((group) => (
+            <section class="course-year-group" aria-labelledby={`year-${group.academicYear}`}>
+              <h3 id={`year-${group.academicYear}`}>{group.academicYear}</h3>
+              <div>
+                {group.courses.map((course) => (
+                  <article class="list-row">
+                    <div>
+                      <h4>
+                        {
+                          course.link ? (
+                            <a href={course.link}>{course.courseName}</a>
+                          ) : (
+                            course.courseName
+                          )
+                        }
+                      </h4>
+                      <p>{course.level}</p>
+                    </div>
+                    <dl>
+                      <div>
+                        <dt>Role</dt>
+                        <dd>{course.position}</dd>
+                      </div>
+                      <div>
+                        <dt>Hours</dt>
+                        <dd>{course.ore}</dd>
+                      </div>
+                    </dl>
+                  </article>
+                ))}
+              </div>
+            </section>
+          ))
+        }
+      </div>
+    </section>
+  </main>
+</BaseLayout>

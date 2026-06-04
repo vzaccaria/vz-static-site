@@ -1,0 +1,79 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import {
+  excerptFromMarkdown,
+  sortedTheses,
+  thesisIntro,
+  toParagraphs
+} from "../../data/public-content";
+
+const introParagraphs = toParagraphs(thesisIntro);
+---
+
+<BaseLayout
+  title="Theses"
+  description="Available thesis topics supervised by Vittorio Zaccaria."
+>
+  <main class="page-shell">
+    <section class="page-hero">
+      <p class="eyebrow">Theses</p>
+      <h1>Available thesis directions.</h1>
+      {
+        introParagraphs.map((paragraph) => (
+          <p class="lede">{paragraph}</p>
+        ))
+      }
+    </section>
+
+    <section class="content-band">
+      <div class="section-heading">
+        <p class="section-kicker">Open topics</p>
+        <h2>{sortedTheses.length} thesis areas</h2>
+      </div>
+      <div class="thesis-grid">
+        {
+          sortedTheses.map((thesis) => (
+            <article class="thesis-card">
+              <div class="thesis-card__header">
+                <p class="meta">{thesis.level} · {thesis.topic} · {thesis.subtopic}</p>
+                <span class={`status-pill status-pill--${thesis.maturityColor}`}>
+                  {thesis.maturity}
+                </span>
+              </div>
+              <h3>{thesis.title}</h3>
+              <p>{excerptFromMarkdown(thesis.__content)}</p>
+              <dl>
+                <div>
+                  <dt>Institution</dt>
+                  <dd>{thesis.institution}</dd>
+                </div>
+                {
+                  thesis.support && (
+                    <div>
+                      <dt>Support</dt>
+                      <dd>{thesis.support}</dd>
+                    </div>
+                  )
+                }
+                {
+                  thesis.where && (
+                    <div>
+                      <dt>Where</dt>
+                      <dd>{thesis.where}</dd>
+                    </div>
+                  )
+                }
+              </dl>
+              <ul class="tag-list">
+                {thesis.skills.map((skill) => <li>{skill}</li>)}
+              </ul>
+              <ul class="plain-list">
+                {thesis.additional.map((item) => <li>{item}</li>)}
+              </ul>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+  </main>
+</BaseLayout>

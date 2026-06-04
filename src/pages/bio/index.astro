@@ -1,0 +1,108 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import {
+  profileImagePath,
+  publicCv,
+  toParagraphs,
+  yearOf
+} from "../../data/public-content";
+
+const bioParagraphs = toParagraphs(publicCv.basics.officialDeptPage);
+const education = publicCv.education;
+const appointments = [...publicCv.work.previous].sort(
+  (left, right) => right.index - left.index
+);
+const basePath = import.meta.env.BASE_URL.endsWith("/")
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
+const profileImageSrc = `${basePath}${profileImagePath}`;
+---
+
+<BaseLayout
+  title="Bio"
+  description="Biography, appointments, education, and contact details for Vittorio Zaccaria."
+>
+  <main class="page-shell">
+    <section class="page-hero page-hero--split">
+      <div>
+        <p class="eyebrow">Bio</p>
+        <h1>Academic biography</h1>
+        {
+          bioParagraphs.map((paragraph) => (
+            <p class="lede">{paragraph}</p>
+          ))
+        }
+      </div>
+      <aside class="contact-panel" aria-label="Contact details">
+        <img
+          src={profileImageSrc}
+          alt=""
+          width="1367"
+          height="1300"
+          loading="lazy"
+        />
+        <dl>
+          <div>
+            <dt>Email</dt>
+            <dd><a href={`mailto:${publicCv.basics.email}`}>{publicCv.basics.email}</a></dd>
+          </div>
+          <div>
+            <dt>Office</dt>
+            <dd>
+              {publicCv.basics.office.addressShort}, {publicCv.basics.office.address}
+            </dd>
+          </div>
+          <div>
+            <dt>Department</dt>
+            <dd>{publicCv.basics.office.department}</dd>
+          </div>
+        </dl>
+      </aside>
+    </section>
+
+    <section class="content-band">
+      <div class="section-heading">
+        <p class="section-kicker">Appointments</p>
+        <h2>Academic and industrial path</h2>
+      </div>
+      <div class="timeline">
+        {
+          appointments.map((appointment) => (
+            <article>
+              <span class="timeline-date">
+                {yearOf(appointment.startDate)}
+                {appointment.endDate ? `-${yearOf(appointment.endDate)}` : "-present"}
+              </span>
+              <div>
+                <h3>{appointment.position}</h3>
+                <p>{appointment.company}, {appointment.address}</p>
+                <ul>
+                  {appointment.highlights.slice(0, 3).map((highlight) => <li>{highlight}</li>)}
+                </ul>
+              </div>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="content-band">
+      <div class="section-heading">
+        <p class="section-kicker">Education</p>
+        <h2>Degrees</h2>
+      </div>
+      <div class="item-grid item-grid--two">
+        {
+          education.map((item) => (
+            <article class="detail-card">
+              <p class="meta">{yearOf(item.startDate)}-{yearOf(item.endDate)}</p>
+              <h3>{item.studyType} in {item.area}</h3>
+              <p>{item.institution}</p>
+              <p>{item.topic}</p>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+  </main>
+</BaseLayout>

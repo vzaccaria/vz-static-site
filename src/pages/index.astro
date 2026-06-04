@@ -1,80 +1,107 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { primaryNavigation } from "../data/navigation";
-import { siteMetadata } from "../data/site";
+import {
+  currentCourses,
+  groupStatement,
+  profileImagePath,
+  publicCv,
+  publicationStats,
+  sortedTheses,
+  toParagraphs
+} from "../data/public-content";
 
+const summaryParagraphs = toParagraphs(publicCv.basics.websiteSummary);
+const latestCourse = currentCourses[0];
+const topTheses = sortedTheses.slice(0, 3);
 const basePath = import.meta.env.BASE_URL.endsWith("/")
   ? import.meta.env.BASE_URL
   : `${import.meta.env.BASE_URL}/`;
+const profileImageSrc = `${basePath}${profileImagePath}`;
 ---
 
 <BaseLayout>
-  <header class="site-header" aria-label="Primary">
-    <a class="brand" href={basePath} aria-label={siteMetadata.title}>
-      <span class="brand-mark">VZ</span>
-      <span>{siteMetadata.title}</span>
-    </a>
-    <nav aria-label="Main navigation">
-      {
-        primaryNavigation.map((item) => (
-          <a href={item.href}>{item.label}</a>
-        ))
-      }
-    </nav>
-  </header>
-
-  <main>
-    <section class="hero">
+  <main class="page-shell">
+    <section class="hero hero--profile">
       <div class="hero-copy">
-        <p class="eyebrow">Politecnico di Milano</p>
-        <h1>Vittorio Zaccaria</h1>
-        <p class="lede">
-          Academic profile, research, teaching, theses, and writing in a public
-          static site.
-        </p>
+        <p class="eyebrow">{publicCv.basics.label}</p>
+        <h1>{publicCv.basics.name}</h1>
+        {
+          summaryParagraphs.map((paragraph) => (
+            <p class="lede">{paragraph}</p>
+          ))
+        }
+        <div class="action-row" aria-label="Primary actions">
+          <a class="button button--primary" href="research/">Research</a>
+          <a class="button" href="theses/">Thesis topics</a>
+        </div>
       </div>
-      <aside class="hero-panel" aria-label="Build status">
-        <dl>
-          <div>
-            <dt>Generator</dt>
-            <dd>Astro static</dd>
-          </div>
-          <div>
-            <dt>Preview</dt>
-            <dd>GitHub Pages</dd>
-          </div>
-          <div>
-            <dt>Data</dt>
-            <dd>Imported model</dd>
-          </div>
-        </dl>
-      </aside>
+
+      <figure class="profile-figure">
+        <img
+          src={profileImageSrc}
+          alt=""
+          width="1367"
+          height="1300"
+          loading="eager"
+        />
+        <figcaption>
+          <strong>{publicCv.work.current.position}</strong>
+          <span>{publicCv.work.current.company}</span>
+        </figcaption>
+      </figure>
     </section>
 
-    <section class="section-grid" aria-label="Site areas">
-      <article id="research">
+    <section class="metric-strip" aria-label="Academic profile summary">
+      <div>
+        <strong>{publicationStats.total}</strong>
+        <span>publications</span>
+      </div>
+      <div>
+        <strong>{publicCv.research.impact.scholar.hindex}</strong>
+        <span>Google Scholar h-index</span>
+      </div>
+      <div>
+        <strong>{currentCourses.length}</strong>
+        <span>current course</span>
+      </div>
+      <div>
+        <strong>{sortedTheses.length}</strong>
+        <span>open thesis areas</span>
+      </div>
+    </section>
+
+    <section class="feature-grid" aria-label="Main site areas">
+      <article>
         <p class="section-kicker">Research</p>
-        <h2>Projects and publications</h2>
-        <p>
-          Research pages will use public structured data exported by the
-          private repository and validated by the public content model.
-        </p>
+        <h2>Embedded systems, security, hardware design, and software tools.</h2>
+        <p>{groupStatement}</p>
+        <a class="text-link" href="research/">View research profile</a>
       </article>
-      <article id="teaching">
+
+      <article>
         <p class="section-kicker">Teaching</p>
-        <h2>Courses and theses</h2>
+        <h2>{latestCourse?.courseName ?? "Courses"}</h2>
         <p>
-          Course and thesis pages will be generated as static routes from the
-          validated content model.
+          Current and past courses at Politecnico di Milano, including advanced
+          operating systems, embedded virtualisation, and computer architecture.
         </p>
+        <a class="text-link" href="courses/">Browse courses</a>
       </article>
-      <article id="writing">
-        <p class="section-kicker">Writing</p>
-        <h2>Blog and tags</h2>
-        <p>
-          Blog posts are imported into the Astro content collection from
-          <code>data/imported/blog</code>.
-        </p>
+
+      <article>
+        <p class="section-kicker">Theses</p>
+        <h2>Active thesis directions</h2>
+        <ul class="plain-list">
+          {
+            topTheses.map((thesis) => (
+              <li>
+                <span>{thesis.topic}</span>
+                <strong>{thesis.title}</strong>
+              </li>
+            ))
+          }
+        </ul>
+        <a class="text-link" href="theses/">See thesis topics</a>
       </article>
     </section>
   </main>
