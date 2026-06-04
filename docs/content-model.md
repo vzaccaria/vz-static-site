@@ -1,6 +1,6 @@
 # Content Model
 
-`vz-site3` defines the public content model for the imported static data tree.
+`vz-site.3` defines the public content model for the imported static data tree.
 The schemas live in `src/data/content-model.ts` and are enforced by:
 
 ```bash

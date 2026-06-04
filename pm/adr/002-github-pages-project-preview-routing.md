@@ -6,7 +6,7 @@ Status: Accepted
 
 ## Context
 
-`vz-site12` added a temporary GitHub Pages project deploy so the Astro scaffold
+`vz-site.12` added a temporary GitHub Pages project deploy so the Astro scaffold
 can be tested before the later custom preview domain work. The intended test URL
 is:
 

@@ -16,7 +16,7 @@ website/scripts/export-public/
 ```
 
 That script writes sanitized files into this repository under `data/imported/`.
-The initial `vz-site2` implementation added a second allowlist and sanitizer in
+The initial `vz-site.2` implementation added a second allowlist and sanitizer in
 the public repo. That duplicated the private manifest and risked divergence.
 
 ## Decision
@@ -41,7 +41,7 @@ sanitization remains entirely upstream.
 - The canonical public/private allowlist stays in the private repo.
 - `vz-static-site` does not maintain a duplicate field allowlist.
 - `data/imported/` becomes the handoff boundary between repositories.
-- `vz-site3` should build content models from `data/imported/`, including
+- `vz-site.3` should build content models from `data/imported/`, including
   deriving any JSON representation of `cv-jr.yaml` locally.
 - CI can run before an export exists; strict validation should be used after
   running the private exporter.

@@ -12,17 +12,17 @@ to private source data. The new repository must be safe to publish, simple to
 build locally, and deployable as static files without a runtime application
 server.
 
-`vz-site0` requires an initial decision for repository boundaries, static-site
+`vz-site.0` requires an initial decision for repository boundaries, static-site
 generator, preview and production environments, and expected DNS under Dynadot.
 
 ## Decision
 
 Use a separate public repository, `vz-static-site`, as the only source for the
 public static website. Keep all private source data outside this repository and
-import only allowlisted public data through the pipeline owned by `vz-site2`.
+import only allowlisted public data through the pipeline owned by `vz-site.2`.
 
 Use Astro in its default static/pre-rendered mode as the site generator. Astro is
-the accepted default for `vz-site1` unless scaffold work finds a concrete
+the accepted default for `vz-site.1` unless scaffold work finds a concrete
 blocker. Use npm and a committed lockfile for reproducible local and CI builds.
 
 Deploy with GitHub Actions to GitHub Pages. During preview, publish the Pages
@@ -40,9 +40,9 @@ specific; do not use wildcard DNS records.
 
 - Source lives in this public repository.
 - Private data sources remain outside the repository.
-- The build consumes committed public fixtures and, after `vz-site2`, generated
+- The build consumes committed public fixtures and, after `vz-site.2`, generated
   public data only.
-- Expected commands after `vz-site1`: `npm install`, `npm run dev`,
+- Expected commands after `vz-site.1`: `npm install`, `npm run dev`,
   `npm run build`, `npm run preview`, and `npm run check`.
 - No secrets are required for a normal static build. Public browser variables,
   if any, must use explicit `PUBLIC_` naming and must not contain credentials.
@@ -98,9 +98,9 @@ not be removed during cutover unless there is a specific reason.
 - Preview and production are separate phases for the same GitHub Pages site. If
   long-lived simultaneous preview and production custom domains become necessary,
   create a follow-up decision for a second Pages site or a different static host.
-- `vz-site1` should scaffold Astro with static output, npm, and GitHub Pages as
+- `vz-site.1` should scaffold Astro with static output, npm, and GitHub Pages as
   the target deploy environment.
-- `vz-site2` must preserve the public/private boundary and must not copy private
+- `vz-site.2` must preserve the public/private boundary and must not copy private
   source data wholesale into this repository.
 
 ## Alternatives considered
