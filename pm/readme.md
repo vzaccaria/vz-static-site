@@ -14,6 +14,8 @@ Planned architecture:
 - Private source data remains outside this repository and is imported only
   through the sanitized export produced by `../vz-personal-store`.
 - The site exposes static routes for profile, bio/research, courses, theses, blog, tags, feeds, sitemap, and SEO metadata.
+- Shared build-time helpers in `src/data/public-content.ts` derive page data from the imported public tree without a runtime server.
+- The avatar used by the public bio/home pages lives in `public/static/images/avatar.jpg` so it is served as a normal static asset.
 - Preview deployment targets `preview.vittoriozaccaria.net`.
 - Production cutover targets `www.vittoriozaccaria.net` after parity checks pass,
   with the apex domain expected to redirect to `www`.
@@ -65,6 +67,8 @@ The public data handoff was added by `vz-site.2`; the private repo exports a
 sanitized generated tree to `data/imported/`, and this repo validates that tree.
 The content model added by `vz-site.3` lives in `src/data/content-model.ts` and
 is enforced by `npm run content:check` and `npm run check`.
+`vz-site.4` added the shared static views, the build-time public content helper,
+and the local avatar asset fallback.
 
 The CI workflow in `.github/workflows/ci.yml` runs on pull requests and pushes
 to `main`, installs with `npm ci`, then runs `npm run check` and
@@ -77,5 +81,6 @@ to `main`, installs with `npm ci`, then runs `npm run check` and
   sanitized allowlist export from `../vz-personal-store`; do not add a second
   sanitizer here.
 - Preserve current website routes where practical, using the audit in the private repo at `website/docs/audit.md` as migration reference.
+- Keep assets that must be served reliably by Astro in `public/`, not in `data/imported/`.
 - Astro telemetry is disabled in npm scripts so local agent runs do not need to
   write outside the repository.

@@ -15,16 +15,16 @@ now consumes the sanitized `data/imported/` tree from the private repo, as
 recorded in ADR 003. `vz-site.3` adds strict public content schemas and CI
 validation for the imported tree. `vz-site.12` adds a temporary GitHub Pages
 project deploy for early testing before the later custom preview domain deploy.
-`vz-site.4` is next for the core static views.
+`vz-site.4` now implements the core static views and the local avatar fallback;
+the next step is `vz-site.5`.
 
 ## Planned sequence
 
-1. `vz-site.4` - Viste statiche core
-2. `vz-site.5` - Blog, tag e compatibilita URL
-3. `vz-site.6` - Feed sitemap SEO e asset
-4. `vz-site.7` - Preview deploy
-5. `vz-site.8` - Parity check con sito attuale
-6. `vz-site.9` - Cutover produzione
+1. `vz-site.5` - Blog, tag e compatibilita URL
+2. `vz-site.6` - Feed sitemap SEO e asset
+3. `vz-site.7` - Preview deploy
+4. `vz-site.8` - Parity check con sito attuale
+5. `vz-site.9` - Cutover produzione
 
 ## Parked / future
 - Framework alternatives to Astro - only revisit if `vz-site.0` finds a concrete blocker.
@@ -39,6 +39,9 @@ project deploy for early testing before the later custom preview domain deploy.
   production host.
 
 ## Completed (recent)
+- `vz-site.4` - Viste statiche core, completed 2026-06-04 with static home,
+  bio, research, courses, and theses routes, responsive shared layout, and a
+  local avatar fallback asset.
 - `vz-site.11` - Beads issue-prefix alignment and ID migration, completed
   2026-06-04 by setting database `issue_prefix` to `vz-site`, migrating the
   numbered series to `vz-site.0` through `vz-site.15`, and verifying the dotted
