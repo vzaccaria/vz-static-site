@@ -1,6 +1,6 @@
 # Development Plan
 
-Last updated: 2026-06-04
+Last updated: 2026-06-05
 
 ## Active epics
 
@@ -17,6 +17,30 @@ validation for the imported tree. `vz-site.12` adds a temporary GitHub Pages
 project deploy for early testing before the later custom preview domain deploy.
 `vz-site.4` now implements the core static views and the local avatar fallback;
 the next step is `vz-site.5`.
+
+### 2. Adozione design system (`vz-ds`)
+
+**Why:** il sito usa attualmente una palette teal `#1b6f6a` divergente dalla
+direzione AOS Lab datasheet decisa in
+`../vz-personal-store/design-system/adr/0001-direction-datasheet.md`. Il
+monorepo ora espone un flusso pull-based stabile (epic `v-ds` chiuso
+2026-06-05) e una skill `aos-lab-design` che documenta come consumare
+i token. Adottare i token converge il sito sulla stessa identità visiva
+di curriculum e materiale-corsi.
+
+**Scope (in):**
+- `scripts/sync-ds.sh` che invoca `node $DS_ROOT/scripts/build.mjs` e copia
+  `tokens.css`, `fonts.css`, `fonts/` in `src/styles/ds/`.
+- Wiring import in `src/layouts/BaseLayout.astro`.
+- Sostituzione palette teal → `var(--ds-colors-accent)` (#1756e0).
+- Sostituzione font corrente → IBM Plex Sans/Mono/Serif via `var(--ds-fonts-*)`.
+- Pin documentato (git SHA monorepo vz-personal-store).
+
+**Scope (out):**
+- Restyle UI completo oltre i token (eventualmente epic separato dopo `vz-ds.1`).
+- Modifiche al monorepo design-system (consumer-only adoption).
+
+**Status:** open. `vz-ds.1` è il primo (e unico per ora) child task.
 
 ## Planned sequence
 
