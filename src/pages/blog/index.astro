@@ -1,0 +1,57 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { withBasePath } from "../../data/site";
+
+const posts = await getCollection("blog");
+const sortedPosts = posts.sort(
+  (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+);
+
+const displayTag = (tag: string) => tag.replace(/^topics\//, "");
+const tagSlug = (tag: string) =>
+  displayTag(tag).replace(/[^a-zA-Z0-9_-]/g, "-").replace(/-+/g, "-").replace(/^-|-$/g, "");
+const tagHref = (tag: string) =>
+  withBasePath(`/tags/${tagSlug(tag)}/`);
+---
+
+<BaseLayout title="Blog" description="Writing by Vittorio Zaccaria.">
+  <main class="page-shell">
+    <section class="page-hero">
+      <p class="eyebrow">Blog</p>
+      <h1>Notes and writing.</h1>
+      <p class="lede">{sortedPosts.length} posts</p>
+    </section>
+
+    <section class="content-band">
+      <div class="blog-list">
+        {
+          sortedPosts.map((post) => (
+            <article class="blog-card">
+              <div class="blog-card__meta">
+<time datetime={new Date(post.data.date).toISOString()}>
+                {new Date(post.data.date).toLocaleDateString("en-US", {
+                    year: "numeric",
+                    month: "short",
+                    day: "numeric"
+                  })}
+                </time>
+              </div>
+              <h2>
+                <a href={withBasePath(`/blog/${post.id}/`)}>
+                  {post.data.title}
+                </a>
+              </h2>
+              <p>{post.data.summary}</p>
+              <ul class="tag-list">
+                {post.data.tags.map((tag) => (
+                  <li><a href={tagHref(tag)}>{displayTag(tag)}</a></li>
+                ))}
+              </ul>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+  </main>
+</BaseLayout>

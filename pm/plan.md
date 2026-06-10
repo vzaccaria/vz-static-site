@@ -15,6 +15,16 @@ now consumes the sanitized `data/imported/` tree from the private repo, as
 recorded in ADR 003. `vz-site.3` adds strict public content schemas and CI
 validation for the imported tree. `vz-site.12` adds a temporary GitHub Pages
 project deploy for early testing before the later custom preview domain deploy.
+`vz-site.4` now implements the core static views and the local avatar fallback.
+`vz-site.5` completed 2026-06-10 with blog listing, individual post pages,
+tag index, and tag detail pages. Uses Astro content collections from
+`data/imported/blog/`. Tags with `topics/` prefix displayed cleanly; spaces
+slugified to hyphens in URLs.
+contract in ADR 001. `vz-site.1` added the Astro/npm scaffold and CI. `vz-site.2`
+now consumes the sanitized `data/imported/` tree from the private repo, as
+recorded in ADR 003. `vz-site.3` adds strict public content schemas and CI
+validation for the imported tree. `vz-site.12` adds a temporary GitHub Pages
+project deploy for early testing before the later custom preview domain deploy.
 `vz-site.4` now implements the core static views and the local avatar fallback;
 the next step is `vz-site.5`.
 

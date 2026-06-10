@@ -1,0 +1,90 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { withBasePath } from "../../data/site";
+
+interface TagPageData {
+  displayTag: string;
+  taggedPosts: CollectionEntry<"blog">[];
+}
+
+export async function getStaticPaths() {
+  const tagSlug = (tag: string) =>
+    tag.replace(/^topics\//, "").replace(/[^a-zA-Z0-9_-]/g, "-").replace(/-+/g, "-").replace(/^-|-$/g, "");
+  const displayFromRaw = (t: string) => t.replace(/^topics\//, "");
+
+  const posts = await getCollection("blog");
+  const tagPosts = new Map<string, CollectionEntry<"blog">[]>();
+
+  for (const post of posts) {
+    for (const rawTag of post.data.tags) {
+      const display = displayFromRaw(rawTag);
+      const current = tagPosts.get(display) ?? [];
+      current.push(post);
+      tagPosts.set(display, current);
+    }
+  }
+
+  return [...tagPosts.entries()].map(([display, taggedPosts]) => ({
+    params: { tag: tagSlug(display) },
+    props: { displayTag: display, taggedPosts } satisfies TagPageData
+  }));
+}
+
+const { displayTag, taggedPosts } = Astro.props as TagPageData;
+
+const tagSlug = (tag: string) =>
+  tag.replace(/^topics\//, "").replace(/[^a-zA-Z0-9_-]/g, "-").replace(/-+/g, "-").replace(/^-|-$/g, "");
+const displayFromRaw = (t: string) => t.replace(/^topics\//, "");
+
+const sortedPosts = [...taggedPosts].sort(
+  (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+);
+
+const tagHref = (t: string) =>
+  withBasePath(`/tags/${tagSlug(t)}/`);
+---
+
+<BaseLayout
+  title={`Tag: ${displayTag}`}
+  description={`Blog posts tagged with "${displayTag}".`}
+>
+  <main class="page-shell">
+    <section class="page-hero">
+      <p class="eyebrow">
+        <a href={withBasePath("/tags/")}>Tags</a>
+      </p>
+      <h1>{displayTag}</h1>
+      <p class="lede">{sortedPosts.length} {sortedPosts.length === 1 ? "post" : "posts"}</p>
+    </section>
+
+    <section class="content-band">
+      <div class="blog-list">
+        {sortedPosts.map((post) => (
+          <article class="blog-card">
+            <div class="blog-card__meta">
+              <time datetime={new Date(post.data.date).toISOString()}>
+                {new Date(post.data.date).toLocaleDateString("en-US", {
+                  year: "numeric",
+                  month: "short",
+                  day: "numeric"
+                })}
+              </time>
+            </div>
+            <h2>
+              <a href={withBasePath(`/blog/${post.id}/`)}>
+                {post.data.title}
+              </a>
+            </h2>
+            <p>{post.data.summary}</p>
+            <ul class="tag-list">
+              {post.data.tags.map((t) => (
+                <li><a href={tagHref(displayFromRaw(t))}>{displayFromRaw(t)}</a></li>
+              ))}
+            </ul>
+          </article>
+        ))}
+      </div>
+    </section>
+  </main>
+</BaseLayout>

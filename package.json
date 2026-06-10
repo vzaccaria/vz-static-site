@@ -24,5 +24,10 @@
     "tsx": "^4.22.4",
     "typescript": "^6.0.3",
     "yaml": "^2.9.0"
+  },
+  "dependencies": {
+    "katex": "^0.17.0",
+    "rehype-katex": "^7.0.1",
+    "remark-math": "^6.0.0"
   }
 }

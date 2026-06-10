@@ -1,0 +1,49 @@
+---
+import { getCollection, render } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { withBasePath } from "../../data/site";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post }
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+
+const displayTag = (tag: string) => tag.replace(/^topics\//, "");
+const tagSlug = (tag: string) =>
+  displayTag(tag).replace(/[^a-zA-Z0-9_-]/g, "-").replace(/-+/g, "-").replace(/^-|-$/g, "");
+const tagHref = (tag: string) =>
+  withBasePath(`/tags/${tagSlug(tag)}/`);
+---
+
+<BaseLayout title={post.data.title} description={post.data.summary}>
+  <main class="page-shell">
+    <article class="blog-post">
+      <header class="blog-post__header">
+        <p class="eyebrow">
+          <time datetime={new Date(post.data.date).toISOString()}>
+            {new Date(post.data.date).toLocaleDateString("en-US", {
+              year: "numeric",
+              month: "long",
+              day: "numeric"
+            })}
+          </time>
+        </p>
+        <h1>{post.data.title}</h1>
+        <ul class="tag-list">
+          {post.data.tags.map((tag) => (
+            <li><a href={tagHref(tag)}>{displayTag(tag)}</a></li>
+          ))}
+        </ul>
+      </header>
+      <div class="blog-post__body">
+        <Content />
+      </div>
+    </article>
+  </main>
+</BaseLayout>
