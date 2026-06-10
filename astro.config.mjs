@@ -11,7 +11,7 @@ export default defineConfig({
   base,
   output: "static",
   markdown: {
-    unified: unified({
+    processor: unified({
       remarkPlugins: [remarkMath],
       rehypePlugins: [rehypeKatex]
     })

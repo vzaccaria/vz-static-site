@@ -19,6 +19,7 @@ Author: Codex
     - Added LaTeX rendering via `remark-math` + `rehype-katex` with KaTeX CSS imported in `BaseLayout.astro`.
     - Updated `astro.config.mjs` to use `unified()` from `@astrojs/markdown-remark` (non-deprecated API).
   - Build passes: 35 pages, all checks pass.
+  - **Post-review fix (2nd round):** Changed astro.config.mjs from `markdown.unified` to `markdown.processor` (correct Astro 6 API for markdown plugins). LaTeX now renders correctly via KaTeX (verified: 25+ katex spans per post).
 
 ## Current state
 
