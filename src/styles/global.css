@@ -7,7 +7,13 @@
 }
 
 html {
-  font-family: var(--ds-fonts-sans), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+  font-family:
+    var(--ds-fonts-sans),
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
     sans-serif;
   background: var(--ds-colors-bg);
   color: var(--ds-colors-fg);
@@ -36,7 +42,9 @@ img {
 }
 
 code {
-  font-family: var(--ds-fonts-mono), "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-family:
+    var(--ds-fonts-mono), "SFMono-Regular", Consolas, "Liberation Mono",
+    monospace;
   font-size: 0.92em;
 }
 
@@ -100,7 +108,8 @@ code {
   border: var(--ds-border_width-bw1) solid var(--ds-colors-fg);
   background: var(--ds-colors-fg);
   color: var(--ds-colors-bg);
-  font-family: var(--ds-fonts-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-family:
+    var(--ds-fonts-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
   font-size: 0.7rem;
   font-weight: var(--ds-weight-bold);
   letter-spacing: 0;
@@ -123,7 +132,8 @@ code {
 
 .brand-meta {
   color: var(--ds-colors-fg2);
-  font-family: var(--ds-fonts-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-family:
+    var(--ds-fonts-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
   font-size: var(--ds-sizes-print-xs);
   font-weight: var(--ds-weight-medium);
   letter-spacing: var(--ds-tracking-label);
@@ -137,7 +147,8 @@ code {
   justify-content: flex-start;
   gap: 0.55rem 1.15rem;
   color: var(--ds-colors-fg);
-  font-family: var(--ds-fonts-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-family:
+    var(--ds-fonts-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
   font-size: var(--ds-sizes-print-xs);
   font-weight: var(--ds-weight-semibold);
   letter-spacing: var(--ds-tracking-label);
@@ -231,7 +242,8 @@ code {
 .label--mono {
   margin: 0 0 0.85rem;
   color: var(--ds-colors-accent);
-  font-family: var(--ds-fonts-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-family:
+    var(--ds-fonts-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
   font-size: var(--ds-sizes-print-xs);
   font-weight: var(--ds-weight-bold);
   letter-spacing: var(--ds-tracking-label);
@@ -247,7 +259,8 @@ code {
   display: inline-block;
   margin-right: 0.5em;
   color: var(--ds-colors-accent);
-  font-family: var(--ds-fonts-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-family:
+    var(--ds-fonts-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
   font-weight: var(--ds-weight-medium);
   letter-spacing: var(--ds-tracking-normal);
 }
@@ -319,7 +332,8 @@ h4 {
 .hero-subline {
   margin: 1.6rem 0 0;
   color: var(--ds-colors-fg2);
-  font-family: var(--ds-fonts-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-family:
+    var(--ds-fonts-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
   font-size: var(--ds-sizes-print-sm);
   letter-spacing: var(--ds-tracking-label);
   line-height: 1.45;
@@ -347,7 +361,8 @@ h4 {
 
 .statement-number {
   color: var(--ds-colors-accent);
-  font-family: var(--ds-fonts-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-family:
+    var(--ds-fonts-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
   font-size: var(--ds-sizes-print-sm);
   font-weight: var(--ds-weight-bold);
 }
@@ -379,7 +394,8 @@ h4 {
   gap: 0.55rem;
   margin: 0 0 1.15rem;
   color: var(--ds-colors-accent);
-  font-family: var(--ds-fonts-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-family:
+    var(--ds-fonts-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
   font-size: var(--ds-sizes-print-sm);
   font-weight: var(--ds-weight-bold);
   letter-spacing: var(--ds-tracking-label);
@@ -404,7 +420,8 @@ h4 {
 
 .spec-panel dt,
 .spec-panel dd {
-  font-family: var(--ds-fonts-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-family:
+    var(--ds-fonts-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
   font-size: var(--ds-sizes-print-sm);
   font-weight: var(--ds-weight-medium);
   line-height: 1.35;
@@ -459,12 +476,12 @@ h4 {
 }
 
 .profile-figure {
-  max-width: 140px;
+  max-width: 120px;
   justify-self: end;
 }
 
 .profile-figure--home {
-  max-width: 14rem;
+  max-width: 12rem;
 }
 
 .profile-figure img,
@@ -480,14 +497,16 @@ h4 {
 .profile-figure figcaption {
   display: grid;
   gap: 0.25rem;
-  padding: 0.75rem 0.85rem;
+  padding: 1.95rem 0.85rem;
   font-size: 0.82rem;
 }
 
 .profile-figure figcaption span {
-  font-family: var(--ds-fonts-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-family:
+    var(--ds-fonts-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
   font-size: var(--ds-sizes-print-xs);
   letter-spacing: var(--ds-tracking-label);
+  padding: 0.15rem 0rem;
   text-transform: uppercase;
   color: var(--ds-colors-fg2);
 }
@@ -574,7 +593,8 @@ dd {
 
 .metric-strip span {
   color: var(--ds-colors-fg2);
-  font-family: var(--ds-fonts-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-family:
+    var(--ds-fonts-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
   font-size: var(--ds-sizes-print-xs);
   letter-spacing: var(--ds-tracking-label);
   text-transform: uppercase;
@@ -614,14 +634,14 @@ dd {
 .detail-card p,
 .thesis-card p {
   color: var(--ds-colors-fg2);
-  font-size: clamp(0.98rem, 1.25vw, 1.08rem);
+  font-size: clamp(0.6rem, 1.25vw, 1.08rem);
   line-height: 1.55;
 }
 
 .feature-grid h2,
 .detail-card h3,
 .thesis-card h3 {
-  font-size: clamp(1.1rem, 1.45vw, 1.32rem);
+  font-size: clamp(0.7rem, 1.45vw, 1.32rem);
   line-height: 1.22;
 }
 
@@ -655,7 +675,8 @@ dd {
 .table-heading p {
   margin: 0;
   color: var(--ds-colors-accent);
-  font-family: var(--ds-fonts-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-family:
+    var(--ds-fonts-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
   font-size: var(--ds-sizes-print-sm);
   font-weight: var(--ds-weight-bold);
   letter-spacing: var(--ds-tracking-label);
@@ -753,7 +774,8 @@ dd {
   background: transparent;
   color: var(--ds-colors-fg);
   padding: 0.42rem 0.58rem;
-  font-family: var(--ds-fonts-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-family:
+    var(--ds-fonts-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
   font-size: var(--ds-sizes-print-xs);
   font-weight: var(--ds-weight-semibold);
   letter-spacing: var(--ds-tracking-label);
@@ -875,7 +897,8 @@ dd {
   overflow-x: auto;
   border-top: var(--ds-border_width-bw3) solid var(--ds-colors-fg);
   border-bottom: var(--ds-border_width-bw3) solid var(--ds-colors-fg);
-  font-family: var(--ds-fonts-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-family:
+    var(--ds-fonts-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
 }
 
 .registry-table__head,
@@ -906,7 +929,7 @@ dd {
 .registry-row {
   border-bottom: var(--ds-border_width-bw1) solid var(--ds-colors-border_soft);
   padding: 0.9rem 1.2rem;
-  font-size: clamp(0.92rem, 1vw, 1.02rem);
+  font-size: clamp(0.52rem, 1vw, 1.02rem);
   line-height: 1.25;
 }
 
@@ -920,7 +943,7 @@ dd {
 
 .registry-row__course {
   color: var(--ds-colors-fg);
-  font-size: clamp(0.98rem, 1.1vw, 1.08rem);
+  font-size: clamp(0.78rem, 1.1vw, 1.08rem);
   line-height: 1.2;
 }
 
@@ -1009,7 +1032,8 @@ dd {
   gap: 0.6rem 1.2rem;
   margin: 0;
   color: var(--ds-colors-fg2);
-  font-family: var(--ds-fonts-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-family:
+    var(--ds-fonts-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
   font-size: var(--ds-sizes-print-sm);
   letter-spacing: var(--ds-tracking-label);
   text-transform: uppercase;

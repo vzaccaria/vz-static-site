@@ -17,7 +17,7 @@ const latestCourse = currentCourses[0];
 const topTheses = sortedTheses.slice(0, 3);
 const recentOutput = latestPublications.slice(0, 5);
 const officeLine = `${publicCv.basics.office.department} · ${publicCv.basics.office.address} · ${publicCv.basics.office.postalCode} ${publicCv.basics.office.city}`;
-const affiliationLine = `${publicCv.basics.label} · ${publicCv.work.current.company}`;
+const affiliationLine = `${publicCv.work.current.company}`;
 const profileImageSrc = withBasePath(profileImagePath);
 const formatPublicationDate = (publication: (typeof latestPublications)[number]) =>
   new Date(publication.timestamp * 1000).toISOString().slice(0, 7);
