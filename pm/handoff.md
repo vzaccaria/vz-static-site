@@ -1,25 +1,30 @@
 # Session Handoff
 
-Written: 2026-06-11 09:45 CEST
+Written: 2026-06-11 10:20 CEST
 Author: Codex
 
 ## What was done this session
 
-- Completed `vz-ds.2` — Typography baseline (IBM Plex Sans/Mono/Serif)
-  - Updated `src/styles/global.css` to use `var(--ds-fonts-sans)` for body text
-  - Updated `src/styles/global.css` to use `var(--ds-fonts-mono)` for code elements
-  - Adjusted non-standard font-weight values (750, 850, 800) to nearest available IBM Plex weights (700)
-  - Verified build passes successfully with `npm run build`
-  - Confirmed all CSS font references now use design system variables
-  - Closed bead `vz-ds.2`
+- Completed `vz-ds.3` — Accent palette swap (teal `#1b6f6a` → blue `#1756e0`)
+  - Replaced all custom color variables in `src/styles/global.css` with design system color tokens
+  - Updated foreground colors: `--ink` → `var(--ds-colors-fg)`, `--muted` → `var(--ds-colors-fg2)`
+  - Updated background colors: `--paper` → `var(--ds-colors-bg_sunken)`, `--surface` → `var(--ds-colors-bg)`, `--surface-soft` → `var(--ds-colors-bg_code)`
+  - Updated border colors: `--line` → `var(--ds-colors-border_soft)`
+  - Updated accent colors: `--accent` → `var(--ds-colors-accent)`, `--accent-strong` → `var(--ds-colors-accent_hover)`
+  - Updated semantic colors: `--success` → `var(--ds-colors-success)`, `--warning` → `var(--ds-colors-warning)`, `--danger` → `var(--ds-colors-danger)`
+  - Verified no remaining references to old teal color `#1b6f6a` or its variants
+  - Confirmed build passes successfully with `npm run build`
+  - Verified all links, CTA, and accent UI now use `#1756e0` (blue)
+  - Confirmed hover/visited states are distinguishable
+  - Closed bead `vz-ds.3`
 
 ## Current state
 
-- Design system typography is fully implemented
+- Design system color palette is fully implemented
 - Build passes successfully
-- All routes render with IBM Plex Sans for body text
-- Code blocks and mono elements use IBM Plex Mono
-- Next phase `vz-ds.3` can proceed (accent palette swap)
+- All routes render with blue accent color `#1756e0`
+- Semantic colors use design system tokens
+- Next phase `vz-ds.4` can proceed (shape conventions)
 
 ## In progress
 
@@ -31,12 +36,13 @@ Author: Codex
 
 ## Recommended next steps
 
-1. Start `vz-ds.3` — Accent palette swap (teal `#1b6f6a` → blue `#1756e0`)
-2. Update color variables to use design system accent tokens
+1. Start `vz-ds.4` — Shape conventions (zero radii, zero shadows, borders 1/2/3 px ink)
+2. Update border-radius and shadow properties to use design system shape tokens
 
 ## Context the next agent should know
 
-- IBM Plex fonts are now fully integrated via design system variables
-- Font weights have been adjusted to match available IBM Plex weights
-- All fallback fonts remain in place for graceful degradation
-- Design system infrastructure and typography phases are complete
+- All color variables have been replaced with design system tokens
+- Single accent color (`#1756e0`) is used consistently throughout
+- Semantic colors (success, warning, danger) are now using design system values
+- No gradients or secondary accents are used (following "Single accent" rule)
+- Design system infrastructure, typography, and color phases are complete
