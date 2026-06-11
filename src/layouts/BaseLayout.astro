@@ -1,5 +1,6 @@
 ---
 import { primaryNavigation } from "../data/navigation";
+import { publicCv } from "../data/public-content";
 import { siteMetadata, withBasePath } from "../data/site";
 import "../styles/global.css";
 import "../styles/ds/fonts.css";
@@ -28,6 +29,17 @@ const siteUrl = Astro.site ?? new URL(siteMetadata.url);
 const canonical = new URL(Astro.url.pathname, siteUrl);
 const ogImage = new URL(withBasePath(image), siteUrl);
 const feedUrl = new URL(withBasePath("/feed.xml"), siteUrl);
+const revision = "2026.06";
+const normalizedPath = Astro.url.pathname.endsWith("/")
+  ? Astro.url.pathname
+  : `${Astro.url.pathname}/`;
+const isCurrentNavItem = (href: string) => {
+  const target = withBasePath(href);
+  return href === "/" ? normalizedPath === target : normalizedPath.startsWith(target);
+};
+const socialLinks = Object.fromEntries(
+  publicCv.basics.social.map((item) => [item.network.toLowerCase(), item.url])
+);
 ---
 
 <!doctype html>
@@ -61,14 +73,34 @@ const feedUrl = new URL(withBasePath("/feed.xml"), siteUrl);
   <body>
     <a class="skip-link" href="#content">Skip to content</a>
     <header class="site-header" aria-label="Primary">
-      <a class="brand" href={withBasePath("/")} aria-label={siteMetadata.title}>
-        <span class="brand-mark">VZ</span>
-        <span>{siteMetadata.title}</span>
-      </a>
-      <nav aria-label="Main navigation">
+      <div class="document-topline" aria-label="Document metadata">
+        <div>
+          <span class="document-code">{siteMetadata.shortName}</span>
+          <span aria-hidden="true">·</span>
+          <span>Rev. {revision}</span>
+        </div>
+        <div>
+          <span>Datasheet</span>
+          <span aria-hidden="true">·</span>
+          <span>Page 1/N</span>
+        </div>
+      </div>
+      <div class="document-part">
+        <a class="brand" href={withBasePath("/")} aria-label={siteMetadata.title}>
+          <span class="part-number">Part no. - {siteMetadata.shortName}</span>
+          <span class="brand-title">{siteMetadata.title}</span>
+        </a>
+      </div>
+      <nav class="site-nav" aria-label="Main navigation">
         {
-          primaryNavigation.map((item) => (
-            <a href={withBasePath(item.href)}>{item.label}</a>
+          primaryNavigation.map((item, index) => (
+            <a
+              href={withBasePath(item.href)}
+              aria-current={isCurrentNavItem(item.href) ? "page" : undefined}
+            >
+              <span class="nav-number">{String(index + 1).padStart(2, "0")}</span>
+              <span>{item.label}</span>
+            </a>
           ))
         }
       </nav>
@@ -76,5 +108,17 @@ const feedUrl = new URL(withBasePath("/feed.xml"), siteUrl);
     <div id="content">
       <slot />
     </div>
+    <footer class="site-footer">
+      <nav class="footer-links" aria-label="Secondary links">
+        <a href={`mailto:${publicCv.basics.email}`}>mail</a>
+        {socialLinks.github && <a href={socialLinks.github}>github</a>}
+        {socialLinks.linkedin && <a href={socialLinks.linkedin}>linkedin</a>}
+        <a href={feedUrl.toString()}>rss</a>
+      </nav>
+      <p>
+        <span>Doc {siteMetadata.shortName}-001</span>
+        <strong>Rev. {revision}</strong>
+      </p>
+    </footer>
   </body>
 </html>

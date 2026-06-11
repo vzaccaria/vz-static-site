@@ -3,7 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import {
   currentCourses,
   groupStatement,
-  profileImagePath,
+  latestPublications,
   publicCv,
   publicationStats,
   renderInlineMarkdown,
@@ -15,57 +15,101 @@ import { withBasePath } from "../data/site";
 const summaryParagraphs = toParagraphs(publicCv.basics.websiteSummary);
 const latestCourse = currentCourses[0];
 const topTheses = sortedTheses.slice(0, 3);
-const profileImageSrc = withBasePath(profileImagePath);
+const recentOutput = latestPublications.slice(0, 5);
+const officeLine = `${publicCv.basics.office.department} · ${publicCv.basics.office.address} · ${publicCv.basics.office.postalCode} ${publicCv.basics.office.city}`;
+const formatPublicationDate = (publication: (typeof latestPublications)[number]) =>
+  new Date(publication.timestamp * 1000).toISOString().slice(0, 7);
+const publicationVenue = (publication: (typeof latestPublications)[number]) =>
+  publication.journal?.name ??
+  publication.booktitle ??
+  publication.publisher ??
+  publication.institution ??
+  publication.type;
+const publicationMeta = (publication: (typeof latestPublications)[number]) =>
+  [
+    publication.authors.join(", "),
+    publicationVenue(publication),
+    publication.pages ? `pp ${publication.pages}` : undefined
+  ]
+    .filter(Boolean)
+    .join(" · ");
 ---
 
 <BaseLayout>
   <main class="page-shell">
-    <section class="hero hero--profile">
+    <section class="hero hero--datasheet">
       <div class="hero-copy">
-        <p class="eyebrow">{publicCv.basics.label}</p>
-        <h1><span class="section-marker" aria-hidden="true">§1</span>{publicCv.basics.name}</h1>
-        {
-          summaryParagraphs.map((paragraph) => (
-            <p class="lede"><Fragment set:html={renderInlineMarkdown(paragraph)} /></p>
-          ))
-        }
-        <div class="action-row" aria-label="Primary actions">
-          <a class="button button--primary" href={withBasePath("/research/")}>Research</a>
-          <a class="button" href={withBasePath("/theses/")}>Thesis topics</a>
+        <p class="eyebrow">§ 1 · Profile overview</p>
+        <h1>{publicCv.basics.name}</h1>
+        <p class="hero-subline">{officeLine}</p>
+        <div class="statement-list">
+          {
+            summaryParagraphs.map((paragraph, index) => (
+              <p>
+                <span class="statement-number">§1.{index + 1}</span>
+                <span><Fragment set:html={renderInlineMarkdown(paragraph)} /></span>
+              </p>
+            ))
+          }
         </div>
+        <nav class="inline-actions" aria-label="Primary actions">
+          <a class="text-link" href={withBasePath("/research/")}>research profile</a>
+          <a class="text-link" href={withBasePath("/theses/")}>thesis topics</a>
+        </nav>
       </div>
 
-      <figure class="profile-figure">
-        <img
-          src={profileImageSrc}
-          alt=""
-          width="1367"
-          height="1300"
-          loading="eager"
-        />
-        <figcaption>
-          <strong>{publicCv.work.current.position}</strong>
-          <span>{publicCv.work.current.company}</span>
-        </figcaption>
-      </figure>
+      <aside class="spec-panel" aria-label="Key specifications">
+        <h2><span aria-hidden="true">■</span> Key specs</h2>
+        <dl>
+          <div>
+            <dt>Role</dt>
+            <dd>{publicCv.basics.label}</dd>
+          </div>
+          <div>
+            <dt>Pubs</dt>
+            <dd>{publicationStats.total}</dd>
+          </div>
+          <div>
+            <dt>Courses</dt>
+            <dd>{currentCourses.length}</dd>
+          </div>
+          <div>
+            <dt>Theses</dt>
+            <dd>{sortedTheses.length}</dd>
+          </div>
+          <div>
+            <dt>Since</dt>
+            <dd>{new Date(publicCv.work.current.startDate).getUTCFullYear()}</dd>
+          </div>
+        </dl>
+      </aside>
     </section>
 
-    <section class="metric-strip" aria-label="Academic profile summary">
-      <div>
-        <strong>{publicationStats.total}</strong>
-        <span>publications</span>
+    <section class="content-band home-output">
+      <div class="table-heading">
+        <p>Table 2 - Recent output</p>
+        <h2 class="visually-hidden">Recent output</h2>
       </div>
-      <div>
-        <strong>{publicCv.research.impact.scholar.hindex}</strong>
-        <span>Google Scholar h-index</span>
-      </div>
-      <div>
-        <strong>{currentCourses.length}</strong>
-        <span>current course</span>
-      </div>
-      <div>
-        <strong>{sortedTheses.length}</strong>
-        <span>open thesis areas</span>
+      <div class="publication-list publication-list--datasheet">
+        {
+          recentOutput.map((publication) => (
+            <article>
+              <p class="meta">{formatPublicationDate(publication)}</p>
+              <div>
+                <h3>
+                  {
+                    publication.url ? (
+                      <a href={publication.url}>{publication.title}</a>
+                    ) : (
+                      publication.title
+                    )
+                  }
+                </h3>
+                <p>{publicationMeta(publication)}</p>
+              </div>
+            </article>
+          ))
+        }
       </div>
     </section>
 
