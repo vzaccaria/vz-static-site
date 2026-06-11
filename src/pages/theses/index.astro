@@ -17,7 +17,7 @@ const introParagraphs = toParagraphs(thesisIntro);
   <main class="page-shell">
     <section class="page-hero">
       <p class="eyebrow">Theses</p>
-      <h1>Available thesis directions.</h1>
+      <h1><span class="section-marker" aria-hidden="true">§1</span>Available thesis directions.</h1>
       {
         introParagraphs.map((paragraph) => (
           <p class="lede">{paragraph}</p>
@@ -28,7 +28,7 @@ const introParagraphs = toParagraphs(thesisIntro);
     <section class="content-band">
       <div class="section-heading">
         <p class="section-kicker">Open topics</p>
-        <h2>{sortedTheses.length} thesis areas</h2>
+        <h2><span class="section-marker" aria-hidden="true">§2</span>{sortedTheses.length} thesis areas</h2>
       </div>
       <div class="thesis-grid">
         {

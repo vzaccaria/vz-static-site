@@ -22,7 +22,7 @@ const profileImageSrc = withBasePath(profileImagePath);
     <section class="hero hero--profile">
       <div class="hero-copy">
         <p class="eyebrow">{publicCv.basics.label}</p>
-        <h1>{publicCv.basics.name}</h1>
+        <h1><span class="section-marker" aria-hidden="true">§1</span>{publicCv.basics.name}</h1>
         {
           summaryParagraphs.map((paragraph) => (
             <p class="lede">{paragraph}</p>
@@ -71,14 +71,14 @@ const profileImageSrc = withBasePath(profileImagePath);
     <section class="feature-grid" aria-label="Main site areas">
       <article>
         <p class="section-kicker">Research</p>
-        <h2>Embedded systems, security, hardware design, and software tools.</h2>
+        <h2><span class="section-marker" aria-hidden="true">§2</span>Embedded systems, security, hardware design, and software tools.</h2>
         <p>{groupStatement}</p>
         <a class="text-link" href={withBasePath("/research/")}>View research profile</a>
       </article>
 
       <article>
         <p class="section-kicker">Teaching</p>
-        <h2>{latestCourse?.courseName ?? "Courses"}</h2>
+        <h2><span class="section-marker" aria-hidden="true">§3</span>{latestCourse?.courseName ?? "Courses"}</h2>
         <p>
           Current and past courses at Politecnico di Milano, including advanced
           operating systems, embedded virtualisation, and computer architecture.
@@ -88,7 +88,7 @@ const profileImageSrc = withBasePath(profileImagePath);
 
       <article>
         <p class="section-kicker">Theses</p>
-        <h2>Active thesis directions</h2>
+        <h2><span class="section-marker" aria-hidden="true">§4</span>Active thesis directions</h2>
         <ul class="plain-list">
           {
             topTheses.map((thesis) => (
