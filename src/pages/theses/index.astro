@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import {
-  excerptFromMarkdown,
+  renderMarkdownExcerpt,
   sortedTheses,
   thesisIntro,
   toParagraphs
@@ -41,7 +41,7 @@ const introParagraphs = toParagraphs(thesisIntro);
                 </span>
               </div>
               <h3>{thesis.title}</h3>
-              <p>{excerptFromMarkdown(thesis.__content)}</p>
+              <p><Fragment set:html={renderMarkdownExcerpt(thesis.__content)} /></p>
               <dl>
                 <div>
                   <dt>Institution</dt>

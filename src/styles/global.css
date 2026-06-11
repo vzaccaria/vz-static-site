@@ -430,7 +430,8 @@ dd {
 
 .detail-card {
   display: grid;
-  gap: 0.9rem;
+  gap: 0.6rem;
+  align-content: start;
 }
 
 .detail-card--accent {
@@ -486,6 +487,13 @@ dd {
   padding: 0.35rem 0.5rem;
   font-size: 0.82rem;
   font-weight: 700;
+}
+
+.tag-list--light li {
+  background: transparent;
+  color: var(--ds-colors-fg2);
+  font-weight: 500;
+  border-color: var(--ds-colors-border_soft);
 }
 
 .timeline,
@@ -642,7 +650,9 @@ dd {
 }
 
 .blog-card h2 {
-  font-size: clamp(1.25rem, 2vw, 1.65rem);
+  font-size: clamp(1.1rem, 1.6vw, 1.35rem);
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .blog-card h2 a {

@@ -62,6 +62,17 @@ heading scale downsized (h1 max 2.6rem, was 8rem), profile photo capped at
 4. `vz-ds.4` — Shape conventions (zero radii, zero shadows, borders 1/2/3 px ink). **Completed 2026-06-11.** Depends on `.3`.
 5. `vz-ds.5` — Datasheet voice (mono labels uppercase, section markers `§N`). **Completed 2026-06-11.** Depends on `.4`.
 
+### 3. Styling nit-picks post vz-ds (`vz-site-gge`)
+
+**Why:** dopo la chiusura di `vz-ds.5` l'utente ha segnalato 5 rifiniture stilistiche
+(blog title wrap, bio degrees card height, research sub-area gray boxes,
+courses card height, theses markdown not rendered). Rifiniture cosmetiche,
+non blockers, ma da chiudere prima del preview deploy per non spostare il debito visivo.
+
+**Scope:** vz-site-gge.1 → .5 (uno per pagina/difetto).
+
+**Status:** closed, completed 2026-06-11.
+
 ## Planned sequence
 
 1. `vz-site.7` - Preview deploy
@@ -81,6 +92,7 @@ heading scale downsized (h1 max 2.6rem, was 8rem), profile photo capped at
   production host.
 
 ## Completed (recent)
+- `vz-site-gge` - Styling nit-picks (5 bug, polish post vz-ds.5), completed 2026-06-11 with all 5 child beads closed.
 - `vz-site.6` - Feed sitemap SEO e asset, completed 2026-06-11 with valid
   `feed.xml` and `sitemap.xml`, shared URL helpers, OpenGraph/Twitter metadata,
   `SITE_URL`/`SITE_BASE`-safe canonical URLs, and generated static copies of

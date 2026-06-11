@@ -1,6 +1,7 @@
 import { readFileSync } from "node:fs";
 import path from "node:path";
 import { parse as parseYaml } from "yaml";
+import { marked } from "marked";
 import {
   bibliographySchema,
   publicCvSchema,
@@ -58,6 +59,19 @@ export const excerptFromMarkdown = (value: string, maxLength = 260) => {
 
   const excerpt = plainText.slice(0, maxLength).replace(/\s+\S*$/, "");
   return `${excerpt}...`;
+};
+
+export const renderMarkdownExcerpt = (value: string, maxLength = 260) => {
+  const plainText = markdownToPlainText(value);
+  if (plainText.length <= maxLength) {
+    return marked.parse(value, { async: false }) as string;
+  }
+  const truncated = plainText.slice(0, maxLength).replace(/\s+\S*$/, "");
+  const plainIndex = truncated.length;
+  const ratio = plainIndex / Math.max(plainText.length, 1);
+  const mdCut = Math.floor(value.length * ratio);
+  const trimmedMd = value.slice(0, mdCut).replace(/\s+\S*$/, "");
+  return `${marked.parse(trimmedMd, { async: false }) as string}...`;
 };
 
 export const formatAcademicYear = (course: {
