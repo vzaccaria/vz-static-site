@@ -641,7 +641,7 @@ dd {
   display: grid;
   gap: 0.6rem;
   background: var(--ds-colors-bg);
-  padding: clamp(1.2rem, 3vw, 1.6rem);
+  padding: clamp(1.2rem, 3vw, 1.6rem) clamp(1rem, 2vw, 1.4rem);
 }
 
 .blog-card__meta {
@@ -650,9 +650,7 @@ dd {
 }
 
 .blog-card h2 {
-  font-size: clamp(1.1rem, 1.6vw, 1.35rem);
-  overflow-wrap: break-word;
-  word-break: break-word;
+  font-size: clamp(1.2rem, 1.8vw, 1.5rem);
 }
 
 .blog-card h2 a {
@@ -681,7 +679,6 @@ dd {
 }
 
 .blog-post__header h1 {
-  max-width: 18ch;
   margin-top: 0.5rem;
 }
 
