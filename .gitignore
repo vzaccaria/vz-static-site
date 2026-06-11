@@ -21,8 +21,8 @@ data/private/
 data/imported/blog/.other/
 .claude
 
-# Design system artifacts (synced from vz-personal-store)
-src/styles/ds/
+# Old design-system root font copies from the pre-fixed sync script layout
+src/styles/ds/*.otf
 
 # Static copies generated from the imported public blog assets
 public/static/blog/images/

@@ -31,6 +31,7 @@ mkdir -p src/styles/ds/
 echo "Copying tokens.css, fonts.css, fonts/ to src/styles/ds/"
 cp -f "$DS_ROOT/build/tokens.css" src/styles/ds/
 cp -f "$DS_ROOT/build/fonts.css" src/styles/ds/
-cp -rf "$DS_ROOT/build/fonts/" src/styles/ds/
+rm -rf src/styles/ds/fonts
+cp -rf "$DS_ROOT/build/fonts" src/styles/ds/
 
 echo "Design system sync complete!"
