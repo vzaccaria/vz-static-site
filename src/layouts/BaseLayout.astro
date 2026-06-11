@@ -2,6 +2,12 @@
 import { primaryNavigation } from "../data/navigation";
 import { publicCv } from "../data/public-content";
 import { siteMetadata, withBasePath } from "../data/site";
+import monoBoldFontUrl from "../styles/ds/fonts/IBMPlexMono-Bold.otf?url";
+import monoMediumFontUrl from "../styles/ds/fonts/IBMPlexMono-Medium.otf?url";
+import monoRegularFontUrl from "../styles/ds/fonts/IBMPlexMono-Regular.otf?url";
+import monoSemiBoldFontUrl from "../styles/ds/fonts/IBMPlexMono-SemiBold.otf?url";
+import sansBoldFontUrl from "../styles/ds/fonts/IBMPlexSans-Bold.otf?url";
+import sansRegularFontUrl from "../styles/ds/fonts/IBMPlexSans-Regular.otf?url";
 import "../styles/global.css";
 import "../styles/ds/fonts.css";
 import "../styles/ds/tokens.css";
@@ -40,6 +46,14 @@ const isCurrentNavItem = (href: string) => {
 const socialLinks = Object.fromEntries(
   publicCv.basics.social.map((item) => [item.network.toLowerCase(), item.url])
 );
+const criticalFontPreloads = [
+  sansRegularFontUrl,
+  sansBoldFontUrl,
+  monoRegularFontUrl,
+  monoMediumFontUrl,
+  monoSemiBoldFontUrl,
+  monoBoldFontUrl
+];
 ---
 
 <!doctype html>
@@ -51,6 +65,11 @@ const socialLinks = Object.fromEntries(
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical.toString()} />
     <link rel="icon" href={withBasePath("favicon.svg")} type="image/svg+xml" />
+    {
+      criticalFontPreloads.map((fontUrl) => (
+        <link rel="preload" href={fontUrl} as="font" type="font/otf" crossorigin />
+      ))
+    }
     <link
       rel="alternate"
       type="application/rss+xml"

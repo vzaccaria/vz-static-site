@@ -33,5 +33,6 @@ cp -f "$DS_ROOT/build/tokens.css" src/styles/ds/
 cp -f "$DS_ROOT/build/fonts.css" src/styles/ds/
 rm -rf src/styles/ds/fonts
 cp -rf "$DS_ROOT/build/fonts" src/styles/ds/
+perl -0pi -e 's/font-display: swap;/font-display: block;/g' src/styles/ds/fonts.css
 
 echo "Design system sync complete!"
