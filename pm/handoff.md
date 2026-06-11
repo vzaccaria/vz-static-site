@@ -1,25 +1,25 @@
 # Session Handoff
 
-Written: 2026-06-11 08:52 CEST
+Written: 2026-06-11 09:45 CEST
 Author: Codex
 
 ## What was done this session
 
-- Completed `vz-ds.1` — Pull infrastructure (sync-ds.sh + import in BaseLayout)
-  - Created `scripts/sync-ds.sh` script to sync design system artifacts from `../vz-personal-store/design-system`
-  - Added `src/styles/ds/` to `.gitignore` to exclude synced artifacts
-  - Updated `src/layouts/BaseLayout.astro` to import `../styles/ds/fonts.css` and `../styles/ds/tokens.css`
-  - Verified build passes with `npm run build`
-  - Confirmed `--ds-colors-accent` resolves to `#1756e0` in `src/styles/ds/tokens.css`
-  - Documented design system pin SHA `ceadc0ad18aaee9f4999c3671bc811b92d96dbfd` in `AGENTS.md`
-  - Closed bead `vz-ds.1`
+- Completed `vz-ds.2` — Typography baseline (IBM Plex Sans/Mono/Serif)
+  - Updated `src/styles/global.css` to use `var(--ds-fonts-sans)` for body text
+  - Updated `src/styles/global.css` to use `var(--ds-fonts-mono)` for code elements
+  - Adjusted non-standard font-weight values (750, 850, 800) to nearest available IBM Plex weights (700)
+  - Verified build passes successfully with `npm run build`
+  - Confirmed all CSS font references now use design system variables
+  - Closed bead `vz-ds.2`
 
 ## Current state
 
-- Design system infrastructure is in place
+- Design system typography is fully implemented
 - Build passes successfully
-- Custom properties from design system are available but not yet consumed
-- Next phase `vz-ds.2` will implement typography baseline
+- All routes render with IBM Plex Sans for body text
+- Code blocks and mono elements use IBM Plex Mono
+- Next phase `vz-ds.3` can proceed (accent palette swap)
 
 ## In progress
 
@@ -31,12 +31,12 @@ Author: Codex
 
 ## Recommended next steps
 
-1. Start `vz-ds.2` — Typography baseline (IBM Plex Sans/Mono/Serif)
-2. Update typography in CSS to use design system font variables
+1. Start `vz-ds.3` — Accent palette swap (teal `#1b6f6a` → blue `#1756e0`)
+2. Update color variables to use design system accent tokens
 
 ## Context the next agent should know
 
-- Design system is pinned to commit `ceadc0ad18aaee9f4999c3671bc811b92d96dbfd` of `vz-personal-store`
-- Sync script is at `./scripts/sync-ds.sh` and can be overridden with `DS_ROOT` env var
-- Design system artifacts are in `src/styles/ds/` (ignored in git)
-- Custom properties are available globally via `:root` in `tokens.css`
+- IBM Plex fonts are now fully integrated via design system variables
+- Font weights have been adjusted to match available IBM Plex weights
+- All fallback fonts remain in place for graceful degradation
+- Design system infrastructure and typography phases are complete
