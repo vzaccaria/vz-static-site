@@ -4,8 +4,8 @@ import {
   currentCourses,
   groupStatement,
   latestPublications,
+  profileImagePath,
   publicCv,
-  publicationStats,
   renderInlineMarkdown,
   sortedTheses,
   toParagraphs
@@ -17,6 +17,8 @@ const latestCourse = currentCourses[0];
 const topTheses = sortedTheses.slice(0, 3);
 const recentOutput = latestPublications.slice(0, 5);
 const officeLine = `${publicCv.basics.office.department} · ${publicCv.basics.office.address} · ${publicCv.basics.office.postalCode} ${publicCv.basics.office.city}`;
+const affiliationLine = `${publicCv.basics.label} · ${publicCv.work.current.company}`;
+const profileImageSrc = withBasePath(profileImagePath);
 const formatPublicationDate = (publication: (typeof latestPublications)[number]) =>
   new Date(publication.timestamp * 1000).toISOString().slice(0, 7);
 const publicationVenue = (publication: (typeof latestPublications)[number]) =>
@@ -37,11 +39,11 @@ const publicationMeta = (publication: (typeof latestPublications)[number]) =>
 
 <BaseLayout>
   <main class="page-shell">
-    <section class="hero hero--datasheet">
+    <section class="hero hero--profile">
       <div class="hero-copy">
         <p class="eyebrow">§ 1 · Profile overview</p>
         <h1>{publicCv.basics.name}</h1>
-        <p class="hero-subline">{officeLine}</p>
+        <p class="hero-subline">{affiliationLine}</p>
         <div class="statement-list">
           {
             summaryParagraphs.map((paragraph, index) => (
@@ -58,31 +60,21 @@ const publicationMeta = (publication: (typeof latestPublications)[number]) =>
         </nav>
       </div>
 
-      <aside class="spec-panel" aria-label="Key specifications">
-        <h2><span aria-hidden="true">■</span> Key specs</h2>
-        <dl>
-          <div>
-            <dt>Role</dt>
-            <dd>{publicCv.basics.label}</dd>
-          </div>
-          <div>
-            <dt>Pubs</dt>
-            <dd>{publicationStats.total}</dd>
-          </div>
-          <div>
-            <dt>Courses</dt>
-            <dd>{currentCourses.length}</dd>
-          </div>
-          <div>
-            <dt>Theses</dt>
-            <dd>{sortedTheses.length}</dd>
-          </div>
-          <div>
-            <dt>Since</dt>
-            <dd>{new Date(publicCv.work.current.startDate).getUTCFullYear()}</dd>
-          </div>
-        </dl>
-      </aside>
+      <figure class="profile-figure profile-figure--home">
+        <img
+          src={profileImageSrc}
+          alt="Vittorio Zaccaria"
+          width="1367"
+          height="1300"
+          loading="eager"
+        />
+        <figcaption>
+          <strong>{publicCv.work.current.position}</strong>
+          <span>{publicCv.work.current.company}</span>
+          <span>{officeLine}</span>
+          <span>{publicCv.basics.email}</span>
+        </figcaption>
+      </figure>
     </section>
 
     <section class="content-band home-output">

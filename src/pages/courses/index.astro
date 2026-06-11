@@ -1,12 +1,44 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import {
-  coursesByAcademicYear,
-  currentCourses,
-  formatAcademicYear,
-  publicCv,
-  sortedCourses
+  publicCv
 } from "../../data/public-content";
+
+type Course = (typeof publicCv.teaching.courses)[number];
+
+const courseRegistry = [...publicCv.teaching.courses].sort(
+  (left, right) => right.aaEnd - left.aaEnd || right.aaInit - left.aaInit
+);
+
+const formatAcademicYearLong = (course: Course) =>
+  course.aaInit === course.aaEnd
+    ? `${course.aaInit}`
+    : `${course.aaInit}/${course.aaEnd}`;
+const courseCredits = (course: Course) => {
+  const value = String(course.crediti ?? "").trim();
+  return value && value.toUpperCase() !== "N" ? value : "-";
+};
+const courseLevel = (course: Course) => {
+  const source = `${course.type ?? ""} ${course.level} ${course.short ?? ""}`.toLowerCase();
+  const hasMs = /magistrale|specialistica|quinquennale|lm|master/.test(source);
+  const hasPhd = /ph\.?d|dottor/.test(source);
+
+  if (hasPhd && hasMs) return "PHD/MS";
+  if (hasPhd) return "PHD";
+  if (hasMs) return "MS";
+  if (/primo livello|triennale|bachelor/.test(source)) return "BS";
+  return "-";
+};
+const courseTrack = (course: Course) => {
+  const source = `${course.level} ${course.short ?? ""}`.toLowerCase();
+
+  if (/meccanica|energetica|mec|eng/.test(source)) return "MEC/ENG";
+  if (/elettronica|biomedica|elett|bio/.test(source)) return "ELN/BIO";
+  if (/informatica|ing\. inf/.test(source)) return "INF";
+  if (/elettrica/.test(source)) return "ELN";
+  if (/design/.test(source)) return "DES";
+  return "-";
+};
 ---
 
 <BaseLayout
@@ -14,101 +46,46 @@ import {
   description="Current and past courses taught by Vittorio Zaccaria."
 >
   <main class="page-shell">
-    <section class="page-hero">
-      <p class="eyebrow">Courses</p>
-      <h1><span class="section-marker" aria-hidden="true">§1</span>Teaching at Politecnico di Milano.</h1>
+    <section class="page-hero page-hero--compact">
+      <p class="eyebrow">§ 2 · Teaching</p>
+      <h1>Courses</h1>
       <p class="lede">
-        Current and past course appointments across operating systems,
-        virtualisation, embedded systems, computer architecture, and
-        introductory computing.
+        Current and past courses (with links to webpages if still active).
       </p>
     </section>
 
-    <section class="metric-strip" aria-label="Teaching summary">
-      <div>
-        <strong>{currentCourses.length}</strong>
-        <span>current course</span>
+    <section class="content-band content-band--table courses-registry">
+      <div class="table-heading">
+        <p>Table 1 - Courses registry</p>
+        <h2 class="visually-hidden">Courses registry</h2>
       </div>
-      <div>
-        <strong>{sortedCourses.length}</strong>
-        <span>teaching records</span>
-      </div>
-      <div>
-        <strong>{coursesByAcademicYear.length}</strong>
-        <span>academic years</span>
-      </div>
-      <div>
-        <strong>{publicCv.teaching.courses.filter((course) => course.position === "Titolare").length}</strong>
-        <span>lead roles</span>
-      </div>
-    </section>
-
-    <section class="content-band">
-      <div class="section-heading">
-        <p class="section-kicker">Current</p>
-        <h2><span class="section-marker" aria-hidden="true">§2</span>Latest academic year</h2>
-      </div>
-      <div class="item-grid item-grid--two">
+      <div class="registry-table" role="table" aria-label="Courses registry">
+        <div class="registry-table__head" role="row">
+          <span role="columnheader">AA</span>
+          <span role="columnheader">Course</span>
+          <span role="columnheader">CR</span>
+          <span role="columnheader">Level</span>
+          <span role="columnheader">Track</span>
+          <span role="columnheader">Web</span>
+        </div>
         {
-          currentCourses.map((course) => (
-            <article class="detail-card detail-card--accent">
-              <p class="meta">{formatAcademicYear(course)} · {course.position}</p>
-              <h3>
+          courseRegistry.map((course) => (
+            <article class="registry-row" role="row">
+              <span role="cell">{formatAcademicYearLong(course)}</span>
+              <strong class="registry-row__course" role="cell">{course.courseName}</strong>
+              <span role="cell">{courseCredits(course)}</span>
+              <span role="cell">{courseLevel(course)}</span>
+              <span role="cell">{courseTrack(course)}</span>
+              <span role="cell">
                 {
                   course.link ? (
-                    <a href={course.link}>{course.courseName}</a>
+                    <a class="registry-row__web" href={course.link}>open -&gt;</a>
                   ) : (
-                    course.courseName
+                    "-"
                   )
                 }
-              </h3>
-              <p>{course.level}</p>
-              <p>{course.ore} hours · {course.crediti} credits</p>
+              </span>
             </article>
-          ))
-        }
-      </div>
-    </section>
-
-    <section class="content-band">
-      <div class="section-heading">
-        <p class="section-kicker">Archive</p>
-        <h2><span class="section-marker" aria-hidden="true">§3</span>Teaching history</h2>
-      </div>
-      <div class="course-archive">
-        {
-          coursesByAcademicYear.map((group) => (
-            <section class="course-year-group" aria-labelledby={`year-${group.academicYear}`}>
-              <h3 id={`year-${group.academicYear}`}>{group.academicYear}</h3>
-              <div>
-                {group.courses.map((course) => (
-                  <article class="list-row">
-                    <div>
-                      <h4>
-                        {
-                          course.link ? (
-                            <a href={course.link}>{course.courseName}</a>
-                          ) : (
-                            course.courseName
-                          )
-                        }
-                      </h4>
-                      <p>{course.level}</p>
-                    </div>
-                    <dl>
-                      <div>
-                        <dt>Role</dt>
-                        <dd>{course.position}</dd>
-                      </div>
-                      <div>
-                        <dt>Hours</dt>
-                        <dd>{course.ore}</dd>
-                      </div>
-                    </dl>
-                  </article>
-                ))}
-              </div>
-            </section>
           ))
         }
       </div>

@@ -19,6 +19,22 @@ const metrics = [
   { label: "Conference papers", value: publicationStats.conferences },
   { label: "Patents", value: publicationStats.patents }
 ];
+const formatPublicationDate = (publication: (typeof latestPublications)[number]) =>
+  new Date(publication.timestamp * 1000).toISOString().slice(0, 7);
+const publicationVenue = (publication: (typeof latestPublications)[number]) =>
+  publication.journal?.name ??
+  publication.booktitle ??
+  publication.publisher ??
+  publication.institution ??
+  publication.type;
+const publicationMeta = (publication: (typeof latestPublications)[number]) =>
+  [
+    publication.authors.join(", "),
+    publicationVenue(publication),
+    publication.pages ? `pp ${publication.pages}` : undefined
+  ]
+    .filter(Boolean)
+    .join(" · ");
 ---
 
 <BaseLayout
@@ -67,27 +83,27 @@ const metrics = [
     </section>
 
     <section class="content-band">
-      <div class="section-heading">
-        <p class="section-kicker">Selected work</p>
-        <h2><span class="section-marker" aria-hidden="true">§3</span>Recent publications</h2>
+      <div class="table-heading">
+        <p>Table 1 - Recent publications</p>
+        <h2 class="visually-hidden">Recent publications</h2>
       </div>
-      <div class="publication-list">
+      <div class="publication-list publication-list--datasheet">
         {
           latestPublications.map((publication) => (
             <article>
-              <p class="meta">{publication.year} · {publication.type}</p>
-              <h3>
-                {
-                  publication.url ? (
-                    <a href={publication.url}>{publication.title}</a>
-                  ) : (
-                    publication.title
-                  )
-                }
-              </h3>
-              <p>
-                {publication.journal?.name ?? publication.booktitle ?? publication.publisher ?? publication.institution}
-              </p>
+              <p class="meta">{formatPublicationDate(publication)}</p>
+              <div>
+                <h3>
+                  {
+                    publication.url ? (
+                      <a href={publication.url}>{publication.title}</a>
+                    ) : (
+                      publication.title
+                    )
+                  }
+                </h3>
+                <p>{publicationMeta(publication)}</p>
+              </div>
             </article>
           ))
         }

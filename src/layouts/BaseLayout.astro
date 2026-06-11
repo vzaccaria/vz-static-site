@@ -92,37 +92,28 @@ const criticalFontPreloads = [
   <body>
     <a class="skip-link" href="#content">Skip to content</a>
     <header class="site-header" aria-label="Primary">
-      <div class="document-topline" aria-label="Document metadata">
-        <div>
-          <span class="document-code">{siteMetadata.shortName}</span>
-          <span aria-hidden="true">·</span>
-          <span>Rev. {revision}</span>
-        </div>
-        <div>
-          <span>Datasheet</span>
-          <span aria-hidden="true">·</span>
-          <span>Page 1/N</span>
-        </div>
-      </div>
-      <div class="document-part">
+      <div class="site-header__inner">
         <a class="brand" href={withBasePath("/")} aria-label={siteMetadata.title}>
-          <span class="part-number">Part no. - {siteMetadata.shortName}</span>
-          <span class="brand-title">{siteMetadata.title}</span>
+          <span class="brand-mark" aria-hidden="true">{siteMetadata.shortName}</span>
+          <span class="brand-copy">
+            <span class="brand-title">{siteMetadata.title}</span>
+            <span class="brand-meta">Rev. {revision}</span>
+          </span>
         </a>
+        <nav class="site-nav" aria-label="Main navigation">
+          {
+            primaryNavigation.map((item, index) => (
+              <a
+                href={withBasePath(item.href)}
+                aria-current={isCurrentNavItem(item.href) ? "page" : undefined}
+              >
+                <span class="nav-number">{String(index + 1).padStart(2, "0")}</span>
+                <span class="nav-label">{item.label}</span>
+              </a>
+            ))
+          }
+        </nav>
       </div>
-      <nav class="site-nav" aria-label="Main navigation">
-        {
-          primaryNavigation.map((item, index) => (
-            <a
-              href={withBasePath(item.href)}
-              aria-current={isCurrentNavItem(item.href) ? "page" : undefined}
-            >
-              <span class="nav-number">{String(index + 1).padStart(2, "0")}</span>
-              <span>{item.label}</span>
-            </a>
-          ))
-        }
-      </nav>
     </header>
     <div id="content">
       <slot />

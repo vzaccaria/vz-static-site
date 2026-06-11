@@ -1,20 +1,17 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import {
-  profileImagePath,
   publicCv,
   renderInlineMarkdown,
   toParagraphs,
   yearOf
 } from "../../data/public-content";
-import { withBasePath } from "../../data/site";
 
 const bioParagraphs = toParagraphs(publicCv.basics.officialDeptPage);
 const education = publicCv.education;
 const appointments = [...publicCv.work.previous].sort(
   (left, right) => right.index - left.index
 );
-const profileImageSrc = withBasePath(profileImagePath);
 ---
 
 <BaseLayout
@@ -22,7 +19,7 @@ const profileImageSrc = withBasePath(profileImagePath);
   description="Biography, appointments, education, and contact details for Vittorio Zaccaria."
 >
   <main class="page-shell">
-    <section class="page-hero page-hero--split">
+    <section class="page-hero">
       <div>
         <p class="eyebrow">Bio</p>
         <h1><span class="section-marker" aria-hidden="true">§1</span>Academic biography</h1>
@@ -32,31 +29,6 @@ const profileImageSrc = withBasePath(profileImagePath);
           ))
         }
       </div>
-      <aside class="contact-panel" aria-label="Contact details">
-        <img
-          src={profileImageSrc}
-          alt=""
-          width="1367"
-          height="1300"
-          loading="lazy"
-        />
-        <dl>
-          <div>
-            <dt>Email</dt>
-            <dd><a href={`mailto:${publicCv.basics.email}`}>{publicCv.basics.email}</a></dd>
-          </div>
-          <div>
-            <dt>Office</dt>
-            <dd>
-              {publicCv.basics.office.addressShort}, {publicCv.basics.office.address}
-            </dd>
-          </div>
-          <div>
-            <dt>Department</dt>
-            <dd>{publicCv.basics.office.department}</dd>
-          </div>
-        </dl>
-      </aside>
     </section>
 
     <section class="content-band">
