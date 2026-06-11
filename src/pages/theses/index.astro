@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import {
+  renderInlineMarkdown,
   renderMarkdownExcerpt,
   sortedTheses,
   thesisIntro,
@@ -20,7 +21,7 @@ const introParagraphs = toParagraphs(thesisIntro);
       <h1><span class="section-marker" aria-hidden="true">§1</span>Available thesis directions.</h1>
       {
         introParagraphs.map((paragraph) => (
-          <p class="lede">{paragraph}</p>
+          <p class="lede"><Fragment set:html={renderInlineMarkdown(paragraph)} /></p>
         ))
       }
     </section>

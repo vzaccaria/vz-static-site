@@ -5,6 +5,7 @@ import {
   latestPublications,
   publicationStats,
   publicCv,
+  renderInlineMarkdown,
   researchAreas,
   selectedProjects,
   toParagraphs,
@@ -30,7 +31,7 @@ const metrics = [
       <h1><span class="section-marker" aria-hidden="true">§1</span>Embedded systems, security, and hardware/software design.</h1>
       {
         goalParagraphs.map((paragraph) => (
-          <p class="lede">{paragraph}</p>
+          <p class="lede"><Fragment set:html={renderInlineMarkdown(paragraph)} /></p>
         ))
       }
     </section>

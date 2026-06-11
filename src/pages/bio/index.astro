@@ -3,6 +3,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import {
   profileImagePath,
   publicCv,
+  renderInlineMarkdown,
   toParagraphs,
   yearOf
 } from "../../data/public-content";
@@ -27,7 +28,7 @@ const profileImageSrc = withBasePath(profileImagePath);
         <h1><span class="section-marker" aria-hidden="true">§1</span>Academic biography</h1>
         {
           bioParagraphs.map((paragraph) => (
-            <p class="lede">{paragraph}</p>
+            <p class="lede"><Fragment set:html={renderInlineMarkdown(paragraph)} /></p>
           ))
         }
       </div>

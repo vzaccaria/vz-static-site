@@ -74,6 +74,9 @@ export const renderMarkdownExcerpt = (value: string, maxLength = 260) => {
   return `${marked.parse(trimmedMd, { async: false }) as string}...`;
 };
 
+export const renderInlineMarkdown = (text: string) =>
+  marked.parseInline(text, { async: false }) as string;
+
 export const formatAcademicYear = (course: {
   aaInit: number;
   aaEnd: number;
