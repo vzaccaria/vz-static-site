@@ -123,7 +123,7 @@ nav a {
 
 .page-hero--split {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 180px;
+  grid-template-columns: minmax(0, 1fr) 220px;
   gap: clamp(2rem, 4vw, 3rem);
   align-items: start;
 }
@@ -314,6 +314,16 @@ dl {
   gap: 1rem;
   background: var(--ds-colors-bg);
   padding: 0.85rem 1rem;
+}
+
+.contact-panel dl div {
+  grid-template-columns: 1fr;
+  gap: 0.2rem;
+}
+
+.contact-panel dd {
+  font-size: 0.88rem;
+  overflow-wrap: anywhere;
 }
 
 dt {
