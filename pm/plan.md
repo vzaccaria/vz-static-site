@@ -1,6 +1,6 @@
 # Development Plan
 
-Last updated: 2026-06-11
+Last updated: 2026-06-11 (vz-ds.4 closed)
 
 ## Active epics
 
@@ -47,13 +47,15 @@ di curriculum e materiale-corsi.
 dipendenze stretta. **`vz-ds.1` completed 2026-06-11** — pull infrastructure in place.
 **`vz-ds.2` completed 2026-06-11** — typography baseline implemented.
 **`vz-ds.3` completed 2026-06-11** — accent palette swap implemented.
+**`vz-ds.4` completed 2026-06-11** — shape conventions enforced (zero radii,
+zero shadows, ink borders via `--ds-border_width-bw1/bw3` tokens). Next: `vz-ds.5`.
 
 **Planned sequence (vz-ds):**
 
 1. `vz-ds.1` — Pull infrastructure (sync-ds.sh + import in BaseLayout). **Completed 2026-06-11.**
 2. `vz-ds.2` — Typography baseline (IBM Plex Sans/Mono/Serif). **Completed 2026-06-11.** Depends on `.1`.
 3. `vz-ds.3` — Accent palette swap (teal `#1b6f6a` → blue `#1756e0`). **Completed 2026-06-11.** Depends on `.2`.
-4. `vz-ds.4` — Shape conventions (zero radii, zero shadows, borders 1/2/3 px ink). Depends on `.3`.
+4. `vz-ds.4` — Shape conventions (zero radii, zero shadows, borders 1/2/3 px ink). **Completed 2026-06-11.** Depends on `.3`.
 5. `vz-ds.5` — Datasheet voice (mono labels uppercase, section markers `§N.N`). Depends on `.4`.
 
 ## Planned sequence

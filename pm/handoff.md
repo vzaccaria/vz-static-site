@@ -1,26 +1,33 @@
 # Session Handoff
 
-Written: 2026-06-11 10:48 CEST
-Author: Codex
+Written: 2026-06-11 11:05 CEST
+Author: Claude
 
 ## What was done this session
 
-- Completed `vz-site.6` — Feed sitemap SEO e asset.
-- Added `src/pages/feed.xml.ts` with RSS 2.0 output for all imported blog posts.
-- Added `src/pages/sitemap.xml.ts` covering static routes, blog posts, and tag pages.
-- Expanded `BaseLayout.astro` with canonical, RSS discovery, OpenGraph, Twitter card, and article published-time metadata.
-- Made `SITE_URL` and `SITE_BASE` flow through canonical URLs, feed URLs, sitemap URLs, navigation links, and static image paths.
-- Added `scripts/sync-static-assets.mjs` and `npm run assets:sync` so imported blog images are copied into ignored `public/static/blog/images/` before dev/build/preview.
-- Added a Markdown image rewrite in `astro.config.mjs` so imported `images/...` blog references render as base-safe `/static/blog/images/...` URLs.
-- Centralized blog post/tag URL helpers in `src/data/blog.ts`.
-- Recorded memory `lesson/vz-site/static-blog-assets`.
+- Closed `vz-ds.4` — Shape conventions (zero radii, zero shadows, ink borders).
+- `src/styles/global.css`:
+  - Removed legacy `--shadow` custom var from `:root` and its single use on
+    `.profile-figure, .contact-panel`.
+  - Replaced `.tag-pill__count` `border-radius: 50%` with
+    `var(--ds-radius-flat)` (0px). No avatar-circle CSS exists, so no ADR
+    exception was needed.
+  - Replaced every literal `1px solid` with
+    `var(--ds-border_width-bw1) solid` (≈1.33px). Replaced both `3px solid`
+    accent left-rules with `var(--ds-border_width-bw3) solid` (4px) and the
+    one `4px solid` accent top-rule with the same token.
+- Verified `npm run check` and `npm run build` green. Dev server smoke-checked
+  on `:4321/` — pre-existing DS font 404s observed (unchanged from prior
+  session, out of scope).
 
 ## Current state
 
-- `npm run check` passes when run outside the sandbox because `tsx` needs to create an IPC pipe under `/var/folders`.
-- `npm run build` passes for the default preview target.
-- `SITE_URL=https://vzaccaria.github.io SITE_BASE=/vz-static-site npm run build` also passes and produces base-safe canonical, feed, sitemap, navigation, CSS, avatar, and blog image URLs.
-- The build still emits pre-existing Vite warnings for design-system font URLs under ignored `src/styles/ds/`; this session did not change that area.
+- `vz-ds.4` closed. `vz-ds.5` now ready (datasheet voice).
+- Token-name mapping note: DS exposes `--ds-radius-flat`, `--ds-shadow-flat`,
+  `--ds-border_width-bw1/bw2/bw3`. Earlier bead text referenced
+  `*-none/thin/med/heavy`; those names do not exist in
+  `src/styles/ds/tokens.css`. Future fases must use the actual `bw*`/`flat`
+  names.
 
 ## In progress
 
@@ -28,15 +35,20 @@ Author: Codex
 
 ## Blockers & open questions
 
-- Network access was blocked in the sandbox for automatic beads remote sync; use explicit elevated `bd dolt push` and `git push` at close.
+- None.
 
 ## Recommended next steps
 
-1. Start `vz-site.7` — Preview deploy.
-2. Verify the deployed GitHub Pages project URL serves `feed.xml`, `sitemap.xml`, avatar, and rewritten blog images under `/vz-static-site/`.
+1. Start `vz-ds.5` — datasheet voice: mono uppercase labels, `§N.N` section
+   markers in section headers.
+2. Eventually revisit pre-existing DS font 404s under `src/styles/ds/fonts.css`
+   (Vite warnings, dev console 404s on `/fonts/IBMPlex*.otf`).
 
 ## Context the next agent should know
 
-- Do not commit `public/static/blog/images/`; it is generated and ignored.
-- `SITE_URL` controls absolute SEO/feed/sitemap URLs. `SITE_BASE` controls subpath links and asset paths.
-- The feed and sitemap share post/tag path logic from `src/data/blog.ts`; keep future URL changes centralized there.
+- DS shape tokens in use: `--ds-radius-flat` (0), `--ds-border_width-bw1`
+  (1.33px), `--ds-border_width-bw3` (4px). `bw2` (2.67px) not yet used in
+  `global.css` — adopt when a mid-weight rule is needed.
+- No `box-shadow` declarations remain in site CSS (DS tokens.css unchanged).
+- Avatar image (`.profile-figure img`) has no border-radius — stays square,
+  consistent with datasheet direction.
