@@ -385,7 +385,7 @@ dd {
 .thesis-card {
   border: var(--ds-border_width-bw1) solid var(--ds-colors-border_soft);
   background: var(--ds-colors-bg);
-  padding: clamp(0.8rem, 1.5vw, 1rem);
+  padding: 0.75rem;
 }
 
 .feature-grid article {
