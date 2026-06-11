@@ -23,3 +23,6 @@ data/imported/blog/.other/
 
 # Design system artifacts (synced from vz-personal-store)
 src/styles/ds/
+
+# Static copies generated from the imported public blog assets
+public/static/blog/images/

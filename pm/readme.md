@@ -15,7 +15,9 @@ Planned architecture:
   through the sanitized export produced by `../vz-personal-store`.
 - The site exposes static routes for profile, bio/research, courses, theses, blog, tags, feeds, sitemap, and SEO metadata.
 - Shared build-time helpers in `src/data/public-content.ts` derive page data from the imported public tree without a runtime server.
+- Shared blog helpers in `src/data/blog.ts` keep post and tag paths consistent across pages, feed, and sitemap generation.
 - The avatar used by the public bio/home pages lives in `public/static/images/avatar.jpg` so it is served as a normal static asset.
+- Imported blog images remain in `data/imported/blog/images/`; `npm run assets:sync` copies them to ignored `public/static/blog/images/`, and the Astro Markdown pipeline rewrites `images/...` references to `SITE_BASE`-safe `/static/blog/images/...` URLs.
 - Preview deployment targets `preview.vittoriozaccaria.net`.
 - Production cutover targets `www.vittoriozaccaria.net` after parity checks pass,
   with the apex domain expected to redirect to `www`.
@@ -53,6 +55,7 @@ Local commands:
 ```bash
 npm install
 npm run dev
+npm run assets:sync
 npm run build
 npm run preview
 npm run check
@@ -69,6 +72,8 @@ The content model added by `vz-site.3` lives in `src/data/content-model.ts` and
 is enforced by `npm run content:check` and `npm run check`.
 `vz-site.4` added the shared static views, the build-time public content helper,
 and the local avatar asset fallback.
+`vz-site.6` added RSS feed and sitemap endpoints, OpenGraph/Twitter metadata,
+and the generated static blog image asset sync.
 
 The CI workflow in `.github/workflows/ci.yml` runs on pull requests and pushes
 to `main`, installs with `npm ci`, then runs `npm run check` and
@@ -87,3 +92,7 @@ to `main`, installs with `npm ci`, then runs `npm run check` and
 - Always use `withBasePath()` from `src/data/site.ts` for internal links and
   asset paths — never compute `basePath` locally in pages. Required for correct
   behaviour when `SITE_BASE=/vz-static-site/` (GitHub Pages project deploy).
+- Use `SITE_URL` for canonical/feed/sitemap/OG URL targets and `SITE_BASE` for
+  subpath deployments. Validate both the default preview build and the
+  `SITE_URL=https://vzaccaria.github.io SITE_BASE=/vz-static-site` build when
+  changing URLs or static asset paths.

@@ -1,7 +1,7 @@
 ---
 import { getCollection, render } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import { withBasePath } from "../../data/site";
+import { displayTag, tagHref } from "../../data/blog";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
@@ -13,15 +13,15 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { Content } = await render(post);
-
-const displayTag = (tag: string) => tag.replace(/^topics\//, "");
-const tagSlug = (tag: string) =>
-  displayTag(tag).replace(/[^a-zA-Z0-9_-]/g, "-").replace(/-+/g, "-").replace(/^-|-$/g, "");
-const tagHref = (tag: string) =>
-  withBasePath(`/tags/${tagSlug(tag)}/`);
+const publishedTime = new Date(post.data.date).toISOString();
 ---
 
-<BaseLayout title={post.data.title} description={post.data.summary}>
+<BaseLayout
+  title={post.data.title}
+  description={post.data.summary}
+  type="article"
+  publishedTime={publishedTime}
+>
   <main class="page-shell">
     <article class="blog-post">
       <header class="blog-post__header">

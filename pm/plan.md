@@ -1,6 +1,6 @@
 # Development Plan
 
-Last updated: 2026-06-05
+Last updated: 2026-06-11
 
 ## Active epics
 
@@ -15,18 +15,11 @@ now consumes the sanitized `data/imported/` tree from the private repo, as
 recorded in ADR 003. `vz-site.3` adds strict public content schemas and CI
 validation for the imported tree. `vz-site.12` adds a temporary GitHub Pages
 project deploy for early testing before the later custom preview domain deploy.
-`vz-site.4` now implements the core static views and the local avatar fallback.
-`vz-site.5` completed 2026-06-10 with blog listing, individual post pages,
-tag index, and tag detail pages. Uses Astro content collections from
-`data/imported/blog/`. Tags with `topics/` prefix displayed cleanly; spaces
-slugified to hyphens in URLs.
-contract in ADR 001. `vz-site.1` added the Astro/npm scaffold and CI. `vz-site.2`
-now consumes the sanitized `data/imported/` tree from the private repo, as
-recorded in ADR 003. `vz-site.3` adds strict public content schemas and CI
-validation for the imported tree. `vz-site.12` adds a temporary GitHub Pages
-project deploy for early testing before the later custom preview domain deploy.
-`vz-site.4` now implements the core static views and the local avatar fallback;
-the next step is `vz-site.5`.
+`vz-site.4` implements the core static views and the local avatar fallback.
+`vz-site.5` added blog listing, individual post pages, tag index, and tag
+detail pages. `vz-site.6` completed 2026-06-11 with RSS feed, sitemap,
+canonical/OG/Twitter metadata, configurable preview/project URLs, and static
+blog image asset rewrites. The next step is `vz-site.7`.
 
 ### 2. Adozione design system (`vz-ds`)
 
@@ -65,11 +58,9 @@ dipendenze stretta. **`vz-ds.1` completed 2026-06-11** — pull infrastructure i
 
 ## Planned sequence
 
-1. `vz-site.5` - Blog, tag e compatibilita URL
-2. `vz-site.6` - Feed sitemap SEO e asset
-3. `vz-site.7` - Preview deploy
-4. `vz-site.8` - Parity check con sito attuale
-5. `vz-site.9` - Cutover produzione
+1. `vz-site.7` - Preview deploy
+2. `vz-site.8` - Parity check con sito attuale
+3. `vz-site.9` - Cutover produzione
 
 ## Parked / future
 - Framework alternatives to Astro - only revisit if `vz-site.0` finds a concrete blocker.
@@ -84,6 +75,13 @@ dipendenze stretta. **`vz-ds.1` completed 2026-06-11** — pull infrastructure i
   production host.
 
 ## Completed (recent)
+- `vz-site.6` - Feed sitemap SEO e asset, completed 2026-06-11 with valid
+  `feed.xml` and `sitemap.xml`, shared URL helpers, OpenGraph/Twitter metadata,
+  `SITE_URL`/`SITE_BASE`-safe canonical URLs, and generated static copies of
+  imported blog images.
+- `vz-site.5` - Blog, tag e compatibilita URL, completed 2026-06-10 with blog
+  listing, individual post pages, tag index, and tag detail pages backed by
+  Astro content collections from `data/imported/blog/`.
 - `vz-site.4` - Viste statiche core, completed 2026-06-04 with static home,
   bio, research, courses, and theses routes, responsive shared layout, and a
   local avatar fallback asset.

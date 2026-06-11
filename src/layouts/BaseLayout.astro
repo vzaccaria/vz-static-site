@@ -9,16 +9,25 @@ import "katex/dist/katex.min.css";
 interface Props {
   title?: string;
   description?: string;
+  image?: string;
+  type?: "website" | "article";
+  publishedTime?: string;
 }
 
 const {
   title = siteMetadata.title,
-  description = siteMetadata.description
+  description = siteMetadata.description,
+  image = siteMetadata.image,
+  type = "website",
+  publishedTime
 } = Astro.props;
 
 const pageTitle =
   title === siteMetadata.title ? title : `${title} | ${siteMetadata.shortName}`;
-const canonical = new URL(Astro.url.pathname, Astro.site ?? siteMetadata.url);
+const siteUrl = Astro.site ?? new URL(siteMetadata.url);
+const canonical = new URL(Astro.url.pathname, siteUrl);
+const ogImage = new URL(withBasePath(image), siteUrl);
+const feedUrl = new URL(withBasePath("/feed.xml"), siteUrl);
 ---
 
 <!doctype html>
@@ -30,6 +39,24 @@ const canonical = new URL(Astro.url.pathname, Astro.site ?? siteMetadata.url);
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical.toString()} />
     <link rel="icon" href={withBasePath("favicon.svg")} type="image/svg+xml" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title={`${siteMetadata.title} feed`}
+      href={feedUrl.toString()}
+    />
+    <meta property="og:site_name" content={siteMetadata.title} />
+    <meta property="og:locale" content={siteMetadata.locale} />
+    <meta property="og:type" content={type} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical.toString()} />
+    <meta property="og:image" content={ogImage.toString()} />
+    {publishedTime && <meta property="article:published_time" content={publishedTime} />}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage.toString()} />
   </head>
   <body>
     <a class="skip-link" href="#content">Skip to content</a>

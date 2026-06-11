@@ -1,22 +1,10 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import { withBasePath } from "../../data/site";
+import { collectTagPosts, sortTags, tagHref } from "../../data/blog";
 
 const posts = await getCollection("blog");
-
-const tagCounts = new Map<string, number>();
-for (const post of posts) {
-  for (const tag of post.data.tags) {
-    const display = tag.replace(/^topics\//, "");
-    tagCounts.set(display, (tagCounts.get(display) ?? 0) + 1);
-  }
-}
-
-const tagSlug = (tag: string) =>
-  tag.replace(/[^a-zA-Z0-9_-]/g, "-").replace(/-+/g, "-").replace(/^-|-$/g, "");
-
-const sortedTags = [...tagCounts.entries()].sort((a, b) => a[0].localeCompare(b[0]));
+const sortedTags = sortTags(collectTagPosts(posts).entries());
 ---
 
 <BaseLayout title="Tags" description="Blog tags by topic.">
@@ -32,10 +20,10 @@ const sortedTags = [...tagCounts.entries()].sort((a, b) => a[0].localeCompare(b[
         {sortedTags.map(([tag, count]) => (
           <a
             class="tag-pill"
-            href={withBasePath(`/tags/${tagSlug(tag)}/`)}
+            href={tagHref(tag)}
           >
             {tag}
-            <span class="tag-pill__count">{count}</span>
+            <span class="tag-pill__count">{count.length}</span>
           </a>
         ))}
       </div>
