@@ -82,3 +82,19 @@ bd close <id>         # Complete work
 - NEVER say "ready to push when you are" - YOU must push
 - If push fails, resolve and retry until it succeeds
 <!-- END BEADS INTEGRATION -->
+
+## Design System Pin
+
+The design system is pinned to commit `ceadc0ad18aaee9f4999c3671bc811b92d96dbfd` of the `vz-personal-store` monorepo.
+
+To re-sync design system tokens and fonts:
+
+```bash
+./scripts/sync-ds.sh
+```
+
+To use a different monorepo location:
+
+```bash
+DS_ROOT=/path/to/vz-personal-store/design-system ./scripts/sync-ds.sh
+```

@@ -20,3 +20,6 @@ data/private/
 # Non-published generated blog drafts/legacy posts
 data/imported/blog/.other/
 .claude
+
+# Design system artifacts (synced from vz-personal-store)
+src/styles/ds/

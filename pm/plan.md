@@ -51,12 +51,11 @@ di curriculum e materiale-corsi.
 - Modifiche al monorepo design-system (consumer-only adoption).
 
 **Status:** open. Adozione strutturata in 5 fasi sequenziali con catena di
-dipendenze stretta.
+dipendenze stretta. **`vz-ds.1` completed 2026-06-11** — pull infrastructure in place.
 
 **Planned sequence (vz-ds):**
 
-1. `vz-ds.1` — Pull infrastructure (sync-ds.sh + import in BaseLayout). Nessun
-   consumo di token; solo verifica build + pin SHA.
+1. `vz-ds.1` — Pull infrastructure (sync-ds.sh + import in BaseLayout). **Completed 2026-06-11.**
 2. `vz-ds.2` — Typography baseline (IBM Plex Sans/Mono/Serif). Depends on `.1`.
 3. `vz-ds.3` — Accent palette swap (teal `#1b6f6a` → blue `#1756e0`). Depends on `.2`.
 4. `vz-ds.4` — Shape conventions (zero radii, zero shadows, borders 1/2/3 px ink). Depends on `.3`.

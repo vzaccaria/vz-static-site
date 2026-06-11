@@ -1,31 +1,25 @@
 # Session Handoff
 
-Written: 2026-06-10 17:53 CEST
+Written: 2026-06-11 08:52 CEST
 Author: Codex
 
 ## What was done this session
 
-- Closed `vz-site.5` — Blog, tag e compatibilita URL.
-  - Added Blog link to `primaryNavigation` in `src/data/navigation.ts`.
-  - Created `src/pages/blog/index.astro` — listing page sorted by date desc.
-  - Created `src/pages/blog/[...slug].astro` — dynamic route per blog post using Astro content collection rendering.
-  - Created `src/pages/tags/index.astro` — tag index page with post counts.
-  - Created `src/pages/tags/[tag].astro` — tag detail page listing tagged posts.
-  - Added blog-specific CSS to `src/styles/global.css` (blog list, blog post body, tag grid, tag pills).
-  - Tag values with `topics/` prefix are displayed without the prefix.
-  - Tag URLs slugify spaces to hyphens (e.g., `topics/fault topics/injection` → `/tags/fault-topics-injection/`).
-  - **Post-review fixes:**
-    - Fixed vertically stretched images in blog posts — added `height: auto` to `.blog-post__body img`.
-    - Added LaTeX rendering via `remark-math` + `rehype-katex` with KaTeX CSS imported in `BaseLayout.astro`.
-    - Updated `astro.config.mjs` to use `unified()` from `@astrojs/markdown-remark` (non-deprecated API).
-  - Build passes: 35 pages, all checks pass.
-  - **Post-review fix (2nd round):** Changed astro.config.mjs from `markdown.unified` to `markdown.processor` (correct Astro 6 API for markdown plugins). LaTeX now renders correctly via KaTeX (verified: 25+ katex spans per post).
+- Completed `vz-ds.1` — Pull infrastructure (sync-ds.sh + import in BaseLayout)
+  - Created `scripts/sync-ds.sh` script to sync design system artifacts from `../vz-personal-store/design-system`
+  - Added `src/styles/ds/` to `.gitignore` to exclude synced artifacts
+  - Updated `src/layouts/BaseLayout.astro` to import `../styles/ds/fonts.css` and `../styles/ds/tokens.css`
+  - Verified build passes with `npm run build`
+  - Confirmed `--ds-colors-accent` resolves to `#1756e0` in `src/styles/ds/tokens.css`
+  - Documented design system pin SHA `ceadc0ad18aaee9f4999c3671bc811b92d96dbfd` in `AGENTS.md`
+  - Closed bead `vz-ds.1`
 
 ## Current state
 
-- All 5 existing routes + new blog/tag routes build and pass.
-- Blog posts are served from `data/imported/blog/*.md` via Astro content collections.
-- Tag URLs are slugified for safety; display keeps the original formatting minus `topics/` prefix.
+- Design system infrastructure is in place
+- Build passes successfully
+- Custom properties from design system are available but not yet consumed
+- Next phase `vz-ds.2` will implement typography baseline
 
 ## In progress
 
@@ -33,17 +27,16 @@ Author: Codex
 
 ## Blockers & open questions
 
-- `npm audit` reports moderate dev-only vulnerabilities through `@astrojs/check`; `npm audit --omit=dev` is clean.
-- The `.other/` blog posts (old format) are not loaded — they need manual migration if desired.
-- Blog images are served from `data/imported/blog/images/` but post body renders them as relative paths (they resolve in dev/build since Astro processes `data/`).
+- None.
 
 ## Recommended next steps
 
-1. Start `vz-site.6` — Feed, sitemap, SEO, and asset handling.
-2. Continue with remaining planned sequence: preview deploy, parity check, production cutover.
+1. Start `vz-ds.2` — Typography baseline (IBM Plex Sans/Mono/Serif)
+2. Update typography in CSS to use design system font variables
 
 ## Context the next agent should know
 
-- Use `withBasePath()` from `src/data/site.ts` for every internal link and asset path.
-- Tag helper functions are defined inline in each page (`tagSlug`, `displayFromRaw`).
-- Blog content uses `astro:content` `getCollection("blog")` and `render()`.
+- Design system is pinned to commit `ceadc0ad18aaee9f4999c3671bc811b92d96dbfd` of `vz-personal-store`
+- Sync script is at `./scripts/sync-ds.sh` and can be overridden with `DS_ROOT` env var
+- Design system artifacts are in `src/styles/ds/` (ignored in git)
+- Custom properties are available globally via `:root` in `tokens.css`
