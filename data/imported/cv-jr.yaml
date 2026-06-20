@@ -1277,6 +1277,18 @@ teaching:
       position: Titolare
       crediti: 5
       ore: 50
+      courseName: Principi di Architetture dei Calcolatori
+      titolare: Vittorio Zaccaria
+      level: Laurea di primo livello in Ingegneria Elettronica
+      institution: Politecnico di Milano
+      students: 200+
+      short: PoliMi - Ing. Elett. - 1 Liv
+      link: https://vzaccaria.notion.site/Principi-di-Architetture-dei-Calcolatori-A-A-2025-2026-Polimi-2e9f43ba76ac80e7a89dfc1a5c1bfebc
+    - aaInit: 2025
+      aaEnd: 2026
+      position: Titolare
+      crediti: 5
+      ore: 50
       courseName: Advanced Operating Systems
       titolare: Vittorio Zaccaria
       level: Laurea Magistrale in Ingegneria Informatica
