@@ -39,7 +39,7 @@ const introParagraphs = toParagraphs(thesisIntro);
                 {thesis.level} · {thesis.topic} · {thesis.subtopic} · {thesis.maturity}
               </p>
               <h3>{thesis.title}</h3>
-              <p><Fragment set:html={renderMarkdownExcerpt(thesis.__content)} /></p>
+              <p><Fragment set:html={renderMarkdownExcerpt(thesis.__content, 200)} /></p>
               <dl>
                 <div>
                   <dt>Institution</dt>
@@ -62,9 +62,7 @@ const introParagraphs = toParagraphs(thesisIntro);
                   )
                 }
               </dl>
-              <ul class="tag-list">
-                {thesis.skills.map((skill) => <li>{skill}</li>)}
-              </ul>
+              <h4>Thesis topic list</h4>
               <ul class="plain-list">
                 {thesis.additional.map((item) => <li>{item}</li>)}
               </ul>

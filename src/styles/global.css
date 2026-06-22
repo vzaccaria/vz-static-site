@@ -544,7 +544,7 @@ dl {
   grid-template-columns: 7rem minmax(0, 1fr);
   gap: 1rem;
   background: var(--ds-colors-bg);
-  padding: 0.85rem 1rem;
+  padding: 0.85rem 0rem;
 }
 
 .contact-panel dl div {

@@ -8,7 +8,7 @@ import {
   thesesSchema,
   type Bibliography,
   type PublicCv,
-  type ThesisCatalog
+  type ThesisCatalog,
 } from "./content-model";
 
 type DateLikeValue = string | number | Date;
@@ -20,15 +20,15 @@ const readImportedText = (path: string) =>
   readFileSync(importedFile(path), "utf8").trim();
 
 export const publicCv: PublicCv = publicCvSchema.parse(
-  parseYaml(readImportedText("cv-jr.yaml"))
+  parseYaml(readImportedText("cv-jr.yaml")),
 );
 
 export const bibliography: Bibliography = bibliographySchema.parse(
-  JSON.parse(readImportedText("bibliov2.json"))
+  JSON.parse(readImportedText("bibliov2.json")),
 );
 
 export const thesisCatalog: ThesisCatalog = thesesSchema.parse(
-  JSON.parse(readImportedText("theses.json"))
+  JSON.parse(readImportedText("theses.json")),
 );
 
 export const groupStatement = readImportedText("group.md");
@@ -50,7 +50,7 @@ export const markdownToPlainText = (value: string) =>
     value
       .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
       .replace(/[*_`>#]/g, "")
-      .replace(/-{3,}/g, " ")
+      .replace(/-{3,}/g, " "),
   );
 
 export const excerptFromMarkdown = (value: string, maxLength = 260) => {
@@ -71,7 +71,7 @@ export const renderMarkdownExcerpt = (value: string, maxLength = 260) => {
   const ratio = plainIndex / Math.max(plainText.length, 1);
   const mdCut = Math.floor(value.length * ratio);
   const trimmedMd = value.slice(0, mdCut).replace(/\s+\S*$/, "");
-  return `${marked.parse(trimmedMd, { async: false }) as string}...`;
+  return `${marked.parse(trimmedMd, { async: false }) as string}`;
 };
 
 export const renderInlineMarkdown = (text: string) =>
@@ -101,15 +101,15 @@ export const sortedCourses = [...publicCv.teaching.courses].sort(
   (left, right) =>
     right.aaInit - left.aaInit ||
     right.aaEnd - left.aaEnd ||
-    left.courseName.localeCompare(right.courseName)
+    left.courseName.localeCompare(right.courseName),
 );
 
 const latestCourseEndYear = Math.max(
-  ...publicCv.teaching.courses.map((course) => course.aaEnd)
+  ...publicCv.teaching.courses.map((course) => course.aaEnd),
 );
 
 export const currentCourses = sortedCourses.filter(
-  (course) => course.aaEnd === latestCourseEndYear
+  (course) => course.aaEnd === latestCourseEndYear,
 );
 
 export const coursesByAcademicYear = sortedCourses.reduce<
@@ -132,11 +132,11 @@ export const publicationStats = {
   journals: bibliography.records.filter((record) => record.type === "journal")
     .length,
   conferences: bibliography.records.filter(
-    (record) => record.type === "conference"
+    (record) => record.type === "conference",
   ).length,
   patents: bibliography.records.filter((record) => record.type === "patent")
     .length,
-  books: bibliography.records.filter((record) => record.type === "book").length
+  books: bibliography.records.filter((record) => record.type === "book").length,
 };
 
 export const latestPublications = [...bibliography.records]
@@ -147,7 +147,8 @@ export const researchAreas = publicCv.research.currentGoals.itemized;
 
 export const highlightedGrants = [...publicCv.research.grants]
   .sort((left, right) => {
-    const highlightDelta = Number(right.highlight ?? false) - Number(left.highlight ?? false);
+    const highlightDelta =
+      Number(right.highlight ?? false) - Number(left.highlight ?? false);
     if (highlightDelta !== 0) return highlightDelta;
     return Number(yearOf(right.from)) - Number(yearOf(left.from));
   })
@@ -157,5 +158,5 @@ export const selectedProjects = publicCv.work.other.projects;
 
 export const sortedTheses = [...thesisCatalog.theses].sort(
   (left, right) =>
-    right.prio - left.prio || left.title.localeCompare(right.title)
+    right.prio - left.prio || left.title.localeCompare(right.title),
 );

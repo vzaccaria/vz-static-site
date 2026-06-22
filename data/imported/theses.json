@@ -19,7 +19,7 @@
         "various"
       ],
       "prio": 7,
-      "__content": "\n\nThis is a general umbrella topic --- valid even if you are thinking of a Ph.d. **Bring your own ideas!**\n\n\n  "
+      "__content": "\n\nThis is a general umbrella topic --- valid even if you are thinking of a Ph.d. **Bring your own ideas!**"
     },
     {
       "level": "MS",
@@ -41,7 +41,7 @@
       ],
       "prio": 8,
       "created": "2024-05-15T00:00:00.000Z",
-      "__content": "\n\n**Formal Verification of a new Protocol for Securing Physical Communication between an Embedded System and a Secure Element**\n\nThis thesis aims to formally verify a new protocol, designed to enhance the security of physical communication between an embedded microcontroller and a **secure element**. The proposed new protocol employs lightweight cryptographic techniques tailored to the constraints of embedded systems, while leveraging the security features of the secure element. Formal verification techniques, such as model checking and theorem proving, will be utilized to rigorously analyse the algorithm's correctness and resilience against potential attacks.\n\n\n\n"
+      "__content": "\n\nThis thesis aims to formally verify a new protocol, designed to enhance the security of physical communication between an embedded microcontroller and a **secure element**. The proposed new protocol employs lightweight cryptographic techniques tailored to the constraints of embedded systems, while leveraging the security features of the secure element. Formal verification techniques, such as model checking and theorem proving, will be utilized to rigorously analyse the algorithm's correctness and resilience against potential attacks."
     },
     {
       "level": "MS",
@@ -66,7 +66,7 @@
         "various skills"
       ],
       "created": "2022-12-13 09:26",
-      "__content": "\n\nEngage in the [HAL4SDV](https://www.linkedin.com/company/hal4sdv/about/) project, a pioneering European initiative in software-defined vehicles, where you will collaborate with semiconductor providers like STMicroelectronics and connect with giants such as Mercedes, and BMW, to harmonize and innovate software interfaces and development methodologies, thereby shaping the future of both safety-critical and non-safety-critical applications in next-generation vehicles.\n\n\n\n"
+      "__content": "\n\nEngage in the [HAL4SDV](https://www.linkedin.com/company/hal4sdv/about/) project, a pioneering European initiative in software-defined vehicles, where you will collaborate with semiconductor providers like STMicroelectronics and connect with giants such as Mercedes, and BMW, to harmonize and innovate software interfaces and development methodologies, thereby shaping the future of both safety-critical and non-safety-critical applications in next-generation vehicles."
     }
   ]
 }

@@ -160,7 +160,7 @@ work:
       dichiara: di aver prestato servizio come ricercatore a tempo indeterminato dal 1 marzo 2011 al 5 Luglio 2020 presso il Dipartimento di Elettronica e Informazione del Politecnico di Milano, e di avere prestato servizio come ricercatore a tempo determinato dal 1 novembre 2009 a fine Febbraio 2011 presso il Dipartimento di Elettronica e Informazione del Politecnico di Milano.
     - startDate: 2004-05-01T00:00:00.000Z
       endDate: 2007-03-27T00:00:00.000Z
-      position: R\&D Engineer
+      position: R&D Engineer
       positionLong: Research and Development Engineer
       company: STMicroelectronics
       address: Lugano, Switzerland
@@ -440,17 +440,12 @@ research:
       since: 2000-01-01T00:00:00.000Z
   currentGoals:
     short: |
-      I love studying and innovating all aspects of software and hardware
-      development. In 2015 I have started working with
-      STMicroelectronics on using functional programming languages for
-      hardware design. In particular, I am investigating how deeply embedded
-      DSLs can be used to produce a diverse set of artifacts (actual hardware
-      specification, high-level simulators, functional and non-functional
-      property proving).
-
-      I am also interested into applying functional programming and category
-      theory into the general context of asynchronous systems with a specific
-      emphasis on web technologies.
+      I am interested in designing and validating embedded systems, with a particular focus on hardware security, 
+      secure channels for microcontrollers, remote attestation, firmware updates with live 
+      state transfer, electromagnetic fault injection, kernel exploitation and mitigation 
+      strategies, and compiler optimization for edge AI accelerators. 
+      I am broadly interested in dependable resource-constrained systems and the 
+      interplay between software, hardware, and security.
     itemized:
       - area: Cryptography
         keywords:
@@ -727,6 +722,39 @@ research:
       role: Technical team member
       name: Multi-objective design space exploration of multi-processor SoC architectures for embedded multimedia applications
   students:
+    - name: Andrea Giacomini
+      year: 2025
+      title: 'Subject: ASCON side-channel leakage assessment with TI/DOM'
+    - name: Matteo Groppi
+      year: 2025
+      title: 'Subject: Hypervisor-induced IRQ-latency measurement'
+    - name: Nicolas Benatti
+      year: 2025
+      title: 'Subject: Statistical WCET anomaly detection for real-time tasks'
+    - name: Alessandro Lo Prete
+      year: 2025
+      title: 'Subject: Intermittent-demand forecasting for DTN intrusion detection'
+    - name: Alexandru Bradatan
+      year: 2025
+      title: 'Subject: Hypervisor porting and overhead analysis on STM Stellar'
+    - name: Luca Sereni
+      year: 2025
+      title: 'Subject: Rust-based static partitioning hypervisor for automotive RTOS'
+    - name: Alessio Lanzini
+      year: 2024
+      title: 'Subject: DDS benchmarking and latency measurement on STM Stellar'
+    - name: Luca Tagliaferri
+      year: 2024
+      title: 'Subject: Unified Simulink abstraction for heterogeneous FreeRTOS BSPs'
+    - name: Davide Frigerio
+      year: 2024
+      title: 'Subject: 5G broadcast/multicast content delivery with eMBMS'
+    - name: Claudio Migliorelli
+      year: 2024
+      title: 'Subject: Linux kernel SLUB exploitation'
+    - name: Luca Botti
+      year: 2024
+      title: 'Subject: Memory compression with zram and selective swap'
     - name: Joan Bushi
       year: 2023
       title: 'Subject: A new secure channel protocol based on sponge functions'
