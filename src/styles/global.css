@@ -376,7 +376,6 @@ h4 {
 }
 
 .inline-actions a + a::before {
-  content: "/";
   margin-right: 1.1rem;
   color: var(--ds-colors-fg3);
   font-weight: var(--ds-weight-regular);
