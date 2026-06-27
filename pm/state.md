@@ -5,10 +5,9 @@ Updated: 2026-06-27
 ## Roadmap
 
 Active (children + detail in bd; run `bd show <id>`):
-1. `vz-site` — Nuovo sito statico pubblico. Static public rebuild + production
-   cutover. Open: `vz-site.9` cutover **prepared** — repo changes committed
-   locally (CNAME, prod root build, default site=www, ADR 004); awaiting push +
-   Namecheap DNS flip + Vercel decommission, then verify and close.
+1. `vz-site` — Nuovo sito statico pubblico. Static public rebuild done; production
+   cutover complete (vz-site.9 closed). Open: `vz-site.17` redirect legacy
+   `vzaccaria.github.io` account site to www (P3, not started).
 2. `vz-site-csn` (P3) — Updates sito: pagina laboratorio. Merge research + theses
    into a "Lab & theses" virtual lab page. Open: not started.
 
@@ -16,25 +15,28 @@ Parked: alternative SSG frameworks (revisit only on a concrete Astro blocker).
 
 ## Handoff
 
-Written: 2026-06-27 17:35 CEST · Claude
+Written: 2026-06-27 20:05 CEST · Claude
 
-Done: `vz-site.9` Part A (in-repo) prepared and committed locally — `public/CNAME`
-= www, `pages.yml` production build (`SITE_URL=https://www.vittoriozaccaria.net`,
-no `SITE_BASE`), default `site` in `astro.config.mjs` + fallback in
-`src/data/site.ts` set to production www, and [ADR 004](adr/004-production-cutover.md)
-(final DNS, rollback, verification). Root-base build verified clean (`npm run check`
-0 errors; no `/vz-static-site` references).
+Done: `vz-site.9` production cutover **complete and verified**. Pushed root build
+to main (Pages deploy), set Pages custom domain `www.vittoriozaccaria.net` via API
+(workflow deploys need the repo setting, not just the artifact CNAME file). At
+Namecheap: nameservers switched Vercel→BasicDNS, apex A → 4 GitHub IPs, `www` CNAME
+→ vzaccaria.github.io. TLS cert issued (Let's Encrypt) after a domain off/on toggle
+unstuck GitHub's issuance queue (~2h passive wait failed; `is_https_eligible` was
+true throughout). Enforce HTTPS on. Verified @ GitHub IP: www 200, apex 301→www,
+all routes 200, valid cert, new datasheet content. ADR 004 records final DNS,
+rollback, verification.
 
-State: working; cutover **not executed** — not pushed, DNS still on Vercel NS.
+State: production live on GitHub Pages at https://www.vittoriozaccaria.net.
 
-Next: 1) `git push` main → triggers Pages deploy, claims `www`, retires the
-`vzaccaria.github.io/vz-static-site/` preview URL (this push IS the cutover
-trigger). 2) At Namecheap: switch NS Vercel→BasicDNS + records per ADR 004.
-3) Enable Enforce HTTPS, remove/park the Vercel Next site, run the ADR 004
-verification, then `bd close vz-site.9`.
+Next: 1) `vz-site.17` — redirect the legacy `vzaccaria.github.io` account repo
+(branch master, old 2022 site) to www. 2) Optional hygiene: remove `www` from the
+old Vercel project (DNS no longer routes to it; keep the project parked for the
+rollback grace window per ADR 004 — do not delete yet).
 
-Gotchas: pre-cutover DNS captured in ADR 004 for rollback (NS ns1/ns2.vercel-dns.com;
-www A 76.76.21.22/66.33.60.66; apex A 76.76.21.241/76.76.21.61). Keep the old
-Vercel site parked, not deleted, until prod is verified stable.
+Gotchas: cert was stuck ~2h despite correct config; the fix was toggling the Pages
+custom domain off→on via API (re-PUT of the same value does NOT re-queue). Pre-cutover
+DNS for rollback is in ADR 004. Local resolver may still cache old Vercel IPs; public
+DNS is on GitHub.
 
-Blockers: DNS flip + Vercel decommission need the user (Namecheap/Vercel dashboards).
+Blockers: none.
