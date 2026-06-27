@@ -1,4 +1,4 @@
-const fallbackSiteUrl = "https://preview.vittoriozaccaria.net";
+const fallbackSiteUrl = "https://www.vittoriozaccaria.net";
 const configuredSiteUrl = (
   import.meta.env.SITE ?? import.meta.env.SITE_URL ?? fallbackSiteUrl
 ).replace(/\/+$/, "");

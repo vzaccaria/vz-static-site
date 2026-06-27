@@ -3,7 +3,7 @@ import { unified } from "@astrojs/markdown-remark";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 
-const site = process.env.SITE_URL ?? "https://preview.vittoriozaccaria.net";
+const site = process.env.SITE_URL ?? "https://www.vittoriozaccaria.net";
 const base = process.env.SITE_BASE ?? "/";
 const basePath = base.endsWith("/") ? base : `${base}/`;
 
