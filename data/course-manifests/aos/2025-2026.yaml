@@ -1,0 +1,791 @@
+schema_version: 1
+
+site:
+  title: Advanced Operating Systems
+  short_title: AOS
+  locale: en
+  timezone: Europe/Rome
+  summary: >-
+    Advanced Operating Systems combines operating-system theory with practical
+    work on concurrency, Linux kernels, virtualization, embedded systems, and
+    system-level programming.
+
+course:
+  academic_year: "2025-2026"
+  institution: Politecnico di Milano
+  staff:
+    - person: vittorio-zaccaria
+      role: course-instructor
+    - person: federico-terraneo
+      role: additional-instructor
+
+people:
+  - id: vittorio-zaccaria
+    name: Vittorio Zaccaria
+    email: vittorio.zaccaria@polimi.it
+  - id: federico-terraneo
+    name: Federico Terraneo
+    email: federico.terraneo@polimi.it
+
+publication:
+  artifact_provider: google-drive
+  root_href: https://drive.google.com/drive/folders/1cLpCLBuCwFJaUooKPGHd4a9Mx4qY8BJO?usp=sharing
+
+artifacts:
+  - id: syllabus
+    kind: file
+    media_type: application/pdf
+    title: Course syllabus
+    href: https://drive.google.com/file/d/1eajR4ZVWyO6gFdtTTVYfYu7gu2FdkfoT/view?usp=sharing
+
+  - id: study-guide
+    kind: file
+    media_type: application/pdf
+    title: Course study guide
+    href: https://drive.google.com/file/d/12TWKKp_Azb7Bm4xAqG2LTJRUXAUsP98S/view?usp=sharing
+
+  - id: thesis-proposals
+    kind: file
+    media_type: application/pdf
+    title: Master and PhD thesis proposals
+    href: https://drive.google.com/file/d/1QQyec3J5oGw8yM3c2oo88suivZzJzirt/view?usp=sharing
+
+  - id: project-assignments
+    kind: file
+    media_type: application/pdf
+    title: Current project assignments
+    href: https://drive.google.com/file/d/1JtdfQqtgybHmSHleKoIrUSPLYd3Rhx4I/view?usp=sharing
+
+  - id: project-presentation-template
+    kind: file
+    media_type: application/vnd.google-apps.presentation
+    title: Course project presentation template
+    href: https://drive.google.com/file/d/1LXi-Z874qiGMWOVvpF5U-1Dptg5nn3QF/view?usp=sharing
+
+  - id: exam-archive
+    kind: collection
+    title: Archive of previous exams
+    href: https://drive.google.com/drive/folders/1lAxJ34GhPJVBOfkG7H1IEWcBQYgst__C?usp=sharing
+
+  - id: exam-blanks
+    kind: collection
+    title: Original exam versions with blanks
+    href: https://drive.google.com/drive/folders/1onwhoo5UOjCdbZjuvzi_qM27QOkFQDah?usp=sharing
+
+  - id: cheatsheet-part-a
+    kind: file
+    media_type: application/pdf
+    title: Part A cheatsheet — C++ and RTOS APIs
+    href: https://drive.google.com/file/d/1qIEqCfbbjpJAI6KCD71P0Laera6O_q2S/view?usp=sharing
+
+  - id: cheatsheet-part-b
+    kind: file
+    media_type: application/pdf
+    title: Part B cheatsheet — Linux APIs
+    href: https://drive.google.com/file/d/1ZzIOuVKjemo817mN9_bR_LSDduztukzd/view?usp=sharing
+
+  - id: slides-admin
+    kind: file
+    media_type: application/pdf
+    title: Course administration slides
+    href: https://drive.google.com/file/d/1TAFgfzHQaxrIISfIL7cpQKkp3I4CQgJO/view?usp=sharing
+
+  - id: slides-intro
+    kind: file
+    media_type: application/pdf
+    title: Introduction slides
+    href: https://drive.google.com/file/d/1CtdNr0miTd4hNh2HOl4IKhM1OXZgAqzE/view?usp=sharing
+
+  - id: notes-intro
+    kind: file
+    media_type: application/pdf
+    title: Introduction notes
+    href: https://drive.google.com/file/d/1INHgcSuIzFW4U7_F8l3wn14_83xX60aP/view?usp=sharing
+
+  - id: slides-processes
+    kind: file
+    media_type: application/pdf
+    title: Processes and scheduling slides
+    href: https://drive.google.com/file/d/1ITA7vyLa2U7Q39bfUOXoCDVIG0ik7Xhu/view?usp=sharing
+
+  - id: notes-processes
+    kind: file
+    media_type: application/pdf
+    title: Processes and scheduling notes
+    href: https://drive.google.com/file/d/11e0AK2FpcbjyCT7i1sjTLH2d1O9qDA1K/view?usp=sharing
+
+  - id: slides-lab-1
+    kind: file
+    media_type: application/pdf
+    title: Kernel modules and debugging laboratory
+    href: https://drive.google.com/file/d/1oNuOI-DatY651n31S7pgFZCYCN_cJqSO/view?usp=sharing
+
+  - id: slides-concurrency
+    kind: file
+    media_type: application/pdf
+    title: Kernel concurrency slides
+    href: https://drive.google.com/file/d/1gPX9Jp2kyWp-BIZLRGcEyfMt2BVw0IGh/view?usp=sharing
+
+  - id: notes-concurrency
+    kind: file
+    media_type: application/pdf
+    title: Kernel concurrency notes
+    href: https://drive.google.com/file/d/1SpxGUNShU4wMi3RrPT0KTqKx0hUkLhD0/view?usp=sharing
+
+  - id: slides-lab-2
+    kind: file
+    media_type: application/pdf
+    title: Kernel concurrency laboratory
+    href: https://drive.google.com/file/d/1BhR2FoTOLcPVDLbRkMpZ7pn57bYytj69/view?usp=sharing
+
+  - id: slides-virtual-memory
+    kind: file
+    media_type: application/pdf
+    title: Virtual memory slides
+    href: https://drive.google.com/file/d/1rW7ksR_8ctjci0dqdmAXqBK8rpxrd6LS/view?usp=sharing
+
+  - id: notes-virtual-memory
+    kind: file
+    media_type: application/pdf
+    title: Virtual memory notes
+    href: https://drive.google.com/file/d/1x5Jhzt7m4MGOY6yTpsTuJfgO9UhftXQI/view?usp=sharing
+
+  - id: slides-lab-3
+    kind: file
+    media_type: application/pdf
+    title: Kernel memory laboratory
+    href: https://drive.google.com/file/d/1FqrjVNX4DBy1ZBhg4grOuB6GKVvUZoEH/view?usp=sharing
+
+  - id: slides-io
+    kind: file
+    media_type: application/pdf
+    title: Device I/O slides
+    href: https://drive.google.com/file/d/1qjHoUfoGdsLGNRc9OCHYn-qkm62PVGKt/view?usp=sharing
+
+  - id: notes-io
+    kind: file
+    media_type: application/pdf
+    title: Device I/O notes
+    href: https://drive.google.com/file/d/1Qi5NqulyjTyhOPTgppu-1xee1fqQfu3-/view?usp=sharing
+
+  - id: slides-lab-4
+    kind: file
+    media_type: application/pdf
+    title: Device I/O laboratory
+    href: https://drive.google.com/file/d/1LibaTGNfIl70rR8aG2XGztIvvLjwLF7D/view?usp=sharing
+
+  - id: slides-boot
+    kind: file
+    media_type: application/pdf
+    title: Boot and firmware slides
+    href: https://drive.google.com/file/d/1dhfVQBVpSkpqGyr4eiqvpzwK2pRIh5FK/view?usp=sharing
+
+  - id: notes-boot
+    kind: file
+    media_type: application/pdf
+    title: Boot and firmware notes
+    href: https://drive.google.com/file/d/1YnGYvq_TUBV104Wc1M7duL9QWvvxUnRw/view?usp=sharing
+
+  - id: slides-virtualization
+    kind: file
+    media_type: application/pdf
+    title: System virtualization slides
+    href: https://drive.google.com/file/d/1-umGMpkLqAuyQrkRPNP_mreLCpi1CI44/view?usp=sharing
+
+  - id: notes-virtualization
+    kind: file
+    media_type: application/pdf
+    title: System virtualization notes
+    href: https://drive.google.com/file/d/1pY6vjt8dNBDegiTpFuL0qpDB5GGRsIHw/view?usp=sharing
+
+  - id: slides-projects
+    kind: file
+    media_type: application/pdf
+    title: Course projects slides
+    href: https://drive.google.com/file/d/1No1JL-bBxLCHZLv-2opcwiSylZW_-UJ_/view?usp=sharing
+
+  - id: slides-cpp-intro
+    kind: file
+    media_type: application/pdf
+    title: Introduction to C++ slides
+    href: https://drive.google.com/file/d/1cpvAJdx0sCR0KIaWLSPW9imT9GmwFwIM/view?usp=sharing
+
+  - id: slides-threads
+    kind: file
+    media_type: application/pdf
+    title: C++ and RTOS threads slides
+    href: https://drive.google.com/file/d/16lJ_UAV1uIfqrAXhlF-V5GgF2HaHn8Li/view?usp=sharing
+
+  - id: supplementary-acso-intro
+    kind: file
+    media_type: application/pdf
+    title: ACSO introduction material
+    href: https://drive.google.com/file/d/1X20sebZMb11zL66rvrwcsr8Fcx4GjEPH/view?usp=sharing
+
+  - id: supplementary-acso-processes
+    kind: file
+    media_type: application/pdf
+    title: ACSO processes material
+    href: https://drive.google.com/file/d/1WhkNnKZDJmRgCoJZyyS22HoQYdo237sP/view?usp=sharing
+
+  - id: supplementary-acso-threads
+    kind: file
+    media_type: application/pdf
+    title: ACSO threads material
+    href: https://drive.google.com/file/d/1WjhTnK8e5lc7RaimhfdkcGz2uy4-hnTi/view?usp=sharing
+
+  - id: supplementary-acso-memory
+    kind: file
+    media_type: application/pdf
+    title: ACSO virtual memory material
+    href: https://drive.google.com/file/d/1WyP30cohCI5gryxFuanAC4flAS-Q8wIV/view?usp=sharing
+
+  - id: supplementary-acso-io
+    kind: file
+    media_type: application/pdf
+    title: ACSO I/O material
+    href: https://drive.google.com/file/d/1WmbONn_ZoKEahTkwvY77Youotw51Zf7z/view?usp=sharing
+
+  - id: supplementary-git
+    kind: file
+    media_type: application/pdf
+    title: System programming in Linux — Git
+    href: https://drive.google.com/file/d/1z18t8Ml8EFHWTcux12eQqNHt1HrJ-JOP/view?usp=sharing
+
+  - id: supplementary-linux-development
+    kind: file
+    media_type: application/pdf
+    title: System programming in Linux — GCC and Make
+    href: https://drive.google.com/file/d/1Pldf1O_6S12qCzkO5mFkEjkI81j8yfrl/view?usp=sharing
+
+  - id: supplementary-cpp
+    kind: file
+    media_type: application/pdf
+    title: Introduction to C++ programming
+    href: https://drive.google.com/file/d/1TLmos8ntXqpDQhVzGSQKhxRn2vl0OFCl/view?usp=sharing
+
+resource_groups:
+  - id: course-information
+    title: Course information
+    artifacts:
+      - syllabus
+      - study-guide
+
+  - id: projects
+    title: Course projects and research opportunities
+    artifacts:
+      - project-assignments
+      - project-presentation-template
+      - thesis-proposals
+
+  - id: exam-preparation
+    title: Exam preparation
+    artifacts:
+      - exam-archive
+      - exam-blanks
+      - cheatsheet-part-a
+      - cheatsheet-part-b
+
+  - id: teaching-material
+    title: Teaching material
+    artifacts:
+      - slides-admin
+      - slides-intro
+      - notes-intro
+      - slides-processes
+      - notes-processes
+      - slides-lab-1
+      - slides-concurrency
+      - notes-concurrency
+      - slides-lab-2
+      - slides-virtual-memory
+      - notes-virtual-memory
+      - slides-lab-3
+      - slides-io
+      - notes-io
+      - slides-lab-4
+      - slides-boot
+      - notes-boot
+      - slides-virtualization
+      - notes-virtualization
+      - slides-projects
+      - slides-cpp-intro
+      - slides-threads
+
+  - id: supplementary-material
+    title: Supplementary tutorials and prerequisites
+    artifacts:
+      - supplementary-acso-intro
+      - supplementary-acso-processes
+      - supplementary-acso-threads
+      - supplementary-acso-memory
+      - supplementary-acso-io
+      - supplementary-git
+      - supplementary-linux-development
+      - supplementary-cpp
+
+external_links:
+  - id: webex-room
+    title: Course instructor Webex room
+    href: https://politecnicomilano.webex.com/meet/vittorio.zaccaria
+
+  - id: research-group
+    title: Vittorio Zaccaria research group
+    href: https://www.vittoriozaccaria.net/research
+
+  - id: project-registration-form
+    title: Project registration form
+    href: https://forms.office.com/Pages/ResponsePage.aspx?id=K3EXCvNtXUKAjjCd8ope65c-_PYFR0ZKtf-DhII6aBRUNTNRM0tUWVIwWUw2WkgxUTJJQ0s5NUJKOS4u
+
+  - id: course-lab-repository
+    title: Course laboratory repository for 2025/26
+    href: https://github.com/polimi-aos-lab/course-labs-2526/tree/main
+
+  - id: terraneo-lab-repository
+    title: Federico Terraneo laboratory repository
+    href: https://github.com/polimi-aos-lab/course-labs-2425-ft
+
+  - id: project-report-template
+    title: Course project report template
+    href: https://github.com/polimi-aos-lab/course-project-report-template
+
+  - id: poul-git-course
+    title: POuL Git crash course
+    href: https://poul.org/courses/git/
+
+  - id: supplementary-git-recording
+    title: System programming in Linux — Git recording
+    href: https://politecnicomilano.webex.com/recordingservice/sites/politecnicomilano/recording/playback/7820f6cea2d84fd6a5880daca9e2491c
+
+  - id: supplementary-linux-recording
+    title: System programming in Linux — GCC and Make recording
+    href: https://politecnicomilano.webex.com/recordingservice/sites/politecnicomilano/recording/playback/077206d5e940444da136dfee33ea02ba
+
+  - id: supplementary-cpp-recording-1
+    title: Introduction to C++ recording 1
+    href: https://politecnicomilano.webex.com/recordingservice/sites/politecnicomilano/recording/playback/b6f05fc32310415fbc8d3279e1212985
+
+  - id: supplementary-cpp-recording-2
+    title: Introduction to C++ recording 2
+    href: https://politecnicomilano.webex.com/recordingservice/sites/politecnicomilano/recording/playback/8ab2203d382241c8b42227aee15ab27d
+
+  - id: supplementary-cpp-recording-3
+    title: Introduction to C++ recording 3
+    href: https://politecnicomilano.webex.com/recordingservice/sites/politecnicomilano/recording/playback/a5636ef531744471a4190168eb92a17c
+
+  - id: embedded-systems-course-intro
+    title: Embedded Systems course introduction
+    href: https://politecnicomilano.webex.com/recordingservice/sites/politecnicomilano/recording/playback/a63967250fbc4a8cac5fc6432b25775f
+
+  - id: linux-kernel-source
+    title: Linux kernel source used in class
+    href: https://elixir.bootlin.com/linux/v5.16-rc1/source/kernel
+
+  - id: seminar-webex-room
+    title: Seminar Webex room
+    href: https://politecnicomilano.webex.com/join/vittorio.zaccaria
+
+  - id: recording-2025-09-15
+    title: Lecture recording — 15 September 2025
+    href: https://politecnicomilano.webex.com/politecnicomilano/ldr.php?RCID=d0ec7a6f94220a2acd638f895d82f446
+
+  - id: recording-2025-09-19
+    title: Lecture recording — 19 September 2025
+    href: https://politecnicomilano.webex.com/politecnicomilano/ldr.php?RCID=5491d6cf932c072eec13aa7b8640d4a9
+
+  - id: recording-2025-09-22
+    title: Lecture recording — 22 September 2025
+    href: https://politecnicomilano.webex.com/politecnicomilano/ldr.php?RCID=bd9f6d59164760cee14a2e1dd8db1f68
+
+  - id: recording-2025-09-26
+    title: Lecture recording — 26 September 2025
+    href: https://politecnicomilano.webex.com/politecnicomilano/ldr.php?RCID=4174dc26bb3886b26ed2ac01f7557455
+
+  - id: recording-2025-09-29
+    title: Lecture recording — 29 September 2025
+    href: https://politecnicomilano.webex.com/politecnicomilano/ldr.php?RCID=55cc21f31753ce181ee40e7cb7419d54
+
+  - id: recording-2025-10-03
+    title: Lecture recording — 3 October 2025
+    href: https://politecnicomilano.webex.com/politecnicomilano/ldr.php?RCID=bedc09e6417646d6069670bbc06da561
+
+  - id: recording-2025-10-06
+    title: Lecture recording — 6 October 2025
+    href: https://politecnicomilano.webex.com/politecnicomilano/ldr.php?RCID=459f8a074d81896aa7b45cba7911f994
+
+  - id: recording-2025-10-10
+    title: Lecture recording — 10 October 2025
+    href: https://politecnicomilano.webex.com/politecnicomilano/ldr.php?RCID=5107754ea6dbf05589c1143c52146309
+
+  - id: recording-2025-10-13
+    title: Lecture recording — 13 October 2025
+    href: https://politecnicomilano.webex.com/politecnicomilano/ldr.php?RCID=db31f439e484238dd0c540fb6f727b29
+
+  - id: recording-2025-10-17
+    title: Lecture recording — 17 October 2025
+    href: https://politecnicomilano.webex.com/politecnicomilano/ldr.php?RCID=88719c7b093cb60349162499124fecd7
+
+  - id: recording-2025-10-20
+    title: Lecture recording — 20 October 2025
+    href: https://politecnicomilano.webex.com/politecnicomilano/ldr.php?RCID=80fffc9ccdc0c82f98dd3de76633972a
+
+  - id: recording-2025-10-24
+    title: Lecture recording — 24 October 2025
+    href: https://politecnicomilano.webex.com/politecnicomilano/ldr.php?RCID=13a7eeb649e04926f1b98a1f0d073399
+
+  - id: recording-2025-10-27
+    title: Lecture recording — 27 October 2025
+    href: https://politecnicomilano.webex.com/politecnicomilano/ldr.php?RCID=d11b9392f5b0cb82763cf4e6e2e3404d
+
+  - id: recording-2025-10-31
+    title: Lecture recording — 31 October 2025
+    href: https://politecnicomilano.webex.com/politecnicomilano/ldr.php?RCID=30e7365ddc0e6f1f74e350af4ded0b7d
+
+  - id: recording-2025-11-03
+    title: Lecture recording — 3 November 2025
+    href: https://politecnicomilano.webex.com/politecnicomilano/ldr.php?RCID=5cb28d42cb0d547a22cc8027b5058cc7
+
+  - id: recording-2025-11-10
+    title: Seminar recording — 10 November 2025
+    href: https://politecnicomilano.webex.com/politecnicomilano/ldr.php?RCID=b4f7566e52c13ee2ae9b621ea2452f47
+
+  - id: recording-2025-11-14
+    title: Lecture recording — 14 November 2025
+    href: https://politecnicomilano.webex.com/politecnicomilano/ldr.php?RCID=150eaf7f423bb20cc86c5276acb35e86
+
+  - id: recording-2025-11-17
+    title: Lecture recording — 17 November 2025
+    href: https://politecnicomilano.webex.com/politecnicomilano/ldr.php?RCID=a0067428bb9b9395920f4cf2fa4d162b
+
+  - id: recording-2025-11-21
+    title: Lecture recording — 21 November 2025
+    href: https://politecnicomilano.webex.com/politecnicomilano/ldr.php?RCID=a7c27093ea08ca1f3ccbaa77f34ebeb5
+
+  - id: recording-2025-11-24
+    title: Lecture recording — 24 November 2025
+    href: https://politecnicomilano.webex.com/politecnicomilano/ldr.php?RCID=7a0bcb95d03f4475c8515966a271f927
+
+  - id: recording-2025-11-27
+    title: Seminar recording — 27 November 2025
+    href: https://politecnicomilano.webex.com/politecnicomilano/ldr.php?RCID=addd6d8cbade66985943a94c6ed3c764
+
+  - id: recording-2025-11-28
+    title: Lecture recording — 28 November 2025
+    href: https://politecnicomilano.webex.com/politecnicomilano/ldr.php?RCID=d104316a0d0e9a824623b11de845d622
+
+  - id: recording-2025-12-01
+    title: Lecture recording — 1 December 2025
+    href: https://politecnicomilano.webex.com/politecnicomilano/ldr.php?RCID=0ae8d67abe35e04034a74ba43c82516e
+
+  - id: recording-2025-12-05
+    title: Lecture recording — 5 December 2025
+    href: https://politecnicomilano.webex.com/politecnicomilano/ldr.php?RCID=7f89c2d4ed47e0d80324cfdb861af699
+
+  - id: recording-2025-12-12
+    title: Lecture recording — 12 December 2025
+    href: https://politecnicomilano.webex.com/politecnicomilano/ldr.php?RCID=4cdb8a473eb2748b14a52fae01b8776d
+
+announcements: []
+
+schedule:
+  notice: >-
+    This archived schedule reflects the completed 2025/26 edition. Topics and
+    dates were originally published as best effort; slides were normally
+    published before each lecture, while the study-guide readings were mandatory.
+  events:
+    - id: event-2025-09-15
+      start: "2025-09-15T12:15:00+02:00"
+      end: "2025-09-15T14:15:00+02:00"
+      kind: lecture
+      status: completed
+      location: 21.S.1
+      topic: Introduction and operating-system patterns
+      people: [vittorio-zaccaria]
+      artifacts: [slides-admin, slides-intro, notes-intro]
+      external_links: [recording-2025-09-15]
+
+    - id: event-2025-09-19
+      start: "2025-09-19T12:15:00+02:00"
+      end: "2025-09-19T14:15:00+02:00"
+      kind: lecture
+      status: completed
+      location: 25.S.2
+      topic: Kernel overview, tasks, wait queues, and scheduling
+      people: [vittorio-zaccaria]
+      artifacts: [slides-processes, notes-processes]
+      external_links: [recording-2025-09-19]
+
+    - id: event-2025-09-22
+      start: "2025-09-22T12:15:00+02:00"
+      end: "2025-09-22T14:15:00+02:00"
+      kind: lecture
+      status: completed
+      location: Online (Webex)
+      topic: Scheduling and load balancing
+      people: [vittorio-zaccaria]
+      artifacts: [slides-processes, notes-processes]
+      external_links: [recording-2025-09-22]
+
+    - id: event-2025-09-26
+      start: "2025-09-26T12:15:00+02:00"
+      end: "2025-09-26T14:15:00+02:00"
+      kind: laboratory
+      status: completed
+      location: 25.S.2
+      topic: Kernel modules and debugging
+      people: [vittorio-zaccaria]
+      artifacts: [slides-lab-1]
+      external_links: [recording-2025-09-26]
+
+    - id: event-2025-09-29
+      start: "2025-09-29T12:15:00+02:00"
+      end: "2025-09-29T14:15:00+02:00"
+      kind: laboratory
+      status: completed
+      location: 21.S.1
+      topic: Kernel debugging
+      people: [vittorio-zaccaria]
+      artifacts: [slides-lab-1]
+      external_links: [recording-2025-09-29]
+
+    - id: event-2025-10-03
+      start: "2025-10-03T12:15:00+02:00"
+      end: "2025-10-03T14:15:00+02:00"
+      kind: lecture
+      status: completed
+      location: 25.S.2
+      topic: MCS locks, spinlocks, and lockdep
+      people: [vittorio-zaccaria]
+      artifacts: [slides-concurrency, notes-concurrency]
+      external_links: [recording-2025-10-03]
+
+    - id: event-2025-10-06
+      start: "2025-10-06T12:15:00+02:00"
+      end: "2025-10-06T14:15:00+02:00"
+      kind: lecture
+      status: completed
+      location: 21.S.1
+      topic: RCU, CAS, and the ABA problem
+      people: [vittorio-zaccaria]
+      artifacts: [slides-concurrency, notes-concurrency]
+      external_links: [recording-2025-10-06]
+
+    - id: event-2025-10-10
+      start: "2025-10-10T12:15:00+02:00"
+      end: "2025-10-10T14:15:00+02:00"
+      kind: lecture
+      status: completed
+      location: 25.S.2
+      topic: Linux kernel memory model
+      people: [vittorio-zaccaria]
+      artifacts: [slides-concurrency, notes-concurrency]
+      external_links: [recording-2025-10-10]
+
+    - id: event-2025-10-13
+      start: "2025-10-13T12:15:00+02:00"
+      end: "2025-10-13T14:15:00+02:00"
+      kind: laboratory
+      status: completed
+      location: 21.S.1
+      topic: Kernel lists, atomic access, and RCU
+      people: [vittorio-zaccaria]
+      artifacts: [slides-lab-2]
+      external_links: [recording-2025-10-13]
+
+    - id: event-2025-10-17
+      start: "2025-10-17T12:15:00+02:00"
+      end: "2025-10-17T14:15:00+02:00"
+      kind: lecture
+      status: completed
+      location: 25.S.2
+      topic: Kernel lists, atomic access, RCU, and memory model
+      people: [vittorio-zaccaria]
+      artifacts: [slides-lab-2]
+      external_links: [recording-2025-10-17]
+
+    - id: event-2025-10-20
+      start: "2025-10-20T12:15:00+02:00"
+      end: "2025-10-20T14:15:00+02:00"
+      kind: lecture
+      status: completed
+      location: 21.S.1
+      topic: VMAs, kmalloc, vmalloc, and slab allocation
+      people: [vittorio-zaccaria]
+      artifacts: [slides-virtual-memory, notes-virtual-memory]
+      external_links: [recording-2025-10-20]
+
+    - id: event-2025-10-24
+      start: "2025-10-24T12:15:00+02:00"
+      end: "2025-10-24T14:15:00+02:00"
+      kind: laboratory
+      status: completed
+      location: 25.S.2
+      topic: Kernel memory allocation and user/kernel data movement
+      people: [vittorio-zaccaria]
+      artifacts: [slides-lab-3]
+      external_links: [recording-2025-10-24]
+
+    - id: event-2025-10-27
+      start: "2025-10-27T12:15:00+01:00"
+      end: "2025-10-27T14:15:00+01:00"
+      kind: lecture
+      status: completed
+      location: 21.S.1
+      topic: MMIO, port I/O, and interrupts
+      people: [vittorio-zaccaria]
+      artifacts: [slides-io, notes-io]
+      external_links: [recording-2025-10-27]
+
+    - id: event-2025-10-31
+      start: "2025-10-31T12:15:00+01:00"
+      end: "2025-10-31T14:15:00+01:00"
+      kind: laboratory
+      status: completed
+      location: 25.S.2
+      topic: MMIO, port I/O, interrupts, and UART driver
+      people: [vittorio-zaccaria]
+      artifacts: [slides-lab-4]
+      external_links: [recording-2025-10-31]
+
+    - id: event-2025-11-03
+      start: "2025-11-03T12:15:00+01:00"
+      end: "2025-11-03T14:15:00+01:00"
+      kind: lecture
+      status: completed
+      location: 21.S.1
+      topic: Block devices
+      people: [vittorio-zaccaria]
+      artifacts: [slides-lab-4]
+      external_links: [recording-2025-11-03]
+
+    - id: event-2025-11-07
+      start: "2025-11-07T12:15:00+01:00"
+      end: "2025-11-07T14:15:00+01:00"
+      kind: lecture
+      status: cancelled
+      location: Not applicable
+      topic: Class cancelled
+      people: []
+      artifacts: []
+      external_links: []
+
+    - id: event-2025-11-10
+      start: "2025-11-10T12:15:00+01:00"
+      end: "2025-11-10T14:15:00+01:00"
+      kind: seminar
+      status: completed
+      location: Online (Webex)
+      topic: STMicroelectronics seminar
+      people: []
+      artifacts: []
+      external_links: [seminar-webex-room, recording-2025-11-10]
+
+    - id: event-2025-11-14
+      start: "2025-11-14T12:15:00+01:00"
+      end: "2025-11-14T14:15:00+01:00"
+      kind: lecture
+      status: completed
+      location: 25.S.2
+      topic: Linux device model and PCIe
+      people: [vittorio-zaccaria]
+      artifacts: [slides-io, notes-io]
+      external_links: [recording-2025-11-14]
+
+    - id: event-2025-11-17
+      start: "2025-11-17T12:15:00+01:00"
+      end: "2025-11-17T14:15:00+01:00"
+      kind: lecture
+      status: completed
+      location: 21.S.1
+      topic: ACPI and device trees
+      people: [vittorio-zaccaria]
+      artifacts: [slides-boot, notes-boot]
+      external_links: [recording-2025-11-17]
+
+    - id: event-2025-11-21
+      start: "2025-11-21T12:15:00+01:00"
+      end: "2025-11-21T14:15:00+01:00"
+      kind: laboratory
+      status: completed
+      location: 25.S.2
+      topic: UEFI and embedded Linux with U-Boot
+      people: [vittorio-zaccaria]
+      artifacts: [slides-boot, notes-boot]
+      external_links: [recording-2025-11-21]
+
+    - id: event-2025-11-24
+      start: "2025-11-24T12:15:00+01:00"
+      end: "2025-11-24T14:15:00+01:00"
+      kind: lecture
+      status: completed
+      location: 21.S.1
+      topic: System virtualization
+      people: [vittorio-zaccaria]
+      artifacts: [slides-virtualization, notes-virtualization]
+      external_links: [recording-2025-11-24]
+
+    - id: event-2025-11-27
+      start: "2025-11-27T18:00:00+01:00"
+      end: "2025-11-27T19:00:00+01:00"
+      kind: seminar
+      status: completed
+      location: Online (Webex)
+      topic: Secure Boot and Secure Storage — Security Pattern seminar
+      people: []
+      artifacts: []
+      external_links: [recording-2025-11-27]
+
+    - id: event-2025-11-28
+      start: "2025-11-28T12:15:00+01:00"
+      end: "2025-11-28T14:15:00+01:00"
+      kind: lecture
+      status: completed
+      location: 25.S.2
+      topic: System virtualization
+      people: [vittorio-zaccaria]
+      artifacts: [slides-virtualization, notes-virtualization]
+      external_links: [recording-2025-11-28]
+
+    - id: event-2025-12-01
+      start: "2025-12-01T12:15:00+01:00"
+      end: "2025-12-01T14:15:00+01:00"
+      kind: lecture
+      status: completed
+      location: 21.S.1
+      topic: Project presentations
+      people: [vittorio-zaccaria]
+      artifacts: [slides-projects]
+      external_links: [recording-2025-12-01]
+
+    - id: event-2025-12-05
+      start: "2025-12-05T12:15:00+01:00"
+      end: "2025-12-05T14:15:00+01:00"
+      kind: laboratory
+      status: completed
+      location: 25.S.2
+      topic: Microcontroller OS programming
+      people: [federico-terraneo]
+      artifacts: [slides-cpp-intro]
+      external_links: [recording-2025-12-05]
+
+    - id: event-2025-12-08
+      start: "2025-12-08T12:15:00+01:00"
+      end: "2025-12-08T14:15:00+01:00"
+      kind: lecture
+      status: cancelled
+      location: Not applicable
+      topic: Class cancelled — Immaculate Conception holiday
+      people: []
+      artifacts: []
+      external_links: []
+
+    - id: event-2025-12-12
+      start: "2025-12-12T12:15:00+01:00"
+      end: "2025-12-12T14:15:00+01:00"
+      kind: laboratory
+      status: completed
+      location: 25.S.2
+      topic: Microcontroller OS programming
+      people: [federico-terraneo]
+      artifacts: [slides-threads]
+      external_links: [recording-2025-12-12]

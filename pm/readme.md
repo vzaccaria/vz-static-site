@@ -10,10 +10,13 @@ Replaces the legacy private Next.js site.
 - Public data only: the private `../vz-personal-store` repo owns sanitization and
   exports a generated tree to `data/imported/`; this repo validates and consumes
   it ([ADR 003](adr/003-imported-public-data-contract.md)). No second sanitizer here.
-- Build-time helpers: `src/data/public-content.ts` (page data), `src/data/blog.ts`
+- Public AOS course manifests remain canonical in `../materiale-corsi/aos/`;
+  validated snapshots under `data/course-manifests/` keep CI builds deterministic.
+- Build-time helpers: `src/data/public-content.ts` (profile pages),
+  `src/data/course-manifests.ts` (course editions), `src/data/blog.ts`
   (post/tag paths), `src/data/site.ts` (`withBasePath`, canonical URLs).
-- Routes: home, bio, research, courses, theses, blog + tags, `/feed.xml`,
-  `/sitemap.xml`, SEO metadata.
+- Routes: home, bio, research, courses and per-edition AOS pages, theses, blog
+  + tags, `/feed.xml`, `/sitemap.xml`, SEO metadata.
 - Deploy: GitHub Pages via `.github/workflows/pages.yml`. Production serves
   `www.vittoriozaccaria.net` at root base; DNS at Namecheap, Vercel retired
   ([ADR 004](adr/004-production-cutover.md), supersedes ADR 001/002 DNS assumptions).
@@ -24,14 +27,16 @@ npm install
 npm run dev
 npm run build      # SITE_URL / SITE_BASE env-driven; default site = production www
 npm run preview
-npm run check      # data:check:strict + content:check + astro check
+npm run check      # imported data + course manifests + Astro diagnostics
+npm test
 ```
-CI: `.github/workflows/ci.yml` (PR + push to main) runs `npm ci`, check, build.
+CI: `.github/workflows/ci.yml` (PR + push to main) runs install, checks, tests, build.
 Pages deploy: `.github/workflows/pages.yml` on push to main.
 
 ## Conventions
 - Track work with beads, prefix `vz-site`. Use `pm/` for context/roadmap/handoff.
-- Keep private data out of this repo; consume only the sanitized export.
+- Keep private data out of this repo; consume only the sanitized CV export.
+- Refresh public course snapshots with `npm run courses:sync`; never edit them by hand.
 - Use `withBasePath()` from `src/data/site.ts` for internal links/assets — never
   compute base locally. `SITE_URL` drives canonical/feed/sitemap/OG; `SITE_BASE`
   drives subpath deploys.

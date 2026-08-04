@@ -1,6 +1,6 @@
 # vz-static-site — State
 
-Updated: 2026-06-27
+Updated: 2026-08-04
 
 ## Roadmap
 
@@ -12,23 +12,21 @@ Parked: alternative SSG frameworks (revisit only on a concrete Astro blocker).
 
 ## Handoff
 
-Written: 2026-06-27 21:20 CEST · Claude
+Written: 2026-08-04 12:13 CEST · OpenAI Codex
 
-Done: Epic `vz-site` **complete and closed** (7/7). `vz-site.9` production cutover:
-root build live on GitHub Pages at https://www.vittoriozaccaria.net (apex 301→www),
-Namecheap BasicDNS (apex A → GitHub IPs, www CNAME → vzaccaria.github.io), Let's
-Encrypt cert + Enforce HTTPS. `vz-site.17`: legacy `vzaccaria.github.io` account repo
-now redirects to www (.nojekyll + redirect index.html/404.html; old Jekyll site
-retired). ADR 004 records final DNS, rollback, verification.
+Done: epic `vz-site-adx` complete (4/4). AOS manifests now sync from
+`../materiale-corsi`, validate in CI, and generate static 2025-2026 and
+2026-2027 routes with resources, schedule, links, archive navigation, and
+responsive styling. `/courses/` links the matching AOS edition locally.
 
-State: production live and verified. Only `vz-site-csn` remains (not started).
+State: working. `npm run ci` passes: content/course validation, Astro diagnostics,
+2 manifest tests, and 37-page static build. Browser smoke passed for both AOS
+editions and the registry at desktop/mobile widths, with no horizontal overflow.
 
-Next: 1) `vz-site-csn` — Lab & theses page. 2) Optional hygiene: remove `www` from
-the old Vercel project once soaked (keep parked, not deleted, per ADR 004).
+Next: 1) `vz-site-csn` — Lab & theses page. 2) Populate the 2026-2027 manifest in
+`materiale-corsi`, then run `npm run courses:sync` here.
 
-Gotchas: cert was stuck ~2h despite correct config; the fix was toggling the Pages
-custom domain off→on via API (re-PUT of the same value does NOT re-queue). Pre-cutover
-DNS for rollback is in ADR 004. Local resolver may still cache old Vercel IPs; public
-DNS is on GitHub.
-
-Blockers: none.
+Gotchas: `materiale-corsi` is source of truth; committed
+`data/course-manifests/` snapshots make CI independent of the sibling checkout.
+The registry chooses a local page by exact course title + academic year and keeps
+the imported external link as fallback. Blockers: none.

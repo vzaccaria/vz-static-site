@@ -1,0 +1,358 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aos.polimi.it/schemas/website-manifest-v1.schema.json",
+  "title": "AOS website manifest v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "site",
+    "course",
+    "people",
+    "publication",
+    "artifacts",
+    "resource_groups",
+    "external_links",
+    "announcements",
+    "schedule"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "site": {
+      "$ref": "#/$defs/site"
+    },
+    "course": {
+      "$ref": "#/$defs/course"
+    },
+    "people": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/person"
+      }
+    },
+    "publication": {
+      "$ref": "#/$defs/publication"
+    },
+    "artifacts": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/artifact"
+      }
+    },
+    "resource_groups": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/resourceGroup"
+      }
+    },
+    "external_links": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/externalLink"
+      }
+    },
+    "announcements": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/announcement"
+      }
+    },
+    "schedule": {
+      "$ref": "#/$defs/schedule"
+    }
+  },
+  "$defs": {
+    "identifier": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$"
+    },
+    "nonEmptyString": {
+      "type": "string",
+      "minLength": 1
+    },
+    "httpsUri": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https://"
+    },
+    "site": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "short_title", "locale", "timezone", "summary"],
+      "properties": {
+        "title": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "short_title": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "locale": {
+          "type": "string",
+          "pattern": "^[a-z]{2,3}(?:-[A-Z]{2})?$"
+        },
+        "timezone": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "summary": {
+          "$ref": "#/$defs/nonEmptyString"
+        }
+      }
+    },
+    "course": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["academic_year", "institution", "staff"],
+      "properties": {
+        "academic_year": {
+          "type": "string",
+          "pattern": "^[0-9]{4}-[0-9]{4}$"
+        },
+        "institution": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "staff": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["person", "role"],
+            "properties": {
+              "person": {
+                "$ref": "#/$defs/identifier"
+              },
+              "role": {
+                "$ref": "#/$defs/identifier"
+              }
+            }
+          }
+        }
+      }
+    },
+    "person": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "name", "email"],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/identifier"
+        },
+        "name": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "email": {
+          "type": "string",
+          "format": "email"
+        }
+      }
+    },
+    "publication": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["artifact_provider", "root_href"],
+      "properties": {
+        "artifact_provider": {
+          "const": "google-drive"
+        },
+        "root_href": {
+          "$ref": "#/$defs/httpsUri"
+        }
+      }
+    },
+    "artifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "kind", "title", "href"],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/identifier"
+        },
+        "kind": {
+          "enum": ["file", "collection"]
+        },
+        "media_type": {
+          "type": "string",
+          "pattern": "^[a-z0-9!#$&^_.+-]+/[a-z0-9!#$&^_.+-]+$"
+        },
+        "title": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "href": {
+          "$ref": "#/$defs/httpsUri"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "file"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "media_type": true
+            },
+            "required": ["media_type"]
+          },
+          "else": {
+            "not": {
+              "required": ["media_type"]
+            }
+          }
+        }
+      ]
+    },
+    "resourceGroup": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "title", "artifacts"],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/identifier"
+        },
+        "title": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "artifacts": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/identifier"
+          }
+        }
+      }
+    },
+    "externalLink": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "title", "href"],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/identifier"
+        },
+        "title": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "href": {
+          "$ref": "#/$defs/httpsUri"
+        },
+        "description": {
+          "$ref": "#/$defs/nonEmptyString"
+        }
+      }
+    },
+    "announcement": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "published_at", "title", "body", "artifacts"],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/identifier"
+        },
+        "published_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "title": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "body": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "artifacts": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/identifier"
+          }
+        }
+      }
+    },
+    "schedule": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["notice", "events"],
+      "properties": {
+        "notice": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "events": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/event"
+          }
+        }
+      }
+    },
+    "event": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "start",
+        "end",
+        "kind",
+        "status",
+        "location",
+        "topic",
+        "people",
+        "artifacts",
+        "external_links"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/identifier"
+        },
+        "start": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "end": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "kind": {
+          "enum": ["lecture", "laboratory", "seminar", "deadline"]
+        },
+        "status": {
+          "enum": ["scheduled", "tentative", "cancelled", "completed"]
+        },
+        "location": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "topic": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "people": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/identifier"
+          }
+        },
+        "artifacts": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/identifier"
+          }
+        },
+        "external_links": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/identifier"
+          }
+        }
+      }
+    }
+  }
+}

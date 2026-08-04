@@ -11,16 +11,21 @@
     "data:check": "node scripts/check-imported-data.mjs",
     "data:check:strict": "node scripts/check-imported-data.mjs --require-imported",
     "content:check": "tsx scripts/validate-content-model.ts",
+    "courses:sync": "tsx scripts/sync-course-manifests.ts",
+    "courses:check": "tsx scripts/validate-course-manifests.ts",
+    "test": "tsx --test test/*.test.ts",
     "dev": "npm run assets:sync && ASTRO_TELEMETRY_DISABLED=1 astro dev",
     "start": "npm run dev",
     "build": "npm run assets:sync && ASTRO_TELEMETRY_DISABLED=1 astro build",
     "preview": "npm run assets:sync && ASTRO_TELEMETRY_DISABLED=1 astro preview",
-    "check": "npm run data:check:strict && npm run content:check && ASTRO_TELEMETRY_DISABLED=1 astro check",
-    "ci": "npm run check && npm run build"
+    "check": "npm run data:check:strict && npm run content:check && npm run courses:check && ASTRO_TELEMETRY_DISABLED=1 astro check",
+    "ci": "npm run check && npm test && npm run build"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.9",
     "@types/node": "^22.19.19",
+    "ajv": "^8.20.0",
+    "ajv-formats": "^3.0.1",
     "astro": "^6.4.2",
     "tsx": "^4.22.4",
     "typescript": "^6.0.3",

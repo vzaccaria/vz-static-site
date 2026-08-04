@@ -72,3 +72,18 @@ not maintain a second sanitizer.
 
 `npm run check` requires `data/imported/` and validates the public content model
 defined in `src/data/content-model.ts`.
+
+## Course Manifests
+
+The canonical AOS manifests and JSON Schema live in
+`../materiale-corsi/aos/`. Synchronize validated, build-local snapshots with:
+
+```bash
+npm run courses:sync
+```
+
+Set `MATERIALE_CORSI_ROOT` when the source repository is not available at the
+default sibling path. Commit `data/course-manifests/`; CI reads only these
+snapshots and does not fetch or require `materiale-corsi`. `npm run
+courses:check` validates schema, references, publication URLs, academic years,
+and event times. The check is also part of `npm run check`.

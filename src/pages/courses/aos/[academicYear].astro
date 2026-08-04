@@ -1,0 +1,306 @@
+---
+import type { GetStaticPaths } from "astro";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import {
+  loadCourseManifests,
+  type CourseManifestRecord,
+} from "../../../data/course-manifests";
+import { withBasePath } from "../../../data/site";
+
+type EditionLink = Pick<CourseManifestRecord, "academicYear" | "href">;
+
+type Props = {
+  editions: EditionLink[];
+  record: CourseManifestRecord;
+};
+
+export const getStaticPaths = (async () => {
+  const records = (await loadCourseManifests()).filter(
+    (record) => record.courseSlug === "aos",
+  );
+  const editions = records.map(({ academicYear, href }) => ({
+    academicYear,
+    href,
+  }));
+
+  return records.map((record) => ({
+    params: { academicYear: record.academicYear },
+    props: { editions, record },
+  }));
+}) satisfies GetStaticPaths;
+
+const { editions, record } = Astro.props as Props;
+const { manifest } = record;
+const peopleById = new Map(manifest.people.map((person) => [person.id, person]));
+const artifactsById = new Map(
+  manifest.artifacts.map((artifact) => [artifact.id, artifact]),
+);
+const externalLinksById = new Map(
+  manifest.external_links.map((link) => [link.id, link]),
+);
+const staff = manifest.course.staff.map(({ person, role }) => ({
+  person: peopleById.get(person)!,
+  role,
+}));
+const resourceGroups = manifest.resource_groups.map((group) => ({
+  ...group,
+  artifacts: group.artifacts.map((artifact) => artifactsById.get(artifact)!),
+}));
+const announcements = [...manifest.announcements].sort(
+  (left, right) =>
+    Date.parse(right.published_at) - Date.parse(left.published_at),
+);
+const events = [...manifest.schedule.events].sort(
+  (left, right) => Date.parse(left.start) - Date.parse(right.start),
+);
+const eventLinkIds = new Set(events.flatMap((event) => event.external_links));
+const standaloneLinks = manifest.external_links.filter(
+  (link) => !eventLinkIds.has(link.id),
+);
+const dateFormatter = new Intl.DateTimeFormat(manifest.site.locale, {
+  weekday: "short",
+  day: "2-digit",
+  month: "short",
+  year: "numeric",
+  timeZone: manifest.site.timezone,
+});
+const timeFormatter = new Intl.DateTimeFormat(manifest.site.locale, {
+  hour: "2-digit",
+  minute: "2-digit",
+  timeZone: manifest.site.timezone,
+});
+let nextSection = 2;
+const announcementSection = announcements.length > 0 ? nextSection++ : undefined;
+const resourceSection = nextSection++;
+const scheduleSection = nextSection++;
+const linksSection = standaloneLinks.length > 0 ? nextSection++ : undefined;
+const editionsSection = nextSection;
+---
+
+<BaseLayout
+  title={`${manifest.site.short_title} ${manifest.course.academic_year}`}
+  description={manifest.site.summary}
+>
+  <main class="page-shell course-edition">
+    <section class="page-hero course-edition__hero">
+      <p class="eyebrow">
+        Teaching · {manifest.site.short_title} · {manifest.course.academic_year}
+      </p>
+      <h1>
+        <span class="section-marker" aria-hidden="true">§1</span>{manifest.site.title}
+      </h1>
+      <p class="lede">{manifest.site.summary}</p>
+      <dl class="course-facts">
+        <div>
+          <dt>Academic year</dt>
+          <dd>{manifest.course.academic_year.replace("-", "/")}</dd>
+        </div>
+        <div>
+          <dt>Institution</dt>
+          <dd>{manifest.course.institution}</dd>
+        </div>
+        <div>
+          <dt>Staff</dt>
+          <dd>
+            {
+              staff.map(({ person, role }) => (
+                <span>
+                  <a href={`mailto:${person.email}`}>{person.name}</a>
+                  <small>{role.replaceAll("-", " ")}</small>
+                </span>
+              ))
+            }
+          </dd>
+        </div>
+        <div>
+          <dt>Material archive</dt>
+          <dd><a href={manifest.publication.root_href}>Open Google Drive</a></dd>
+        </div>
+      </dl>
+    </section>
+
+    {
+      announcements.length > 0 && (
+        <section class="content-band" aria-labelledby="course-announcements">
+          <div class="section-heading">
+            <p class="section-kicker">Updates</p>
+            <h2 id="course-announcements">
+              <span class="section-marker" aria-hidden="true">
+                §{announcementSection}
+              </span>
+              Announcements
+            </h2>
+          </div>
+          <div class="course-announcements">
+            {announcements.map((announcement) => (
+              <article class="detail-card detail-card--accent">
+                <p class="meta">
+                  <time datetime={announcement.published_at}>
+                    {dateFormatter.format(new Date(announcement.published_at))}
+                  </time>
+                </p>
+                <h3>{announcement.title}</h3>
+                <p>{announcement.body}</p>
+                {announcement.artifacts.length > 0 && (
+                  <ul class="course-link-list">
+                    {announcement.artifacts.map((artifactId) => {
+                      const artifact = artifactsById.get(artifactId)!;
+                      return <li><a href={artifact.href}>{artifact.title}</a></li>;
+                    })}
+                  </ul>
+                )}
+              </article>
+            ))}
+          </div>
+        </section>
+      )
+    }
+
+    <section class="content-band" aria-labelledby="course-resources">
+      <div class="section-heading">
+        <p class="section-kicker">Reference</p>
+        <h2 id="course-resources">
+          <span class="section-marker" aria-hidden="true">§{resourceSection}</span>
+          Course resources
+        </h2>
+      </div>
+      <div class="item-grid item-grid--two course-resource-grid">
+        {
+          resourceGroups.map((group) => (
+            <article class="detail-card course-resource-group">
+              <p class="meta">{group.artifacts.length} resources</p>
+              <h3>{group.title}</h3>
+              <ul class="course-link-list">
+                {group.artifacts.map((artifact) => (
+                  <li>
+                    <a href={artifact.href}>{artifact.title}</a>
+                    <span>{artifact.kind}</span>
+                  </li>
+                ))}
+              </ul>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="content-band" aria-labelledby="course-schedule">
+      <div class="section-heading">
+        <p class="section-kicker">Calendar</p>
+        <h2 id="course-schedule">
+          <span class="section-marker" aria-hidden="true">§{scheduleSection}</span>
+          Schedule
+        </h2>
+      </div>
+      <p class="course-schedule-notice">{manifest.schedule.notice}</p>
+      {
+        events.length > 0 ? (
+          <ol class="course-events">
+            {events.map((event) => {
+              const eventPeople = event.people.map((id) => peopleById.get(id)!);
+              const eventArtifacts = event.artifacts.map(
+                (id) => artifactsById.get(id)!,
+              );
+              const eventLinks = event.external_links.map(
+                (id) => externalLinksById.get(id)!,
+              );
+
+              return (
+                <li class={`course-event course-event--${event.status}`}>
+                  <div class="course-event__date">
+                    <time datetime={event.start}>
+                      {dateFormatter.format(new Date(event.start))}
+                    </time>
+                    <span>
+                      {timeFormatter.format(new Date(event.start))}–
+                      {timeFormatter.format(new Date(event.end))}
+                    </span>
+                  </div>
+                  <article>
+                    <p class="meta">
+                      {event.kind} · <strong>{event.status}</strong>
+                    </p>
+                    <h3>{event.topic}</h3>
+                    <dl class="course-event__facts">
+                      <div>
+                        <dt>Location</dt>
+                        <dd>{event.location}</dd>
+                      </div>
+                      {eventPeople.length > 0 && (
+                        <div>
+                          <dt>Staff</dt>
+                          <dd>{eventPeople.map(({ name }) => name).join(", ")}</dd>
+                        </div>
+                      )}
+                    </dl>
+                    {(eventArtifacts.length > 0 || eventLinks.length > 0) && (
+                      <ul class="course-event__links">
+                        {eventArtifacts.map((artifact) => (
+                          <li><a href={artifact.href}>{artifact.title}</a></li>
+                        ))}
+                        {eventLinks.map((link) => (
+                          <li><a href={link.href}>{link.title}</a></li>
+                        ))}
+                      </ul>
+                    )}
+                  </article>
+                </li>
+              );
+            })}
+          </ol>
+        ) : (
+          <p class="course-empty">The detailed schedule has not been published yet.</p>
+        )
+      }
+    </section>
+
+    {
+      standaloneLinks.length > 0 && (
+        <section class="content-band" aria-labelledby="course-links">
+          <div class="section-heading">
+            <p class="section-kicker">Elsewhere</p>
+            <h2 id="course-links">
+              <span class="section-marker" aria-hidden="true">§{linksSection}</span>
+              External links
+            </h2>
+          </div>
+          <div class="compact-list course-external-links">
+            {standaloneLinks.map((link) => (
+              <article>
+                <span aria-hidden="true">↗</span>
+                <div>
+                  <h3><a href={link.href}>{link.title}</a></h3>
+                  {link.description && <p>{link.description}</p>}
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+      )
+    }
+
+    <section class="content-band" aria-labelledby="course-editions">
+      <div class="section-heading">
+        <p class="section-kicker">Archive</p>
+        <h2 id="course-editions">
+          <span class="section-marker" aria-hidden="true">§{editionsSection}</span>
+          Course editions
+        </h2>
+      </div>
+      <nav class="course-edition-nav" aria-label="AOS course editions">
+        {
+          editions.map((edition) => (
+            <a
+              href={withBasePath(edition.href)}
+              aria-current={
+                edition.academicYear === record.academicYear ? "page" : undefined
+              }
+            >
+              {edition.academicYear.replace("-", "/")}
+            </a>
+          ))
+        }
+      </nav>
+    </section>
+  </main>
+</BaseLayout>

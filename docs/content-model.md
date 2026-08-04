@@ -25,6 +25,18 @@ The model currently validates:
   markdown bodies.
 - `data/imported/blog/images/**` as blog assets, not content entries.
 
+## Course Manifest Snapshots
+
+`data/course-manifests/` contains committed snapshots of the public AOS
+`website.yaml` files and their canonical JSON Schema from
+`../materiale-corsi/aos/`. Run `npm run courses:sync` to refresh them; do not
+edit the snapshots directly.
+
+`src/data/course-manifests.ts` validates schema v1 plus cross-reference,
+Google Drive URL, timezone, academic-year, and event-time invariants. It then
+provides the build-time records used to generate one static route per edition.
+`npm run courses:check` is part of `npm run check`.
+
 ## Validation Rules
 
 Object schemas are strict. A build fails when a validated object contains an

@@ -1,0 +1,100 @@
+schema_version: 1
+
+site:
+  title: Advanced Operating Systems
+  short_title: AOS
+  locale: en
+  timezone: Europe/Rome
+  summary: >-
+    Advanced Operating Systems combines operating-system theory with practical
+    work on concurrency, Linux kernels, virtualization, embedded systems, and
+    system-level programming.
+
+course:
+  academic_year: "2026-2027"
+  institution: Politecnico di Milano
+  staff:
+    - person: vittorio-zaccaria
+      role: course-instructor
+    - person: federico-terraneo
+      role: additional-instructor
+
+people:
+  - id: vittorio-zaccaria
+    name: Vittorio Zaccaria
+    email: vittorio.zaccaria@polimi.it
+  - id: federico-terraneo
+    name: Federico Terraneo
+    email: federico.terraneo@polimi.it
+
+publication:
+  artifact_provider: google-drive
+  root_href: https://drive.google.com/drive/folders/1l-Yhfxnr3o0a52_w0SYdMeERNRNI164S?usp=sharing
+
+artifacts:
+  - id: syllabus
+    kind: file
+    media_type: application/pdf
+    title: Course syllabus
+    href: https://drive.google.com/file/d/1r7kHp1xuwaHqldBn8D_tGKqghbUD3n3O/view?usp=sharing
+
+  - id: study-guide
+    kind: file
+    media_type: application/pdf
+    title: Course study guide
+    href: https://drive.google.com/file/d/1Euo1Cwv3cgrBr-Y4MOOGPp9R5IvDypbi/view?usp=sharing
+
+  - id: lecture-notes
+    kind: collection
+    title: Lecture notes
+    href: https://drive.google.com/drive/folders/1hAP_LooxJyUyN5FwGXhTsYwdJlBlfJP2?usp=sharing
+
+  - id: lecture-slides
+    kind: collection
+    title: Lecture slides
+    href: https://drive.google.com/drive/folders/1FJJ7rO9AV4vzfRX_UcZc6gaWops7BP0l?usp=sharing
+
+  - id: concept-maps
+    kind: collection
+    title: Concept maps
+    href: https://drive.google.com/drive/folders/1hS3434OLlLL75QXOD2p5sPR21ehbO5pJ?usp=sharing
+
+  - id: exam-archive
+    kind: collection
+    title: Archive of previous exams
+    href: https://drive.google.com/drive/folders/1nsArJnx-9xCQySuOt_pa1A7gnGXK7y2c?usp=sharing
+
+  - id: cheatsheets
+    kind: collection
+    title: Official API cheatsheets
+    href: https://drive.google.com/drive/folders/12DlSZ6y9eC_zBeuwnRedwqSZy_iKNNWj?usp=sharing
+
+resource_groups:
+  - id: course-information
+    title: Course information
+    artifacts:
+      - syllabus
+      - study-guide
+
+  - id: teaching-material
+    title: Teaching material
+    artifacts:
+      - lecture-notes
+      - lecture-slides
+      - concept-maps
+
+  - id: exam-preparation
+    title: Exam preparation
+    artifacts:
+      - exam-archive
+      - cheatsheets
+
+external_links: []
+announcements: []
+
+schedule:
+  notice: >-
+    The schedule is best effort. Topics may be covered sooner or later depending
+    on lecture progress. Slides are normally published before each lecture;
+    notes and materials listed in the study guide are mandatory readings.
+  events: []

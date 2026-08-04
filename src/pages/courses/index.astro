@@ -3,11 +3,19 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import {
   publicCv
 } from "../../data/public-content";
+import { loadCourseManifests } from "../../data/course-manifests";
+import { withBasePath } from "../../data/site";
 
 type Course = (typeof publicCv.teaching.courses)[number];
 
 const courseRegistry = [...publicCv.teaching.courses].sort(
   (left, right) => right.aaEnd - left.aaEnd || right.aaInit - left.aaInit
+);
+const localCourseEditionByKey = new Map(
+  (await loadCourseManifests()).map((record) => [
+    `${record.manifest.site.title}::${record.academicYear}`,
+    record.href,
+  ]),
 );
 
 const formatAcademicYearLong = (course: Course) =>
@@ -69,24 +77,33 @@ const courseTrack = (course: Course) => {
           <span role="columnheader">Web</span>
         </div>
         {
-          courseRegistry.map((course) => (
-            <article class="registry-row" role="row">
-              <span role="cell">{formatAcademicYearLong(course)}</span>
-              <strong class="registry-row__course" role="cell">{course.courseName}</strong>
-              <span role="cell">{courseCredits(course)}</span>
-              <span role="cell">{courseLevel(course)}</span>
-              <span role="cell">{courseTrack(course)}</span>
-              <span role="cell">
-                {
-                  course.link ? (
-                    <a class="registry-row__web" href={course.link}>open</a>
-                  ) : (
-                    "-"
-                  )
-                }
-              </span>
-            </article>
-          ))
+          courseRegistry.map((course) => {
+            const localHref = localCourseEditionByKey.get(
+              `${course.courseName}::${course.aaInit}-${course.aaEnd}`,
+            );
+            const webHref = localHref
+              ? withBasePath(localHref)
+              : course.link;
+
+            return (
+              <article class="registry-row" role="row">
+                <span role="cell">{formatAcademicYearLong(course)}</span>
+                <strong class="registry-row__course" role="cell">{course.courseName}</strong>
+                <span role="cell">{courseCredits(course)}</span>
+                <span role="cell">{courseLevel(course)}</span>
+                <span role="cell">{courseTrack(course)}</span>
+                <span role="cell">
+                  {
+                    webHref ? (
+                      <a class="registry-row__web" href={webHref}>open</a>
+                    ) : (
+                      "-"
+                    )
+                  }
+                </span>
+              </article>
+            );
+          })
         }
       </div>
     </section>
