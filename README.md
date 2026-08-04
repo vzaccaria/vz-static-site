@@ -52,6 +52,16 @@ export under `data/imported/` should be committed here.
 
 ## Public Data
 
+With `../vz-personal-store` and `../materiale-corsi` checked out as siblings,
+refresh both the sanitized public export and course-manifest snapshots with:
+
+```bash
+make sync
+```
+
+The target runs the existing personal-store `export-site` workflow first, then
+`npm run courses:sync`; either failure stops the combined sync.
+
 The private repo `../vz-personal-store` exports sanitized public data into
 `data/imported/`. Validate the imported tree:
 

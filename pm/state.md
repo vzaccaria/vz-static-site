@@ -12,21 +12,22 @@ Parked: alternative SSG frameworks (revisit only on a concrete Astro blocker).
 
 ## Handoff
 
-Written: 2026-08-04 12:13 CEST · OpenAI Codex
+Written: 2026-08-04 12:22 CEST · OpenAI Codex
 
-Done: epic `vz-site-adx` complete (4/4). AOS manifests now sync from
-`../materiale-corsi`, validate in CI, and generate static 2025-2026 and
-2026-2027 routes with resources, schedule, links, archive navigation, and
-responsive styling. `/courses/` links the matching AOS edition locally.
+Done: epic `vz-site-adx` complete (4/4): validated AOS snapshots generate static
+2025-2026 and 2026-2027 routes, and `/courses/` links the matching local edition.
+`vz-site-dpj` adds `make sync`, which runs the personal-store `export-site`
+workflow followed by `npm run courses:sync`.
 
-State: working. `npm run ci` passes: content/course validation, Astro diagnostics,
-2 manifest tests, and 37-page static build. Browser smoke passed for both AOS
-editions and the registry at desktop/mobile widths, with no horizontal overflow.
+State: working. `make sync` completed end-to-end with 49 sanitized exported files
+and 2 AOS manifests. `npm run ci` passes: content/course validation, Astro
+diagnostics, 2 manifest tests, and 37-page static build. Browser smoke for the
+AOS pages and registry previously passed at desktop/mobile widths.
 
 Next: 1) `vz-site-csn` — Lab & theses page. 2) Populate the 2026-2027 manifest in
-`materiale-corsi`, then run `npm run courses:sync` here.
+`materiale-corsi`, then run `make sync`.
 
-Gotchas: `materiale-corsi` is source of truth; committed
-`data/course-manifests/` snapshots make CI independent of the sibling checkout.
-The registry chooses a local page by exact course title + academic year and keeps
+Gotchas: both source repositories must be sibling directories for `make sync`.
+`data/imported/` and `data/course-manifests/` are generated snapshots; never edit
+them by hand. Registry matching uses exact course title + academic year and keeps
 the imported external link as fallback. Blockers: none.

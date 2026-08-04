@@ -24,6 +24,7 @@ Replaces the legacy private Next.js site.
 ## Build & test
 ```bash
 npm install
+make sync        # refresh personal-store export + AOS course manifests
 npm run dev
 npm run build      # SITE_URL / SITE_BASE env-driven; default site = production www
 npm run preview
