@@ -2,6 +2,31 @@
   "records": [
     {
       "authors": [
+        "N. Benatti",
+        "F. Reghenzani",
+        "V. Zaccaria"
+      ],
+      "title": "On DoS Attacks Exploiting Input Representativeness in Mixed-Criticality Systems",
+      "month": "July",
+      "year": "2026",
+      "booktitle": "Proceedings of ECRTS 2026: 38th European Conference on Real-Time Systems",
+      "pages": "11:1 to 11:25",
+      "publisher": "Schloss Dagstuhl -- Leibniz-Zentrum f\\\"ur Informatik",
+      "address": "Lund, Sweden",
+      "doi": "10.4230/LIPIcs.ECRTS.2026.11",
+      "url": "https://doi.org/10.4230/LIPIcs.ECRTS.2026.11",
+      "volume": "375",
+      "keyword": [
+        "conference"
+      ],
+      "type": "conference",
+      "timestamp": 1782856800,
+      "justApplied": false,
+      "justAccepted": false,
+      "isbn": "9783959774291"
+    },
+    {
+      "authors": [
         "J. Bushi",
         "A. Battistello",
         "G. Bertoni",
