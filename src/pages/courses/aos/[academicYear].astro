@@ -42,10 +42,6 @@ const staff = manifest.course.staff.map(({ person, role }) => ({
   person: peopleById.get(person)!,
   role,
 }));
-const resourceGroups = manifest.resource_groups.map((group) => ({
-  ...group,
-  artifacts: group.artifacts.map((artifact) => artifactsById.get(artifact)!),
-}));
 const announcements = [...manifest.announcements].sort(
   (left, right) =>
     Date.parse(right.published_at) - Date.parse(left.published_at),
@@ -53,9 +49,24 @@ const announcements = [...manifest.announcements].sort(
 const events = [...manifest.schedule.events].sort(
   (left, right) => Date.parse(left.start) - Date.parse(right.start),
 );
+const resourceGroups = manifest.resource_groups
+  .filter((group) => group.id !== "teaching-material" || events.length === 0)
+  .map((group) => ({
+    ...group,
+    artifacts: group.artifacts.map((artifact) => artifactsById.get(artifact)!),
+  }));
 const eventLinkIds = new Set(events.flatMap((event) => event.external_links));
 const standaloneLinks = manifest.external_links.filter(
   (link) => !eventLinkIds.has(link.id),
+);
+const resourceLinks = standaloneLinks.filter(
+  (link) =>
+    link.id === "project-registration-form" ||
+    new URL(link.href).hostname === "github.com",
+);
+const resourceLinkIds = new Set(resourceLinks.map(({ id }) => id));
+const remainingStandaloneLinks = standaloneLinks.filter(
+  (link) => !resourceLinkIds.has(link.id),
 );
 const dateFormatter = new Intl.DateTimeFormat(manifest.site.locale, {
   weekday: "short",
@@ -73,7 +84,7 @@ let nextSection = 2;
 const announcementSection = announcements.length > 0 ? nextSection++ : undefined;
 const resourceSection = nextSection++;
 const scheduleSection = nextSection++;
-const linksSection = standaloneLinks.length > 0 ? nextSection++ : undefined;
+const linksSection = remainingStandaloneLinks.length > 0 ? nextSection++ : undefined;
 const editionsSection = nextSection;
 ---
 
@@ -164,11 +175,10 @@ const editionsSection = nextSection;
           Course resources
         </h2>
       </div>
-      <div class="item-grid item-grid--two course-resource-grid">
+      <div class="item-grid item-grid--three course-resource-grid">
         {
           resourceGroups.map((group) => (
             <article class="detail-card course-resource-group">
-              <p class="meta">{group.artifacts.length} resources</p>
               <h3>{group.title}</h3>
               <ul class="course-link-list">
                 {group.artifacts.map((artifact) => (
@@ -180,6 +190,18 @@ const editionsSection = nextSection;
               </ul>
             </article>
           ))
+        }
+        {
+          resourceLinks.length > 0 && (
+            <article class="detail-card course-resource-group">
+              <h3>Repositories and project registration</h3>
+              <ul class="course-link-list">
+                {resourceLinks.map((link) => (
+                  <li><a href={link.href}>{link.title}</a></li>
+                ))}
+              </ul>
+            </article>
+          )
         }
       </div>
     </section>
@@ -255,7 +277,7 @@ const editionsSection = nextSection;
     </section>
 
     {
-      standaloneLinks.length > 0 && (
+      remainingStandaloneLinks.length > 0 && (
         <section class="content-band" aria-labelledby="course-links">
           <div class="section-heading">
             <p class="section-kicker">Elsewhere</p>
@@ -265,7 +287,7 @@ const editionsSection = nextSection;
             </h2>
           </div>
           <div class="compact-list course-external-links">
-            {standaloneLinks.map((link) => (
+            {remainingStandaloneLinks.map((link) => (
               <article>
                 <span aria-hidden="true">↗</span>
                 <div>
