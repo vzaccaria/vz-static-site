@@ -270,6 +270,7 @@ resource_groups:
     artifacts:
       - syllabus
       - study-guide
+      - slides-admin
 
   - id: projects
     title: Course projects and research opportunities
@@ -289,7 +290,6 @@ resource_groups:
   - id: teaching-material
     title: Teaching material
     artifacts:
-      - slides-admin
       - slides-intro
       - notes-intro
       - slides-processes
@@ -501,7 +501,7 @@ schedule:
       location: 21.S.1
       topic: Introduction and operating-system patterns
       people: [vittorio-zaccaria]
-      artifacts: [slides-admin, slides-intro, notes-intro]
+      artifacts: [slides-intro, notes-intro]
       external_links: [recording-2025-09-15]
 
     - id: event-2025-09-19

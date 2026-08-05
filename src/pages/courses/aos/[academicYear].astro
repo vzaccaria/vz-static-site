@@ -80,6 +80,12 @@ const timeFormatter = new Intl.DateTimeFormat(manifest.site.locale, {
   minute: "2-digit",
   timeZone: manifest.site.timezone,
 });
+const driveDownloadHref = (href: string) => {
+  const fileId = new URL(href).pathname.match(/^\/file\/d\/([^/]+)\/view$/)?.[1];
+  return fileId
+    ? `https://drive.google.com/uc?export=download&id=${encodeURIComponent(fileId)}`
+    : href;
+};
 let nextSection = 2;
 const announcementSection = announcements.length > 0 ? nextSection++ : undefined;
 const resourceSection = nextSection++;
@@ -214,10 +220,25 @@ const editionsSection = nextSection;
           Schedule
         </h2>
       </div>
-      <p class="course-schedule-notice">{manifest.schedule.notice}</p>
+      <div class="course-schedule-toolbar">
+        <p class="course-schedule-notice">{manifest.schedule.notice}</p>
+        {
+          events.length > 0 && (
+            <button
+              class="button course-schedule-toggle"
+              type="button"
+              aria-controls="course-events"
+              aria-pressed="false"
+              data-schedule-toggle
+            >
+              <span data-schedule-toggle-label>Compact schedule</span>
+            </button>
+          )
+        }
+      </div>
       {
         events.length > 0 ? (
-          <ol class="course-events">
+          <ol class="course-events" id="course-events" data-course-schedule>
             {events.map((event) => {
               const eventPeople = event.people.map((id) => peopleById.get(id)!);
               const eventArtifacts = event.artifacts.map(
@@ -226,6 +247,9 @@ const editionsSection = nextSection;
               const eventLinks = event.external_links.map(
                 (id) => externalLinksById.get(id)!,
               );
+              const slides = eventArtifacts.find(({ id }) => id.startsWith("slides-"));
+              const notes = eventArtifacts.find(({ id }) => id.startsWith("notes-"));
+              const recording = eventLinks.find(({ id }) => id.startsWith("recording-"));
 
               return (
                 <li class={`course-event course-event--${event.status}`}>
@@ -243,6 +267,40 @@ const editionsSection = nextSection;
                       {event.kind} · <strong>{event.status}</strong>
                     </p>
                     <h3>{event.topic}</h3>
+                    {(slides || notes || recording) && (
+                      <div
+                        class="course-event__actions"
+                        role="group"
+                        aria-label={`Quick resources for ${event.topic}`}
+                      >
+                        {slides && (
+                          <a
+                            href={driveDownloadHref(slides.href)}
+                            download
+                            aria-label={`Download slides for ${event.topic}`}
+                          >
+                            Slides
+                          </a>
+                        )}
+                        {notes && (
+                          <a
+                            href={driveDownloadHref(notes.href)}
+                            download
+                            aria-label={`Download notes for ${event.topic}`}
+                          >
+                            Notes
+                          </a>
+                        )}
+                        {recording && (
+                          <a
+                            href={recording.href}
+                            aria-label={`Open recording for ${event.topic}`}
+                          >
+                            Recording
+                          </a>
+                        )}
+                      </div>
+                    )}
                     <dl class="course-event__facts">
                       <div>
                         <dt>Location</dt>
@@ -325,4 +383,17 @@ const editionsSection = nextSection;
       </nav>
     </section>
   </main>
+  <script>
+    const schedule = document.querySelector<HTMLElement>("[data-course-schedule]");
+    const toggle = document.querySelector<HTMLButtonElement>("[data-schedule-toggle]");
+    const label = toggle?.querySelector<HTMLElement>("[data-schedule-toggle-label]");
+
+    if (schedule && toggle && label) {
+      toggle.addEventListener("click", () => {
+        const compact = schedule.classList.toggle("course-events--compact");
+        toggle.setAttribute("aria-pressed", String(compact));
+        label.textContent = compact ? "Detailed schedule" : "Compact schedule";
+      });
+    }
+  </script>
 </BaseLayout>

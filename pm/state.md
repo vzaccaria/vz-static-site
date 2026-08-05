@@ -1,6 +1,6 @@
 # vz-static-site — State
 
-Updated: 2026-08-04
+Updated: 2026-08-05
 
 ## Roadmap
 
@@ -12,22 +12,23 @@ Parked: alternative SSG frameworks (revisit only on a concrete Astro blocker).
 
 ## Handoff
 
-Written: 2026-08-04 12:35 CEST · OpenAI Codex
+Written: 2026-08-05 10:24 CEST · OpenAI Codex
 
-Done: epic `vz-site-adx` complete; `vz-site-dpj` adds unified `make sync`.
-`vz-site-vvf` simplifies AOS resource presentation: three desktop columns,
-removes repeated counts, promotes GitHub repositories and project registration,
-and hides archived teaching materials already represented by the schedule.
+Done: AOS edition pages and unified `make sync` are live. `vz-site-87r` adds an
+accessible detailed/compact schedule toggle. Compact desktop events use one row
+with Slides/Notes direct-download actions and Recording access; mobile actions
+wrap without horizontal overflow. Course administration slides moved to Course
+information in the canonical 2025-2026 manifest.
 
-State: working. The empty-schedule 2026-2027 edition still exposes its teaching
-material. Promoted links are removed from the external-links section to avoid
-duplication. `npm run ci` passes: validation, Astro diagnostics, 2 tests, and
-37-page build. Desktop/mobile browser smoke passed with no overflow.
+State: working. `materiale-corsi/aos/website` passes 8 tests. `npm run ci` passes
+course/content validation, Astro diagnostics, 2 tests, and 37-page static build.
+Browser smoke covered toggle state, row alignment, download targets, recording
+links, empty schedules, and desktop/mobile overflow.
 
 Next: 1) `vz-site-csn` — Lab & theses page. 2) Populate the 2026-2027 manifest in
 `materiale-corsi`, then run `make sync`.
 
-Gotchas: source repositories must be siblings for `make sync`; generated data
-snapshots are read-only. Teaching material is suppressed only when an edition
-has schedule events. Registry matching uses exact title + academic year and
-keeps the imported external link as fallback. Blockers: none.
+Gotchas: source repositories must be siblings for `make sync`; generated
+snapshots are read-only. Quick actions are selected by `slides-`, `notes-`, and
+`recording-` IDs; Drive file URLs become direct-download URLs. Teaching material
+is suppressed only when an edition has schedule events. Blockers: none.
