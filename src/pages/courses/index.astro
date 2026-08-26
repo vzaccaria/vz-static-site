@@ -11,12 +11,27 @@ type Course = (typeof publicCv.teaching.courses)[number];
 const courseRegistry = [...publicCv.teaching.courses].sort(
   (left, right) => right.aaEnd - left.aaEnd || right.aaInit - left.aaInit
 );
+const leadInstructorCourses = courseRegistry.filter(
+  (course) => course.position.trim().toLowerCase() === "titolare",
+);
+const teachingAssistantCourses = courseRegistry.filter(
+  (course) =>
+    course.position.trim().toLowerCase() === "esercitatore" &&
+    course.titolare.trim().toLowerCase() !== publicCv.basics.name.trim().toLowerCase(),
+);
 const localCourseEditionByKey = new Map(
   (await loadCourseManifests()).map((record) => [
     `${record.manifest.site.title}::${record.academicYear}`,
     record.href,
   ]),
 );
+const courseWebHref = (course: Course) => {
+  const localHref = localCourseEditionByKey.get(
+    `${course.courseName}::${course.aaInit}-${course.aaEnd}`,
+  );
+
+  return localHref ? withBasePath(localHref) : course.link;
+};
 
 const formatAcademicYearLong = (course: Course) =>
   course.aaInit === course.aaEnd
@@ -47,6 +62,21 @@ const courseTrack = (course: Course) => {
   if (/design/.test(source)) return "DES";
   return "-";
 };
+
+const courseSections = [
+  {
+    id: "lead",
+    caption: "Table 1 - Courses as lead instructor",
+    title: "Courses as lead instructor",
+    courses: leadInstructorCourses,
+  },
+  {
+    id: "assistant",
+    caption: "Table 2 - Courses as teaching assistant",
+    title: "Courses as teaching assistant",
+    courses: teachingAssistantCourses,
+  },
+] as const;
 ---
 
 <BaseLayout
@@ -58,54 +88,68 @@ const courseTrack = (course: Course) => {
       <p class="eyebrow">§ 2 · Teaching</p>
       <h1>Courses</h1>
       <p class="lede">
-        Current and past courses (with links to webpages if still active).
+        Courses taught as lead instructor or teaching assistant, with links to
+        active course webpages.
       </p>
     </section>
 
     <section class="content-band content-band--table courses-registry">
-      <div class="table-heading">
-        <p>Table 1 - Courses registry</p>
-        <h2 class="visually-hidden">Courses registry</h2>
-      </div>
-      <div class="registry-table" role="table" aria-label="Courses registry">
-        <div class="registry-table__head" role="row">
-          <span role="columnheader">AA</span>
-          <span role="columnheader">Course</span>
-          <span role="columnheader">CR</span>
-          <span role="columnheader">Level</span>
-          <span role="columnheader">Track</span>
-          <span role="columnheader">Web</span>
-        </div>
-        {
-          courseRegistry.map((course) => {
-            const localHref = localCourseEditionByKey.get(
-              `${course.courseName}::${course.aaInit}-${course.aaEnd}`,
-            );
-            const webHref = localHref
-              ? withBasePath(localHref)
-              : course.link;
-
-            return (
-              <article class="registry-row" role="row">
-                <span role="cell">{formatAcademicYearLong(course)}</span>
-                <strong class="registry-row__course" role="cell">{course.courseName}</strong>
-                <span role="cell">{courseCredits(course)}</span>
-                <span role="cell">{courseLevel(course)}</span>
-                <span role="cell">{courseTrack(course)}</span>
-                <span role="cell">
-                  {
-                    webHref ? (
-                      <a class="registry-row__web" href={webHref}>open</a>
-                    ) : (
-                      "-"
-                    )
-                  }
+      {
+        courseSections.map(({ id, caption, title, courses }) => (
+          <div class="courses-registry__group">
+            <div class="table-heading">
+              <p>{caption}</p>
+              <h2 class="visually-hidden">{title}</h2>
+            </div>
+            <div
+              class={`registry-table registry-table--${id}`}
+              role="table"
+              aria-label={title}
+            >
+              <div class="registry-table__head" role="row">
+                <span role="columnheader">AA</span>
+                <span role="columnheader">Course</span>
+                <span role="columnheader">{id === "assistant" ? "Hours" : "CR"}</span>
+                <span role="columnheader">Level</span>
+                <span role="columnheader">Track</span>
+                <span role="columnheader">
+                  {id === "assistant" ? "Lead instructor" : "Web"}
                 </span>
-              </article>
-            );
-          })
-        }
-      </div>
+              </div>
+              {
+                courses.map((course) => {
+                  const webHref = id === "lead" ? courseWebHref(course) : undefined;
+
+                  return (
+                    <article class="registry-row" role="row">
+                      <span role="cell">{formatAcademicYearLong(course)}</span>
+                      <strong class="registry-row__course" role="cell">
+                        {course.courseName}
+                      </strong>
+                      <span role="cell">
+                        {id === "assistant" ? course.ore : courseCredits(course)}
+                      </span>
+                      <span role="cell">{courseLevel(course)}</span>
+                      <span role="cell">{courseTrack(course)}</span>
+                      <span role="cell">
+                        {
+                          id === "assistant" ? (
+                            course.titolare
+                          ) : webHref ? (
+                            <a class="registry-row__web" href={webHref}>open</a>
+                          ) : (
+                            "-"
+                          )
+                        }
+                      </span>
+                    </article>
+                  );
+                })
+              }
+            </div>
+          </div>
+        ))
+      }
     </section>
   </main>
 </BaseLayout>

@@ -882,6 +882,15 @@ dd {
   border: var(--ds-border_width-bw1) solid var(--ds-colors-border_soft);
 }
 
+.courses-registry {
+  display: grid;
+  gap: clamp(3rem, 6vw, 5rem);
+}
+
+.courses-registry__group {
+  min-width: 0;
+}
+
 .courses-registry .table-heading {
   border-bottom: 0;
   padding-bottom: clamp(1.8rem, 4vw, 3.2rem);
@@ -913,6 +922,18 @@ dd {
   min-width: 900px;
   align-items: center;
   gap: 1rem;
+}
+
+.registry-table--assistant .registry-table__head,
+.registry-table--assistant .registry-row {
+  grid-template-columns:
+    minmax(7.2rem, 0.85fr)
+    minmax(20rem, 3.3fr)
+    minmax(3.5rem, 0.45fr)
+    minmax(5rem, 0.65fr)
+    minmax(6rem, 0.75fr)
+    minmax(12rem, 1.6fr);
+  min-width: 980px;
 }
 
 .registry-table__head {
