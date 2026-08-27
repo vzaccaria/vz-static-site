@@ -216,6 +216,18 @@ artifacts:
     title: C++ and RTOS threads slides
     href: https://drive.google.com/file/d/16lJ_UAV1uIfqrAXhlF-V5GgF2HaHn8Li/view?usp=sharing
 
+  - id: slides-embedded-rtos
+    kind: file
+    media_type: application/pdf
+    title: Embedded systems and RTOS slides
+    href: https://drive.google.com/file/d/1kTirhDnv5BmWJJDAZScObn9uBph5030h/view?usp=sharing
+
+  - id: slides-microcontroller-exercises
+    kind: file
+    media_type: application/pdf
+    title: Microcontroller OS exercises
+    href: https://drive.google.com/file/d/15GRHUU4XIx4QsazSx8waBeDEIOL9aJS6/view?usp=sharing
+
   - id: supplementary-acso-intro
     kind: file
     media_type: application/pdf
@@ -311,6 +323,8 @@ resource_groups:
       - slides-projects
       - slides-cpp-intro
       - slides-threads
+      - slides-embedded-rtos
+      - slides-microcontroller-exercises
 
   - id: supplementary-material
     title: Supplementary tutorials and prerequisites
@@ -485,6 +499,22 @@ external_links:
     title: Lecture recording — 12 December 2025
     href: https://politecnicomilano.webex.com/politecnicomilano/ldr.php?RCID=4cdb8a473eb2748b14a52fae01b8776d
 
+  - id: recording-2025-12-12-seminar
+    title: Seminar recording — 12 December 2025
+    href: https://politecnicomilano.webex.com/politecnicomilano/ldr.php?RCID=10da8199d8d83124d83a1f7c9d0d5ff6
+
+  - id: recording-2025-12-15
+    title: Lecture recording — 15 December 2025
+    href: https://politecnicomilano.webex.com/politecnicomilano/ldr.php?RCID=48f6b6f7770232e2e4a604298bd99413
+
+  - id: recording-2025-12-19
+    title: Lecture recording — 19 December 2025
+    href: https://politecnicomilano.webex.com/politecnicomilano/ldr.php?RCID=58c573666f459a19bf211106c153e375
+
+  - id: recording-2025-12-22
+    title: Lecture recording — 22 December 2025
+    href: https://politecnicomilano.webex.com/politecnicomilano/ldr.php?RCID=5d4de10b764ac86eb2ae6ad38d8ad6d8
+
 announcements: []
 
 schedule:
@@ -501,7 +531,7 @@ schedule:
       location: 21.S.1
       topic: Introduction and operating-system patterns
       people: [vittorio-zaccaria]
-      artifacts: [slides-intro, notes-intro]
+      artifacts: [slides-admin, slides-intro, notes-intro]
       external_links: [recording-2025-09-15]
 
     - id: event-2025-09-19
@@ -789,3 +819,47 @@ schedule:
       people: [federico-terraneo]
       artifacts: [slides-threads]
       external_links: [recording-2025-12-12]
+
+    - id: event-2025-12-12-seminar
+      start: "2025-12-12T18:00:00+01:00"
+      end: "2025-12-12T19:00:00+01:00"
+      kind: seminar
+      status: completed
+      location: Online (Webex)
+      topic: Exploiting and mitigating memory corruption in the Linux kernel
+      people: []
+      artifacts: []
+      external_links: [recording-2025-12-12-seminar]
+
+    - id: event-2025-12-15
+      start: "2025-12-15T12:15:00+01:00"
+      end: "2025-12-15T14:15:00+01:00"
+      kind: laboratory
+      status: completed
+      location: 21.S.1
+      topic: Microcontroller OS programming
+      people: [federico-terraneo]
+      artifacts: [slides-embedded-rtos]
+      external_links: [recording-2025-12-15]
+
+    - id: event-2025-12-19
+      start: "2025-12-19T12:15:00+01:00"
+      end: "2025-12-19T14:15:00+01:00"
+      kind: laboratory
+      status: completed
+      location: 25.S.2
+      topic: Microcontroller OS programming
+      people: [federico-terraneo]
+      artifacts: [slides-embedded-rtos]
+      external_links: [recording-2025-12-19]
+
+    - id: event-2025-12-22
+      start: "2025-12-22T12:15:00+01:00"
+      end: "2025-12-22T14:15:00+01:00"
+      kind: laboratory
+      status: completed
+      location: 21.S.1
+      topic: Microcontroller OS programming
+      people: [federico-terraneo]
+      artifacts: [slides-microcontroller-exercises]
+      external_links: [recording-2025-12-22]
