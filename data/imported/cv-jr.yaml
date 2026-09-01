@@ -1300,6 +1300,18 @@ research:
 teaching:
   currentGoals: ''
   courses:
+    - aaInit: 2026
+      aaEnd: 2027
+      position: Titolare
+      crediti: 5
+      ore: 50
+      courseName: Advanced Operating Systems
+      titolare: Vittorio Zaccaria
+      level: Laurea Magistrale in Ingegneria Informatica
+      institution: Politecnico di Milano
+      students: 100+
+      short: PoliMi - Ing. Inf. LM
+      link: https://www.vittoriozaccaria.net/courses/aos/2026-2027/
     - aaInit: 2025
       aaEnd: 2026
       position: Titolare

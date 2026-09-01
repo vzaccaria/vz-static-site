@@ -44,21 +44,6 @@ artifacts:
     title: Course study guide
     href: https://drive.google.com/file/d/1Euo1Cwv3cgrBr-Y4MOOGPp9R5IvDypbi/view?usp=sharing
 
-  - id: lecture-notes
-    kind: collection
-    title: Lecture notes
-    href: https://drive.google.com/drive/folders/1hAP_LooxJyUyN5FwGXhTsYwdJlBlfJP2?usp=sharing
-
-  - id: lecture-slides
-    kind: collection
-    title: Lecture slides
-    href: https://drive.google.com/drive/folders/1FJJ7rO9AV4vzfRX_UcZc6gaWops7BP0l?usp=sharing
-
-  - id: concept-maps
-    kind: collection
-    title: Concept maps
-    href: https://drive.google.com/drive/folders/1hS3434OLlLL75QXOD2p5sPR21ehbO5pJ?usp=sharing
-
   - id: exam-archive
     kind: collection
     title: Archive of previous exams
@@ -69,45 +54,271 @@ artifacts:
     title: Official API cheatsheets
     href: https://drive.google.com/drive/folders/12DlSZ6y9eC_zBeuwnRedwqSZy_iKNNWj?usp=sharing
 
+  - id: cheatsheet-cpp-rtos
+    kind: file
+    media_type: application/pdf
+    title: C++ and RTOS APIs cheatsheet
+    href: https://drive.google.com/file/d/1urrX1dFOWLevmYJPqMX7jXzg71O39cPs/view?usp=sharing
+
+  - id: cheatsheet-linux-kernel
+    kind: file
+    media_type: application/pdf
+    title: Linux kernel APIs cheatsheet
+    href: https://drive.google.com/file/d/1CSMBvpXYtLBm06yGK2DF0sr0-orqdV_M/view?usp=sharing
+
+  - id: notes-admin
+    kind: file
+    media_type: application/pdf
+    title: Course administration notes
+    href: https://drive.google.com/file/d/1lKTap4mJYpsg7g1boAfp-kblIJXbSg9R/view?usp=sharing
+
+  - id: notes-intro
+    kind: file
+    media_type: application/pdf
+    title: Introduction notes
+    href: https://drive.google.com/file/d/1Z7lc0fE8mX0QcWxaTEuVKN2T_H33EziQ/view?usp=sharing
+
+  - id: notes-processes
+    kind: file
+    media_type: application/pdf
+    title: Processes and scheduling notes
+    href: https://drive.google.com/file/d/1s5Jck1RG8QOmjj4mn5sgowMmn8CxNBvL/view?usp=sharing
+
+  - id: notes-concurrency
+    kind: file
+    media_type: application/pdf
+    title: Linux kernel concurrency notes
+    href: https://drive.google.com/file/d/1imVAfZng0kNI616eN7xQHLM2heoKBL9j/view?usp=sharing
+
+  - id: notes-virtual-memory
+    kind: file
+    media_type: application/pdf
+    title: Virtual memory notes
+    href: https://drive.google.com/file/d/1PpNeJiuNzc9uXKeh318_ujz3JT9Gs9yu/view?usp=sharing
+
+  - id: notes-io
+    kind: file
+    media_type: application/pdf
+    title: Device I/O notes
+    href: https://drive.google.com/file/d/1ndPrLvF5n3dRG34g0f1aWuV9Wv_gQ3Zd/view?usp=sharing
+
+  - id: notes-boot
+    kind: file
+    media_type: application/pdf
+    title: Boot and firmware notes
+    href: https://drive.google.com/file/d/1EZ7nzd_zoHlwAzP7VXdHl4N8ObQzmI7H/view?usp=sharing
+
+  - id: notes-virtualization
+    kind: file
+    media_type: application/pdf
+    title: System virtualization notes
+    href: https://drive.google.com/file/d/1nNKcJyf6I14j22BYBOwLxyiBEtTw_Ulq/view?usp=sharing
+
+  - id: notes-projects
+    kind: file
+    media_type: application/pdf
+    title: Course projects notes
+    href: https://drive.google.com/file/d/1RLb2VDku440EDZJmh5TDq1mI-6Jl2sXl/view?usp=sharing
+
+  - id: notes-mcs-intro
+    kind: file
+    media_type: application/pdf
+    title: Virtualization and mixed-criticality systems notes
+    href: https://drive.google.com/file/d/1Pj2tW7zhbbhLQ1FEshf0sEYoDKOT_MwI/view?usp=sharing
+
+  - id: notes-mcs-taxonomy
+    kind: file
+    media_type: application/pdf
+    title: Mixed-criticality systems taxonomy notes
+    href: https://drive.google.com/file/d/19PVWJRhWaUHcjLTxYcrCVjq_g5nNaZi2/view?usp=sharing
+
+  - id: slides-admin
+    kind: file
+    media_type: application/pdf
+    title: Course administration slides
+    href: https://drive.google.com/file/d/1JTj7K1R3NNh2YipTPWcdlOm-q2A8DU7a/view?usp=sharing
+
+  - id: slides-intro
+    kind: file
+    media_type: application/pdf
+    title: Introduction slides
+    href: https://drive.google.com/file/d/1d_ilhKGcSl9ZOo_qbxoaC_zC44U0LD-c/view?usp=sharing
+
+  - id: slides-processes
+    kind: file
+    media_type: application/pdf
+    title: Processes and scheduling slides
+    href: https://drive.google.com/file/d/1stCGdy44Xif9U4S3-h3LoZ2opUk0WoO-/view?usp=sharing
+
+  - id: slides-concurrency
+    kind: file
+    media_type: application/pdf
+    title: Linux kernel concurrency slides
+    href: https://drive.google.com/file/d/1RgvYCWKOvb6ATPcMTUPZK-6llH0ZTCNt/view?usp=sharing
+
+  - id: slides-virtual-memory
+    kind: file
+    media_type: application/pdf
+    title: Virtual memory slides
+    href: https://drive.google.com/file/d/1g_B-vcMy6u_M8T1Lg7SvmroXrcDzB0e6/view?usp=sharing
+
+  - id: slides-io
+    kind: file
+    media_type: application/pdf
+    title: Device I/O slides
+    href: https://drive.google.com/file/d/1tgxw1z5eJ4p5vKClQkauccVkYhpI-hQT/view?usp=sharing
+
+  - id: slides-boot
+    kind: file
+    media_type: application/pdf
+    title: Boot and firmware slides
+    href: https://drive.google.com/file/d/1HH3dN97pMLs0j2mJfS9T3u0edxaHEaCL/view?usp=sharing
+
+  - id: slides-virtualization
+    kind: file
+    media_type: application/pdf
+    title: System virtualization slides
+    href: https://drive.google.com/file/d/1vONyt3jMmYiLNTOsR7XMyRk61mvKHLHT/view?usp=sharing
+
+  - id: slides-projects
+    kind: file
+    media_type: application/pdf
+    title: Course projects slides
+    href: https://drive.google.com/file/d/1GtGtLlbDCozcKczsRYezvC4-qRMidLHj/view?usp=sharing
+
+  - id: slides-cpp-intro
+    kind: file
+    media_type: application/pdf
+    title: Introduction to C++ slides
+    href: https://drive.google.com/file/d/1jdINXDTo3pk7BnYdFPdFhOdp32PzMCFt/view?usp=sharing
+
+  - id: slides-cpp-threads
+    kind: file
+    media_type: application/pdf
+    title: Multithreading in C++ slides
+    href: https://drive.google.com/file/d/17844kn1ASpDAl9NofD35WQpbrM7UA11B/view?usp=sharing
+
+  - id: slides-embedded-rtos
+    kind: file
+    media_type: application/pdf
+    title: Embedded systems and RTOS slides
+    href: https://drive.google.com/file/d/1mebwdmr3165GCkAJ6A1xszn0kLLS4PT_/view?usp=sharing
+
+  - id: slides-os-development-part-1
+    kind: file
+    media_type: application/pdf
+    title: Hands-on operating-system development — part 1
+    href: https://drive.google.com/file/d/1tQqbZ9C5g3T9tmCNRhCskjM8GNvkOoyK/view?usp=sharing
+
+  - id: slides-os-development-part-2
+    kind: file
+    media_type: application/pdf
+    title: Hands-on operating-system development — part 2
+    href: https://drive.google.com/file/d/1qaZQrwOKlJEsY8SHf0It3gdJB1CkW_6L/view?usp=sharing
+
+  - id: slides-mcs-intro
+    kind: file
+    media_type: application/pdf
+    title: Virtualization and mixed-criticality systems slides
+    href: https://drive.google.com/file/d/1JhEp93S6x-PM-jLwvxR3RCTsmcSH3Q_M/view?usp=sharing
+
+  - id: slides-mcs-taxonomy
+    kind: file
+    media_type: application/pdf
+    title: Mixed-criticality systems taxonomy slides
+    href: https://drive.google.com/file/d/11v4Y92BBMrJKN2nXlSO9MVBEJxlE7Af4/view?usp=sharing
+
 resource_groups:
   - id: course-information
     title: Course information
     artifacts:
       - syllabus
       - study-guide
+      - slides-admin
+      - notes-admin
 
-  - id: teaching-material
-    title: Teaching material
+  - id: projects
+    title: Course projects
     artifacts:
-      - lecture-notes
-      - lecture-slides
-      - concept-maps
+      - slides-projects
+      - notes-projects
 
   - id: exam-preparation
     title: Exam preparation
     artifacts:
       - exam-archive
       - cheatsheets
+      - cheatsheet-cpp-rtos
+      - cheatsheet-linux-kernel
 
-external_links: []
+  - id: teaching-material
+    title: Teaching material
+    artifacts:
+      - slides-intro
+      - notes-intro
+      - slides-processes
+      - notes-processes
+      - slides-concurrency
+      - notes-concurrency
+      - slides-virtual-memory
+      - notes-virtual-memory
+      - slides-io
+      - notes-io
+      - slides-boot
+      - notes-boot
+      - slides-virtualization
+      - notes-virtualization
+      - slides-mcs-intro
+      - notes-mcs-intro
+      - slides-mcs-taxonomy
+      - notes-mcs-taxonomy
+      - slides-cpp-intro
+      - slides-cpp-threads
+      - slides-embedded-rtos
+      - slides-os-development-part-1
+      - slides-os-development-part-2
+
+external_links:
+  - id: webex-room
+    title: Course instructor Webex room
+    href: https://politecnicomilano.webex.com/meet/vittorio.zaccaria
+
+  - id: research-group
+    title: Vittorio Zaccaria research group
+    href: https://www.vittoriozaccaria.net/research
+
+  # Project registration form: TBD
+
+  - id: project-report-template
+    title: Course project report template
+    href: https://github.com/polimi-aos-lab/course-project-report-template
+
+  - id: poul-git-course
+    title: POuL Git crash course
+    href: https://poul.org/courses/git/
+
+  - id: linux-kernel-source
+    title: Linux kernel source used in class
+    href: https://elixir.bootlin.com/linux/v5.16-rc1/source/kernel
+
 announcements: []
 
 schedule:
   notice: >-
     The schedule is best effort. Topics may be covered sooner or later depending
     on lecture progress. Slides are normally published before each lecture;
-    notes and materials listed in the study guide are mandatory readings. Rooms
-    will be announced when the official timetable is available.
+    notes and materials listed in the study guide are mandatory readings. Monday
+    classes meet in room 7.1.3; Friday classes meet in room 3.1.8.
   events:
     - id: event-2026-09-14
       start: "2026-09-14T12:15:00+02:00"
       end: "2026-09-14T14:15:00+02:00"
       kind: lecture
       status: scheduled
-      location: To be announced
+      location: 7.1.3
       topic: Introduction and operating-system patterns
       people: [vittorio-zaccaria]
-      artifacts: []
+      artifacts: [slides-admin, notes-admin, slides-intro, notes-intro]
       external_links: []
 
     - id: event-2026-09-18
@@ -115,10 +326,10 @@ schedule:
       end: "2026-09-18T14:15:00+02:00"
       kind: lecture
       status: scheduled
-      location: To be announced
+      location: 3.1.8
       topic: Kernel overview, tasks, wait queues, and scheduling
       people: [vittorio-zaccaria]
-      artifacts: []
+      artifacts: [slides-processes, notes-processes]
       external_links: []
 
     - id: event-2026-09-21
@@ -126,10 +337,10 @@ schedule:
       end: "2026-09-21T14:15:00+02:00"
       kind: lecture
       status: scheduled
-      location: To be announced
+      location: 7.1.3
       topic: Scheduling and load balancing
       people: [vittorio-zaccaria]
-      artifacts: []
+      artifacts: [slides-processes, notes-processes]
       external_links: []
 
     - id: event-2026-09-25
@@ -137,10 +348,10 @@ schedule:
       end: "2026-09-25T14:15:00+02:00"
       kind: laboratory
       status: scheduled
-      location: To be announced
+      location: 3.1.8
       topic: Kernel modules and debugging
       people: [vittorio-zaccaria]
-      artifacts: []
+      artifacts: [] # Laboratory slides: TBD
       external_links: []
 
     - id: event-2026-09-28
@@ -148,10 +359,10 @@ schedule:
       end: "2026-09-28T14:15:00+02:00"
       kind: laboratory
       status: scheduled
-      location: To be announced
+      location: 7.1.3
       topic: Kernel debugging
       people: [vittorio-zaccaria]
-      artifacts: []
+      artifacts: [] # Laboratory slides: TBD
       external_links: []
 
     - id: event-2026-10-02
@@ -159,10 +370,10 @@ schedule:
       end: "2026-10-02T14:15:00+02:00"
       kind: lecture
       status: scheduled
-      location: To be announced
+      location: 3.1.8
       topic: MCS locks, spinlocks, and lockdep
       people: [vittorio-zaccaria]
-      artifacts: []
+      artifacts: [slides-concurrency, notes-concurrency]
       external_links: []
 
     - id: event-2026-10-05
@@ -170,10 +381,10 @@ schedule:
       end: "2026-10-05T14:15:00+02:00"
       kind: lecture
       status: scheduled
-      location: To be announced
+      location: 7.1.3
       topic: RCU, CAS, and the ABA problem
       people: [vittorio-zaccaria]
-      artifacts: []
+      artifacts: [slides-concurrency, notes-concurrency]
       external_links: []
 
     - id: event-2026-10-09
@@ -181,10 +392,10 @@ schedule:
       end: "2026-10-09T14:15:00+02:00"
       kind: lecture
       status: scheduled
-      location: To be announced
+      location: 3.1.8
       topic: Linux kernel memory model
       people: [vittorio-zaccaria]
-      artifacts: []
+      artifacts: [slides-concurrency, notes-concurrency]
       external_links: []
 
     - id: event-2026-10-12
@@ -192,10 +403,10 @@ schedule:
       end: "2026-10-12T14:15:00+02:00"
       kind: laboratory
       status: scheduled
-      location: To be announced
+      location: 7.1.3
       topic: Kernel lists, atomic access, and RCU
       people: [vittorio-zaccaria]
-      artifacts: []
+      artifacts: [] # Laboratory slides: TBD
       external_links: []
 
     - id: event-2026-10-16
@@ -203,10 +414,10 @@ schedule:
       end: "2026-10-16T14:15:00+02:00"
       kind: lecture
       status: scheduled
-      location: To be announced
+      location: 3.1.8
       topic: Kernel lists, atomic access, RCU, and memory model
       people: [vittorio-zaccaria]
-      artifacts: []
+      artifacts: [] # Laboratory slides: TBD
       external_links: []
 
     - id: event-2026-10-19
@@ -214,10 +425,10 @@ schedule:
       end: "2026-10-19T14:15:00+02:00"
       kind: lecture
       status: scheduled
-      location: To be announced
+      location: 7.1.3
       topic: VMAs, kmalloc, vmalloc, and slab allocation
       people: [vittorio-zaccaria]
-      artifacts: []
+      artifacts: [slides-virtual-memory, notes-virtual-memory]
       external_links: []
 
     - id: event-2026-10-23
@@ -225,10 +436,10 @@ schedule:
       end: "2026-10-23T14:15:00+02:00"
       kind: laboratory
       status: scheduled
-      location: To be announced
+      location: 3.1.8
       topic: Kernel memory allocation and user/kernel data movement
       people: [vittorio-zaccaria]
-      artifacts: []
+      artifacts: [] # Laboratory slides: TBD
       external_links: []
 
     - id: event-2026-10-26
@@ -236,10 +447,10 @@ schedule:
       end: "2026-10-26T14:15:00+01:00"
       kind: lecture
       status: scheduled
-      location: To be announced
+      location: 7.1.3
       topic: MMIO, port I/O, and interrupts
       people: [vittorio-zaccaria]
-      artifacts: []
+      artifacts: [slides-io, notes-io]
       external_links: []
 
     - id: event-2026-10-30
@@ -269,10 +480,10 @@ schedule:
       end: "2026-11-06T14:15:00+01:00"
       kind: laboratory
       status: scheduled
-      location: To be announced
+      location: 3.1.8
       topic: MMIO, port I/O, interrupts, and UART driver
       people: [vittorio-zaccaria]
-      artifacts: []
+      artifacts: [] # Laboratory slides: TBD
       external_links: []
 
     - id: event-2026-11-09
@@ -280,10 +491,10 @@ schedule:
       end: "2026-11-09T14:15:00+01:00"
       kind: lecture
       status: scheduled
-      location: To be announced
+      location: 7.1.3
       topic: Block devices
       people: [vittorio-zaccaria]
-      artifacts: []
+      artifacts: [] # Laboratory slides: TBD
       external_links: []
 
     - id: event-2026-11-13
@@ -291,10 +502,10 @@ schedule:
       end: "2026-11-13T14:15:00+01:00"
       kind: lecture
       status: scheduled
-      location: To be announced
+      location: 3.1.8
       topic: Linux device model and PCIe
       people: [vittorio-zaccaria]
-      artifacts: []
+      artifacts: [slides-io, notes-io]
       external_links: []
 
     - id: event-2026-11-16
@@ -302,10 +513,10 @@ schedule:
       end: "2026-11-16T14:15:00+01:00"
       kind: lecture
       status: scheduled
-      location: To be announced
+      location: 7.1.3
       topic: ACPI and device trees
       people: [vittorio-zaccaria]
-      artifacts: []
+      artifacts: [slides-boot, notes-boot]
       external_links: []
 
     - id: event-2026-11-20
@@ -313,10 +524,10 @@ schedule:
       end: "2026-11-20T14:15:00+01:00"
       kind: laboratory
       status: scheduled
-      location: To be announced
+      location: 3.1.8
       topic: UEFI and embedded Linux with U-Boot
       people: [vittorio-zaccaria]
-      artifacts: []
+      artifacts: [slides-boot, notes-boot]
       external_links: []
 
     - id: event-2026-11-23
@@ -324,10 +535,10 @@ schedule:
       end: "2026-11-23T14:15:00+01:00"
       kind: lecture
       status: scheduled
-      location: To be announced
+      location: 7.1.3
       topic: System virtualization — part 1
       people: [vittorio-zaccaria]
-      artifacts: []
+      artifacts: [slides-virtualization, notes-virtualization]
       external_links: []
 
     - id: event-2026-11-27
@@ -335,10 +546,10 @@ schedule:
       end: "2026-11-27T14:15:00+01:00"
       kind: lecture
       status: scheduled
-      location: To be announced
+      location: 3.1.8
       topic: System virtualization — part 2
       people: [vittorio-zaccaria]
-      artifacts: []
+      artifacts: [slides-virtualization, notes-virtualization]
       external_links: []
 
     - id: event-2026-11-30
@@ -346,10 +557,10 @@ schedule:
       end: "2026-11-30T14:15:00+01:00"
       kind: lecture
       status: scheduled
-      location: To be announced
+      location: 7.1.3
       topic: Project presentations
       people: [vittorio-zaccaria]
-      artifacts: []
+      artifacts: [slides-projects, notes-projects]
       external_links: []
 
     - id: event-2026-12-04
@@ -357,10 +568,10 @@ schedule:
       end: "2026-12-04T14:15:00+01:00"
       kind: laboratory
       status: scheduled
-      location: To be announced
+      location: 3.1.8
       topic: Microcontroller OS programming — C++ introduction
       people: [federico-terraneo]
-      artifacts: []
+      artifacts: [slides-cpp-intro]
       external_links: []
 
     - id: event-2026-12-07
@@ -379,10 +590,10 @@ schedule:
       end: "2026-12-11T14:15:00+01:00"
       kind: laboratory
       status: scheduled
-      location: To be announced
+      location: 3.1.8
       topic: Microcontroller OS programming — threads
       people: [federico-terraneo]
-      artifacts: []
+      artifacts: [slides-cpp-threads]
       external_links: []
 
     - id: event-2026-12-14
@@ -390,10 +601,10 @@ schedule:
       end: "2026-12-14T14:15:00+01:00"
       kind: laboratory
       status: scheduled
-      location: To be announced
+      location: 7.1.3
       topic: Microcontroller OS programming — embedded systems and RTOS
       people: [federico-terraneo]
-      artifacts: []
+      artifacts: [slides-embedded-rtos]
       external_links: []
 
     - id: event-2026-12-18
@@ -401,10 +612,10 @@ schedule:
       end: "2026-12-18T14:15:00+01:00"
       kind: laboratory
       status: scheduled
-      location: To be announced
+      location: 3.1.8
       topic: Microcontroller OS programming — continued
       people: [federico-terraneo]
-      artifacts: []
+      artifacts: [slides-embedded-rtos]
       external_links: []
 
     - id: event-2026-12-21
@@ -412,8 +623,8 @@ schedule:
       end: "2026-12-21T14:15:00+01:00"
       kind: laboratory
       status: scheduled
-      location: To be announced
+      location: 7.1.3
       topic: Microcontroller OS programming — exercises
       people: [federico-terraneo]
-      artifacts: []
+      artifacts: [slides-os-development-part-1, slides-os-development-part-2]
       external_links: []
