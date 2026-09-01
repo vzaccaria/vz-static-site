@@ -66,72 +66,6 @@ artifacts:
     title: Linux kernel APIs cheatsheet
     href: https://drive.google.com/file/d/1CSMBvpXYtLBm06yGK2DF0sr0-orqdV_M/view?usp=sharing
 
-  - id: notes-admin
-    kind: file
-    media_type: application/pdf
-    title: Course administration notes
-    href: https://drive.google.com/file/d/1lKTap4mJYpsg7g1boAfp-kblIJXbSg9R/view?usp=sharing
-
-  - id: notes-intro
-    kind: file
-    media_type: application/pdf
-    title: Introduction notes
-    href: https://drive.google.com/file/d/1Z7lc0fE8mX0QcWxaTEuVKN2T_H33EziQ/view?usp=sharing
-
-  - id: notes-processes
-    kind: file
-    media_type: application/pdf
-    title: Processes and scheduling notes
-    href: https://drive.google.com/file/d/1s5Jck1RG8QOmjj4mn5sgowMmn8CxNBvL/view?usp=sharing
-
-  - id: notes-concurrency
-    kind: file
-    media_type: application/pdf
-    title: Linux kernel concurrency notes
-    href: https://drive.google.com/file/d/1imVAfZng0kNI616eN7xQHLM2heoKBL9j/view?usp=sharing
-
-  - id: notes-virtual-memory
-    kind: file
-    media_type: application/pdf
-    title: Virtual memory notes
-    href: https://drive.google.com/file/d/1PpNeJiuNzc9uXKeh318_ujz3JT9Gs9yu/view?usp=sharing
-
-  - id: notes-io
-    kind: file
-    media_type: application/pdf
-    title: Device I/O notes
-    href: https://drive.google.com/file/d/1ndPrLvF5n3dRG34g0f1aWuV9Wv_gQ3Zd/view?usp=sharing
-
-  - id: notes-boot
-    kind: file
-    media_type: application/pdf
-    title: Boot and firmware notes
-    href: https://drive.google.com/file/d/1EZ7nzd_zoHlwAzP7VXdHl4N8ObQzmI7H/view?usp=sharing
-
-  - id: notes-virtualization
-    kind: file
-    media_type: application/pdf
-    title: System virtualization notes
-    href: https://drive.google.com/file/d/1nNKcJyf6I14j22BYBOwLxyiBEtTw_Ulq/view?usp=sharing
-
-  - id: notes-projects
-    kind: file
-    media_type: application/pdf
-    title: Course projects notes
-    href: https://drive.google.com/file/d/1RLb2VDku440EDZJmh5TDq1mI-6Jl2sXl/view?usp=sharing
-
-  - id: notes-mcs-intro
-    kind: file
-    media_type: application/pdf
-    title: Virtualization and mixed-criticality systems notes
-    href: https://drive.google.com/file/d/1Pj2tW7zhbbhLQ1FEshf0sEYoDKOT_MwI/view?usp=sharing
-
-  - id: notes-mcs-taxonomy
-    kind: file
-    media_type: application/pdf
-    title: Mixed-criticality systems taxonomy notes
-    href: https://drive.google.com/file/d/19PVWJRhWaUHcjLTxYcrCVjq_g5nNaZi2/view?usp=sharing
-
   - id: slides-admin
     kind: file
     media_type: application/pdf
@@ -235,13 +169,11 @@ resource_groups:
       - syllabus
       - study-guide
       - slides-admin
-      - notes-admin
 
   - id: projects
     title: Course projects
     artifacts:
       - slides-projects
-      - notes-projects
 
   - id: exam-preparation
     title: Exam preparation
@@ -255,23 +187,14 @@ resource_groups:
     title: Teaching material
     artifacts:
       - slides-intro
-      - notes-intro
       - slides-processes
-      - notes-processes
       - slides-concurrency
-      - notes-concurrency
       - slides-virtual-memory
-      - notes-virtual-memory
       - slides-io
-      - notes-io
       - slides-boot
-      - notes-boot
       - slides-virtualization
-      - notes-virtualization
       - slides-mcs-intro
-      - notes-mcs-intro
       - slides-mcs-taxonomy
-      - notes-mcs-taxonomy
       - slides-cpp-intro
       - slides-cpp-threads
       - slides-embedded-rtos
@@ -318,7 +241,7 @@ schedule:
       location: 7.1.3
       topic: Introduction and operating-system patterns
       people: [vittorio-zaccaria]
-      artifacts: [slides-admin, notes-admin, slides-intro, notes-intro]
+      artifacts: [slides-admin, slides-intro]
       external_links: []
 
     - id: event-2026-09-18
@@ -329,7 +252,7 @@ schedule:
       location: 3.1.8
       topic: Kernel overview, tasks, wait queues, and scheduling
       people: [vittorio-zaccaria]
-      artifacts: [slides-processes, notes-processes]
+      artifacts: [slides-processes]
       external_links: []
 
     - id: event-2026-09-21
@@ -340,7 +263,7 @@ schedule:
       location: 7.1.3
       topic: Scheduling and load balancing
       people: [vittorio-zaccaria]
-      artifacts: [slides-processes, notes-processes]
+      artifacts: [slides-processes]
       external_links: []
 
     - id: event-2026-09-25
@@ -373,7 +296,7 @@ schedule:
       location: 3.1.8
       topic: MCS locks, spinlocks, and lockdep
       people: [vittorio-zaccaria]
-      artifacts: [slides-concurrency, notes-concurrency]
+      artifacts: [slides-concurrency]
       external_links: []
 
     - id: event-2026-10-05
@@ -384,7 +307,7 @@ schedule:
       location: 7.1.3
       topic: RCU, CAS, and the ABA problem
       people: [vittorio-zaccaria]
-      artifacts: [slides-concurrency, notes-concurrency]
+      artifacts: [slides-concurrency]
       external_links: []
 
     - id: event-2026-10-09
@@ -395,7 +318,7 @@ schedule:
       location: 3.1.8
       topic: Linux kernel memory model
       people: [vittorio-zaccaria]
-      artifacts: [slides-concurrency, notes-concurrency]
+      artifacts: [slides-concurrency]
       external_links: []
 
     - id: event-2026-10-12
@@ -428,7 +351,7 @@ schedule:
       location: 7.1.3
       topic: VMAs, kmalloc, vmalloc, and slab allocation
       people: [vittorio-zaccaria]
-      artifacts: [slides-virtual-memory, notes-virtual-memory]
+      artifacts: [slides-virtual-memory]
       external_links: []
 
     - id: event-2026-10-23
@@ -450,7 +373,7 @@ schedule:
       location: 7.1.3
       topic: MMIO, port I/O, and interrupts
       people: [vittorio-zaccaria]
-      artifacts: [slides-io, notes-io]
+      artifacts: [slides-io]
       external_links: []
 
     - id: event-2026-10-30
@@ -505,7 +428,7 @@ schedule:
       location: 3.1.8
       topic: Linux device model and PCIe
       people: [vittorio-zaccaria]
-      artifacts: [slides-io, notes-io]
+      artifacts: [slides-io]
       external_links: []
 
     - id: event-2026-11-16
@@ -516,7 +439,7 @@ schedule:
       location: 7.1.3
       topic: ACPI and device trees
       people: [vittorio-zaccaria]
-      artifacts: [slides-boot, notes-boot]
+      artifacts: [slides-boot]
       external_links: []
 
     - id: event-2026-11-20
@@ -527,7 +450,7 @@ schedule:
       location: 3.1.8
       topic: UEFI and embedded Linux with U-Boot
       people: [vittorio-zaccaria]
-      artifacts: [slides-boot, notes-boot]
+      artifacts: [slides-boot]
       external_links: []
 
     - id: event-2026-11-23
@@ -538,7 +461,7 @@ schedule:
       location: 7.1.3
       topic: System virtualization — part 1
       people: [vittorio-zaccaria]
-      artifacts: [slides-virtualization, notes-virtualization]
+      artifacts: [slides-virtualization]
       external_links: []
 
     - id: event-2026-11-27
@@ -549,7 +472,7 @@ schedule:
       location: 3.1.8
       topic: System virtualization — part 2
       people: [vittorio-zaccaria]
-      artifacts: [slides-virtualization, notes-virtualization]
+      artifacts: [slides-virtualization]
       external_links: []
 
     - id: event-2026-11-30
@@ -560,7 +483,7 @@ schedule:
       location: 7.1.3
       topic: Project presentations
       people: [vittorio-zaccaria]
-      artifacts: [slides-projects, notes-projects]
+      artifacts: [slides-projects]
       external_links: []
 
     - id: event-2026-12-04
