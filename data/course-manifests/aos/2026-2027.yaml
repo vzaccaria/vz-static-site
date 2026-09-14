@@ -213,6 +213,10 @@ resource_groups:
       - slides-os-development-part-2
 
 external_links:
+  - id: recording-2026-09-14
+    title: Lecture recording — 14 September 2026
+    href: https://politecnicomilano.webex.com/politecnicomilano/ldr.php?RCID=05f4748da27a76da119565ce09d396f8
+
   - id: course-labs
     title: Lab environment and setup instructions
     href: https://github.com/polimi-aos-lab/course-labs-2627
@@ -265,12 +269,12 @@ schedule:
       start: "2026-09-14T12:15:00+02:00"
       end: "2026-09-14T14:15:00+02:00"
       kind: lecture
-      status: scheduled
+      status: completed
       location: 7.1.3
       topic: Introduction and operating-system patterns
       people: [vittorio-zaccaria]
       artifacts: [slides-admin, slides-intro]
-      external_links: []
+      external_links: [recording-2026-09-14]
 
     - id: event-2026-09-18
       start: "2026-09-18T12:15:00+02:00"
