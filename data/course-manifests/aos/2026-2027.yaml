@@ -171,9 +171,20 @@ resource_groups:
       - slides-admin
 
   - id: projects
-    title: Course projects
+    title: Projects
+    external_links: [project-report-template]
     artifacts:
       - slides-projects
+
+  - id: laboratories
+    title: Laboratories
+    artifacts: []
+    external_links: [course-labs]
+
+  - id: course-links
+    title: Useful links
+    artifacts: []
+    external_links: [webex-room, research-group, poul-git-course, linux-kernel-source]
 
   - id: exam-preparation
     title: Exam preparation
@@ -202,6 +213,10 @@ resource_groups:
       - slides-os-development-part-2
 
 external_links:
+  - id: course-labs
+    title: Lab environment and setup instructions
+    href: https://github.com/polimi-aos-lab/course-labs-2627
+
   - id: webex-room
     title: Course instructor Webex room
     href: https://politecnicomilano.webex.com/meet/vittorio.zaccaria
@@ -288,7 +303,7 @@ schedule:
       topic: Kernel modules and debugging
       people: [vittorio-zaccaria]
       artifacts: [] # Laboratory slides: TBD
-      external_links: []
+      external_links: [course-labs]
 
     - id: event-2026-09-28
       start: "2026-09-28T12:15:00+02:00"

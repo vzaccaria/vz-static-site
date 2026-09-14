@@ -27,6 +27,7 @@ export type CourseResourceGroup = {
   id: string;
   title: string;
   artifacts: string[];
+  external_links?: string[];
 };
 
 export type CourseExternalLink = {
@@ -150,6 +151,7 @@ function checkReferences(manifest: CourseManifest, issues: string[]) {
 
   manifest.resource_groups.forEach((group, index) => {
     check(group.artifacts, artifacts, `resource_groups[${index}].artifacts`);
+    check(group.external_links ?? [], externalLinks, `resource_groups[${index}].external_links`);
   });
 
   manifest.announcements.forEach((announcement, index) => {
@@ -312,4 +314,15 @@ export async function loadCourseManifests(
       right.academicYear.localeCompare(left.academicYear) ||
       left.courseSlug.localeCompare(right.courseSlug),
   );
+}
+
+// Membership and order come exclusively from the manifest, never the schedule or URL.
+export function resolveCourseResourceGroups(manifest: CourseManifest) {
+  const artifacts = new Map(manifest.artifacts.map((item) => [item.id, item]));
+  const links = new Map(manifest.external_links.map((item) => [item.id, item]));
+  return manifest.resource_groups.map((group) => ({
+    ...group,
+    artifacts: group.artifacts.map((id) => artifacts.get(id)!),
+    external_links: (group.external_links ?? []).map((id) => links.get(id)!),
+  }));
 }

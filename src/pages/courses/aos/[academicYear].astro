@@ -1,4 +1,5 @@
 ---
+import { resolveCourseResourceGroups } from "../../../data/course-manifests";
 import type { GetStaticPaths } from "astro";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import {
@@ -49,25 +50,7 @@ const announcements = [...manifest.announcements].sort(
 const events = [...manifest.schedule.events].sort(
   (left, right) => Date.parse(left.start) - Date.parse(right.start),
 );
-const resourceGroups = manifest.resource_groups
-  .filter((group) => group.id !== "teaching-material" || events.length === 0)
-  .map((group) => ({
-    ...group,
-    artifacts: group.artifacts.map((artifact) => artifactsById.get(artifact)!),
-  }));
-const eventLinkIds = new Set(events.flatMap((event) => event.external_links));
-const standaloneLinks = manifest.external_links.filter(
-  (link) => !eventLinkIds.has(link.id),
-);
-const resourceLinks = standaloneLinks.filter(
-  (link) =>
-    link.id === "project-registration-form" ||
-    new URL(link.href).hostname === "github.com",
-);
-const resourceLinkIds = new Set(resourceLinks.map(({ id }) => id));
-const remainingStandaloneLinks = standaloneLinks.filter(
-  (link) => !resourceLinkIds.has(link.id),
-);
+const resourceGroups = resolveCourseResourceGroups(manifest);
 const dateFormatter = new Intl.DateTimeFormat(manifest.site.locale, {
   weekday: "short",
   day: "2-digit",
@@ -90,7 +73,6 @@ let nextSection = 2;
 const announcementSection = announcements.length > 0 ? nextSection++ : undefined;
 const resourceSection = nextSection++;
 const scheduleSection = nextSection++;
-const linksSection = remainingStandaloneLinks.length > 0 ? nextSection++ : undefined;
 const editionsSection = nextSection;
 ---
 
@@ -193,21 +175,15 @@ const editionsSection = nextSection;
                     <span>{artifact.kind}</span>
                   </li>
                 ))}
-              </ul>
-            </article>
-          ))
-        }
-        {
-          resourceLinks.length > 0 && (
-            <article class="detail-card course-resource-group">
-              <h3>Repositories and project registration</h3>
-              <ul class="course-link-list">
-                {resourceLinks.map((link) => (
-                  <li><a href={link.href}>{link.title}</a></li>
+                {group.external_links.map((link) => (
+                  <li>
+                    <a href={link.href}>{link.title}</a>
+                    {link.description && <span>{link.description}</span>}
+                  </li>
                 ))}
               </ul>
             </article>
-          )
+          ))
         }
       </div>
     </section>
@@ -333,31 +309,6 @@ const editionsSection = nextSection;
         )
       }
     </section>
-
-    {
-      remainingStandaloneLinks.length > 0 && (
-        <section class="content-band" aria-labelledby="course-links">
-          <div class="section-heading">
-            <p class="section-kicker">Elsewhere</p>
-            <h2 id="course-links">
-              <span class="section-marker" aria-hidden="true">§{linksSection}</span>
-              External links
-            </h2>
-          </div>
-          <div class="compact-list course-external-links">
-            {remainingStandaloneLinks.map((link) => (
-              <article>
-                <span aria-hidden="true">↗</span>
-                <div>
-                  <h3><a href={link.href}>{link.title}</a></h3>
-                  {link.description && <p>{link.description}</p>}
-                </div>
-              </article>
-            ))}
-          </div>
-        </section>
-      )
-    }
 
     <section class="content-band" aria-labelledby="course-editions">
       <div class="section-heading">

@@ -286,7 +286,9 @@ resource_groups:
 
   - id: projects
     title: Course projects and research opportunities
+    external_links: [project-registration-form, project-report-template]
     artifacts:
+      - slides-projects
       - project-assignments
       - project-presentation-template
       - thesis-proposals
@@ -320,7 +322,6 @@ resource_groups:
       - notes-boot
       - slides-virtualization
       - notes-virtualization
-      - slides-projects
       - slides-cpp-intro
       - slides-threads
       - slides-embedded-rtos
@@ -337,6 +338,27 @@ resource_groups:
       - supplementary-git
       - supplementary-linux-development
       - supplementary-cpp
+
+  - id: laboratories
+    title: Laboratories
+    artifacts: []
+    external_links: [course-lab-repository, terraneo-lab-repository]
+
+  - id: course-links
+    title: Useful links
+    artifacts: []
+    external_links:
+      - webex-room
+      - research-group
+      - poul-git-course
+      - supplementary-git-recording
+      - supplementary-linux-recording
+      - supplementary-cpp-recording-1
+      - supplementary-cpp-recording-2
+      - supplementary-cpp-recording-3
+      - embedded-systems-course-intro
+      - linux-kernel-source
+      - seminar-webex-room
 
 external_links:
   - id: webex-room
