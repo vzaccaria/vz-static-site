@@ -282,9 +282,9 @@ schedule:
       kind: lecture
       status: scheduled
       location: 3.1.8
-      topic: Kernel overview, tasks, wait queues, and scheduling
+      topic: Operating-system patterns — conclusion; kernel overview — introduction
       people: [vittorio-zaccaria]
-      artifacts: [slides-processes]
+      artifacts: [slides-intro, slides-processes]
       external_links: []
 
     - id: event-2026-09-21
