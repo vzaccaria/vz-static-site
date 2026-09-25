@@ -213,6 +213,10 @@ resource_groups:
       - slides-os-development-part-2
 
 external_links:
+  - id: recording-2026-09-25
+    title: Laboratory recording — 25 September 2026
+    href: https://politecnicomilano.webex.com/politecnicomilano/ldr.php?RCID=b32cea82ad33c192d6af99283ee1a494
+
   - id: recording-2026-09-21
     title: Lecture recording — 21 September 2026
     href: https://politecnicomilano.webex.com/politecnicomilano/ldr.php?RCID=c382ceef59512e905f600dc702513ce1
@@ -310,12 +314,12 @@ schedule:
       start: "2026-09-25T12:15:00+02:00"
       end: "2026-09-25T14:15:00+02:00"
       kind: laboratory
-      status: scheduled
+      status: completed
       location: 3.1.8
       topic: Kernel modules and debugging
       people: [vittorio-zaccaria]
       artifacts: [] # Laboratory slides: TBD
-      external_links: [course-labs]
+      external_links: [course-labs, recording-2026-09-25]
 
     - id: event-2026-09-28
       start: "2026-09-28T12:15:00+02:00"
