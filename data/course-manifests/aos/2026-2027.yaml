@@ -429,12 +429,12 @@ schedule:
     - id: event-2026-10-23
       start: "2026-10-23T12:15:00+02:00"
       end: "2026-10-23T14:15:00+02:00"
-      kind: laboratory
+      kind: lecture
       status: scheduled
       location: 3.1.8
-      topic: Kernel memory allocation and user/kernel data movement
+      topic: Virtual memory (continued)
       people: [vittorio-zaccaria]
-      artifacts: [] # Laboratory slides: TBD
+      artifacts: [slides-virtual-memory]
       external_links: []
 
     - id: event-2026-10-26
