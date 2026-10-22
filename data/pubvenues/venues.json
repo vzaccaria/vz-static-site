@@ -95,6 +95,23 @@
           ],
           "checked": "2026-07-28",
           "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        },
+        {
+          "year": 2027,
+          "name": "33rd ACM Symposium on Operating Systems Principles",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2027-04-01",
+              "notification": "2027-07-03",
+              "estimated": true
+            },
+            {
+              "track": "posters",
+              "deadline": "2027-07-10",
+              "estimated": true
+            }
+          ]
         }
       ]
     },
@@ -205,6 +222,26 @@
           ],
           "checked": "2026-07-28",
           "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        },
+        {
+          "year": 2028,
+          "name": "23rd European Conference on Computer Systems",
+          "submissions": [
+            {
+              "track": "papers",
+              "round": "Round 1",
+              "deadline": "2027-05-14",
+              "notification": "2027-08-21",
+              "estimated": true
+            },
+            {
+              "track": "papers",
+              "round": "Round 2",
+              "deadline": "2027-09-24",
+              "notification": "2028-01-29",
+              "estimated": true
+            }
+          ]
         }
       ]
     },
@@ -235,6 +272,18 @@
           ],
           "checked": "2026-07-28",
           "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        },
+        {
+          "year": 2027,
+          "name": "The 2027 ACM SIGOPS Annual Technical Conference",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2027-06-10",
+              "notification": "2027-09-18",
+              "estimated": true
+            }
+          ]
         }
       ]
     },
@@ -283,6 +332,26 @@
           ],
           "checked": "2026-07-28",
           "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        },
+        {
+          "year": 2027,
+          "name": "ACM Symposium on Cloud Computing 2027",
+          "submissions": [
+            {
+              "track": "papers",
+              "round": "Round 1",
+              "deadline": "2027-02-13",
+              "notification": "2027-04-29",
+              "estimated": true
+            },
+            {
+              "track": "papers",
+              "round": "Round 2",
+              "deadline": "2027-07-14",
+              "notification": "2027-09-26",
+              "estimated": true
+            }
+          ]
         }
       ]
     },
@@ -335,6 +404,32 @@
           ],
           "checked": "2026-07-28",
           "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        },
+        {
+          "year": 2027,
+          "name": "28th ACM/IFIP International Middleware Conference",
+          "url": "https://middleware-conf.github.io/2027/",
+          "location": "Kyoto, Japan",
+          "start": "2027-12-13",
+          "end": "2027-12-17",
+          "submissions": [
+            {
+              "track": "papers",
+              "round": "Winter",
+              "abstract": "2026-11-27",
+              "deadline": "2026-12-04",
+              "url": "https://middleware2027r1.hotcrp.com"
+            },
+            {
+              "track": "papers",
+              "round": "Summer",
+              "abstract": "2027-05-28",
+              "deadline": "2027-06-04",
+              "url": "https://middleware2027r2.hotcrp.com"
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://middleware-conf.github.io/2027/"
         }
       ]
     },
@@ -363,9 +458,16 @@
           "location": "Burghausen, Bavaria, Germany",
           "start": "2027-05-24",
           "end": "2027-05-26",
-          "submissions": [],
-          "checked": "2026-07-28",
-          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2027-02-01",
+              "notification": "2027-04-09",
+              "url": "https://sigops.org/s/conferences/hotos/2027/cfp.html"
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://sigops.org/s/conferences/hotos/2027/cfp.html"
         }
       ]
     },
@@ -398,6 +500,18 @@
           ],
           "checked": "2026-07-28",
           "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        },
+        {
+          "year": 2027,
+          "name": "18th ACM SIGOPS Asia-Pacific Workshop on Systems",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2027-05-20",
+              "notification": "2027-07-29",
+              "estimated": true
+            }
+          ]
         }
       ]
     },
@@ -429,6 +543,19 @@
           ],
           "checked": "2026-07-28",
           "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        },
+        {
+          "year": 2027,
+          "name": "Workshop on Operating Systems and Virtualization Security",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2027-03-16",
+              "notification": "2027-04-07",
+              "estimated": true,
+              "note": "Projected from 2025; no 2026 edition found"
+            }
+          ]
         }
       ]
     },
@@ -460,6 +587,18 @@
           ],
           "checked": "2026-07-28",
           "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        },
+        {
+          "year": 2027,
+          "name": "10th Workshop on System Software for Trusted Execution",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2027-02-20",
+              "notification": "2027-03-16",
+              "estimated": true
+            }
+          ]
         }
       ]
     },
@@ -490,6 +629,18 @@
           ],
           "checked": "2026-07-28",
           "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        },
+        {
+          "year": 2027,
+          "name": "4th Workshop on Kernel Isolation, Safety and Verification",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2027-08-01",
+              "notification": "2027-08-20",
+              "estimated": true
+            }
+          ]
         }
       ]
     },
@@ -534,6 +685,18 @@
           ],
           "checked": "2026-07-28",
           "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        },
+        {
+          "year": 2028,
+          "name": "43rd ACM SIGAPP Symposium On Applied Computing",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2027-09-30",
+              "notification": "2027-10-30",
+              "estimated": true
+            }
+          ]
         }
       ]
     },
@@ -578,6 +741,30 @@
           ],
           "checked": "2026-07-28",
           "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        },
+        {
+          "year": 2027,
+          "name": "2027 IEEE 51st Annual Computers, Software, and Applications Conference",
+          "url": "https://ieeecompsac.computer.org/2027/",
+          "location": "Tokyo, Japan",
+          "start": "2027-07-13",
+          "end": "2027-07-16",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2027-01-31",
+              "notification": "2027-04-07",
+              "url": "https://ieeecompsac.computer.org/2027/call-for-papers/"
+            },
+            {
+              "track": "workshops",
+              "deadline": "2027-04-15",
+              "notification": "2027-05-01",
+              "url": "https://ieeecompsac.computer.org/2027/call-for-papers/"
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://ieeecompsac.computer.org/2027/call-for-papers/"
         }
       ]
     },
@@ -630,6 +817,26 @@
           ],
           "checked": "2026-07-28",
           "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        },
+        {
+          "year": 2028,
+          "name": "33rd International Conference on Architectural Support for Programming Languages and Operating Systems",
+          "submissions": [
+            {
+              "track": "papers",
+              "round": "Round 1",
+              "deadline": "2027-04-15",
+              "notification": "2027-07-27",
+              "estimated": true
+            },
+            {
+              "track": "papers",
+              "round": "Round 2",
+              "deadline": "2027-09-09",
+              "notification": "2027-12-21",
+              "estimated": true
+            }
+          ]
         }
       ]
     },
@@ -675,6 +882,25 @@
           ],
           "checked": "2026-07-28",
           "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        },
+        {
+          "year": 2027,
+          "name": "54th International Symposium on Computer Architecture",
+          "url": "https://iscaconf.org/isca2027/",
+          "location": "Atlanta, GA, USA",
+          "start": "2027-06-05",
+          "end": "2027-06-09",
+          "submissions": [
+            {
+              "track": "papers",
+              "abstract": "2026-11-09",
+              "deadline": "2026-11-16",
+              "notification": "2027-03-26",
+              "url": "https://iscaconf.org/isca2027/submit/callforpapers.php"
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://iscaconf.org/isca2027/submit/callforpapers.php"
         }
       ]
     },
@@ -719,6 +945,18 @@
           ],
           "checked": "2026-07-28",
           "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        },
+        {
+          "year": 2027,
+          "name": "60th IEEE/ACM International Symposium on Microarchitecture",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2027-04-07",
+              "notification": "2027-07-07",
+              "estimated": true
+            }
+          ]
         }
       ]
     },
@@ -763,6 +1001,18 @@
           ],
           "checked": "2026-07-28",
           "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        },
+        {
+          "year": 2028,
+          "name": "34th International Symposium on High-Performance Computer Architecture",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2027-07-31",
+              "notification": "2027-11-06",
+              "estimated": true
+            }
+          ]
         }
       ]
     },
@@ -958,6 +1208,32 @@
           ],
           "checked": "2026-07-28",
           "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        },
+        {
+          "year": 2027,
+          "name": "34th ACM Conference on Computer and Communications Security",
+          "url": "https://www.sigsac.org/ccs/CCS2027/",
+          "location": "Atlanta, GA, USA",
+          "start": "2027-10-11",
+          "end": "2027-10-15",
+          "submissions": [
+            {
+              "track": "papers",
+              "round": "Round 1",
+              "deadline": "2027-01-14",
+              "notification": "2027-04-09",
+              "estimated": true
+            },
+            {
+              "track": "papers",
+              "round": "Round 2",
+              "deadline": "2027-04-29",
+              "notification": "2027-07-17",
+              "estimated": true
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://www.sigsac.org/ccs/CCS2027/"
         }
       ]
     },
@@ -1014,6 +1290,26 @@
           ],
           "checked": "2026-07-28",
           "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        },
+        {
+          "year": 2028,
+          "name": "Network and Distributed System Security Symposium 2028",
+          "submissions": [
+            {
+              "track": "papers",
+              "round": "Round 1",
+              "deadline": "2027-05-06",
+              "notification": "2027-07-29",
+              "estimated": true
+            },
+            {
+              "track": "papers",
+              "round": "Round 2",
+              "deadline": "2027-08-19",
+              "notification": "2027-11-04",
+              "estimated": true
+            }
+          ]
         }
       ]
     },
@@ -1173,6 +1469,26 @@
           ],
           "checked": "2026-07-28",
           "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        },
+        {
+          "year": 2027,
+          "name": "32nd European Symposium on Research in Computer Security",
+          "submissions": [
+            {
+              "track": "papers",
+              "round": "Round 1",
+              "deadline": "2027-01-09",
+              "notification": "2027-03-10",
+              "estimated": true
+            },
+            {
+              "track": "papers",
+              "round": "Round 2",
+              "deadline": "2027-04-21",
+              "notification": "2027-06-12",
+              "estimated": true
+            }
+          ]
         }
       ]
     },
@@ -1217,6 +1533,18 @@
           ],
           "checked": "2026-07-28",
           "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        },
+        {
+          "year": 2027,
+          "name": "30th International Symposium on Research in Attacks, Intrusions and Defenses",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2027-04-16",
+              "notification": "2027-07-10",
+              "estimated": true
+            }
+          ]
         }
       ]
     },
@@ -1265,6 +1593,22 @@
           ],
           "checked": "2026-07-28",
           "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        },
+        {
+          "year": 2027,
+          "name": "Annual Computer Security Applications Conference",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2027-05-26",
+              "estimated": true
+            },
+            {
+              "track": "posters",
+              "deadline": "2027-09-19",
+              "estimated": true
+            }
+          ]
         }
       ]
     },
@@ -1325,6 +1669,39 @@
           ],
           "checked": "2026-07-28",
           "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        },
+        {
+          "year": 2027,
+          "name": "40th IEEE Computer Security Foundations Symposium",
+          "url": "https://csf2027.ieee-security.org/",
+          "location": "Tokyo, Japan",
+          "start": "2027-09-13",
+          "end": "2027-09-17",
+          "submissions": [
+            {
+              "track": "papers",
+              "round": "Summer",
+              "deadline": "2026-08-03",
+              "notification": "2026-10-07",
+              "url": "https://csf2027.ieee-security.org/cfp.html"
+            },
+            {
+              "track": "papers",
+              "round": "Fall",
+              "deadline": "2026-10-15",
+              "notification": "2026-12-14",
+              "url": "https://csf2027.ieee-security.org/cfp.html"
+            },
+            {
+              "track": "papers",
+              "round": "Winter",
+              "deadline": "2027-01-28",
+              "notification": "2027-04-05",
+              "url": "https://csf2027.ieee-security.org/cfp.html"
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://csf2027.ieee-security.org/cfp.html"
         }
       ]
     },
@@ -1369,6 +1746,17 @@
           ],
           "checked": "2026-07-28",
           "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        },
+        {
+          "year": 2027,
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2027-08-01",
+              "notification": "2027-10-01",
+              "estimated": true
+            }
+          ]
         }
       ]
     },
@@ -1407,6 +1795,17 @@
           ],
           "checked": "2026-07-28",
           "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        },
+        {
+          "year": 2027,
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2027-05-08",
+              "notification": "2027-07-03",
+              "estimated": true
+            }
+          ]
         }
       ]
     },
@@ -1445,6 +1844,18 @@
           ],
           "checked": "2026-07-28",
           "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        },
+        {
+          "year": 2027,
+          "name": "22nd International Conference on Availability, Reliability and Security",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2027-03-09",
+              "notification": "2027-05-13",
+              "estimated": true
+            }
+          ]
         }
       ]
     },
@@ -1497,6 +1908,31 @@
           ],
           "checked": "2026-07-28",
           "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        },
+        {
+          "year": 2027,
+          "name": "32nd ACM Symposium on Access Control Models and Technologies",
+          "url": "https://sacmat.org/2027/",
+          "start": "2027-07-19",
+          "end": "2027-07-21",
+          "submissions": [
+            {
+              "track": "papers",
+              "round": "Cycle 1",
+              "deadline": "2026-10-30",
+              "notification": "2026-12-21",
+              "url": "https://sacmat.org/2027/call-for-papers.php"
+            },
+            {
+              "track": "papers",
+              "round": "Cycle 2",
+              "deadline": "2027-02-12",
+              "notification": "2027-03-29",
+              "url": "https://sacmat.org/2027/call-for-papers.php"
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://sacmat.org/2027/call-for-papers.php"
         }
       ]
     },
@@ -1535,6 +1971,24 @@
           ],
           "checked": "2026-07-28",
           "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        },
+        {
+          "year": 2027,
+          "name": "24th Annual International Conference on Privacy, Security and Trust",
+          "url": "https://pstnet.ca/pst2027/",
+          "location": "Sheffield, UK",
+          "start": "2027-08-25",
+          "end": "2027-08-27",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2027-04-10",
+              "notification": "2027-06-07",
+              "url": "https://pstnet.ca/pst2027/"
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://pstnet.ca/pst2027/"
         }
       ]
     },
@@ -1586,6 +2040,34 @@
           ],
           "checked": "2026-07-28",
           "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        },
+        {
+          "year": 2027,
+          "name": "24th Conference on Detection of Intrusions and Malware & Vulnerability Assessment",
+          "url": "https://www.dimva.org/dimva2027/",
+          "location": "Enschede, The Netherlands",
+          "start": "2027-06-30",
+          "end": "2027-07-02",
+          "submissions": [
+            {
+              "track": "papers",
+              "round": "Cycle 1",
+              "abstract": "2026-12-03",
+              "deadline": "2026-12-10",
+              "notification": "2027-01-28",
+              "url": "https://dimva27r1.hotcrp.com/"
+            },
+            {
+              "track": "papers",
+              "round": "Cycle 2",
+              "abstract": "2027-02-11",
+              "deadline": "2027-02-18",
+              "notification": "2027-04-08",
+              "url": "https://dimva27r2.hotcrp.com/"
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://www.dimva.org/dimva2027/"
         }
       ]
     },
@@ -1630,6 +2112,30 @@
           ],
           "checked": "2026-07-28",
           "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        },
+        {
+          "year": 2027,
+          "submissions": [
+            {
+              "track": "papers",
+              "round": "Round 1",
+              "deadline": "2026-12-12",
+              "notification": "2027-01-27",
+              "estimated": true
+            },
+            {
+              "track": "papers",
+              "round": "Round 2",
+              "deadline": "2027-03-03",
+              "notification": "2027-04-09",
+              "estimated": true
+            },
+            {
+              "track": "posters",
+              "deadline": "2027-07-02",
+              "estimated": true
+            }
+          ]
         }
       ]
     },
@@ -1667,6 +2173,26 @@
           ],
           "checked": "2026-07-28",
           "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        },
+        {
+          "year": 2027,
+          "name": "17th ACM Conference on Data and Application Security and Privacy",
+          "url": "https://www.codaspy.org/2027/",
+          "location": "Fort Collins, CO, USA",
+          "start": "2027-06-14",
+          "end": "2027-06-17",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-11-23",
+              "abstract": "2026-11-16",
+              "notification": "2027-01-25",
+              "url": "https://www.codaspy.org/2027/cfp.html",
+              "note": "SoK abstracts due 2026-11-02"
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://www.codaspy.org/2027/cfp.html"
         }
       ]
     },
@@ -1697,6 +2223,17 @@
           ],
           "checked": "2026-07-28",
           "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        },
+        {
+          "year": 2027,
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2027-02-10",
+              "notification": "2027-03-06",
+              "estimated": true
+            }
+          ]
         }
       ]
     },
@@ -1864,6 +2401,29 @@
           ],
           "checked": "2026-07-28",
           "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        },
+        {
+          "year": 2027,
+          "name": "42nd IEEE/ACM International Conference on Automated Software Engineering",
+          "submissions": [
+            {
+              "track": "papers",
+              "round": "Round 1",
+              "deadline": "2027-03-26",
+              "notification": "2027-06-18",
+              "estimated": true
+            },
+            {
+              "track": "papers",
+              "round": "Round 2",
+              "deadline": "2027-07-16",
+              "notification": "2027-07-29",
+              "estimated": true
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://conf.researchr.org/series/ase",
+          "note": "ASE 2027 not yet announced; deadlines projected from ASE 2026."
         }
       ]
     },
@@ -1914,6 +2474,25 @@
           ],
           "checked": "2026-07-28",
           "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        },
+        {
+          "year": 2027,
+          "name": "38th IEEE International Symposium on Software Reliability Engineering",
+          "url": "https://conf.researchr.org/home/issre-2027",
+          "location": "Taipa, Macao SAR, China",
+          "start": "2027-10-19",
+          "end": "2027-10-22",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2027-04-24",
+              "notification": "2027-07-08",
+              "estimated": true
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://conf.researchr.org/home/issre-2027",
+          "note": "CFP placeholder only; deadline projected from ISSRE 2026."
         }
       ]
     },
@@ -2003,6 +2582,21 @@
           ],
           "checked": "2026-07-28",
           "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        },
+        {
+          "year": 2027,
+          "name": "IEEE International Conference on Cloud Computing 2027",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2027-03-22",
+              "notification": "2027-05-10",
+              "estimated": true
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://services.conferences.computer.org/2026/cloud/cloud-call-for-papers/",
+          "note": "SERVICES 2027 not yet announced; projected from CLOUD 2026."
         }
       ]
     },
@@ -2046,6 +2640,20 @@
           ],
           "checked": "2026-07-28",
           "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        },
+        {
+          "year": 2027,
+          "name": "18th IEEE International Conference on Cloud Computing Technology and Science",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2027-08-15",
+              "estimated": true
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://www.cloudcom2026.org/call-for-papers",
+          "note": "CloudCom 2027 not yet announced; projected from CloudCom 2026."
         }
       ]
     },
@@ -2091,6 +2699,21 @@
           ],
           "checked": "2026-07-28",
           "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        },
+        {
+          "year": 2027,
+          "name": "15th IEEE International Conference on Cloud Engineering",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2027-05-15",
+              "notification": "2027-07-14",
+              "estimated": true
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://conferences.computer.org/IC2E/2026/cfp-main.html",
+          "note": "IC2E 2027 not yet announced; projected from IC2E 2026."
         }
       ]
     },
@@ -2135,6 +2758,21 @@
           ],
           "checked": "2026-07-28",
           "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        },
+        {
+          "year": 2027,
+          "name": "20th IEEE/ACM International Conference on Utility and Cloud Computing",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2027-08-19",
+              "notification": "2027-09-30",
+              "estimated": true
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://ucc2026.ufsc.br/calls/call-for-papers/",
+          "note": "UCC 2027 not yet announced; projected from UCC 2026."
         }
       ]
     },
@@ -2193,6 +2831,30 @@
           ],
           "checked": "2026-07-28",
           "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        },
+        {
+          "year": 2028,
+          "name": "26th USENIX Conference on File and Storage Technologies",
+          "submissions": [
+            {
+              "track": "papers",
+              "round": "Round 1",
+              "deadline": "2027-03-17",
+              "notification": "2027-06-04",
+              "estimated": true,
+              "note": "Projected from FAST '27"
+            },
+            {
+              "track": "papers",
+              "round": "Round 2",
+              "deadline": "2027-09-15",
+              "notification": "2027-12-08",
+              "estimated": true,
+              "note": "Projected from FAST '27"
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://www.usenix.org/conference/fast27/call-for-papers"
         }
       ]
     },
@@ -2243,6 +2905,27 @@
           ],
           "checked": "2026-07-28",
           "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        },
+        {
+          "year": 2027,
+          "name": "20th ACM International Systems and Storage Conference",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2027-05-25",
+              "notification": "2027-07-13",
+              "estimated": true,
+              "note": "Projected from SYSTOR 2026"
+            },
+            {
+              "track": "posters",
+              "deadline": "2027-07-20",
+              "estimated": true,
+              "note": "Projected from SYSTOR 2026"
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://www.systor.org/2026/cfp/"
         }
       ]
     },
@@ -2281,6 +2964,20 @@
           ],
           "checked": "2026-07-28",
           "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        },
+        {
+          "year": 2027,
+          "name": "19th ACM Workshop on Hot Topics in Storage and File Systems",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2027-06-12",
+              "estimated": true,
+              "note": "Projected from HotStorage 2026"
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://www.hotstorage.org/2026/cfp.html"
         }
       ]
     },
@@ -2339,6 +3036,30 @@
           ],
           "checked": "2026-07-28",
           "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        },
+        {
+          "year": 2028,
+          "name": "25th USENIX Symposium on Networked Systems Design and Implementation",
+          "submissions": [
+            {
+              "track": "papers",
+              "round": "Round 1",
+              "deadline": "2027-04-23",
+              "notification": "2027-07-23",
+              "estimated": true,
+              "note": "Projected from NSDI '27"
+            },
+            {
+              "track": "papers",
+              "round": "Round 2",
+              "deadline": "2027-09-17",
+              "notification": "2027-12-08",
+              "estimated": true,
+              "note": "Projected from NSDI '27"
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://www.usenix.org/conference/nsdi27/call-for-papers"
         }
       ]
     },
@@ -2383,6 +3104,21 @@
           ],
           "checked": "2026-07-28",
           "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        },
+        {
+          "year": 2028,
+          "name": "IEEE International Conference on Computer Communications",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2027-07-31",
+              "notification": "2027-12-08",
+              "estimated": true,
+              "note": "Projected from INFOCOM 2027"
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://infocom2027.ieee-infocom.org/call-papers"
         }
       ]
     },
@@ -2432,6 +3168,23 @@
           ],
           "checked": "2026-07-28",
           "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        },
+        {
+          "year": 2027,
+          "name": "ACM SIGCOMM 2027",
+          "url": "https://conferences.sigcomm.org/sigcomm/2027/",
+          "location": "Bangkok, Thailand",
+          "start": "2027-08-08",
+          "end": "2027-08-12",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2027-02-02",
+              "url": "https://conferences.sigcomm.org/sigcomm/2027/cfp/"
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://conferences.sigcomm.org/sigcomm/2027/"
         }
       ]
     },
@@ -2526,6 +3279,25 @@
           ],
           "checked": "2026-07-28",
           "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        },
+        {
+          "year": 2027,
+          "name": "47th IEEE International Conference on Distributed Computing Systems",
+          "url": "https://icdcs2027.icdcs.org/",
+          "location": "Melbourne, Australia",
+          "start": "2027-07-05",
+          "end": "2027-07-08",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2027-01-21",
+              "notification": "2027-04-27",
+              "estimated": true
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://icdcs2027.icdcs.org/",
+          "note": "Important dates all TBD; deadline projected from ICDCS 2026."
         }
       ]
     },
@@ -2818,6 +3590,17 @@
           ],
           "checked": "2026-10-22",
           "source": "https://eurocrypt.iacr.org/2027/callforpapers.php"
+        },
+        {
+          "year": 2028,
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2027-09-17",
+              "notification": "2028-01-18",
+              "estimated": true
+            }
+          ]
         }
       ]
     },
@@ -3137,6 +3920,17 @@
           "checked": "2026-10-22",
           "source": "https://pkc.iacr.org/2027/",
           "note": "Conference dates marked tentative"
+        },
+        {
+          "year": 2028,
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2027-08-16",
+              "notification": "2027-11-26",
+              "estimated": true
+            }
+          ]
         }
       ]
     },
@@ -3241,6 +4035,18 @@
           ],
           "checked": "2026-10-22",
           "source": "https://rwc.iacr.org/2027/"
+        },
+        {
+          "year": 2028,
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2027-10-15",
+              "notification": "2027-12-10",
+              "note": "talk proposals",
+              "estimated": true
+            }
+          ]
         }
       ]
     },
