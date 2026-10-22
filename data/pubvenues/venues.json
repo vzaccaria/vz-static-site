@@ -150,20 +150,22 @@
           "submissions": [
             {
               "track": "papers",
+              "abstract": "2026-12-01",
               "deadline": "2026-12-08",
               "notification": "2027-03-16",
-              "url": "https://www.usenix.org/conference/osdi27/call-for-papers"
+              "timezone": "America/New_York",
+              "url": "https://www.usenix.org/conference/osdi27/call-for-papers",
+              "note": "Abstract and paper deadlines are 17:59 EST (22:59 UTC)."
             },
             {
               "track": "posters",
               "deadline": "2026-05-28",
               "estimated": true,
-              "note": "Date from a previous edition",
-              "url": "https://www.usenix.org/conference/osdi27/call-for-posters"
+              "note": "Date from a previous edition; OSDI 2027 poster call is not yet available."
             }
           ],
-          "checked": "2026-07-28",
-          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+          "checked": "2026-10-22",
+          "source": "https://www.usenix.org/conference/osdi27/call-for-papers"
         }
       ]
     },
@@ -201,27 +203,31 @@
           "submissions": [
             {
               "track": "papers",
-              "round": "Round 1",
+              "round": "Spring",
+              "abstract": "2026-05-07",
               "deadline": "2026-05-14",
               "notification": "2026-08-21",
+              "timezone": "AoE",
               "url": "https://2027.eurosys.org/cfp.html"
             },
             {
               "track": "papers",
-              "round": "Round 2",
+              "round": "Fall",
+              "abstract": "2026-09-17",
               "deadline": "2026-09-24",
               "notification": "2027-01-29",
+              "timezone": "AoE",
               "url": "https://2027.eurosys.org/cfp.html"
             },
             {
               "track": "posters",
               "deadline": "2026-02-14",
               "estimated": true,
-              "note": "Date from a previous edition"
+              "note": "Date from a previous edition; EuroSys 2027 poster deadline is not yet published on the official site."
             }
           ],
-          "checked": "2026-07-28",
-          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+          "checked": "2026-10-22",
+          "source": "https://2027.eurosys.org/cfp.html"
         },
         {
           "year": 2028,
@@ -270,8 +276,8 @@
               "url": "https://sigops.org/s/conferences/atc/2026/cfp.html"
             }
           ],
-          "checked": "2026-07-28",
-          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+          "checked": "2026-10-22",
+          "source": "https://sigops.org/s/conferences/atc/2026/cfp.html"
         },
         {
           "year": 2027,
@@ -318,20 +324,25 @@
             {
               "track": "papers",
               "round": "Round 1",
+              "abstract": "2026-02-06",
               "deadline": "2026-02-13",
               "notification": "2026-04-29",
+              "timezone": "AoE",
               "url": "https://acmsocc.org/2026/papers.html"
             },
             {
               "track": "papers",
               "round": "Round 2",
+              "abstract": "2026-07-07",
               "deadline": "2026-07-14",
               "notification": "2026-09-26",
-              "url": "https://acmsocc.org/2026/papers.html"
+              "timezone": "AoE",
+              "url": "https://acmsocc.org/2026/papers.html",
+              "note": "CFP schedules author notification for 2026-09-26; the homepage announced on 2026-10-13 that notifications had been sent."
             }
           ],
-          "checked": "2026-07-28",
-          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+          "checked": "2026-10-22",
+          "source": "https://acmsocc.org/2026/papers.html"
         },
         {
           "year": 2027,
@@ -389,21 +400,26 @@
           "submissions": [
             {
               "track": "papers",
-              "round": "Round 1",
+              "round": "Winter",
+              "abstract": "2025-12-09",
               "deadline": "2025-12-12",
               "notification": "2026-03-06",
-              "url": "https://middleware-conf.github.io/2026/calls/call-for-research-papers/"
+              "timezone": "AoE",
+              "url": "https://middleware-conf.github.io/2026/calls/call-for-research-papers/",
+              "note": "Extended from 2025-12-05 (abstract registration only; paper deadline unchanged)."
             },
             {
               "track": "papers",
-              "round": "Round 2",
+              "round": "Summer",
+              "abstract": "2026-05-29",
               "deadline": "2026-06-05",
               "notification": "2026-08-28",
+              "timezone": "AoE",
               "url": "https://middleware-conf.github.io/2026/calls/call-for-research-papers/"
             }
           ],
-          "checked": "2026-07-28",
-          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+          "checked": "2026-10-22",
+          "source": "https://middleware-conf.github.io/2026/calls/call-for-research-papers/"
         },
         {
           "year": 2027,
@@ -670,7 +686,7 @@
       "editions": [
         {
           "year": 2027,
-          "name": "42nd ACM SIGAPP Symposium On Applied Computing",
+          "name": "42nd ACM/SIGAPP Symposium On Applied Computing",
           "url": "https://www.sigapp.org/sac/sac2027/index.php",
           "location": "Gwangju, South Korea",
           "start": "2027-04-05",
@@ -678,13 +694,15 @@
           "submissions": [
             {
               "track": "papers",
-              "deadline": "2026-09-30",
-              "notification": "2026-10-30",
-              "url": "https://sites.google.com/view/ossp2027"
+              "deadline": "2026-10-16",
+              "notification": "2026-11-20",
+              "timezone": "UTC-05:00",
+              "url": "https://www.sigapp.org/sac/sac2027/index.php",
+              "note": "Extended from 2026-10-02"
             }
           ],
-          "checked": "2026-07-28",
-          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+          "checked": "2026-10-22",
+          "source": "https://www.sigapp.org/sac/sac2027/index.php"
         },
         {
           "year": 2028,
@@ -802,21 +820,23 @@
           "submissions": [
             {
               "track": "papers",
-              "round": "Round 1",
+              "round": "April",
               "deadline": "2026-04-15",
               "notification": "2026-07-27",
+              "timezone": "AoE",
               "url": "https://www.asplos-conference.org/asplos2027/cfp/"
             },
             {
               "track": "papers",
-              "round": "Round 2",
+              "round": "September",
               "deadline": "2026-09-09",
               "notification": "2026-12-21",
+              "timezone": "AoE",
               "url": "https://www.asplos-conference.org/asplos2027/cfp/"
             }
           ],
-          "checked": "2026-07-28",
-          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+          "checked": "2026-10-22",
+          "source": "https://www.asplos-conference.org/asplos2027/cfp/"
         },
         {
           "year": 2028,
@@ -938,13 +958,15 @@
           "submissions": [
             {
               "track": "papers",
+              "abstract": "2026-03-31",
               "deadline": "2026-04-07",
               "notification": "2026-07-07",
+              "timezone": "America/New_York",
               "url": "https://www.microarch.org/micro59/submit/papers.php"
             }
           ],
-          "checked": "2026-07-28",
-          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+          "checked": "2026-10-22",
+          "source": "https://www.microarch.org/micro59/submit/papers.php"
         },
         {
           "year": 2027,
@@ -986,21 +1008,22 @@
       "editions": [
         {
           "year": 2027,
-          "name": "33rd International Symposium on High-Performance Computer Architecture",
+          "name": "33rd IEEE International Symposium on High-Performance Computer Architecture",
           "url": "https://conf.researchr.org/home/hpca-2027",
           "location": "Salt Lake City, Utah, USA",
-          "start": "2027-01-30",
-          "end": "2027-02-03",
+          "start": "2027-03-20",
+          "end": "2027-03-24",
           "submissions": [
             {
               "track": "papers",
+              "abstract": "2026-07-24",
               "deadline": "2026-07-31",
               "notification": "2026-11-06",
               "url": "https://conf.researchr.org/track/hpca-2027/hpca-2027-main-conference"
             }
           ],
-          "checked": "2026-07-28",
-          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+          "checked": "2026-10-22",
+          "source": "https://conf.researchr.org/track/hpca-2027/hpca-2027-main-conference"
         },
         {
           "year": 2028,
@@ -1028,12 +1051,35 @@
       "editions": [
         {
           "year": 2026,
-          "name": "21st Workshop on Virtualization in High-Performance Cloud Computing",
+          "name": "21st Workshop on Virtualization, Containers, and Resource Isolation for Supercomputer AI",
           "url": "https://vhpc.org/",
           "location": "Pisa, Italy",
-          "submissions": [],
-          "checked": "2026-07-28",
-          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+          "start": "2026-08-24",
+          "end": "2026-08-25",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-05-26",
+              "notification": "2026-06-12",
+              "url": "https://vhpc.org/cfp/cfp.text",
+              "note": "Extended from 2026-05-16"
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://vhpc.org/cfp/cfp.text"
+        },
+        {
+          "year": 2027,
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2027-05-16",
+              "notification": "2027-06-12",
+              "estimated": true
+            }
+          ],
+          "checked": "2026-10-22",
+          "note": "Projected from VHPC 2026 (original deadline)."
         }
       ]
     },
@@ -1067,31 +1113,28 @@
           "url": "https://sp2027.ieee-security.org/",
           "program": "https://sp2027.ieee-security.org/program.html",
           "location": "Montreal, Canada",
+          "start": "2027-05-17",
+          "end": "2027-05-20",
           "submissions": [
             {
               "track": "papers",
-              "round": "Round 1",
+              "round": "Cycle 1",
+              "abstract": "2026-06-04",
               "deadline": "2026-06-11",
               "notification": "2026-09-11",
               "url": "https://sp2027.ieee-security.org/cfpapers.html"
             },
             {
               "track": "papers",
-              "round": "Round 2",
+              "round": "Cycle 2",
+              "abstract": "2026-11-10",
               "deadline": "2026-11-17",
               "notification": "2027-03-05",
               "url": "https://sp2027.ieee-security.org/cfpapers.html"
-            },
-            {
-              "track": "posters",
-              "deadline": "2025-04-15",
-              "estimated": true,
-              "note": "Date from a previous edition",
-              "url": "https://sp2027.ieee-security.org/cfposters.html"
             }
           ],
-          "checked": "2026-07-28",
-          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+          "checked": "2026-10-22",
+          "source": "https://sp2027.ieee-security.org/cfpapers.html"
         }
       ]
     },
@@ -1129,27 +1172,23 @@
           "submissions": [
             {
               "track": "papers",
-              "round": "Round 1",
+              "round": "Cycle 1",
+              "abstract": "2026-08-18",
               "deadline": "2026-08-25",
               "notification": "2026-12-03",
               "url": "https://www.usenix.org/conference/usenixsecurity27/call-for-papers"
             },
             {
               "track": "papers",
-              "round": "Round 2",
+              "round": "Cycle 2",
+              "abstract": "2027-01-19",
               "deadline": "2027-01-26",
               "notification": "2027-05-06",
               "url": "https://www.usenix.org/conference/usenixsecurity27/call-for-papers"
-            },
-            {
-              "track": "posters",
-              "deadline": "2024-07-09",
-              "estimated": true,
-              "note": "Date from a previous edition"
             }
           ],
-          "checked": "2026-07-28",
-          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+          "checked": "2026-10-22",
+          "source": "https://www.usenix.org/conference/usenixsecurity27/call-for-papers"
         }
       ]
     },
@@ -1187,27 +1226,29 @@
           "submissions": [
             {
               "track": "papers",
-              "round": "Round 1",
+              "round": "First Review Cycle",
+              "abstract": "2026-01-07",
               "deadline": "2026-01-14",
               "notification": "2026-04-09",
               "url": "https://www.sigsac.org/ccs/CCS2026/call-for/call-for-papers.html"
             },
             {
               "track": "papers",
-              "round": "Round 2",
+              "round": "Second Review Cycle",
+              "abstract": "2026-04-22",
               "deadline": "2026-04-29",
               "notification": "2026-07-17",
               "url": "https://www.sigsac.org/ccs/CCS2026/call-for/call-for-papers.html"
             },
             {
               "track": "posters",
-              "deadline": "2024-08-01",
-              "estimated": true,
-              "note": "Date from a previous edition"
+              "deadline": "2026-07-23",
+              "notification": "2026-08-27",
+              "url": "https://www.sigsac.org/ccs/CCS2026/call-for/call-for-posters.html"
             }
           ],
-          "checked": "2026-07-28",
-          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+          "checked": "2026-10-22",
+          "source": "https://www.sigsac.org/ccs/CCS2026/call-for/call-for-papers.html"
         },
         {
           "year": 2027,
@@ -1337,22 +1378,20 @@
           "year": 2027,
           "name": "12th IEEE European Symposium on Security and Privacy",
           "url": "https://eurosp2027.ieee-security.org/",
-          "location": "Lisbon, Portugal",
+          "location": "Madrid, Spain",
+          "start": "2027-07-05",
+          "end": "2027-07-09",
           "submissions": [
             {
               "track": "papers",
-              "deadline": "2026-11-20",
-              "url": "https://www.ieee-security.org/Calendar/cfps/cfp-EuroSnP2027.html"
-            },
-            {
-              "track": "posters",
-              "deadline": "2026-05-22",
-              "estimated": true,
-              "note": "Date from a previous edition"
+              "abstract": "2026-11-25",
+              "deadline": "2026-12-02",
+              "notification": "2027-03-18",
+              "url": "https://eurosp2027.ieee-security.org/cfp.html"
             }
           ],
-          "checked": "2026-07-28",
-          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+          "checked": "2026-10-22",
+          "source": "https://eurosp2027.ieee-security.org/cfp.html"
         }
       ]
     },
@@ -1394,6 +1433,7 @@
               "round": "Round 1",
               "deadline": "2026-08-21",
               "notification": "2026-11-13",
+              "timezone": "AoE",
               "url": "https://asiaccs2027.cityu.edu.mo/call-for-papers/index.html"
             },
             {
@@ -1401,18 +1441,18 @@
               "round": "Round 2",
               "deadline": "2026-12-11",
               "notification": "2027-03-31",
+              "timezone": "AoE",
               "url": "https://asiaccs2027.cityu.edu.mo/call-for-papers/index.html"
             },
             {
               "track": "posters",
               "deadline": "2026-02-07",
               "estimated": true,
-              "note": "Date from a previous edition",
-              "url": "https://asiaccs2027.cityu.edu.mo/call-for-posters/index.html"
+              "note": "Unverified previous-edition placeholder; official poster CFP not yet announced."
             }
           ],
-          "checked": "2026-07-28",
-          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+          "checked": "2026-10-22",
+          "source": "https://asiaccs2027.cityu.edu.mo/call-for-papers/index.html"
         }
       ]
     },
@@ -1571,7 +1611,7 @@
         {
           "year": 2026,
           "name": "Annual Computer Security Applications Conference",
-          "url": "https://www.acsac.org/",
+          "url": "https://www.acsac.org/2026/",
           "location": "Los Angeles, CA, USA",
           "start": "2026-12-07",
           "end": "2026-12-11",
@@ -1579,16 +1619,20 @@
             {
               "track": "papers",
               "deadline": "2026-05-26",
+              "notification": "2026-09-08",
+              "timezone": "AoE",
               "url": "https://www.acsac.org/2026/submissions/papers/"
             },
             {
               "track": "posters",
               "deadline": "2026-09-19",
-              "url": "https://www.acsac.org/2026/submissions/posters/"
+              "timezone": "AoE",
+              "url": "https://www.acsac.org/2026/submissions/posters/",
+              "note": "Notification: rolling."
             }
           ],
-          "checked": "2026-07-28",
-          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+          "checked": "2026-10-22",
+          "source": "https://www.acsac.org/2026/submissions/papers/"
         },
         {
           "year": 2027,
@@ -2262,31 +2306,42 @@
           "name": "49th International Conference on Software Engineering",
           "url": "https://conf.researchr.org/home/icse-2027",
           "location": "Dublin, Ireland",
-          "start": "2027-04-28",
-          "end": "2027-04-30",
+          "start": "2027-04-25",
+          "end": "2027-05-01",
           "submissions": [
             {
               "track": "papers",
-              "round": "Round 1",
-              "deadline": "2026-06-23",
+              "abstract": "2026-06-23",
+              "deadline": "2026-06-30",
               "notification": "2026-10-20",
-              "url": "https://conf.researchr.org/track/icse-2027/icse-2027-research-track"
-            },
-            {
-              "track": "papers",
-              "round": "Round 2",
-              "deadline": "2026-11-17",
-              "notification": "2026-12-18",
+              "timezone": "AoE",
               "url": "https://conf.researchr.org/track/icse-2027/icse-2027-research-track"
             },
             {
               "track": "posters",
               "deadline": "2026-10-23",
+              "notification": "2026-12-11",
+              "timezone": "AoE",
               "url": "https://conf.researchr.org/track/icse-2027/icse-2027-demonstrations"
             }
           ],
-          "checked": "2026-07-28",
-          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+          "checked": "2026-10-22",
+          "source": "https://conf.researchr.org/track/icse-2027/icse-2027-research-track",
+          "note": "Single research submission cycle; November 17 is the major-revision deadline, not a second submission round. Full event dates shown; core conference is April 28–30."
+        },
+        {
+          "year": 2028,
+          "submissions": [
+            {
+              "track": "papers",
+              "abstract": "2027-06-23",
+              "deadline": "2027-06-30",
+              "notification": "2027-10-20",
+              "estimated": true
+            }
+          ],
+          "checked": "2026-10-22",
+          "note": "Projected from ICSE 2027; ICSE 2028 site not public yet."
         }
       ]
     },
@@ -2324,21 +2379,29 @@
           "submissions": [
             {
               "track": "papers",
-              "round": "Round 1",
-              "deadline": "2026-10-02",
+              "deadline": "2026-10-03",
               "notification": "2027-01-22",
-              "url": "https://conf.researchr.org/track/fse-2027/fse-2027-papers"
-            },
-            {
-              "track": "papers",
-              "round": "Round 2",
-              "deadline": "2027-03-05",
-              "notification": "2027-03-31",
-              "url": "https://conf.researchr.org/track/fse-2027/fse-2027-papers"
+              "timezone": "AoE",
+              "url": "https://conf.researchr.org/track/fse-2027/fse-2027-papers",
+              "note": "Extended from 2026-10-02"
             }
           ],
-          "checked": "2026-07-28",
-          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+          "checked": "2026-10-22",
+          "source": "https://conf.researchr.org/track/fse-2027/fse-2027-papers",
+          "note": "Single research submission cycle; March 5 is the major-revision deadline, with final notification on March 31, not a second submission round."
+        },
+        {
+          "year": 2028,
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2027-10-02",
+              "notification": "2028-01-22",
+              "estimated": true
+            }
+          ],
+          "checked": "2026-10-22",
+          "note": "Projected from FSE 2027 (original deadline); FSE 2028 site not published yet."
         }
       ]
     },
@@ -2458,18 +2521,24 @@
           "submissions": [
             {
               "track": "papers",
+              "abstract": "2026-04-24",
               "deadline": "2026-04-24",
               "notification": "2026-07-08",
-              "url": "https://cyprusconferences.org/issre2026/cfp-research/"
+              "timezone": "AoE",
+              "url": "https://cyprusconferences.org/issre2026/cfp-research/",
+              "note": "Extended from 2026-04-17"
             },
             {
               "track": "posters",
-              "deadline": "2026-06-15",
-              "url": "https://cyprusconferences.org/issre2026/fast-abstract-track/"
+              "deadline": "2026-06-25",
+              "notification": "2026-08-05",
+              "timezone": "AoE",
+              "url": "https://cyprusconferences.org/issre2026/fast-abstract-track/",
+              "note": "Extended from 2026-06-15"
             }
           ],
-          "checked": "2026-07-28",
-          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+          "checked": "2026-10-22",
+          "source": "https://cyprusconferences.org/issre2026/cfp-research/"
         },
         {
           "year": 2027,
@@ -2526,13 +2595,15 @@
           "submissions": [
             {
               "track": "papers",
+              "abstract": "2026-11-24",
               "deadline": "2026-12-01",
               "notification": "2027-02-01",
-              "url": "https://hpcclab.org/ccgrid27/"
+              "timezone": "AoE",
+              "url": "https://hpcclab.org/ccgrid27-call-for-papers/"
             }
           ],
-          "checked": "2026-07-28",
-          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+          "checked": "2026-10-22",
+          "source": "https://hpcclab.org/ccgrid27-call-for-papers/"
         }
       ]
     },
@@ -2631,11 +2702,12 @@
             {
               "track": "papers",
               "deadline": "2026-08-15",
+              "notification": "2026-09-07",
               "url": "https://www.cloudcom2026.org/call-for-papers"
             }
           ],
-          "checked": "2026-07-28",
-          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+          "checked": "2026-10-22",
+          "source": "https://www.cloudcom2026.org/call-for-papers"
         },
         {
           "year": 2027,
@@ -2747,13 +2819,14 @@
           "submissions": [
             {
               "track": "papers",
-              "deadline": "2026-08-19",
-              "notification": "2026-09-30",
-              "url": "https://ucc2026.ufsc.br/calls/call-for-papers/"
+              "deadline": "2026-09-11",
+              "notification": "2026-10-16",
+              "url": "https://ucc2026.ufsc.br/calls/call-for-papers/",
+              "note": "Extended from 2026-08-19"
             }
           ],
-          "checked": "2026-07-28",
-          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+          "checked": "2026-10-22",
+          "source": "https://ucc2026.ufsc.br/calls/call-for-papers/"
         },
         {
           "year": 2027,
@@ -2806,14 +2879,14 @@
           "submissions": [
             {
               "track": "papers",
-              "round": "Round 1",
+              "round": "Spring",
               "deadline": "2026-03-17",
               "notification": "2026-06-04",
               "url": "https://www.usenix.org/conference/fast27/call-for-papers"
             },
             {
               "track": "papers",
-              "round": "Round 2",
+              "round": "Fall",
               "deadline": "2026-09-15",
               "notification": "2026-12-08",
               "url": "https://www.usenix.org/conference/fast27/call-for-papers"
@@ -2825,8 +2898,8 @@
               "note": "Date from a previous edition"
             }
           ],
-          "checked": "2026-07-28",
-          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+          "checked": "2026-10-22",
+          "source": "https://www.usenix.org/conference/fast27/call-for-papers"
         },
         {
           "year": 2028,
@@ -3011,27 +3084,25 @@
           "submissions": [
             {
               "track": "papers",
-              "round": "Round 1",
+              "round": "Spring",
+              "abstract": "2026-04-16",
               "deadline": "2026-04-23",
               "notification": "2026-07-23",
+              "timezone": "America/New_York",
               "url": "https://www.usenix.org/conference/nsdi27/call-for-papers"
             },
             {
               "track": "papers",
-              "round": "Round 2",
+              "round": "Fall",
+              "abstract": "2026-09-10",
               "deadline": "2026-09-17",
               "notification": "2026-12-08",
+              "timezone": "America/New_York",
               "url": "https://www.usenix.org/conference/nsdi27/call-for-papers"
-            },
-            {
-              "track": "posters",
-              "deadline": "2023-02-27",
-              "estimated": true,
-              "note": "Date from a previous edition"
             }
           ],
-          "checked": "2026-07-28",
-          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+          "checked": "2026-10-22",
+          "source": "https://www.usenix.org/conference/nsdi27/call-for-papers"
         },
         {
           "year": 2028,
@@ -3093,13 +3164,14 @@
           "submissions": [
             {
               "track": "papers",
+              "abstract": "2026-07-24",
               "deadline": "2026-07-31",
               "notification": "2026-12-08",
               "url": "https://infocom2027.ieee-infocom.org/call-papers"
             }
           ],
-          "checked": "2026-07-28",
-          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+          "checked": "2026-10-22",
+          "source": "https://infocom2027.ieee-infocom.org/call-papers"
         },
         {
           "year": 2028,
@@ -3210,7 +3282,7 @@
       "editions": [
         {
           "year": 2027,
-          "name": "57th Annual IEEE/IFIP International Conference on Dependable Systems and Networks",
+          "name": "57th Annual IEEE International Conference on Dependable Systems and Networks",
           "url": "https://dsn2027-berlin.github.io/",
           "location": "Berlin, Germany",
           "start": "2027-06-22",
@@ -3218,13 +3290,14 @@
           "submissions": [
             {
               "track": "papers",
+              "abstract": "2026-11-25",
               "deadline": "2026-12-02",
               "notification": "2027-03-18",
               "url": "https://dsn2027-berlin.github.io/call-for-contributions/"
             }
           ],
-          "checked": "2026-07-28",
-          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+          "checked": "2026-10-22",
+          "source": "https://dsn2027-berlin.github.io/call-for-contributions/"
         }
       ]
     },
@@ -3317,28 +3390,31 @@
           "submissions": [
             {
               "track": "papers",
-              "round": "Round 1",
+              "round": "Summer",
+              "abstract": "2026-07-03",
               "deadline": "2026-07-10",
               "notification": "2026-09-09",
               "url": "https://www.sigmetrics.org/sigmetrics2027/pages/cfp.html"
             },
             {
               "track": "papers",
-              "round": "Round 2",
+              "round": "Fall",
+              "abstract": "2026-10-02",
               "deadline": "2026-10-09",
               "notification": "2026-12-09",
               "url": "https://www.sigmetrics.org/sigmetrics2027/pages/cfp.html"
             },
             {
               "track": "papers",
-              "round": "Round 3",
+              "round": "Winter",
+              "abstract": "2027-01-04",
               "deadline": "2027-01-11",
               "notification": "2027-03-10",
               "url": "https://www.sigmetrics.org/sigmetrics2027/pages/cfp.html"
             }
           ],
-          "checked": "2026-07-28",
-          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+          "checked": "2026-10-22",
+          "source": "https://www.sigmetrics.org/sigmetrics2027/pages/cfp.html"
         }
       ]
     },
