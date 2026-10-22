@@ -1,0 +1,265 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { loadPubVenues } from "../../../data/pubvenues";
+import {
+  coreBuckets,
+  defaultViewState,
+  renderTable,
+  urgencyLabels
+} from "../../../data/pubvenues-model";
+
+const pubVenues = await loadPubVenues();
+const initial = renderTable(pubVenues, defaultViewState, Date.now());
+const tags = [...new Set(pubVenues.venues.flatMap((venue) => venue.tags))].sort();
+const untracked = pubVenues.venues
+  .filter((venue) => !venue.tracked)
+  .sort((left, right) => left.acronym.localeCompare(right.acronym));
+const coreLabels: Record<string, string> = { other: "Other", none: "Unranked" };
+const updated = new Intl.DateTimeFormat("en-GB", {
+  day: "numeric",
+  month: "long",
+  year: "numeric",
+  timeZone: "UTC"
+}).format(new Date(`${pubVenues.updated}T00:00:00Z`));
+const serializedData = JSON.stringify(pubVenues).replaceAll("<", "\\u003c");
+---
+
+<BaseLayout
+  title="Publication venues"
+  description="Conference and workshop submission deadlines in systems, security, cryptography, architecture and embedded systems."
+>
+  <main class="page-shell pubvenues">
+    <section class="page-hero">
+      <p class="eyebrow">Tools</p>
+      <h1><span class="section-marker" aria-hidden="true">§1</span>Publication venues.</h1>
+      <p class="lede">
+        Submission deadlines for conferences and workshops in systems, security,
+        cryptography, architecture and embedded systems. Deadlines are end of day
+        Anywhere on Earth unless marked otherwise; <em>est.</em> marks dates
+        projected from the previous edition.
+      </p>
+      <p class="meta">Updated {updated} · {pubVenues.venues.length - untracked.length} venues</p>
+    </section>
+
+    <section class="content-band content-band--table pv-band" aria-label="Venue table">
+      <form class="pv-controls" data-pv-controls>
+        <label class="pv-field pv-field--search">
+          <span>Search</span>
+          <input type="search" name="q" placeholder="acronym, name, place…" autocomplete="off" />
+        </label>
+        <label class="pv-field">
+          <span>Group by</span>
+          <select name="group">
+            <option value="category">Area</option>
+            <option value="none">None</option>
+            <option value="core">CORE rank</option>
+            <option value="urgency">Deadline window</option>
+            <option value="month">Deadline month</option>
+            <option value="publisher">Publisher</option>
+          </select>
+        </label>
+        <label class="pv-field">
+          <span>Sort by</span>
+          <select name="sort">
+            <option value="deadline">Next deadline</option>
+            <option value="conference">Conference date</option>
+            <option value="venue">Acronym</option>
+            <option value="core">CORE rank</option>
+            <option value="h5">h5-index</option>
+          </select>
+        </label>
+        <label class="pv-field">
+          <span>Order</span>
+          <select name="dir">
+            <option value="asc">Ascending</option>
+            <option value="desc">Descending</option>
+          </select>
+        </label>
+        <label class="pv-field">
+          <span>Color by</span>
+          <select name="color">
+            <option value="deadline">Deadline</option>
+            <option value="conference">Conference date</option>
+            <option value="none">None</option>
+          </select>
+        </label>
+        <label class="pv-field">
+          <span>Tracks</span>
+          <select name="track">
+            <option value="papers">Papers</option>
+            <option value="all">All (posters, artifacts…)</option>
+          </select>
+        </label>
+        <label class="pv-check">
+          <input type="checkbox" name="upcoming" value="1" />
+          <span>Upcoming deadline only</span>
+        </label>
+
+        <fieldset class="pv-chips">
+          <legend>Area</legend>
+          {
+            pubVenues.categories.map((category) => (
+              <label>
+                <input type="checkbox" name="cat" value={category.id} />
+                <span>{category.label}</span>
+              </label>
+            ))
+          }
+        </fieldset>
+        <fieldset class="pv-chips">
+          <legend>CORE</legend>
+          {
+            coreBuckets.map((bucket) => (
+              <label>
+                <input type="checkbox" name="core" value={bucket} />
+                <span>{coreLabels[bucket] ?? bucket}</span>
+              </label>
+            ))
+          }
+        </fieldset>
+        {
+          tags.length > 0 && (
+            <fieldset class="pv-chips">
+              <legend>Tags</legend>
+              {tags.map((tag) => (
+                <label>
+                  <input type="checkbox" name="tag" value={tag} />
+                  <span>{tag}</span>
+                </label>
+              ))}
+            </fieldset>
+          )
+        }
+
+        <div class="pv-status">
+          <p aria-live="polite" data-pv-count>{initial.count} of {initial.total} venues</p>
+          <button type="reset" class="button">Reset</button>
+        </div>
+      </form>
+
+      <ul class="pv-legend" aria-label="Color legend">
+        {
+          (["far", "soon", "imminent", "past"] as const).map((urgency) => (
+            <li data-urgency={urgency}>{urgencyLabels[urgency]}</li>
+          ))
+        }
+      </ul>
+
+      <div class="pv-table-wrap" data-pv-table set:html={initial.html} />
+    </section>
+
+    {
+      untracked.length > 0 && (
+        <section class="content-band">
+          <div class="section-heading">
+            <p class="section-kicker">Archive</p>
+            <h2><span class="section-marker" aria-hidden="true">§2</span>No longer tracked</h2>
+          </div>
+          <ul class="plain-list">
+            {untracked.map((venue) => (
+              <li>
+                {venue.url ? <a href={venue.url}>{venue.name}</a> : venue.name} ({venue.acronym})
+              </li>
+            ))}
+          </ul>
+        </section>
+      )
+    }
+
+    <script type="application/json" id="pv-data" is:inline set:html={serializedData} />
+  </main>
+
+  <script>
+    import {
+      defaultViewState,
+      parseViewState,
+      renderTable,
+      serializeViewState,
+      type PubVenuesDocument,
+      type ViewState
+    } from "../../../data/pubvenues-model";
+
+    const data: PubVenuesDocument = JSON.parse(
+      document.getElementById("pv-data")!.textContent!
+    );
+    const form = document.querySelector<HTMLFormElement>("[data-pv-controls]")!;
+    const table = document.querySelector<HTMLElement>("[data-pv-table]")!;
+    const count = document.querySelector<HTMLElement>("[data-pv-count]")!;
+    const field = <T extends HTMLElement>(name: string) =>
+      form.elements.namedItem(name) as T;
+    const checked = (name: string) =>
+      [...form.querySelectorAll<HTMLInputElement>(`input[name="${name}"]:checked`)].map(
+        (input) => input.value
+      );
+
+    function writeForm(state: ViewState) {
+      field<HTMLInputElement>("q").value = state.q;
+      field<HTMLSelectElement>("group").value = state.group;
+      field<HTMLSelectElement>("sort").value = state.sort;
+      field<HTMLSelectElement>("dir").value = state.dir;
+      field<HTMLSelectElement>("color").value = state.color;
+      field<HTMLSelectElement>("track").value = state.track;
+      field<HTMLInputElement>("upcoming").checked = state.upcoming;
+      const selected: Record<string, string[]> = {
+        cat: state.categories,
+        core: state.core,
+        tag: state.tags
+      };
+      for (const input of form.querySelectorAll<HTMLInputElement>(
+        'input[name="cat"], input[name="core"], input[name="tag"]'
+      )) {
+        input.checked = selected[input.name].includes(input.value);
+      }
+    }
+
+    function readForm(): ViewState {
+      return parseViewState(
+        serializeViewState({
+          q: field<HTMLInputElement>("q").value.trim(),
+          categories: checked("cat"),
+          core: checked("core"),
+          tags: checked("tag"),
+          track: field<HTMLSelectElement>("track").value as ViewState["track"],
+          upcoming: field<HTMLInputElement>("upcoming").checked,
+          group: field<HTMLSelectElement>("group").value as ViewState["group"],
+          sort: field<HTMLSelectElement>("sort").value as ViewState["sort"],
+          dir: field<HTMLSelectElement>("dir").value as ViewState["dir"],
+          color: field<HTMLSelectElement>("color").value as ViewState["color"]
+        })
+      );
+    }
+
+    function render(state: ViewState) {
+      const result = renderTable(data, state, Date.now());
+      table.innerHTML = result.html;
+      count.textContent = `${result.count} of ${result.total} venues`;
+      const query = serializeViewState(state).toString();
+      history.replaceState(null, "", query ? `?${query}` : location.pathname);
+    }
+
+    form.addEventListener("input", () => render(readForm()));
+    form.addEventListener("submit", (event) => event.preventDefault());
+    form.addEventListener("reset", (event) => {
+      event.preventDefault();
+      writeForm(defaultViewState);
+      render(defaultViewState);
+    });
+    table.addEventListener("click", (event) => {
+      const button = (event.target as HTMLElement).closest<HTMLButtonElement>("button[data-sort]");
+      if (!button) return;
+      const state = readForm();
+      const sort = button.dataset.sort as ViewState["sort"];
+      const next: ViewState = {
+        ...state,
+        sort,
+        dir: state.sort === sort && state.dir === "asc" ? "desc" : "asc"
+      };
+      writeForm(next);
+      render(next);
+    });
+
+    const initialState = parseViewState(new URLSearchParams(location.search));
+    writeForm(initialState);
+    render(initialState);
+  </script>
+</BaseLayout>

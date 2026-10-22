@@ -23,7 +23,8 @@ const staticEntries: SitemapEntry[] = [
   { path: "/courses/", changefreq: "monthly", priority: "0.7" },
   { path: "/theses/", changefreq: "monthly", priority: "0.7" },
   { path: "/blog/", changefreq: "weekly", priority: "0.8" },
-  { path: "/tags/", changefreq: "weekly", priority: "0.5" }
+  { path: "/tags/", changefreq: "weekly", priority: "0.5" },
+  { path: "/tools/pubvenues/", changefreq: "weekly", priority: "0.5" }
 ];
 
 const renderEntry = (entry: SitemapEntry) =>

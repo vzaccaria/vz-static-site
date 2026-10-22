@@ -1,0 +1,4815 @@
+{
+  "schema_version": 1,
+  "updated": "2026-10-22",
+  "categories": [
+    {
+      "id": "os",
+      "label": "Operating Systems"
+    },
+    {
+      "id": "arch",
+      "label": "Architecture & Virtualization"
+    },
+    {
+      "id": "security",
+      "label": "Security & Privacy"
+    },
+    {
+      "id": "crypto",
+      "label": "Cryptography"
+    },
+    {
+      "id": "rtes",
+      "label": "Real-Time & Embedded"
+    },
+    {
+      "id": "eda",
+      "label": "Design Automation & Hardware"
+    },
+    {
+      "id": "se",
+      "label": "Software Engineering"
+    },
+    {
+      "id": "cloud",
+      "label": "Cloud"
+    },
+    {
+      "id": "storage",
+      "label": "Storage"
+    },
+    {
+      "id": "network",
+      "label": "Networking & Dependability"
+    },
+    {
+      "id": "misc",
+      "label": "Misc"
+    }
+  ],
+  "venues": [
+    {
+      "key": "sosp",
+      "acronym": "SOSP",
+      "name": "ACM Symposium on Operating Systems Principles",
+      "kind": "symposium",
+      "category": "os",
+      "tags": [],
+      "publisher": "acm",
+      "proceedings": "https://dl.acm.org/conference/sosp",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "A*",
+          "url": "https://portal.core.edu.au/conf-ranks/48/"
+        },
+        {
+          "source": "h5",
+          "value": 43,
+          "year": 2025,
+          "url": "https://scholar.google.co.jp/citations?view_op=list_hcore&venue=5kHS1fwSbtkJ.2025"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "32nd ACM Symposium on Operating Systems Principles",
+          "url": "https://sigops.org/s/conferences/sosp/2026/index.html",
+          "program": "https://sigops.org/s/conferences/sosp/2026/schedule.html",
+          "location": "Prague, Czechia",
+          "start": "2026-09-29",
+          "end": "2026-10-02",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-04-01",
+              "notification": "2026-07-03",
+              "url": "https://sigops.org/s/conferences/sosp/2026/cfp.html"
+            },
+            {
+              "track": "posters",
+              "deadline": "2026-07-10",
+              "url": "https://sigops.org/s/conferences/sosp/2026/cfpo.html"
+            }
+          ],
+          "checked": "2026-07-28",
+          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        }
+      ]
+    },
+    {
+      "key": "osdi",
+      "acronym": "OSDI",
+      "name": "USENIX Symposium on Operating Systems Design and Implementation",
+      "kind": "symposium",
+      "category": "os",
+      "tags": [],
+      "publisher": "usenix",
+      "proceedings": "https://www.usenix.org/publications/proceedings/usenix",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "A*",
+          "url": "https://portal.core.edu.au/conf-ranks/1842/"
+        },
+        {
+          "source": "h5",
+          "value": 68,
+          "year": 2025,
+          "url": "https://scholar.google.co.jp/citations?view_op=list_hcore&venue=nZZ8G3Einp0J.2025"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2027,
+          "name": "21st USENIX Symposium on Operating Systems Design and Implementation",
+          "url": "https://www.usenix.org/conference/osdi27",
+          "program": "https://www.usenix.org/conference/osdi27/technical-sessions",
+          "location": "Baltimore, MD, USA",
+          "start": "2027-07-07",
+          "end": "2027-07-09",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-12-08",
+              "notification": "2027-03-16",
+              "url": "https://www.usenix.org/conference/osdi27/call-for-papers"
+            },
+            {
+              "track": "posters",
+              "deadline": "2026-05-28",
+              "estimated": true,
+              "note": "Date from a previous edition",
+              "url": "https://www.usenix.org/conference/osdi27/call-for-posters"
+            }
+          ],
+          "checked": "2026-07-28",
+          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        }
+      ]
+    },
+    {
+      "key": "eurosys",
+      "acronym": "EuroSys",
+      "name": "European Conference on Computer Systems",
+      "kind": "conference",
+      "category": "os",
+      "tags": [],
+      "publisher": "acm",
+      "proceedings": "https://dl.acm.org/conference/eurosys",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "A",
+          "url": "https://portal.core.edu.au/conf-ranks/525/"
+        },
+        {
+          "source": "h5",
+          "value": 52,
+          "year": 2025,
+          "url": "https://scholar.google.co.jp/citations?view_op=list_hcore&venue=8LhhnAnPYO8J.2025"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2027,
+          "name": "22nd European Conference on Computer Systems",
+          "url": "https://2027.eurosys.org/",
+          "location": "Rabat, Morocco",
+          "start": "2027-04-19",
+          "end": "2027-04-23",
+          "submissions": [
+            {
+              "track": "papers",
+              "round": "Round 1",
+              "deadline": "2026-05-14",
+              "notification": "2026-08-21",
+              "url": "https://2027.eurosys.org/cfp.html"
+            },
+            {
+              "track": "papers",
+              "round": "Round 2",
+              "deadline": "2026-09-24",
+              "notification": "2027-01-29",
+              "url": "https://2027.eurosys.org/cfp.html"
+            },
+            {
+              "track": "posters",
+              "deadline": "2026-02-14",
+              "estimated": true,
+              "note": "Date from a previous edition"
+            }
+          ],
+          "checked": "2026-07-28",
+          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        }
+      ]
+    },
+    {
+      "key": "atc",
+      "acronym": "ATC",
+      "name": "ACM SIGOPS Annual Technical Conference",
+      "kind": "conference",
+      "category": "os",
+      "tags": [],
+      "rankings": [],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "The 2026 ACM SIGOPS Annual Technical Conference",
+          "url": "https://sigops.org/s/conferences/atc/2026/index.html",
+          "location": "Shatin, Hong Kong",
+          "start": "2026-11-15",
+          "end": "2026-11-18",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-06-10",
+              "notification": "2026-09-18",
+              "url": "https://sigops.org/s/conferences/atc/2026/cfp.html"
+            }
+          ],
+          "checked": "2026-07-28",
+          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        }
+      ]
+    },
+    {
+      "key": "socc",
+      "acronym": "SoCC",
+      "name": "ACM Symposium on Cloud Computing",
+      "kind": "symposium",
+      "category": "os",
+      "tags": [],
+      "publisher": "acm",
+      "proceedings": "https://dl.acm.org/conference/socc",
+      "rankings": [
+        {
+          "source": "h5",
+          "value": 39,
+          "year": 2025,
+          "url": "https://scholar.google.co.jp/citations?view_op=list_hcore&venue=o1durVJyeP4J.2025"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "ACM Symposium on Cloud Computing 2026",
+          "url": "https://acmsocc.org/2026/",
+          "program": "https://acmsocc.org/2026/accepted-papers.html",
+          "location": "Singapore",
+          "start": "2026-11-18",
+          "end": "2026-11-20",
+          "submissions": [
+            {
+              "track": "papers",
+              "round": "Round 1",
+              "deadline": "2026-02-13",
+              "notification": "2026-04-29",
+              "url": "https://acmsocc.org/2026/papers.html"
+            },
+            {
+              "track": "papers",
+              "round": "Round 2",
+              "deadline": "2026-07-14",
+              "notification": "2026-09-26",
+              "url": "https://acmsocc.org/2026/papers.html"
+            }
+          ],
+          "checked": "2026-07-28",
+          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        }
+      ]
+    },
+    {
+      "key": "middleware",
+      "acronym": "Middleware",
+      "name": "ACM/IFIP International Middleware Conference",
+      "kind": "conference",
+      "category": "os",
+      "tags": [],
+      "publisher": "acm",
+      "proceedings": "https://dl.acm.org/conference/middleware",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "A",
+          "url": "https://portal.core.edu.au/conf-ranks/79/"
+        },
+        {
+          "source": "h5",
+          "value": 24,
+          "year": 2025,
+          "url": "https://scholar.google.co.jp/citations?view_op=list_hcore&venue=NA4iP0Rm0toJ.2025"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "27th ACM/IFIP International Middleware Conference",
+          "url": "https://middleware-conf.github.io/2026/",
+          "location": "Tarragona, Spain",
+          "start": "2026-12-14",
+          "end": "2026-12-18",
+          "submissions": [
+            {
+              "track": "papers",
+              "round": "Round 1",
+              "deadline": "2025-12-12",
+              "notification": "2026-03-06",
+              "url": "https://middleware-conf.github.io/2026/calls/call-for-research-papers/"
+            },
+            {
+              "track": "papers",
+              "round": "Round 2",
+              "deadline": "2026-06-05",
+              "notification": "2026-08-28",
+              "url": "https://middleware-conf.github.io/2026/calls/call-for-research-papers/"
+            }
+          ],
+          "checked": "2026-07-28",
+          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        }
+      ]
+    },
+    {
+      "key": "hotos",
+      "acronym": "HotOS",
+      "name": "Workshop on Hot Topics in Operating Systems",
+      "kind": "workshop",
+      "category": "os",
+      "tags": [],
+      "publisher": "usenix",
+      "proceedings": "https://www.usenix.org/publications/proceedings/hotos",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "A",
+          "url": "https://portal.core.edu.au/conf-ranks/1845/"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2027,
+          "name": "21st Workshop on Hot Topics in Operating Systems",
+          "url": "https://sigops.org/s/conferences/hotos/2027/index.html",
+          "location": "Burghausen, Bavaria, Germany",
+          "start": "2027-05-24",
+          "end": "2027-05-26",
+          "submissions": [],
+          "checked": "2026-07-28",
+          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        }
+      ]
+    },
+    {
+      "key": "apsys",
+      "acronym": "APSys",
+      "name": "ACM SIGOPS Asia-Pacific Workshop on Systems",
+      "kind": "workshop",
+      "category": "os",
+      "tags": [],
+      "publisher": "acm",
+      "proceedings": "https://dl.acm.org/conference/apsys",
+      "rankings": [],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "17th ACM SIGOPS Asia-Pacific Workshop on Systems",
+          "url": "https://apsys26.github.io/",
+          "location": "Bangkok, Thailand",
+          "start": "2026-09-17",
+          "end": "2026-09-18",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-05-20",
+              "notification": "2026-07-29",
+              "url": "https://apsys26.github.io/call_for_papers.html"
+            }
+          ],
+          "checked": "2026-07-28",
+          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        }
+      ]
+    },
+    {
+      "key": "osvs",
+      "acronym": "OSVS",
+      "name": "Workshop on Operating Systems and Virtualization Security",
+      "kind": "workshop",
+      "category": "os",
+      "tags": [],
+      "rankings": [],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2025,
+          "name": "2nd Workshop on Operating Systems and Virtualization Security",
+          "url": "https://osvs.pages.dev/",
+          "program": "https://osvs.pages.dev/program",
+          "location": "Venice, Italy",
+          "start": "2025-07-04",
+          "end": "2025-07-04",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2025-03-16",
+              "notification": "2025-04-07",
+              "url": "https://osvs.pages.dev/submission"
+            }
+          ],
+          "checked": "2026-07-28",
+          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        }
+      ]
+    },
+    {
+      "key": "systex",
+      "acronym": "SysTEX",
+      "name": "Workshop on System Software for Trusted Execution",
+      "kind": "workshop",
+      "category": "os",
+      "tags": [],
+      "rankings": [],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "9th Workshop on System Software for Trusted Execution",
+          "url": "https://systex-workshop.github.io/2026/",
+          "program": "https://systex-workshop.github.io/2026/program.html",
+          "location": "Edinburgh, UK",
+          "start": "2026-04-27",
+          "end": "2026-04-27",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-02-20",
+              "notification": "2026-03-16",
+              "url": "https://systex-workshop.github.io/2026/cfp.html"
+            }
+          ],
+          "checked": "2026-07-28",
+          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        }
+      ]
+    },
+    {
+      "key": "kisv",
+      "acronym": "KISV",
+      "name": "Workshop on Kernel Isolation, Safety and Verification",
+      "kind": "workshop",
+      "category": "os",
+      "tags": [],
+      "rankings": [],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2025,
+          "name": "3rd Workshop on Kernel Isolation, Safety and Verification",
+          "url": "https://kisv-workshop.github.io/",
+          "program": "https://kisv-workshop.github.io/program/",
+          "location": "Seoul, Republic of Korea",
+          "start": "2025-10-13",
+          "end": "2025-10-13",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2025-08-01",
+              "notification": "2025-08-20"
+            }
+          ],
+          "checked": "2026-07-28",
+          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        }
+      ]
+    },
+    {
+      "key": "sac",
+      "acronym": "SAC",
+      "name": "ACM SIGAPP Symposium On Applied Computing",
+      "kind": "symposium",
+      "category": "os",
+      "tags": [],
+      "publisher": "acm",
+      "proceedings": "https://dl.acm.org/conference/sac",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "Multiconference",
+          "url": "https://portal.core.edu.au/conf-ranks/59/"
+        },
+        {
+          "source": "h5",
+          "value": 37,
+          "year": 2025,
+          "url": "https://scholar.google.co.jp/citations?view_op=list_hcore&venue=eLhWa3qzEDsJ.2025"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2027,
+          "name": "42nd ACM SIGAPP Symposium On Applied Computing",
+          "url": "https://www.sigapp.org/sac/sac2027/index.php",
+          "location": "Gwangju, South Korea",
+          "start": "2027-04-05",
+          "end": "2027-04-09",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-09-30",
+              "notification": "2026-10-30",
+              "url": "https://sites.google.com/view/ossp2027"
+            }
+          ],
+          "checked": "2026-07-28",
+          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        }
+      ]
+    },
+    {
+      "key": "compsac",
+      "acronym": "COMPSAC",
+      "name": "IEEE Annual Computers, Software, and Applications Conference",
+      "kind": "conference",
+      "category": "os",
+      "tags": [],
+      "publisher": "ieee",
+      "proceedings": "http://ieeexplore.ieee.org/servlet/opac?punumber=1000143",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "B",
+          "url": "https://portal.core.edu.au/conf-ranks/871/"
+        },
+        {
+          "source": "h5",
+          "value": 30,
+          "year": 2025,
+          "url": "https://scholar.google.co.jp/citations?view_op=list_hcore&venue=VV1RRR7eju4J.2025"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "2026 IEEE 50th Annual Computers, Software, and Applications Conference",
+          "url": "https://ieeecompsac.computer.org/2026/",
+          "location": "Madrid, Spain",
+          "start": "2026-07-07",
+          "end": "2026-07-10",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-02-20",
+              "notification": "2026-04-12",
+              "url": "https://ieeecompsac.computer.org/2026/call-for-papers/"
+            }
+          ],
+          "checked": "2026-07-28",
+          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        }
+      ]
+    },
+    {
+      "key": "asplos",
+      "acronym": "ASPLOS",
+      "name": "International Conference on Architectural Support for Programming Languages and Operating Systems",
+      "kind": "conference",
+      "category": "arch",
+      "tags": [],
+      "publisher": "acm",
+      "proceedings": "https://dl.acm.org/conference/asplos",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "A*",
+          "url": "https://portal.core.edu.au/conf-ranks/147/"
+        },
+        {
+          "source": "h5",
+          "value": 77,
+          "year": 2025,
+          "url": "https://scholar.google.co.jp/citations?view_op=list_hcore&venue=KlkFB9T8yJEJ.2025"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2027,
+          "name": "32nd International Conference on Architectural Support for Programming Languages and Operating Systems",
+          "url": "https://www.asplos-conference.org/asplos2027/",
+          "location": "Heraklion, Crete, Greece",
+          "start": "2027-04-11",
+          "end": "2027-04-15",
+          "submissions": [
+            {
+              "track": "papers",
+              "round": "Round 1",
+              "deadline": "2026-04-15",
+              "notification": "2026-07-27",
+              "url": "https://www.asplos-conference.org/asplos2027/cfp/"
+            },
+            {
+              "track": "papers",
+              "round": "Round 2",
+              "deadline": "2026-09-09",
+              "notification": "2026-12-21",
+              "url": "https://www.asplos-conference.org/asplos2027/cfp/"
+            }
+          ],
+          "checked": "2026-07-28",
+          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        }
+      ]
+    },
+    {
+      "key": "isca",
+      "acronym": "ISCA",
+      "name": "International Symposium on Computer Architecture",
+      "kind": "symposium",
+      "category": "arch",
+      "tags": [],
+      "publisher": "acm",
+      "proceedings": "https://dl.acm.org/conference/isca",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "A*",
+          "url": "https://portal.core.edu.au/conf-ranks/32/"
+        },
+        {
+          "source": "h5",
+          "value": 64,
+          "year": 2025,
+          "url": "https://scholar.google.co.jp/citations?view_op=list_hcore&venue=-RiAttlQ-g0J.2025"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "53rd International Symposium on Computer Architecture",
+          "url": "https://iscaconf.org/isca2026/",
+          "program": "https://iscaconf.org/isca2026/program/",
+          "location": "Raleigh, NC, USA",
+          "start": "2026-06-27",
+          "end": "2026-07-01",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2025-11-17",
+              "notification": "2026-03-27",
+              "url": "https://iscaconf.org/isca2026/submit/callforpapers.php"
+            }
+          ],
+          "checked": "2026-07-28",
+          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        }
+      ]
+    },
+    {
+      "key": "micro",
+      "acronym": "MICRO",
+      "name": "IEEE/ACM International Symposium on Microarchitecture",
+      "kind": "symposium",
+      "category": "arch",
+      "tags": [],
+      "publisher": "ieee",
+      "proceedings": "http://ieeexplore.ieee.org/servlet/opac?punumber=1000440",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "A*",
+          "url": "https://portal.core.edu.au/conf-ranks/2098/"
+        },
+        {
+          "source": "h5",
+          "value": 45,
+          "year": 2025,
+          "url": "https://scholar.google.co.jp/citations?view_op=list_hcore&venue=3ra307z4BhkJ.2025"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "59th IEEE/ACM International Symposium on Microarchitecture",
+          "url": "https://microarch.org/micro59/",
+          "location": "Athens, Greece",
+          "start": "2026-10-31",
+          "end": "2026-11-04",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-04-07",
+              "notification": "2026-07-07",
+              "url": "https://www.microarch.org/micro59/submit/papers.php"
+            }
+          ],
+          "checked": "2026-07-28",
+          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        }
+      ]
+    },
+    {
+      "key": "hpca",
+      "acronym": "HPCA",
+      "name": "International Symposium on High-Performance Computer Architecture",
+      "kind": "symposium",
+      "category": "arch",
+      "tags": [],
+      "publisher": "ieee",
+      "proceedings": "http://ieeexplore.ieee.org/servlet/opac?punumber=1000335",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "A*",
+          "url": "https://portal.core.edu.au/conf-ranks/1386/"
+        },
+        {
+          "source": "h5",
+          "value": 59,
+          "year": 2025,
+          "url": "https://scholar.google.co.jp/citations?view_op=list_hcore&venue=oRj0q6yVVdsJ.2025"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2027,
+          "name": "33rd International Symposium on High-Performance Computer Architecture",
+          "url": "https://conf.researchr.org/home/hpca-2027",
+          "location": "Salt Lake City, Utah, USA",
+          "start": "2027-01-30",
+          "end": "2027-02-03",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-07-31",
+              "notification": "2026-11-06",
+              "url": "https://conf.researchr.org/track/hpca-2027/hpca-2027-main-conference"
+            }
+          ],
+          "checked": "2026-07-28",
+          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        }
+      ]
+    },
+    {
+      "key": "vhpc",
+      "acronym": "VHPC",
+      "name": "Workshop on Virtualization in High-Performance Cloud Computing",
+      "kind": "workshop",
+      "category": "arch",
+      "tags": [],
+      "rankings": [],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "21st Workshop on Virtualization in High-Performance Cloud Computing",
+          "url": "https://vhpc.org/",
+          "location": "Pisa, Italy",
+          "submissions": [],
+          "checked": "2026-07-28",
+          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        }
+      ]
+    },
+    {
+      "key": "ieeesp",
+      "acronym": "S&P",
+      "name": "IEEE Symposium on Security and Privacy",
+      "kind": "symposium",
+      "category": "security",
+      "tags": [],
+      "publisher": "ieee",
+      "proceedings": "http://ieeexplore.ieee.org/servlet/opac?punumber=1000646",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "A*",
+          "url": "https://portal.core.edu.au/conf-ranks/750/"
+        },
+        {
+          "source": "h5",
+          "value": 110,
+          "year": 2025,
+          "url": "https://scholar.google.co.jp/citations?view_op=list_hcore&venue=cyrroHz3a0YJ.2025"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2027,
+          "name": "48th IEEE Symposium on Security and Privacy",
+          "url": "https://sp2027.ieee-security.org/",
+          "program": "https://sp2027.ieee-security.org/program.html",
+          "location": "Montreal, Canada",
+          "submissions": [
+            {
+              "track": "papers",
+              "round": "Round 1",
+              "deadline": "2026-06-11",
+              "notification": "2026-09-11",
+              "url": "https://sp2027.ieee-security.org/cfpapers.html"
+            },
+            {
+              "track": "papers",
+              "round": "Round 2",
+              "deadline": "2026-11-17",
+              "notification": "2027-03-05",
+              "url": "https://sp2027.ieee-security.org/cfpapers.html"
+            },
+            {
+              "track": "posters",
+              "deadline": "2025-04-15",
+              "estimated": true,
+              "note": "Date from a previous edition",
+              "url": "https://sp2027.ieee-security.org/cfposters.html"
+            }
+          ],
+          "checked": "2026-07-28",
+          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        }
+      ]
+    },
+    {
+      "key": "usenixsec",
+      "acronym": "USENIX Security",
+      "name": "USENIX Security Symposium",
+      "kind": "symposium",
+      "category": "security",
+      "tags": [],
+      "publisher": "usenix",
+      "proceedings": "https://www.usenix.org/publications/proceedings/usenixsecurity",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "A*",
+          "url": "https://portal.core.edu.au/conf-ranks/1841/"
+        },
+        {
+          "source": "h5",
+          "value": 116,
+          "year": 2025,
+          "url": "https://scholar.google.co.jp/citations?view_op=list_hcore&venue=HSHJIaLyN9IJ.2025"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2027,
+          "name": "36th USENIX Security Symposium",
+          "url": "https://www.usenix.org/conference/usenixsecurity27",
+          "location": "Denver, CO, USA",
+          "start": "2027-08-11",
+          "end": "2027-08-13",
+          "submissions": [
+            {
+              "track": "papers",
+              "round": "Round 1",
+              "deadline": "2026-08-25",
+              "notification": "2026-12-03",
+              "url": "https://www.usenix.org/conference/usenixsecurity27/call-for-papers"
+            },
+            {
+              "track": "papers",
+              "round": "Round 2",
+              "deadline": "2027-01-26",
+              "notification": "2027-05-06",
+              "url": "https://www.usenix.org/conference/usenixsecurity27/call-for-papers"
+            },
+            {
+              "track": "posters",
+              "deadline": "2024-07-09",
+              "estimated": true,
+              "note": "Date from a previous edition"
+            }
+          ],
+          "checked": "2026-07-28",
+          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        }
+      ]
+    },
+    {
+      "key": "ccs",
+      "acronym": "CCS",
+      "name": "ACM Conference on Computer and Communications Security",
+      "kind": "conference",
+      "category": "security",
+      "tags": [],
+      "publisher": "acm",
+      "proceedings": "https://dl.acm.org/conference/ccs",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "A*",
+          "url": "https://portal.core.edu.au/conf-ranks/12/"
+        },
+        {
+          "source": "h5",
+          "value": 90,
+          "year": 2025,
+          "url": "https://scholar.google.co.jp/citations?view_op=list_hcore&venue=Pg42P_rbavwJ.2025"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "33rd ACM Conference on Computer and Communications Security",
+          "url": "https://www.sigsac.org/ccs/CCS2026/index.html",
+          "location": "The Hague, Netherlands",
+          "start": "2026-11-15",
+          "end": "2026-11-19",
+          "submissions": [
+            {
+              "track": "papers",
+              "round": "Round 1",
+              "deadline": "2026-01-14",
+              "notification": "2026-04-09",
+              "url": "https://www.sigsac.org/ccs/CCS2026/call-for/call-for-papers.html"
+            },
+            {
+              "track": "papers",
+              "round": "Round 2",
+              "deadline": "2026-04-29",
+              "notification": "2026-07-17",
+              "url": "https://www.sigsac.org/ccs/CCS2026/call-for/call-for-papers.html"
+            },
+            {
+              "track": "posters",
+              "deadline": "2024-08-01",
+              "estimated": true,
+              "note": "Date from a previous edition"
+            }
+          ],
+          "checked": "2026-07-28",
+          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        }
+      ]
+    },
+    {
+      "key": "ndss",
+      "acronym": "NDSS",
+      "name": "Network and Distributed System Security Symposium",
+      "kind": "symposium",
+      "category": "security",
+      "tags": [],
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "A*",
+          "url": "https://portal.core.edu.au/conf-ranks/1840/"
+        },
+        {
+          "source": "h5",
+          "value": 72,
+          "year": 2025,
+          "url": "https://scholar.google.co.jp/citations?view_op=list_hcore&venue=q2FcImd5qbgJ.2025"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2027,
+          "name": "Network and Distributed System Security Symposium 2027",
+          "url": "https://www.ndss-symposium.org/ndss2027/",
+          "location": "Seoul, Republic of Korea",
+          "start": "2027-03-22",
+          "end": "2027-03-26",
+          "submissions": [
+            {
+              "track": "papers",
+              "round": "Round 1",
+              "deadline": "2026-05-06",
+              "notification": "2026-07-29",
+              "url": "https://www.ndss-symposium.org/ndss2027/submissions/call-for-papers/"
+            },
+            {
+              "track": "papers",
+              "round": "Round 2",
+              "deadline": "2026-08-19",
+              "notification": "2026-11-04",
+              "url": "https://www.ndss-symposium.org/ndss2027/submissions/call-for-papers/"
+            },
+            {
+              "track": "posters",
+              "deadline": "2024-01-19",
+              "estimated": true,
+              "note": "Date from a previous edition"
+            }
+          ],
+          "checked": "2026-07-28",
+          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        }
+      ]
+    },
+    {
+      "key": "eurosp",
+      "acronym": "EuroS&P",
+      "name": "IEEE European Symposium on Security and Privacy",
+      "kind": "symposium",
+      "category": "security",
+      "tags": [],
+      "publisher": "ieee",
+      "proceedings": "http://ieeexplore.ieee.org/servlet/opac?punumber=1813044",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "A",
+          "url": "https://portal.core.edu.au/conf-ranks/2185/"
+        },
+        {
+          "source": "h5",
+          "value": 52,
+          "year": 2025,
+          "url": "https://scholar.google.co.jp/citations?view_op=list_hcore&venue=GoSvm-d8gKoJ.2025"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2027,
+          "name": "12th IEEE European Symposium on Security and Privacy",
+          "url": "https://eurosp2027.ieee-security.org/",
+          "location": "Lisbon, Portugal",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-11-20",
+              "url": "https://www.ieee-security.org/Calendar/cfps/cfp-EuroSnP2027.html"
+            },
+            {
+              "track": "posters",
+              "deadline": "2026-05-22",
+              "estimated": true,
+              "note": "Date from a previous edition"
+            }
+          ],
+          "checked": "2026-07-28",
+          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        }
+      ]
+    },
+    {
+      "key": "asiaccs",
+      "acronym": "ASIACCS",
+      "name": "ACM ASIA Conference on Computer and Communications Security",
+      "kind": "conference",
+      "category": "security",
+      "tags": [],
+      "publisher": "acm",
+      "proceedings": "https://dl.acm.org/conference/asia-ccs",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "A",
+          "url": "https://portal.core.edu.au/conf-ranks/61/"
+        },
+        {
+          "source": "h5",
+          "value": 39,
+          "year": 2024,
+          "url": "https://scholar.google.co.jp/citations?view_op=list_hcore&venue=3VLtGPwkq54J.2024"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2027,
+          "name": "22nd ACM ASIA Conference on Computer and Communications Security",
+          "url": "https://asiaccs2027.cityu.edu.mo/index.html",
+          "program": "https://asiaccs2027.cityu.edu.mo/program/index.html",
+          "location": "Macau",
+          "start": "2027-07-12",
+          "end": "2027-07-16",
+          "submissions": [
+            {
+              "track": "papers",
+              "round": "Round 1",
+              "deadline": "2026-08-21",
+              "notification": "2026-11-13",
+              "url": "https://asiaccs2027.cityu.edu.mo/call-for-papers/index.html"
+            },
+            {
+              "track": "papers",
+              "round": "Round 2",
+              "deadline": "2026-12-11",
+              "notification": "2027-03-31",
+              "url": "https://asiaccs2027.cityu.edu.mo/call-for-papers/index.html"
+            },
+            {
+              "track": "posters",
+              "deadline": "2026-02-07",
+              "estimated": true,
+              "note": "Date from a previous edition",
+              "url": "https://asiaccs2027.cityu.edu.mo/call-for-posters/index.html"
+            }
+          ],
+          "checked": "2026-07-28",
+          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        }
+      ]
+    },
+    {
+      "key": "esorics",
+      "acronym": "ESORICS",
+      "name": "European Symposium on Research in Computer Security",
+      "kind": "symposium",
+      "category": "security",
+      "tags": [],
+      "publisher": "springer",
+      "proceedings": "https://link.springer.com/conference/esorics",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "A",
+          "url": "https://portal.core.edu.au/conf-ranks/515/"
+        },
+        {
+          "source": "h5",
+          "value": 34,
+          "year": 2025,
+          "url": "https://scholar.google.co.jp/citations?view_op=list_hcore&venue=x1AY1yaO1mQJ.2025"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "31st European Symposium on Research in Computer Security",
+          "url": "https://sites.google.com/di.uniroma1.it/esorics2026/home",
+          "location": "Rome, Italy",
+          "start": "2026-09-14",
+          "end": "2026-09-18",
+          "submissions": [
+            {
+              "track": "papers",
+              "round": "Round 1",
+              "deadline": "2026-01-09",
+              "notification": "2026-03-10",
+              "url": "https://sites.google.com/di.uniroma1.it/esorics2026/call-for/papers"
+            },
+            {
+              "track": "papers",
+              "round": "Round 2",
+              "deadline": "2026-04-21",
+              "notification": "2026-06-12",
+              "url": "https://sites.google.com/di.uniroma1.it/esorics2026/call-for/papers"
+            }
+          ],
+          "checked": "2026-07-28",
+          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        }
+      ]
+    },
+    {
+      "key": "raid",
+      "acronym": "RAID",
+      "name": "International Symposium on Research in Attacks, Intrusions and Defenses",
+      "kind": "symposium",
+      "category": "security",
+      "tags": [],
+      "publisher": "springer",
+      "proceedings": "https://link.springer.com/conference/raid",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "A",
+          "url": "https://portal.core.edu.au/conf-ranks/1408/"
+        },
+        {
+          "source": "h5",
+          "value": 28,
+          "year": 2025,
+          "url": "https://scholar.google.co.jp/citations?view_op=list_hcore&venue=826ERjda8dUJ.2025"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "29th International Symposium on Research in Attacks, Intrusions and Defenses",
+          "url": "https://raid2026.org/",
+          "location": "Lancaster, UK",
+          "start": "2026-10-11",
+          "end": "2026-10-14",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-04-16",
+              "notification": "2026-07-10",
+              "url": "https://raid2026.org/call.html"
+            }
+          ],
+          "checked": "2026-07-28",
+          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        }
+      ]
+    },
+    {
+      "key": "acsac",
+      "acronym": "ACSAC",
+      "name": "Annual Computer Security Applications Conference",
+      "kind": "conference",
+      "category": "security",
+      "tags": [],
+      "publisher": "ieee",
+      "proceedings": "http://ieeexplore.ieee.org/servlet/opac?punumber=10917023",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "A",
+          "url": "https://portal.core.edu.au/conf-ranks/117/"
+        },
+        {
+          "source": "h5",
+          "value": 40,
+          "year": 2025,
+          "url": "https://scholar.google.co.jp/citations?view_op=list_hcore&venue=88oopSfS28MJ.2025"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "Annual Computer Security Applications Conference",
+          "url": "https://www.acsac.org/",
+          "location": "Los Angeles, CA, USA",
+          "start": "2026-12-07",
+          "end": "2026-12-11",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-05-26",
+              "url": "https://www.acsac.org/2026/submissions/papers/"
+            },
+            {
+              "track": "posters",
+              "deadline": "2026-09-19",
+              "url": "https://www.acsac.org/2026/submissions/posters/"
+            }
+          ],
+          "checked": "2026-07-28",
+          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        }
+      ]
+    },
+    {
+      "key": "csf",
+      "acronym": "CSF",
+      "name": "IEEE Computer Security Foundations Symposium",
+      "kind": "symposium",
+      "category": "security",
+      "tags": [],
+      "publisher": "ieee",
+      "proceedings": "http://ieeexplore.ieee.org/servlet/opac?punumber=1000142",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "A",
+          "url": "https://portal.core.edu.au/conf-ranks/599/"
+        },
+        {
+          "source": "h5",
+          "value": 22,
+          "year": 2025,
+          "url": "https://scholar.google.co.jp/citations?view_op=list_hcore&venue=UHUE4XohEV8J.2025"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "39th IEEE Computer Security Foundations Symposium",
+          "url": "https://csf2026.ieee-security.org/",
+          "program": "https://www.ieee-security.org/TC/CSF2026/accepted.html",
+          "location": "Lisbon, Portugal",
+          "start": "2026-07-26",
+          "end": "2026-07-29",
+          "submissions": [
+            {
+              "track": "papers",
+              "round": "Round 1",
+              "deadline": "2025-07-24",
+              "notification": "2025-09-25",
+              "url": "https://csf2026.ieee-security.org/cfp.html"
+            },
+            {
+              "track": "papers",
+              "round": "Round 2",
+              "deadline": "2025-10-09",
+              "notification": "2025-12-11",
+              "url": "https://csf2026.ieee-security.org/cfp.html"
+            },
+            {
+              "track": "papers",
+              "round": "Round 3",
+              "deadline": "2026-01-29",
+              "notification": "2026-04-01",
+              "url": "https://csf2026.ieee-security.org/cfp.html"
+            }
+          ],
+          "checked": "2026-07-28",
+          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        }
+      ]
+    },
+    {
+      "key": "trustcom",
+      "acronym": "TrustCom",
+      "name": "IEEE International Conference on Trust, Security and Privacy in Computing and Communications",
+      "kind": "conference",
+      "category": "security",
+      "tags": [],
+      "publisher": "ieee",
+      "proceedings": "http://ieeexplore.ieee.org/servlet/opac?punumber=1800729",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "B",
+          "url": "https://portal.core.edu.au/conf-ranks/790/"
+        },
+        {
+          "source": "h5",
+          "value": 31,
+          "year": 2025,
+          "url": "https://scholar.google.co.jp/citations?view_op=list_hcore&venue=eMr22KXtlXcJ.2025"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2025,
+          "name": "24th IEEE International Conference on Trust, Security and Privacy in Computing and Communications",
+          "url": "https://ieee-aiplus-2025.org/",
+          "location": "Guiyang, China",
+          "start": "2025-11-14",
+          "end": "2025-11-17",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2025-08-01",
+              "notification": "2025-10-01",
+              "url": "https://ieee-aiplus-2025.org/callFoePapers/Trustcom-CallforPaper.html"
+            }
+          ],
+          "checked": "2026-07-28",
+          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        }
+      ]
+    },
+    {
+      "key": "srds",
+      "acronym": "SRDS",
+      "name": "International Symposium on Reliable Distributed Systems",
+      "kind": "symposium",
+      "category": "security",
+      "tags": [],
+      "publisher": "ieee",
+      "proceedings": "http://ieeexplore.ieee.org/servlet/opac?punumber=1000628",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "B",
+          "url": "https://portal.core.edu.au/conf-ranks/1792/"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "45th International Symposium on Reliable Distributed Systems",
+          "url": "https://srds-conference.org/",
+          "location": "Rome, Italy",
+          "start": "2026-09-22",
+          "end": "2026-09-24",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-05-08",
+              "notification": "2026-07-03",
+              "url": "https://srds-conference.org/index.php/call-for-papers/"
+            }
+          ],
+          "checked": "2026-07-28",
+          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        }
+      ]
+    },
+    {
+      "key": "ares",
+      "acronym": "ARES",
+      "name": "International Conference on Availability, Reliability and Security",
+      "kind": "conference",
+      "category": "security",
+      "tags": [],
+      "publisher": "ieee",
+      "proceedings": "http://ieeexplore.ieee.org/servlet/opac?punumber=1001707",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "B",
+          "url": "https://portal.core.edu.au/conf-ranks/923/"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "21st International Conference on Availability, Reliability and Security",
+          "url": "https://www.ares-conference.eu/",
+          "location": "Linköping, Sweden",
+          "start": "2026-08-24",
+          "end": "2026-08-27",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-03-09",
+              "notification": "2026-05-13",
+              "url": "https://www.ares-conference.eu/open-calls"
+            }
+          ],
+          "checked": "2026-07-28",
+          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        }
+      ]
+    },
+    {
+      "key": "sacmat",
+      "acronym": "SACMAT",
+      "name": "ACM Symposium on Access Control Models and Technologies",
+      "kind": "symposium",
+      "category": "security",
+      "tags": [],
+      "publisher": "acm",
+      "proceedings": "https://dl.acm.org/conference/sacmat",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "C",
+          "url": "https://portal.core.edu.au/conf-ranks/1775/"
+        },
+        {
+          "source": "h5",
+          "value": 16,
+          "year": 2025,
+          "url": "https://scholar.google.co.jp/citations?view_op=list_hcore&venue=9DZYftdOCUAJ.2025"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "31st ACM Symposium on Access Control Models and Technologies",
+          "url": "https://sacmat.org/2026/index.php",
+          "location": "Waterloo, Canada",
+          "start": "2026-07-08",
+          "end": "2026-07-10",
+          "submissions": [
+            {
+              "track": "papers",
+              "round": "Round 1",
+              "deadline": "2025-10-31",
+              "notification": "2025-12-19",
+              "url": "https://sacmat.org/2026/call-for-papers.php"
+            },
+            {
+              "track": "papers",
+              "round": "Round 2",
+              "deadline": "2026-03-06",
+              "notification": "2026-04-10",
+              "url": "https://sacmat.org/2026/call-for-papers.php"
+            }
+          ],
+          "checked": "2026-07-28",
+          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        }
+      ]
+    },
+    {
+      "key": "pst",
+      "acronym": "PST",
+      "name": "Annual International Conference on Privacy, Security and Trust",
+      "kind": "conference",
+      "category": "security",
+      "tags": [],
+      "publisher": "ieee",
+      "proceedings": "http://ieeexplore.ieee.org/servlet/opac?punumber=1002478",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "C",
+          "url": "https://portal.core.edu.au/conf-ranks/127/"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "23rd Annual International Conference on Privacy, Security and Trust",
+          "url": "https://pstnet.ca/pst2026/",
+          "location": "Ottawa, Canada (Hybrid)",
+          "start": "2026-08-26",
+          "end": "2026-08-28",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-04-28",
+              "notification": "2026-06-08",
+              "url": "https://pstnet.ca/pst2026/callforpapers.html"
+            }
+          ],
+          "checked": "2026-07-28",
+          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        }
+      ]
+    },
+    {
+      "key": "dimva",
+      "acronym": "DIMVA",
+      "name": "Conference on Detection of Intrusions and Malware & Vulnerability Assessment",
+      "kind": "conference",
+      "category": "security",
+      "tags": [],
+      "publisher": "springer",
+      "proceedings": "https://link.springer.com/conference/dimva",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "B",
+          "url": "https://portal.core.edu.au/conf-ranks/565/"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "23rd Conference on Detection of Intrusions and Malware & Vulnerability Assessment",
+          "url": "https://www.dimva.org/dimva2026/",
+          "location": "Chania, Greece",
+          "start": "2026-07-01",
+          "end": "2026-07-03",
+          "submissions": [
+            {
+              "track": "papers",
+              "round": "Round 1",
+              "deadline": "2025-12-10",
+              "notification": "2026-01-27",
+              "url": "https://www.dimva.org/dimva2026/#cfp"
+            },
+            {
+              "track": "papers",
+              "round": "Round 2",
+              "deadline": "2026-02-18",
+              "notification": "2026-04-03",
+              "url": "https://www.dimva.org/dimva2026/#cfp"
+            },
+            {
+              "track": "posters",
+              "deadline": "2026-04-27",
+              "url": "https://www.dimva.org/dimva2026/#cfp"
+            }
+          ],
+          "checked": "2026-07-28",
+          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        }
+      ]
+    },
+    {
+      "key": "woot",
+      "acronym": "WOOT",
+      "name": "USENIX WOOT Conference on Offensive Technologies",
+      "kind": "conference",
+      "category": "security",
+      "tags": [],
+      "rankings": [],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "20th USENIX WOOT Conference on Offensive Technologies",
+          "url": "https://www.usenix.org/conference/woot26",
+          "program": "https://www.usenix.org/conference/woot26/technical-sessions",
+          "location": "Baltimore, MD, USA",
+          "start": "2026-08-10",
+          "end": "2026-08-11",
+          "submissions": [
+            {
+              "track": "papers",
+              "round": "Round 1",
+              "deadline": "2025-12-12",
+              "notification": "2026-01-27",
+              "url": "https://www.usenix.org/conference/woot26/call-for-papers"
+            },
+            {
+              "track": "papers",
+              "round": "Round 2",
+              "deadline": "2026-03-03",
+              "notification": "2026-04-09",
+              "url": "https://www.usenix.org/conference/woot26/call-for-papers"
+            },
+            {
+              "track": "posters",
+              "deadline": "2026-07-02",
+              "url": "https://www.usenix.org/conference/woot26/call-for-demos-and-posters"
+            }
+          ],
+          "checked": "2026-07-28",
+          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        }
+      ]
+    },
+    {
+      "key": "codaspy",
+      "acronym": "CODASPY",
+      "name": "ACM Conference on Data and Application Security and Privacy",
+      "kind": "conference",
+      "category": "security",
+      "tags": [],
+      "publisher": "acm",
+      "proceedings": "https://dl.acm.org/conference/codaspy",
+      "rankings": [],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "16th ACM Conference on Data and Application Security and Privacy",
+          "url": "https://www.codaspy.org/2026/",
+          "location": "Frankfurt am Main, Germany",
+          "start": "2026-06-23",
+          "end": "2026-06-25",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-01-02",
+              "notification": "2026-02-27",
+              "url": "https://www.codaspy.org/2026/cfp.html"
+            },
+            {
+              "track": "posters",
+              "deadline": "2026-05-21",
+              "url": "https://codaspy26posters.hotcrp.com/"
+            }
+          ],
+          "checked": "2026-07-28",
+          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        }
+      ]
+    },
+    {
+      "key": "eurosec",
+      "acronym": "EUROSEC",
+      "name": "European Workshop on Systems Security",
+      "kind": "workshop",
+      "category": "security",
+      "tags": [],
+      "rankings": [],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "19th European Workshop on Systems Security",
+          "url": "https://eurosec-workshop.github.io/",
+          "location": "Edinburgh, Scotland, UK",
+          "start": "2026-04-27",
+          "end": "2026-04-27",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-02-10",
+              "notification": "2026-03-06",
+              "url": "https://eurosec-workshop.github.io/#cfp"
+            }
+          ],
+          "checked": "2026-07-28",
+          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        }
+      ]
+    },
+    {
+      "key": "icse",
+      "acronym": "ICSE",
+      "name": "International Conference on Software Engineering",
+      "kind": "conference",
+      "category": "se",
+      "tags": [],
+      "publisher": "acm",
+      "proceedings": "https://dl.acm.org/conference/icse",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "A*",
+          "url": "https://portal.core.edu.au/conf-ranks/1209/"
+        },
+        {
+          "source": "h5",
+          "value": 98,
+          "year": 2025,
+          "url": "https://scholar.google.co.jp/citations?view_op=list_hcore&venue=vtDF2hFAQ-cJ.2025"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2027,
+          "name": "49th International Conference on Software Engineering",
+          "url": "https://conf.researchr.org/home/icse-2027",
+          "location": "Dublin, Ireland",
+          "start": "2027-04-28",
+          "end": "2027-04-30",
+          "submissions": [
+            {
+              "track": "papers",
+              "round": "Round 1",
+              "deadline": "2026-06-23",
+              "notification": "2026-10-20",
+              "url": "https://conf.researchr.org/track/icse-2027/icse-2027-research-track"
+            },
+            {
+              "track": "papers",
+              "round": "Round 2",
+              "deadline": "2026-11-17",
+              "notification": "2026-12-18",
+              "url": "https://conf.researchr.org/track/icse-2027/icse-2027-research-track"
+            },
+            {
+              "track": "posters",
+              "deadline": "2026-10-23",
+              "url": "https://conf.researchr.org/track/icse-2027/icse-2027-demonstrations"
+            }
+          ],
+          "checked": "2026-07-28",
+          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        }
+      ]
+    },
+    {
+      "key": "fse",
+      "acronym": "FSE",
+      "name": "ACM International Conference on the Foundations of Software Engineering",
+      "kind": "conference",
+      "category": "se",
+      "tags": [],
+      "publisher": "acm",
+      "proceedings": "https://dl.acm.org/conference/fse",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "A*",
+          "url": "https://portal.core.edu.au/conf-ranks/52/"
+        },
+        {
+          "source": "h5",
+          "value": 69,
+          "year": 2025,
+          "url": "https://scholar.google.co.jp/citations?view_op=list_hcore&venue=CwfZO4J4a4UJ.2025"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2027,
+          "name": "ACM International Conference on the Foundations of Software Engineering",
+          "url": "https://conf.researchr.org/home/fse-2027",
+          "location": "Shenzhen, China",
+          "start": "2027-07-12",
+          "end": "2027-07-16",
+          "submissions": [
+            {
+              "track": "papers",
+              "round": "Round 1",
+              "deadline": "2026-10-02",
+              "notification": "2027-01-22",
+              "url": "https://conf.researchr.org/track/fse-2027/fse-2027-papers"
+            },
+            {
+              "track": "papers",
+              "round": "Round 2",
+              "deadline": "2027-03-05",
+              "notification": "2027-03-31",
+              "url": "https://conf.researchr.org/track/fse-2027/fse-2027-papers"
+            }
+          ],
+          "checked": "2026-07-28",
+          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        }
+      ]
+    },
+    {
+      "key": "ase",
+      "acronym": "ASE",
+      "name": "IEEE/ACM International Conference on Automated Software engineering",
+      "kind": "conference",
+      "category": "se",
+      "tags": [],
+      "publisher": "acm",
+      "proceedings": "https://dl.acm.org/conference/ase",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "A*",
+          "url": "https://portal.core.edu.au/conf-ranks/279/"
+        },
+        {
+          "source": "h5",
+          "value": 57,
+          "year": 2025,
+          "url": "https://scholar.google.co.jp/citations?view_op=list_hcore&venue=0NzweKVXmpkJ.2025"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "41st IEEE/ACM International Conference on Automated Software engineering",
+          "url": "https://conf.researchr.org/home/ase-2026",
+          "program": "https://conf.researchr.org/attending/ase-2026/program-overview",
+          "location": "Munich, Germany",
+          "start": "2026-10-12",
+          "end": "2026-10-16",
+          "submissions": [
+            {
+              "track": "papers",
+              "round": "Round 1",
+              "deadline": "2026-03-26",
+              "notification": "2026-06-18",
+              "url": "https://conf.researchr.org/track/ase-2026/ase-2026-research-track"
+            },
+            {
+              "track": "papers",
+              "round": "Round 2",
+              "deadline": "2026-07-16",
+              "notification": "2026-07-29",
+              "url": "https://conf.researchr.org/track/ase-2026/ase-2026-research-track"
+            },
+            {
+              "track": "posters",
+              "deadline": "2026-05-11",
+              "url": "https://conf.researchr.org/track/ase-2026/ase-2026-tools-and-data-sets"
+            }
+          ],
+          "checked": "2026-07-28",
+          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        }
+      ]
+    },
+    {
+      "key": "issre",
+      "acronym": "ISSRE",
+      "name": "International Symposium on Software Reliability Engineering",
+      "kind": "symposium",
+      "category": "se",
+      "tags": [],
+      "publisher": "ieee",
+      "proceedings": "http://ieeexplore.ieee.org/servlet/opac?punumber=1000700",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "A",
+          "url": "https://portal.core.edu.au/conf-ranks/1411/"
+        },
+        {
+          "source": "h5",
+          "value": 31,
+          "year": 2025,
+          "url": "https://scholar.google.co.jp/citations?view_op=list_hcore&venue=xJhIFxijeG8J.2025"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "37th International Symposium on Software Reliability Engineering",
+          "url": "https://cyprusconferences.org/issre2026/",
+          "program": "https://cyprusconferences.org/issre2026/program/",
+          "location": "Limassol, Cyprus",
+          "start": "2026-10-20",
+          "end": "2026-10-23",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-04-24",
+              "notification": "2026-07-08",
+              "url": "https://cyprusconferences.org/issre2026/cfp-research/"
+            },
+            {
+              "track": "posters",
+              "deadline": "2026-06-15",
+              "url": "https://cyprusconferences.org/issre2026/fast-abstract-track/"
+            }
+          ],
+          "checked": "2026-07-28",
+          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        }
+      ]
+    },
+    {
+      "key": "ccgrid",
+      "acronym": "CCGrid",
+      "name": "IEEE International Symposium on Cluster, Cloud and Internet Computing",
+      "kind": "symposium",
+      "category": "cloud",
+      "tags": [],
+      "publisher": "acm",
+      "proceedings": "https://dl.acm.org/conference/ccgrid",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "B",
+          "url": "https://portal.core.edu.au/conf-ranks/695/"
+        },
+        {
+          "source": "h5",
+          "value": 30,
+          "year": 2025,
+          "url": "https://scholar.google.co.jp/citations?view_op=list_hcore&venue=_IeLSKDu4j0J.2025"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2027,
+          "name": "27th IEEE International Symposium on Cluster, Cloud and Internet Computing",
+          "url": "https://hpcclab.org/ccgrid27/",
+          "location": "Dallas-Fort Worth, Texas, USA",
+          "start": "2027-05-24",
+          "end": "2027-05-27",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-12-01",
+              "notification": "2027-02-01",
+              "url": "https://hpcclab.org/ccgrid27/"
+            }
+          ],
+          "checked": "2026-07-28",
+          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        }
+      ]
+    },
+    {
+      "key": "cloud",
+      "acronym": "CLOUD",
+      "name": "IEEE International Conference on Cloud Computing",
+      "kind": "conference",
+      "category": "cloud",
+      "tags": [],
+      "publisher": "ieee",
+      "proceedings": "http://ieeexplore.ieee.org/servlet/opac?punumber=1002911",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "B",
+          "url": "https://portal.core.edu.au/conf-ranks/631/"
+        },
+        {
+          "source": "h5",
+          "value": 24,
+          "year": 2025,
+          "url": "https://scholar.google.co.jp/citations?view_op=list_hcore&venue=ioohKoS5imcJ.2025"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "IEEE International Conference on Cloud Computing 2026",
+          "url": "https://services.conferences.computer.org/2026/cloud/",
+          "program": "https://services.conferences.computer.org/2026/cloud-program/",
+          "location": "Sydney, Australia",
+          "start": "2026-07-13",
+          "end": "2026-07-18",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-03-22",
+              "notification": "2026-05-10",
+              "url": "https://services.conferences.computer.org/2026/cloud/cloud-call-for-papers/"
+            }
+          ],
+          "checked": "2026-07-28",
+          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        }
+      ]
+    },
+    {
+      "key": "cloudcom",
+      "acronym": "CloudCom",
+      "name": "IEEE International Conference on Cloud Computing Technology and Science",
+      "kind": "conference",
+      "category": "cloud",
+      "tags": [],
+      "publisher": "ieee",
+      "proceedings": "http://ieeexplore.ieee.org/servlet/opac?punumber=1800284",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "C",
+          "url": "https://portal.core.edu.au/conf-ranks/931/"
+        },
+        {
+          "source": "h5",
+          "value": 9,
+          "year": 2025,
+          "url": "https://scholar.google.co.jp/citations?view_op=list_hcore&venue=aNZ314HiR4YJ.2025"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "17th IEEE International Conference on Cloud Computing Technology and Science",
+          "url": "https://www.cloudcom2026.org/",
+          "location": "Paris, France",
+          "start": "2026-10-27",
+          "end": "2026-10-29",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-08-15",
+              "url": "https://www.cloudcom2026.org/call-for-papers"
+            }
+          ],
+          "checked": "2026-07-28",
+          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        }
+      ]
+    },
+    {
+      "key": "ic2e",
+      "acronym": "IC2E",
+      "name": "IEEE International Conference on Cloud Engineering",
+      "kind": "conference",
+      "category": "cloud",
+      "tags": [],
+      "publisher": "ieee",
+      "proceedings": "http://ieeexplore.ieee.org/servlet/opac?punumber=7483864",
+      "rankings": [
+        {
+          "source": "h5",
+          "value": 19,
+          "year": 2025,
+          "url": "https://scholar.google.co.jp/citations?view_op=list_hcore&venue=Bl2m6b_roKYJ.2025"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "14th IEEE International Conference on Cloud Engineering",
+          "url": "https://conferences.computer.org/IC2E/2026/",
+          "program": "https://conferences.computer.org/IC2E/2026/program.html",
+          "location": "Santa Clara, California, USA",
+          "start": "2026-10-13",
+          "end": "2026-10-16",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-05-15",
+              "notification": "2026-07-14",
+              "url": "https://conferences.computer.org/IC2E/2026/cfp-main.html"
+            },
+            {
+              "track": "posters",
+              "deadline": "2026-07-20",
+              "url": "https://conferences.computer.org/IC2E/2026/cfp-demos-posters.html"
+            }
+          ],
+          "checked": "2026-07-28",
+          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        }
+      ]
+    },
+    {
+      "key": "ucc",
+      "acronym": "UCC",
+      "name": "IEEE/ACM International Conference on Utility and Cloud Computing",
+      "kind": "conference",
+      "category": "cloud",
+      "tags": [],
+      "publisher": "ieee",
+      "proceedings": "http://ieeexplore.ieee.org/servlet/opac?punumber=1800743",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "Unranked",
+          "url": "https://portal.core.edu.au/conf-ranks/2252/"
+        },
+        {
+          "source": "h5",
+          "value": 20,
+          "year": 2025,
+          "url": "https://scholar.google.co.jp/citations?view_op=list_hcore&venue=gCzn4TRHFGQJ.2025"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "19th IEEE/ACM International Conference on Utility and Cloud Computing",
+          "url": "https://ucc2026.ufsc.br/",
+          "location": "Florianópolis, Brazil",
+          "start": "2026-12-01",
+          "end": "2026-12-04",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-08-19",
+              "notification": "2026-09-30",
+              "url": "https://ucc2026.ufsc.br/calls/call-for-papers/"
+            }
+          ],
+          "checked": "2026-07-28",
+          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        }
+      ]
+    },
+    {
+      "key": "fast",
+      "acronym": "FAST",
+      "name": "USENIX Conference on File and Storage Technologies",
+      "kind": "conference",
+      "category": "storage",
+      "tags": [],
+      "publisher": "usenix",
+      "proceedings": "https://www.usenix.org/publications/proceedings/fast",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "A",
+          "url": "https://portal.core.edu.au/conf-ranks/1839/"
+        },
+        {
+          "source": "h5",
+          "value": 40,
+          "year": 2025,
+          "url": "https://scholar.google.co.jp/citations?view_op=list_hcore&venue=9iQfffNlIeAJ.2025"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2027,
+          "name": "25th USENIX Conference on File and Storage Technologies",
+          "url": "https://www.usenix.org/conference/fast27",
+          "location": "Renton, WA, USA",
+          "start": "2027-02-23",
+          "end": "2027-02-25",
+          "submissions": [
+            {
+              "track": "papers",
+              "round": "Round 1",
+              "deadline": "2026-03-17",
+              "notification": "2026-06-04",
+              "url": "https://www.usenix.org/conference/fast27/call-for-papers"
+            },
+            {
+              "track": "papers",
+              "round": "Round 2",
+              "deadline": "2026-09-15",
+              "notification": "2026-12-08",
+              "url": "https://www.usenix.org/conference/fast27/call-for-papers"
+            },
+            {
+              "track": "posters",
+              "deadline": "2026-01-16",
+              "estimated": true,
+              "note": "Date from a previous edition"
+            }
+          ],
+          "checked": "2026-07-28",
+          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        }
+      ]
+    },
+    {
+      "key": "systor",
+      "acronym": "SYSTOR",
+      "name": "ACM International Systems and Storage Conference",
+      "kind": "conference",
+      "category": "storage",
+      "tags": [],
+      "publisher": "acm",
+      "proceedings": "https://dl.acm.org/conference/systor",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "National:Israel",
+          "url": "https://portal.core.edu.au/conf-ranks/2255/"
+        },
+        {
+          "source": "h5",
+          "value": 14,
+          "year": 2025,
+          "url": "https://scholar.google.co.jp/citations?view_op=list_hcore&venue=I6Tldgt-WqAJ.2025"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "19th ACM International Systems and Storage Conference",
+          "url": "https://www.systor.org/2026",
+          "program": "https://www.systor.org/2026/program2/",
+          "location": "Online",
+          "start": "2026-09-08",
+          "end": "2026-09-09",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-05-25",
+              "notification": "2026-07-13",
+              "url": "https://www.systor.org/2026/cfp/"
+            },
+            {
+              "track": "posters",
+              "deadline": "2026-07-20",
+              "url": "https://www.systor.org/2026/cfp/#posters"
+            }
+          ],
+          "checked": "2026-07-28",
+          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        }
+      ]
+    },
+    {
+      "key": "hotstorage",
+      "acronym": "HotStorage",
+      "name": "ACM Workshop on Hot Topics in Storage and File Systems",
+      "kind": "workshop",
+      "category": "storage",
+      "tags": [],
+      "publisher": "usenix",
+      "proceedings": "https://www.usenix.org/publications/proceedings/hotstorage",
+      "rankings": [
+        {
+          "source": "h5",
+          "value": 20,
+          "year": 2024,
+          "url": "https://scholar.google.co.jp/citations?view_op=list_hcore&venue=sdWfpc8BUQUJ.2024"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "18th ACM Workshop on Hot Topics in Storage and File Systems",
+          "url": "https://www.hotstorage.org/2026/index.html",
+          "location": "Prague, Czechia",
+          "start": "2026-09-28",
+          "end": "2026-09-29",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-06-12",
+              "url": "https://www.hotstorage.org/2026/cfp.html"
+            }
+          ],
+          "checked": "2026-07-28",
+          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        }
+      ]
+    },
+    {
+      "key": "nsdi",
+      "acronym": "NSDI",
+      "name": "USENIX Symposium on Networked Systems Design and Implementation",
+      "kind": "symposium",
+      "category": "network",
+      "tags": [],
+      "publisher": "usenix",
+      "proceedings": "https://www.usenix.org/publications/proceedings/nsdi",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "National",
+          "url": "https://portal.core.edu.au/conf-ranks/1789/"
+        },
+        {
+          "source": "h5",
+          "value": 60,
+          "year": 2023,
+          "url": "https://scholar.google.co.jp/citations?view_op=list_hcore&venue=J92rQU3cJVwJ.2023"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2027,
+          "name": "24th USENIX Symposium on Networked Systems Design and Implementation",
+          "url": "https://www.usenix.org/conference/nsdi27",
+          "location": "Providence, RI, USA",
+          "start": "2027-05-11",
+          "end": "2027-05-13",
+          "submissions": [
+            {
+              "track": "papers",
+              "round": "Round 1",
+              "deadline": "2026-04-23",
+              "notification": "2026-07-23",
+              "url": "https://www.usenix.org/conference/nsdi27/call-for-papers"
+            },
+            {
+              "track": "papers",
+              "round": "Round 2",
+              "deadline": "2026-09-17",
+              "notification": "2026-12-08",
+              "url": "https://www.usenix.org/conference/nsdi27/call-for-papers"
+            },
+            {
+              "track": "posters",
+              "deadline": "2023-02-27",
+              "estimated": true,
+              "note": "Date from a previous edition"
+            }
+          ],
+          "checked": "2026-07-28",
+          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        }
+      ]
+    },
+    {
+      "key": "infocom",
+      "acronym": "INFOCOM",
+      "name": "IEEE International Conference on Computer Communications",
+      "kind": "conference",
+      "category": "network",
+      "tags": [],
+      "publisher": "ieee",
+      "proceedings": "http://ieeexplore.ieee.org/servlet/opac?punumber=1000359",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "A*",
+          "url": "https://portal.core.edu.au/conf-ranks/2074/"
+        },
+        {
+          "source": "h5",
+          "value": 80,
+          "year": 2025,
+          "url": "https://scholar.google.co.jp/citations?view_op=list_hcore&venue=JMgzZsGYu14J.2025"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2027,
+          "name": "IEEE International Conference on Computer Communications",
+          "url": "https://infocom2027.ieee-infocom.org/",
+          "location": "Honolulu, HI, USA",
+          "start": "2027-05-24",
+          "end": "2027-05-27",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-07-31",
+              "notification": "2026-12-08",
+              "url": "https://infocom2027.ieee-infocom.org/call-papers"
+            }
+          ],
+          "checked": "2026-07-28",
+          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        }
+      ]
+    },
+    {
+      "key": "sigcomm",
+      "acronym": "SIGCOMM",
+      "name": "ACM SIGCOMM",
+      "kind": "conference",
+      "category": "network",
+      "tags": [],
+      "publisher": "acm",
+      "proceedings": "https://dl.acm.org/conference/comm",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "A*",
+          "url": "https://portal.core.edu.au/conf-ranks/11/"
+        },
+        {
+          "source": "h5",
+          "value": 64,
+          "year": 2025,
+          "url": "https://scholar.google.co.jp/citations?view_op=list_hcore&venue=xd8jQKOw5ikJ.2025"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "url": "https://conferences.sigcomm.org/sigcomm/2026/",
+          "program": "https://conferences.sigcomm.org/sigcomm/2026/program/overview/",
+          "location": "Denver, CO, USA",
+          "start": "2026-08-17",
+          "end": "2026-08-21",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-02-06",
+              "notification": "2026-06-29",
+              "url": "https://conferences.sigcomm.org/sigcomm/2026/cfp/"
+            },
+            {
+              "track": "posters",
+              "deadline": "2026-05-15",
+              "url": "https://conferences.sigcomm.org/sigcomm/2026/posters/"
+            }
+          ],
+          "checked": "2026-07-28",
+          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        }
+      ]
+    },
+    {
+      "key": "dsn",
+      "acronym": "DSN",
+      "name": "Annual IEEE/IFIP International Conference on Dependable Systems and Networks",
+      "kind": "conference",
+      "category": "network",
+      "tags": [],
+      "publisher": "ieee",
+      "proceedings": "http://ieeexplore.ieee.org/servlet/opac?punumber=1000192",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "A",
+          "url": "https://portal.core.edu.au/conf-ranks/787/"
+        },
+        {
+          "source": "h5",
+          "value": 35,
+          "year": 2025,
+          "url": "https://scholar.google.co.jp/citations?view_op=list_hcore&venue=MVYbyyKMpToJ.2025"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2027,
+          "name": "57th Annual IEEE/IFIP International Conference on Dependable Systems and Networks",
+          "url": "https://dsn2027-berlin.github.io/",
+          "location": "Berlin, Germany",
+          "start": "2027-06-22",
+          "end": "2027-06-25",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-12-02",
+              "notification": "2027-03-18",
+              "url": "https://dsn2027-berlin.github.io/call-for-contributions/"
+            }
+          ],
+          "checked": "2026-07-28",
+          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        }
+      ]
+    },
+    {
+      "key": "icdcs",
+      "acronym": "ICDCS",
+      "name": "IEEE International Conference on Distributed Computing Systems",
+      "kind": "conference",
+      "category": "misc",
+      "tags": [],
+      "publisher": "ieee",
+      "proceedings": "http://ieeexplore.ieee.org/servlet/opac?punumber=1000213",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "A",
+          "url": "https://portal.core.edu.au/conf-ranks/1002/"
+        },
+        {
+          "source": "h5",
+          "value": 41,
+          "year": 2025,
+          "url": "https://scholar.google.co.jp/citations?view_op=list_hcore&venue=CiHz08Ia1nsJ.2025"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "46th IEEE International Conference on Distributed Computing Systems",
+          "url": "https://icdcs2026.icdcs.org/",
+          "program": "https://icdcs2026.icdcs.org/program/",
+          "location": "Seoul, South Korea",
+          "start": "2026-06-22",
+          "end": "2026-06-25",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-01-21",
+              "notification": "2026-04-27",
+              "url": "https://icdcs2026.icdcs.org/calls/call-for-papers/"
+            },
+            {
+              "track": "posters",
+              "deadline": "2026-04-24",
+              "url": "https://icdcs2026.icdcs.org/calls/call-for-demos-and-posters/"
+            }
+          ],
+          "checked": "2026-07-28",
+          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        }
+      ]
+    },
+    {
+      "key": "metrics",
+      "acronym": "SIGMETRICS",
+      "name": "ACM SIGMETRICS",
+      "kind": "conference",
+      "category": "misc",
+      "tags": [],
+      "rankings": [],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2027,
+          "name": "ACM SIGMETRICS",
+          "url": "https://www.sigmetrics.org/sigmetrics2027/",
+          "location": "Atlanta, GA, USA",
+          "start": "2027-06-07",
+          "end": "2027-06-11",
+          "submissions": [
+            {
+              "track": "papers",
+              "round": "Round 1",
+              "deadline": "2026-07-10",
+              "notification": "2026-09-09",
+              "url": "https://www.sigmetrics.org/sigmetrics2027/pages/cfp.html"
+            },
+            {
+              "track": "papers",
+              "round": "Round 2",
+              "deadline": "2026-10-09",
+              "notification": "2026-12-09",
+              "url": "https://www.sigmetrics.org/sigmetrics2027/pages/cfp.html"
+            },
+            {
+              "track": "papers",
+              "round": "Round 3",
+              "deadline": "2027-01-11",
+              "notification": "2027-03-10",
+              "url": "https://www.sigmetrics.org/sigmetrics2027/pages/cfp.html"
+            }
+          ],
+          "checked": "2026-07-28",
+          "source": "https://www.os.is.s.u-tokyo.ac.jp/en/conf/"
+        }
+      ]
+    },
+    {
+      "key": "prdc",
+      "acronym": "PRDC",
+      "name": "IEEE Pacific Rim International Symposium on Dependable Computing",
+      "kind": "symposium",
+      "category": "misc",
+      "tags": [],
+      "publisher": "ieee",
+      "proceedings": "http://ieeexplore.ieee.org/servlet/opac?punumber=1000191",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "C",
+          "url": "https://portal.core.edu.au/conf-ranks/1662/"
+        }
+      ],
+      "tracked": false,
+      "editions": []
+    },
+    {
+      "key": "isc",
+      "acronym": "ISC",
+      "name": "International Conference on Information Security",
+      "kind": "conference",
+      "category": "security",
+      "tags": [],
+      "publisher": "springer",
+      "proceedings": "https://link.springer.com/conference/isw",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "C",
+          "url": "https://portal.core.edu.au/conf-ranks/827/"
+        },
+        {
+          "source": "h5",
+          "value": 14,
+          "year": 2025,
+          "url": "https://scholar.google.co.jp/citations?view_op=list_hcore&venue=Vnq3DIsft2YJ.2025"
+        }
+      ],
+      "tracked": false,
+      "editions": []
+    },
+    {
+      "key": "nvmsa",
+      "acronym": "NVMSA",
+      "name": "Non-Volatile Memory Systems and Applications Symposium",
+      "kind": "symposium",
+      "category": "storage",
+      "tags": [],
+      "publisher": "ieee",
+      "proceedings": "http://ieeexplore.ieee.org/servlet/opac?punumber=1804069",
+      "rankings": [],
+      "tracked": false,
+      "editions": []
+    },
+    {
+      "key": "nas",
+      "acronym": "NAS",
+      "name": "International Conference on Networking, Architecture, and Storage",
+      "kind": "conference",
+      "category": "storage",
+      "tags": [],
+      "publisher": "ieee",
+      "url": "http://nas-conf.org/",
+      "proceedings": "http://ieeexplore.ieee.org/servlet/opac?punumber=1001813",
+      "rankings": [
+        {
+          "source": "h5",
+          "value": 10,
+          "year": 2025,
+          "url": "https://scholar.google.co.jp/citations?view_op=list_hcore&venue=Wrm_xjdhLMQJ.2025"
+        }
+      ],
+      "tracked": false,
+      "editions": []
+    },
+    {
+      "key": "arcs",
+      "acronym": "ARCS",
+      "name": "International Conference on Architecture of Computing Systems",
+      "kind": "conference",
+      "category": "arch",
+      "tags": [],
+      "publisher": "springer",
+      "url": "https://arcs-conference.org/",
+      "proceedings": "https://link.springer.com/conference/arcs",
+      "rankings": [],
+      "tracked": false,
+      "editions": []
+    },
+    {
+      "key": "msst",
+      "acronym": "MSST",
+      "name": "International Conference on Massive Storage Systems and Technology",
+      "kind": "conference",
+      "category": "storage",
+      "tags": [],
+      "publisher": "ieee",
+      "url": "https://www.msstconference.org/",
+      "proceedings": "http://ieeexplore.ieee.org/servlet/opac?punumber=1000430",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "National",
+          "url": "https://portal.core.edu.au/conf-ranks/608/"
+        }
+      ],
+      "tracked": false,
+      "editions": []
+    },
+    {
+      "key": "vee",
+      "acronym": "VEE",
+      "name": "ACM SIGPLAN/SIGOPS International Conference on Virtual Execution Environments",
+      "kind": "conference",
+      "category": "arch",
+      "tags": [],
+      "publisher": "acm",
+      "proceedings": "https://dl.acm.org/conference/vee",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "B",
+          "url": "https://portal.core.edu.au/conf-ranks/1262/"
+        }
+      ],
+      "tracked": false,
+      "editions": []
+    },
+    {
+      "key": "crypto",
+      "acronym": "CRYPTO",
+      "name": "Annual International Cryptology Conference",
+      "kind": "conference",
+      "category": "crypto",
+      "tags": [],
+      "publisher": "iacr",
+      "url": "https://www.iacr.org/meetings/crypto/",
+      "dblp": "https://dblp.org/db/conf/crypto/",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "A*",
+          "year": 2023,
+          "url": "https://portal.core.edu.au/conf-ranks/94/"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "url": "https://crypto.iacr.org/2026/",
+          "location": "Santa Barbara, CA, USA",
+          "start": "2026-08-17",
+          "end": "2026-08-20",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-02-12",
+              "notification": "2026-05-04",
+              "url": "https://crypto.iacr.org/2026/callforpapers.php",
+              "timezone": "America/Los_Angeles",
+              "note": "First-round notification 2026-04-07"
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://crypto.iacr.org/2026/callforpapers.php"
+        },
+        {
+          "year": 2027,
+          "url": "https://crypto.iacr.org/2027/",
+          "location": "Santa Barbara, CA, USA",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2027-02-11",
+              "notification": "2027-04-26",
+              "url": "https://crypto.iacr.org/2027/callforpapers.php",
+              "note": "Dates listed on official page under 'to be announced soon'; timezone not stated (2026 used US Pacific)"
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://crypto.iacr.org/2027/callforpapers.php",
+          "note": "Conference dates not yet announced"
+        }
+      ]
+    },
+    {
+      "key": "eurocrypt",
+      "acronym": "EUROCRYPT",
+      "name": "Annual International Conference on the Theory and Applications of Cryptographic Techniques",
+      "kind": "conference",
+      "category": "crypto",
+      "tags": [],
+      "publisher": "iacr",
+      "url": "https://www.iacr.org/meetings/eurocrypt/",
+      "dblp": "https://dblp.org/db/conf/eurocrypt/",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "A*",
+          "year": 2023,
+          "url": "https://portal.core.edu.au/conf-ranks/1242/"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "url": "https://eurocrypt.iacr.org/2026/",
+          "location": "Rome, Italy",
+          "start": "2026-05-10",
+          "end": "2026-05-14",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2025-10-02",
+              "notification": "2026-01-29",
+              "url": "https://eurocrypt.iacr.org/2026/"
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://eurocrypt.iacr.org/2026/"
+        },
+        {
+          "year": 2027,
+          "name": "46th Annual International Conference on the Theory and Applications of Cryptographic Techniques (Eurocrypt 2027)",
+          "url": "https://eurocrypt.iacr.org/2027/",
+          "location": "Eindhoven, Netherlands",
+          "start": "2027-04-11",
+          "end": "2027-04-15",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-09-17",
+              "notification": "2027-01-18",
+              "url": "https://eurocrypt.iacr.org/2027/callforpapers.php",
+              "note": "Early rejections 2026-11-30"
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://eurocrypt.iacr.org/2027/callforpapers.php"
+        }
+      ]
+    },
+    {
+      "key": "asiacrypt",
+      "acronym": "ASIACRYPT",
+      "name": "International Conference on the Theory and Application of Cryptology and Information Security",
+      "kind": "conference",
+      "category": "crypto",
+      "tags": [],
+      "publisher": "iacr",
+      "url": "https://www.iacr.org/meetings/asiacrypt/",
+      "dblp": "https://dblp.org/db/conf/asiacrypt/",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "A",
+          "year": 2023,
+          "url": "https://portal.core.edu.au/conf-ranks/1243/"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "32nd International Conference on the Theory and Application of Cryptology and Information Security (Asiacrypt 2026)",
+          "url": "https://asiacrypt.iacr.org/2026/",
+          "location": "Hong Kong, China",
+          "start": "2026-12-07",
+          "end": "2026-12-11",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-05-21",
+              "notification": "2026-08-14",
+              "url": "https://asiacrypt.iacr.org/2026/callforpapers.php",
+              "note": "First-round notification 2026-07-17"
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://asiacrypt.iacr.org/2026/callforpapers.php"
+        },
+        {
+          "year": 2027,
+          "url": "https://asiacrypt.iacr.org/2027/",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2027-05-21",
+              "notification": "2027-08-14",
+              "estimated": true
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://asiacrypt.iacr.org/2027/",
+          "note": "Not yet announced"
+        }
+      ]
+    },
+    {
+      "key": "ches",
+      "acronym": "CHES",
+      "name": "Conference on Cryptographic Hardware and Embedded Systems",
+      "kind": "conference",
+      "category": "crypto",
+      "tags": [],
+      "publisher": "iacr",
+      "url": "https://ches.iacr.org/",
+      "dblp": "https://dblp.org/db/conf/ches/",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "A",
+          "year": 2023,
+          "url": "https://portal.core.edu.au/conf-ranks/1894/"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "url": "https://ches.iacr.org/2026/",
+          "location": "Antalya, Türkiye",
+          "start": "2026-10-11",
+          "end": "2026-10-15",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2025-07-15",
+              "notification": "2025-09-15",
+              "url": "https://ches.iacr.org/2026/",
+              "round": "Issue 1",
+              "note": "TCHES Volume 2026 Issue 1"
+            },
+            {
+              "track": "papers",
+              "deadline": "2025-10-15",
+              "notification": "2025-12-15",
+              "url": "https://ches.iacr.org/2026/",
+              "round": "Issue 2",
+              "note": "TCHES Volume 2026 Issue 2"
+            },
+            {
+              "track": "papers",
+              "deadline": "2026-01-15",
+              "notification": "2026-03-15",
+              "url": "https://ches.iacr.org/2026/",
+              "round": "Issue 3",
+              "note": "TCHES Volume 2026 Issue 3"
+            },
+            {
+              "track": "papers",
+              "deadline": "2026-04-15",
+              "notification": "2026-06-15",
+              "url": "https://ches.iacr.org/2026/",
+              "round": "Issue 4",
+              "note": "TCHES Volume 2026 Issue 4"
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://ches.iacr.org/2026/"
+        },
+        {
+          "year": 2027,
+          "url": "https://ches.iacr.org/2027/",
+          "location": "Cancún, Mexico",
+          "start": "2027-09-06",
+          "end": "2027-09-09",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-07-15",
+              "notification": "2026-09-15",
+              "url": "https://ches.iacr.org/2027/",
+              "round": "Issue 1",
+              "note": "TCHES Volume 2027 Issue 1"
+            },
+            {
+              "track": "papers",
+              "deadline": "2026-10-15",
+              "notification": "2026-12-15",
+              "url": "https://ches.iacr.org/2027/",
+              "round": "Issue 2",
+              "note": "TCHES Volume 2027 Issue 2"
+            },
+            {
+              "track": "papers",
+              "deadline": "2027-01-15",
+              "notification": "2027-03-15",
+              "url": "https://ches.iacr.org/2027/",
+              "round": "Issue 3",
+              "note": "TCHES Volume 2027 Issue 3"
+            },
+            {
+              "track": "papers",
+              "deadline": "2027-04-15",
+              "notification": "2027-06-15",
+              "url": "https://ches.iacr.org/2027/",
+              "round": "Issue 4",
+              "note": "TCHES Volume 2027 Issue 4"
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://ches.iacr.org/2027/",
+          "note": "Schedule marked tentative"
+        }
+      ],
+      "note": "Papers published in IACR Transactions on Cryptographic Hardware and Embedded Systems (TCHES)"
+    },
+    {
+      "key": "fse-tosc",
+      "acronym": "FSE",
+      "name": "Fast Software Encryption",
+      "kind": "conference",
+      "category": "crypto",
+      "tags": [],
+      "publisher": "iacr",
+      "url": "https://fse.iacr.org/",
+      "dblp": "https://dblp.org/db/conf/fse/",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "Journal Published",
+          "year": 2023,
+          "url": "https://portal.core.edu.au/conf-ranks/1475/"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "url": "https://fse.iacr.org/2026/",
+          "location": "Singapore",
+          "start": "2026-03-23",
+          "end": "2026-03-27",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2025-09-01",
+              "notification": "2025-11-01",
+              "url": "https://fse.iacr.org/2026/callforpapers.php",
+              "round": "2025 Issue 4",
+              "note": "ToSC Volume 2025 Issue 4"
+            },
+            {
+              "track": "papers",
+              "deadline": "2025-11-23",
+              "notification": "2026-01-23",
+              "url": "https://fse.iacr.org/2026/callforpapers.php",
+              "round": "2026 Issue 1",
+              "note": "ToSC Volume 2026 Issue 1"
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://fse.iacr.org/2026/callforpapers.php",
+          "note": "Also includes ToSC 2025 Issues 2 and 3 papers (deadlines not listed on FSE 2026 page)"
+        },
+        {
+          "year": 2027,
+          "url": "https://fse.iacr.org/2027/",
+          "location": "Maastricht, Netherlands",
+          "start": "2027-05-24",
+          "end": "2027-05-28",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-03-01",
+              "notification": "2026-05-01",
+              "url": "https://fse.iacr.org/2027/callforpapers.php",
+              "round": "2026 Issue 2",
+              "note": "ToSC Volume 2026 Issue 2"
+            },
+            {
+              "track": "papers",
+              "deadline": "2026-06-01",
+              "notification": "2026-08-01",
+              "url": "https://fse.iacr.org/2027/callforpapers.php",
+              "round": "2026 Issue 3",
+              "note": "ToSC Volume 2026 Issue 3"
+            },
+            {
+              "track": "papers",
+              "deadline": "2026-09-01",
+              "notification": "2026-11-01",
+              "url": "https://fse.iacr.org/2027/callforpapers.php",
+              "round": "2026 Issue 4",
+              "note": "ToSC Volume 2026 Issue 4"
+            },
+            {
+              "track": "papers",
+              "deadline": "2026-12-01",
+              "notification": "2027-02-01",
+              "url": "https://fse.iacr.org/2027/callforpapers.php",
+              "round": "2027 Issue 1",
+              "note": "ToSC Volume 2027 Issue 1"
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://fse.iacr.org/2027/callforpapers.php"
+        }
+      ],
+      "note": "Papers published in IACR Transactions on Symmetric Cryptology (ToSC)"
+    },
+    {
+      "key": "pkc",
+      "acronym": "PKC",
+      "name": "International Conference on Practice and Theory of Public-Key Cryptography",
+      "kind": "conference",
+      "category": "crypto",
+      "tags": [],
+      "publisher": "iacr",
+      "url": "https://pkc.iacr.org/",
+      "dblp": "https://dblp.org/db/conf/pkc/",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "B",
+          "year": 2023,
+          "url": "https://portal.core.edu.au/conf-ranks/1279/"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "url": "https://pkc.iacr.org/2026/",
+          "location": "West Palm Beach, FL, USA",
+          "start": "2026-05-25",
+          "end": "2026-05-28",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2025-10-24",
+              "notification": "2026-02-13",
+              "url": "https://pkc.iacr.org/2026/",
+              "note": "First-round notification 2025-12-16"
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://pkc.iacr.org/2026/"
+        },
+        {
+          "year": 2027,
+          "url": "https://pkc.iacr.org/2027/",
+          "location": "Taipei, Taiwan",
+          "start": "2027-03-01",
+          "end": "2027-03-04",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-08-16",
+              "notification": "2026-11-26",
+              "url": "https://pkc.iacr.org/2027/",
+              "note": "First-round notification 2026-10-09"
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://pkc.iacr.org/2027/",
+          "note": "Conference dates marked tentative"
+        }
+      ]
+    },
+    {
+      "key": "tcc",
+      "acronym": "TCC",
+      "name": "Theory of Cryptography Conference",
+      "kind": "conference",
+      "category": "crypto",
+      "tags": [],
+      "publisher": "iacr",
+      "url": "https://www.iacr.org/meetings/tcc/",
+      "dblp": "https://dblp.org/db/conf/tcc/",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "A",
+          "year": 2023,
+          "url": "https://portal.core.edu.au/conf-ranks/1815/"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "url": "https://tcc.iacr.org/2026/",
+          "location": "New York City, NY, USA",
+          "start": "2026-11-10",
+          "end": "2026-11-13",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-05-19",
+              "notification": "2026-08-20",
+              "url": "https://tcc.iacr.org/2026/"
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://tcc.iacr.org/2026/"
+        },
+        {
+          "year": 2027,
+          "url": "https://tcc.iacr.org/2027/",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2027-05-19",
+              "notification": "2027-08-20",
+              "estimated": true
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://tcc.iacr.org/2027/",
+          "note": "Not yet announced"
+        }
+      ]
+    },
+    {
+      "key": "rwc",
+      "acronym": "RWC",
+      "name": "Real World Crypto Symposium",
+      "kind": "symposium",
+      "category": "crypto",
+      "tags": [],
+      "publisher": "iacr",
+      "url": "https://rwc.iacr.org/",
+      "rankings": [],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "url": "https://rwc.iacr.org/2026/",
+          "location": "Taipei, Taiwan",
+          "start": "2026-03-09",
+          "end": "2026-03-11",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2025-10-10",
+              "notification": "2025-12-08",
+              "url": "https://rwc.iacr.org/2026/",
+              "note": "talk proposals"
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://rwc.iacr.org/2026/"
+        },
+        {
+          "year": 2027,
+          "url": "https://rwc.iacr.org/2027/",
+          "location": "Seattle, WA, USA",
+          "start": "2027-04-05",
+          "end": "2027-04-07",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-10-15",
+              "notification": "2026-12-10",
+              "url": "https://rwc.iacr.org/2027/",
+              "note": "talk proposals"
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://rwc.iacr.org/2027/"
+        }
+      ]
+    },
+    {
+      "key": "ct-rsa",
+      "acronym": "CT-RSA",
+      "name": "Cryptographers' Track at the RSA Conference",
+      "kind": "conference",
+      "category": "crypto",
+      "tags": [],
+      "publisher": "springer",
+      "dblp": "https://dblp.org/db/conf/ctrsa/",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "B",
+          "year": 2026,
+          "url": "https://portal.core.edu.au/conf-ranks/1710/",
+          "note": "ICORE2026"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "url": "https://conference.wsu.edu/ct-rsa-2026/",
+          "location": "San Francisco, CA, USA",
+          "start": "2026-03-23",
+          "end": "2026-03-26",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2025-10-24",
+              "url": "https://conference.wsu.edu/ct-rsa-2026/",
+              "note": "Date from CCFDDL; official site not reachable"
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://ccfddl.com/venues/sc/ct-rsa-2026/"
+        },
+        {
+          "year": 2027,
+          "url": "https://www.esat.kuleuven.be/cosic/events/ct-rsa-2027/",
+          "location": "San Francisco, CA, USA",
+          "start": "2027-04-05",
+          "end": "2027-04-08",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-10-22",
+              "notification": "2026-12-03",
+              "url": "https://www.esat.kuleuven.be/cosic/events/ct-rsa-2027/"
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://www.esat.kuleuven.be/cosic/events/ct-rsa-2027/",
+          "note": "Track renamed CT-RSAC from 2027."
+        }
+      ],
+      "note": "Renamed CT-RSAC from 2027."
+    },
+    {
+      "key": "acns",
+      "acronym": "ACNS",
+      "name": "International Conference on Applied Cryptography and Network Security",
+      "kind": "conference",
+      "category": "crypto",
+      "tags": [],
+      "publisher": "springer",
+      "dblp": "https://dblp.org/db/conf/acns/",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "B",
+          "year": 2026,
+          "url": "https://portal.core.edu.au/conf-ranks/907/",
+          "note": "ICORE2026"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "url": "https://acns2026.github.io/",
+          "location": "Stony Brook, NY, USA",
+          "start": "2026-06-22",
+          "end": "2026-06-25",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2025-09-26",
+              "round": "Cycle 1",
+              "notification": "2025-11-20",
+              "url": "https://acns2026.github.io/"
+            },
+            {
+              "track": "papers",
+              "deadline": "2026-01-23",
+              "round": "Cycle 2",
+              "notification": "2026-03-19",
+              "url": "https://acns2026.github.io/"
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://acns2026.github.io/"
+        },
+        {
+          "year": 2027,
+          "name": "25th International Conference on Applied Cryptography and Network Security (ACNS 2027)",
+          "url": "https://acns2027.isg.rhul.ac.uk/",
+          "location": "Egham, United Kingdom",
+          "start": "2027-06-28",
+          "end": "2027-07-01",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-09-24",
+              "round": "Cycle 1",
+              "notification": "2026-11-26",
+              "url": "https://acns2027.isg.rhul.ac.uk/calls/papers/"
+            },
+            {
+              "track": "papers",
+              "deadline": "2027-01-21",
+              "round": "Cycle 2",
+              "notification": "2027-03-25",
+              "url": "https://acns2027.isg.rhul.ac.uk/calls/papers/"
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://acns2027.isg.rhul.ac.uk/calls/papers/"
+        }
+      ]
+    },
+    {
+      "key": "sac-crypto",
+      "acronym": "SAC",
+      "name": "Selected Areas in Cryptography",
+      "kind": "conference",
+      "category": "crypto",
+      "tags": [],
+      "publisher": "springer",
+      "url": "https://sacworkshop.org/",
+      "dblp": "https://dblp.org/db/conf/sacrypt/",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "B",
+          "year": 2026,
+          "url": "https://portal.core.edu.au/conf-ranks/138/",
+          "note": "ICORE2026"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "33rd Selected Areas in Cryptography (SAC 2026)",
+          "url": "https://sacworkshop.org/SAC26/",
+          "location": "Ottawa, Canada",
+          "start": "2026-08-26",
+          "end": "2026-08-28",
+          "note": "Preceded by SAC Summer School, Aug 24-25",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-02-02",
+              "round": "Cycle 1",
+              "notification": "2026-03-19",
+              "url": "https://sacworkshop.org/SAC26/"
+            },
+            {
+              "track": "papers",
+              "deadline": "2026-05-11",
+              "round": "Cycle 2",
+              "notification": "2026-06-29",
+              "url": "https://sacworkshop.org/SAC26/"
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://sacworkshop.org/SAC26/"
+        },
+        {
+          "year": 2027,
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2027-02-02",
+              "estimated": true,
+              "round": "Cycle 1"
+            },
+            {
+              "track": "papers",
+              "deadline": "2027-05-11",
+              "estimated": true,
+              "round": "Cycle 2"
+            }
+          ],
+          "checked": "2026-10-22"
+        }
+      ]
+    },
+    {
+      "key": "cans",
+      "acronym": "CANS",
+      "name": "International Conference on Cryptology and Network Security",
+      "kind": "conference",
+      "category": "crypto",
+      "tags": [],
+      "publisher": "springer",
+      "dblp": "https://dblp.org/db/conf/cans/",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "B",
+          "year": 2026,
+          "url": "https://portal.core.edu.au/conf-ranks/982/",
+          "note": "ICORE2026"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "25th International Conference on Cryptology and Network Security (CANS 2026)",
+          "url": "https://uow-ic2.github.io/cans2026/",
+          "location": "Wollongong, Australia",
+          "start": "2026-11-23",
+          "end": "2026-11-25",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-06-19",
+              "notification": "2026-08-12",
+              "url": "https://uow-ic2.github.io/cans2026/",
+              "note": "Extended from 2026-06-10"
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://uow-ic2.github.io/cans2026/"
+        },
+        {
+          "year": 2027,
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2027-06-10",
+              "estimated": true
+            }
+          ],
+          "checked": "2026-10-22"
+        }
+      ]
+    },
+    {
+      "key": "acisp",
+      "acronym": "ACISP",
+      "name": "Australasian Conference on Information Security and Privacy",
+      "kind": "conference",
+      "category": "crypto",
+      "tags": [],
+      "publisher": "springer",
+      "url": "https://acisp.org/",
+      "dblp": "https://dblp.org/db/conf/acisp/",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "Australasian B",
+          "year": 2026,
+          "url": "https://portal.core.edu.au/conf-ranks/212/",
+          "note": "ICORE2026"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "31st Australasian Conference on Information Security and Privacy (ACISP 2026)",
+          "url": "https://acisp-conference.github.io/acisp2026/",
+          "location": "Perth, Australia",
+          "start": "2026-07-06",
+          "end": "2026-07-09",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2025-11-27",
+              "round": "Round 1",
+              "notification": "2026-01-15",
+              "url": "https://acisp-conference.github.io/acisp2026/cfp.html"
+            },
+            {
+              "track": "papers",
+              "deadline": "2026-02-26",
+              "round": "Round 2",
+              "notification": "2026-04-16",
+              "url": "https://acisp-conference.github.io/acisp2026/cfp.html"
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://acisp-conference.github.io/acisp2026/cfp.html"
+        },
+        {
+          "year": 2027,
+          "name": "32nd Australasian Conference on Information Security and Privacy (ACISP 2027)",
+          "url": "https://acisp.org/",
+          "location": "Melbourne, Australia",
+          "start": "2027-07-07",
+          "end": "2027-07-10",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-11-30",
+              "round": "Round 1",
+              "url": "https://acisp.org/cfp.html"
+            },
+            {
+              "track": "papers",
+              "deadline": "2027-03-01",
+              "round": "Round 2",
+              "url": "https://acisp.org/cfp.html"
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://acisp.org/cfp.html"
+        }
+      ]
+    },
+    {
+      "key": "indocrypt",
+      "acronym": "INDOCRYPT",
+      "name": "International Conference on Cryptology in India",
+      "kind": "conference",
+      "category": "crypto",
+      "tags": [],
+      "publisher": "springer",
+      "dblp": "https://dblp.org/db/conf/indocrypt/",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "National: India",
+          "year": 2026,
+          "url": "https://portal.core.edu.au/conf-ranks/983/",
+          "note": "ICORE2026"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "27th International Conference on Cryptology in India (Indocrypt 2026)",
+          "url": "https://indocrypt2026.cdacb.in/",
+          "location": "Bengaluru, India",
+          "start": "2026-12-13",
+          "end": "2026-12-16",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-08-15",
+              "notification": "2026-10-10",
+              "url": "https://indocrypt2026.cdacb.in/"
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://iacr.org/news/item/28590"
+        },
+        {
+          "year": 2027,
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2027-08-15",
+              "estimated": true
+            }
+          ],
+          "checked": "2026-10-22"
+        }
+      ]
+    },
+    {
+      "key": "africacrypt",
+      "acronym": "AFRICACRYPT",
+      "name": "International Conference on Cryptology in Africa",
+      "kind": "conference",
+      "category": "crypto",
+      "tags": [],
+      "publisher": "springer",
+      "dblp": "https://dblp.org/db/conf/africacrypt/",
+      "rankings": [],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "17th International Conference on Cryptology in Africa (AFRICACRYPT 2026)",
+          "url": "https://www.africacrypt2026.tn/",
+          "location": "Hammamet, Tunisia",
+          "start": "2026-07-08",
+          "end": "2026-07-10",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-03-01",
+              "url": "https://www.africacrypt2026.tn/",
+              "note": "Date from sec-deadlines aggregator; official site unreachable"
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://css.korea.ac.kr/deadlines/"
+        },
+        {
+          "year": 2027,
+          "name": "18th AfricaCrypt (AFRICACRYPT 2027)",
+          "url": "https://africacrypt2027.ci/",
+          "location": "Abidjan, Côte d'Ivoire",
+          "start": "2027-07-07",
+          "end": "2027-07-09",
+          "note": "Deadline also on IACR calendar; site news section contains inconsistent placeholder text",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2027-01-15",
+              "notification": "2027-04-15",
+              "url": "https://africacrypt2027.ci/call-for-papers"
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://africacrypt2027.ci/"
+        }
+      ]
+    },
+    {
+      "key": "latincrypt",
+      "acronym": "LATINCRYPT",
+      "name": "International Conference on Cryptology and Information Security in Latin America",
+      "kind": "conference",
+      "category": "crypto",
+      "tags": [],
+      "publisher": "springer",
+      "dblp": "https://dblp.org/db/conf/latincrypt/",
+      "rankings": [],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2025,
+          "name": "9th International Conference on Cryptology and Information Security in Latin America (LATINCRYPT 2025)",
+          "url": "https://ciencias.medellin.unal.edu.co/eventos/latincrypt/",
+          "location": "Medellín, Colombia",
+          "start": "2025-10-01",
+          "end": "2025-10-03",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2025-05-09",
+              "abstract": "2025-05-05",
+              "notification": "2025-07-18",
+              "url": "https://ciencias.medellin.unal.edu.co/eventos/latincrypt/",
+              "note": "Extended to 2025-05-16 per sec-deadlines"
+            },
+            {
+              "track": "posters",
+              "deadline": "2025-07-14",
+              "notification": "2025-07-21",
+              "url": "https://ciencias.medellin.unal.edu.co/eventos/latincrypt/"
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://ciencias.medellin.unal.edu.co/eventos/latincrypt/images/CFP_2025.pdf"
+        },
+        {
+          "year": 2027,
+          "note": "Biennial series; 2027 edition not yet announced, dates projected from 2025",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2027-05-09",
+              "estimated": true,
+              "abstract": "2027-05-05"
+            }
+          ],
+          "checked": "2026-10-22"
+        }
+      ],
+      "note": "Biennial (odd years)."
+    },
+    {
+      "key": "pqcrypto",
+      "acronym": "PQCrypto",
+      "name": "International Conference on Post-Quantum Cryptography",
+      "kind": "conference",
+      "category": "crypto",
+      "tags": [],
+      "publisher": "springer",
+      "url": "https://pqcrypto.org/conferences.html",
+      "dblp": "https://dblp.org/db/conf/pqcrypto/",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "C",
+          "year": 2026,
+          "url": "https://portal.core.edu.au/conf-ranks/1514/",
+          "note": "ICORE2026"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "17th International Conference on Post-Quantum Cryptography (PQCrypto 2026)",
+          "url": "https://pqcrypto2026.irisa.fr/",
+          "location": "Saint-Malo, France",
+          "start": "2026-04-14",
+          "end": "2026-04-16",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2025-11-07",
+              "abstract": "2025-10-31",
+              "notification": "2026-01-12",
+              "url": "https://pqcrypto2026.irisa.fr/callforpapers.html"
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://pqcrypto2026.irisa.fr/"
+        },
+        {
+          "year": 2027,
+          "name": "18th International Conference on Post-Quantum Cryptography (PQCrypto 2027)",
+          "url": "https://pqcrypto2027.ca/",
+          "location": "Waterloo, Canada",
+          "start": "2027-05-12",
+          "end": "2027-05-14",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-11-24",
+              "abstract": "2026-11-17",
+              "notification": "2027-02-03",
+              "url": "https://pqcrypto2027.ca/papersubmission.php"
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://pqcrypto2027.ca/"
+        }
+      ]
+    },
+    {
+      "key": "pets",
+      "acronym": "PETS",
+      "name": "Privacy Enhancing Technologies Symposium",
+      "kind": "symposium",
+      "category": "security",
+      "tags": [],
+      "url": "https://petsymposium.org/",
+      "dblp": "https://dblp.org/db/journals/popets/",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "A",
+          "year": 2026,
+          "url": "https://portal.core.edu.au/conf-ranks/1442/",
+          "note": "ICORE2026"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "26th Privacy Enhancing Technologies Symposium (PETS 2026)",
+          "url": "https://petsymposium.org/cfp26.php",
+          "location": "Calgary, Canada",
+          "start": "2026-07-20",
+          "end": "2026-07-25",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2025-05-31",
+              "round": "Issue 1",
+              "notification": "2025-08-01",
+              "url": "https://petsymposium.org/cfp26.php",
+              "note": "PoPETs Volume 2026 Issue 1"
+            },
+            {
+              "track": "papers",
+              "deadline": "2025-08-31",
+              "round": "Issue 2",
+              "notification": "2025-11-01",
+              "url": "https://petsymposium.org/cfp26.php",
+              "note": "PoPETs Volume 2026 Issue 2"
+            },
+            {
+              "track": "papers",
+              "deadline": "2025-11-30",
+              "round": "Issue 3",
+              "notification": "2026-02-01",
+              "url": "https://petsymposium.org/cfp26.php",
+              "note": "PoPETs Volume 2026 Issue 3"
+            },
+            {
+              "track": "papers",
+              "deadline": "2026-02-28",
+              "round": "Issue 4",
+              "notification": "2026-05-01",
+              "url": "https://petsymposium.org/cfp26.php",
+              "note": "PoPETs Volume 2026 Issue 4"
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://petsymposium.org/cfp26.php"
+        },
+        {
+          "year": 2027,
+          "name": "27th Privacy Enhancing Technologies Symposium (PETS 2027)",
+          "url": "https://petsymposium.org/",
+          "location": "Delft, The Netherlands",
+          "start": "2027-07-19",
+          "end": "2027-07-24",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-05-31",
+              "round": "Issue 1",
+              "notification": "2026-08-01",
+              "url": "https://petsymposium.org/cfp27.php",
+              "note": "PoPETs Volume 2027 Issue 1"
+            },
+            {
+              "track": "papers",
+              "deadline": "2026-08-31",
+              "round": "Issue 2",
+              "notification": "2026-11-01",
+              "url": "https://petsymposium.org/cfp27.php",
+              "note": "PoPETs Volume 2027 Issue 2"
+            },
+            {
+              "track": "papers",
+              "deadline": "2026-11-30",
+              "round": "Issue 3",
+              "notification": "2027-02-01",
+              "url": "https://petsymposium.org/cfp27.php",
+              "note": "PoPETs Volume 2027 Issue 3"
+            },
+            {
+              "track": "papers",
+              "deadline": "2027-02-28",
+              "round": "Issue 4",
+              "notification": "2027-05-01",
+              "url": "https://petsymposium.org/cfp27.php",
+              "note": "PoPETs Volume 2027 Issue 4"
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://petsymposium.org/cfp27.php"
+        }
+      ],
+      "note": "Papers published in the self-published journal Proceedings on Privacy Enhancing Technologies (PoPETs)."
+    },
+    {
+      "key": "icics",
+      "acronym": "ICICS",
+      "name": "International Conference on Information and Communications Security",
+      "kind": "conference",
+      "category": "security",
+      "tags": [],
+      "publisher": "springer",
+      "dblp": "https://dblp.org/db/conf/icics/",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "C",
+          "year": 2026,
+          "url": "https://portal.core.edu.au/conf-ranks/1068/",
+          "note": "ICORE2026"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "28th International Conference on Information and Communications Security (ICICS 2026)",
+          "url": "https://sulab-sever.u-aizu.ac.jp/icics2026/",
+          "location": "Fukui, Japan",
+          "start": "2026-10-27",
+          "end": "2026-10-30",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-03-12",
+              "round": "Round 1",
+              "notification": "2026-05-01",
+              "url": "https://sulab-sever.u-aizu.ac.jp/icics2026/",
+              "note": "Extended from 2026-02-28"
+            },
+            {
+              "track": "papers",
+              "deadline": "2026-06-01",
+              "round": "Round 2",
+              "notification": "2026-07-25",
+              "url": "https://sulab-sever.u-aizu.ac.jp/icics2026/",
+              "note": "Extended from 2026-05-23"
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://sulab-sever.u-aizu.ac.jp/icics2026/"
+        },
+        {
+          "year": 2027,
+          "name": "29th International Conference on Information and Communications Security (ICICS 2027)",
+          "url": "https://icics2027.github.io/ICICS-bot/",
+          "location": "Chengdu, China",
+          "start": "2027-10-27",
+          "end": "2027-10-30",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2027-02-28",
+              "round": "Round 1",
+              "url": "https://icics2027.github.io/ICICS-bot/"
+            },
+            {
+              "track": "papers",
+              "deadline": "2027-05-30",
+              "round": "Round 2",
+              "url": "https://icics2027.github.io/ICICS-bot/"
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://icics2027.github.io/ICICS-bot/"
+        }
+      ]
+    },
+    {
+      "key": "ifip-sec",
+      "acronym": "IFIP SEC",
+      "name": "IFIP International Information Security and Privacy Conference",
+      "kind": "conference",
+      "category": "security",
+      "tags": [],
+      "publisher": "ifip",
+      "url": "https://ifipsec.org/",
+      "dblp": "https://dblp.org/db/conf/sec/",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "B",
+          "year": 2026,
+          "url": "https://portal.core.edu.au/conf-ranks/804/",
+          "note": "ICORE2026"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "41st IFIP TC-11 International Conference on Information Security and Privacy Protection (SEC 2026)",
+          "url": "https://ifipsec.org/",
+          "location": "Perth, Australia",
+          "start": "2026-06-09",
+          "end": "2026-06-11",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2025-12-19",
+              "url": "https://ifipsec.org/assets/IFIPSEC-2026-CfP.pdf",
+              "note": "Date from sec-deadlines aggregator"
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://css.korea.ac.kr/deadlines/"
+        },
+        {
+          "year": 2027,
+          "name": "42nd IFIP TC-11 International Conference on Information Security and Privacy Protection (SEC 2027)",
+          "url": "https://ifipsec.org/",
+          "location": "Linköping, Sweden",
+          "start": "2027-06-14",
+          "end": "2027-06-16",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-12-15",
+              "notification": "2027-02-18",
+              "url": "https://ifipsec.org/cfp.html"
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://ifipsec.org/cfp.html"
+        }
+      ]
+    },
+    {
+      "key": "dbsec",
+      "acronym": "DBSec",
+      "name": "IFIP WG 11.3 Conference on Data and Applications Security and Privacy",
+      "kind": "conference",
+      "category": "security",
+      "tags": [],
+      "publisher": "springer",
+      "dblp": "https://dblp.org/db/conf/dbsec/",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "B",
+          "year": 2026,
+          "url": "https://portal.core.edu.au/conf-ranks/2067/",
+          "note": "ICORE2026"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "40th Annual IFIP WG 11.3 Conference on Data and Applications Security and Privacy (DBSec 2026)",
+          "url": "https://dbsec2026.gmu.edu/",
+          "location": "Arlington, VA, USA",
+          "start": "2026-07-28",
+          "end": "2026-07-30",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-04-10",
+              "notification": "2026-05-19",
+              "url": "https://dbsec2026.gmu.edu/call-for-papers/",
+              "note": "Extended from 2026-03-27"
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://dbsec2026.gmu.edu/call-for-papers/"
+        },
+        {
+          "year": 2027,
+          "note": "41st edition announced for July 2027 by WG 11.3; no CFP yet",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2027-03-27",
+              "estimated": true
+            }
+          ],
+          "checked": "2026-10-22"
+        }
+      ]
+    },
+    {
+      "key": "securecomm",
+      "acronym": "SecureComm",
+      "name": "EAI International Conference on Security and Privacy in Communication Networks",
+      "kind": "conference",
+      "category": "security",
+      "tags": [],
+      "publisher": "springer",
+      "url": "https://securecomm.eai-conferences.org/",
+      "dblp": "https://dblp.org/db/conf/securecomm/",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "C",
+          "year": 2026,
+          "url": "https://portal.core.edu.au/conf-ranks/1198/",
+          "note": "ICORE2026"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "22nd EAI International Conference on Security and Privacy in Communication Networks (SecureComm 2026)",
+          "url": "https://securecomm.eai-conferences.org/2026/",
+          "location": "Lancaster, United Kingdom",
+          "start": "2026-07-21",
+          "end": "2026-07-24",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-01-15",
+              "round": "Cycle 1",
+              "notification": "2026-03-01",
+              "timezone": "UTC",
+              "url": "https://securecomm.eai-conferences.org/2026/call-for-papers/"
+            },
+            {
+              "track": "papers",
+              "deadline": "2026-02-15",
+              "round": "Cycle 2",
+              "notification": "2026-04-01",
+              "timezone": "UTC",
+              "url": "https://securecomm.eai-conferences.org/2026/call-for-papers/"
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://securecomm.eai-conferences.org/2026/call-for-papers/"
+        },
+        {
+          "year": 2027,
+          "name": "23rd EAI International Conference on Security and Privacy in Communication Networks (SecureComm 2027)",
+          "url": "https://securecomm.eai-conferences.org/2027/",
+          "location": "Hefei, China",
+          "start": "2027-10-15",
+          "end": "2027-10-18",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2027-02-01",
+              "round": "Cycle 1",
+              "notification": "2027-03-15",
+              "timezone": "UTC",
+              "url": "https://securecomm.eai-conferences.org/2027/"
+            },
+            {
+              "track": "papers",
+              "deadline": "2027-04-15",
+              "round": "Cycle 2",
+              "notification": "2027-06-01",
+              "timezone": "UTC",
+              "url": "https://securecomm.eai-conferences.org/2027/"
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://securecomm.eai-conferences.org/2027/"
+        }
+      ]
+    },
+    {
+      "key": "isi",
+      "acronym": "ISI",
+      "name": "IEEE International Conference on Intelligence and Security Informatics",
+      "kind": "conference",
+      "category": "security",
+      "tags": [],
+      "publisher": "ieee",
+      "dblp": "https://dblp.org/db/conf/isi/",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "C",
+          "year": 2026,
+          "url": "https://portal.core.edu.au/conf-ranks/658/",
+          "note": "ICORE2026"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "2026 IEEE International Conference on Intelligence and Security Informatics (ISI 2026)",
+          "url": "https://ieee-isi.org/2026/",
+          "location": "Cambridge, UK",
+          "start": "2026-08-12",
+          "end": "2026-08-14",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-05-31",
+              "url": "https://ieee-isi.org/2026/contributions/call-for-papers/"
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://ieee-isi.org/2026/contributions/call-for-papers/"
+        },
+        {
+          "year": 2027,
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2027-05-31",
+              "estimated": true
+            }
+          ],
+          "checked": "2026-10-22"
+        }
+      ]
+    },
+    {
+      "key": "host",
+      "acronym": "HOST",
+      "name": "IEEE International Symposium on Hardware Oriented Security and Trust",
+      "kind": "symposium",
+      "category": "security",
+      "tags": [],
+      "publisher": "ieee",
+      "url": "http://www.hostsymposium.org/",
+      "dblp": "https://dblp.org/db/conf/host/",
+      "rankings": [],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "19th IEEE International Symposium on Hardware Oriented Security and Trust (HOST 2026)",
+          "url": "https://host.conferences.computer.org/2026/",
+          "location": "Washington, DC, USA",
+          "start": "2026-05-04",
+          "end": "2026-05-07",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2025-09-01",
+              "round": "Fall",
+              "abstract": "2025-09-01",
+              "notification": "2025-11-28",
+              "timezone": "UTC",
+              "url": "https://host.conferences.computer.org/2026/call-for-papers/",
+              "note": "Extended from 2025-08-26"
+            },
+            {
+              "track": "papers",
+              "deadline": "2025-12-15",
+              "round": "Winter",
+              "abstract": "2025-12-15",
+              "notification": "2026-03-21",
+              "url": "https://host.conferences.computer.org/2026/call-for-papers/",
+              "note": "Extended from 2025-12-08"
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://host.conferences.computer.org/2026/call-for-papers/"
+        },
+        {
+          "year": 2027,
+          "name": "20th IEEE International Symposium on Hardware Oriented Security and Trust (HOST 2027)",
+          "url": "https://host.conferences.computer.org/2027/",
+          "location": "Washington, DC, USA",
+          "start": "2027-05-03",
+          "end": "2027-05-06",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-07-29",
+              "round": "Fall",
+              "abstract": "2026-07-22",
+              "notification": "2026-10-22",
+              "timezone": "UTC",
+              "url": "https://host.conferences.computer.org/2027/call-for-papers/",
+              "note": "Extended from 2026-07-22"
+            },
+            {
+              "track": "papers",
+              "deadline": "2026-11-08",
+              "round": "Winter",
+              "abstract": "2026-11-01",
+              "notification": "2027-02-09",
+              "url": "https://host.conferences.computer.org/2027/call-for-papers/"
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://host.conferences.computer.org/2027/call-for-papers/"
+        }
+      ]
+    },
+    {
+      "key": "ecrts",
+      "acronym": "ECRTS",
+      "name": "Euromicro Conference on Real-Time Systems",
+      "kind": "conference",
+      "category": "rtes",
+      "tags": [],
+      "url": "https://www.ecrts.org/",
+      "dblp": "https://dblp.org/db/conf/ecrts/",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "B",
+          "year": 2026,
+          "url": "https://portal.core.edu.au/conf-ranks/463/",
+          "note": "ICORE2026"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "38th Euromicro Conference on Real-Time Systems",
+          "url": "https://www.ecrts.org/",
+          "location": "Lund, Sweden",
+          "start": "2026-07-07",
+          "end": "2026-07-10",
+          "source": "https://drops.dagstuhl.de/storage/00lipics/lipics-vol375-ecrts2026/LIPIcs.ECRTS.2026.0/LIPIcs.ECRTS.2026.0.pdf",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-02-26",
+              "notification": "2026-04-20",
+              "url": "https://www.ecrts.org/"
+            }
+          ],
+          "checked": "2026-10-22"
+        },
+        {
+          "year": 2027,
+          "name": "39th Euromicro Conference on Real-Time Systems",
+          "url": "https://www.ecrts.org/",
+          "location": "Prague, Czech Republic",
+          "start": "2027-07-13",
+          "end": "2027-07-16",
+          "source": "https://www.ecrts.org/",
+          "note": "Location/dates from ecrts.org (page under construction, deadlines tba); deadline projected from 2026.",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2027-02-26",
+              "estimated": true
+            }
+          ],
+          "checked": "2026-10-22"
+        }
+      ]
+    },
+    {
+      "key": "rtss",
+      "acronym": "RTSS",
+      "name": "IEEE Real-Time Systems Symposium",
+      "kind": "symposium",
+      "category": "rtes",
+      "tags": [],
+      "publisher": "ieee",
+      "url": "https://www.rtss.org/",
+      "dblp": "https://dblp.org/db/conf/rtss/",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "A",
+          "year": 2026,
+          "url": "https://portal.core.edu.au/conf-ranks/1701/",
+          "note": "ICORE2026"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "47th IEEE Real-Time Systems Symposium",
+          "url": "https://2026.rtss.org/",
+          "location": "Yokohama, Japan",
+          "start": "2026-12-09",
+          "end": "2026-12-11",
+          "source": "https://2026.rtss.org/submissions/dates",
+          "note": "Hot Topics Day on 2026-12-08.",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-05-26",
+              "abstract": "2026-05-21",
+              "notification": "2026-07-25",
+              "url": "https://2026.rtss.org/cfp"
+            }
+          ],
+          "checked": "2026-10-22"
+        },
+        {
+          "year": 2027,
+          "name": "48th IEEE Real-Time Systems Symposium",
+          "source": "https://people.cs.kuleuven.be/~dirk.craeynest/ada-belgium/events/27/2712xx-rtss.html",
+          "note": "Planned for early December 2027, host/location not yet announced (TCRTS call for hosting proposals).",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2027-05-26",
+              "abstract": "2027-05-21",
+              "notification": "2027-07-25",
+              "estimated": true
+            }
+          ],
+          "checked": "2026-10-22"
+        }
+      ]
+    },
+    {
+      "key": "rtas",
+      "acronym": "RTAS",
+      "name": "IEEE Real-Time and Embedded Technology and Applications Symposium",
+      "kind": "symposium",
+      "category": "rtes",
+      "tags": [],
+      "publisher": "ieee",
+      "url": "https://www.rtas.org/",
+      "dblp": "https://dblp.org/db/conf/rtas/",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "A",
+          "year": 2026,
+          "url": "https://portal.core.edu.au/conf-ranks/725/",
+          "note": "ICORE2026"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "32nd IEEE Real-Time and Embedded Technology and Applications Symposium",
+          "url": "https://2026.rtas.org/",
+          "location": "Saint-Malo, France",
+          "start": "2026-05-12",
+          "end": "2026-05-14",
+          "source": "https://2026.rtas.org/cfp",
+          "note": "Part of CPS-IoT Week 2026.",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2025-11-13",
+              "notification": "2026-01-29",
+              "url": "https://2026.rtas.org/cfp"
+            }
+          ],
+          "checked": "2026-10-22"
+        },
+        {
+          "year": 2027,
+          "name": "33rd IEEE Real-Time and Embedded Technology and Applications Symposium",
+          "url": "https://2027.rtas.org/",
+          "location": "Boulder, Colorado, USA",
+          "start": "2027-05-17",
+          "end": "2027-05-20",
+          "source": "https://2027.rtas.org/cfp/",
+          "note": "Part of CPS-IoT Week 2027; notification tentative.",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-11-05",
+              "notification": "2027-01-28",
+              "url": "https://2027.rtas.org/cfp/"
+            }
+          ],
+          "checked": "2026-10-22"
+        }
+      ]
+    },
+    {
+      "key": "esweek",
+      "acronym": "ESWEEK",
+      "name": "Embedded Systems Week",
+      "kind": "conference",
+      "category": "rtes",
+      "tags": [],
+      "url": "https://esweek.org/",
+      "rankings": [],
+      "tracked": true,
+      "note": "Umbrella of CASES, CODES+ISSS, EMSOFT (+MEMOCODE); in ICORE2026 CASES/CODES+ISSS/EMSOFT are listed as 'Journal Published', no umbrella rank.",
+      "editions": [
+        {
+          "year": 2026,
+          "name": "Embedded Systems Week 2026",
+          "url": "https://esweek.org/",
+          "location": "Barcelona, Spain",
+          "start": "2026-10-04",
+          "end": "2026-10-09",
+          "source": "http://wikicfp.com/cfp/servlet/event.showcfp?eventid=191609",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-03-30",
+              "abstract": "2026-03-23",
+              "notification": "2026-07-17",
+              "url": "https://esweek.org/",
+              "note": "Journal track shared by CASES, CODES+ISSS and EMSOFT; accepted papers in IEEE TCAD."
+            },
+            {
+              "track": "papers",
+              "deadline": "2026-06-05",
+              "round": "Late-Breaking/WIP",
+              "notification": "2026-07-17",
+              "url": "https://esweek.org/",
+              "note": "Late-breaking & work-in-progress track, published in IEEE ESL."
+            }
+          ],
+          "checked": "2026-10-22"
+        },
+        {
+          "year": 2027,
+          "name": "Embedded Systems Week 2027",
+          "source": "https://sigbed.org/esweek-2027",
+          "note": "Location and dates TBD.",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2027-03-30",
+              "abstract": "2027-03-23",
+              "notification": "2027-07-17",
+              "estimated": true,
+              "note": "Journal track shared by CASES, CODES+ISSS and EMSOFT (projected)."
+            },
+            {
+              "track": "papers",
+              "deadline": "2027-06-05",
+              "round": "Late-Breaking/WIP",
+              "notification": "2027-07-17",
+              "estimated": true,
+              "note": "Late-breaking & work-in-progress track (projected)."
+            }
+          ],
+          "checked": "2026-10-22"
+        }
+      ]
+    },
+    {
+      "key": "safecomp",
+      "acronym": "SAFECOMP",
+      "name": "International Conference on Computer Safety, Reliability and Security",
+      "kind": "conference",
+      "category": "rtes",
+      "tags": [],
+      "publisher": "springer",
+      "url": "https://www.ewics.org/index.php/safecomp/safecomp-conference-series",
+      "dblp": "https://dblp.org/db/conf/safecomp/",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "B",
+          "year": 2026,
+          "url": "https://portal.core.edu.au/conf-ranks/961/",
+          "note": "ICORE2026"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "45th International Conference on Computer Safety, Reliability and Security",
+          "url": "https://safecomp2026.webs.upv.es/",
+          "location": "Valencia, Spain",
+          "start": "2026-09-22",
+          "end": "2026-09-25",
+          "source": "https://safecomp2026.webs.upv.es/important-dates/",
+          "note": "Workshops 2026-09-22, main conference 2026-09-23..25.",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-03-15",
+              "abstract": "2026-03-08",
+              "notification": "2026-05-01",
+              "url": "https://safecomp2026.webs.upv.es/call-for-papers/",
+              "note": "Extended from abstract 2026-02-23 / paper 2026-03-02."
+            }
+          ],
+          "checked": "2026-10-22"
+        },
+        {
+          "year": 2027,
+          "name": "46th International Conference on Computer Safety, Reliability and Security",
+          "url": "https://safecomp2027.hosted.york.ac.uk/",
+          "location": "York, United Kingdom",
+          "start": "2027-09-06",
+          "end": "2027-09-09",
+          "source": "https://easychair.org/cfp/safecomp2027",
+          "note": "Workshops 2027-09-06, main conference 2027-09-07..09.",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2027-03-01",
+              "abstract": "2027-02-22",
+              "notification": "2027-05-16",
+              "url": "https://safecomp2027.hosted.york.ac.uk/call-for-papers/"
+            }
+          ],
+          "checked": "2026-10-22"
+        }
+      ]
+    },
+    {
+      "key": "dac",
+      "acronym": "DAC",
+      "name": "Design Automation Conference",
+      "kind": "conference",
+      "category": "eda",
+      "tags": [],
+      "url": "https://www.dac.com/",
+      "dblp": "https://dblp.org/db/conf/dac/",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "A*",
+          "year": 2026,
+          "url": "https://portal.core.edu.au/conf-ranks/1996/",
+          "note": "ICORE2026"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "63rd Design Automation Conference",
+          "url": "https://dac.com/2026",
+          "location": "Long Beach, California, USA",
+          "start": "2026-07-26",
+          "end": "2026-07-29",
+          "source": "https://dac.com/2026/research-manuscript-submissions",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2025-11-19",
+              "abstract": "2025-11-11",
+              "timezone": "America/Los_Angeles",
+              "url": "https://dac.com/2026/research-manuscript-submissions",
+              "note": "Research manuscripts; 17:00 PST; extended from 2025-11-18."
+            }
+          ],
+          "checked": "2026-10-22"
+        },
+        {
+          "year": 2027,
+          "name": "64th Design Automation Conference",
+          "url": "https://dac.com/2027",
+          "location": "San Jose, California, USA",
+          "start": "2027-07-11",
+          "end": "2027-07-14",
+          "source": "https://dac.com/2027/program/research-manuscript-submissions",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-11-18",
+              "abstract": "2026-11-11",
+              "timezone": "America/Los_Angeles",
+              "url": "https://dac.com/2027/program/research-manuscript-submissions",
+              "note": "Research manuscripts; 17:00 PT."
+            }
+          ],
+          "checked": "2026-10-22"
+        }
+      ]
+    },
+    {
+      "key": "date",
+      "acronym": "DATE",
+      "name": "Design, Automation and Test in Europe",
+      "kind": "conference",
+      "category": "eda",
+      "tags": [],
+      "publisher": "ieee",
+      "url": "https://www.date-conference.com/",
+      "dblp": "https://dblp.org/db/conf/date/",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "A",
+          "year": 2026,
+          "url": "https://portal.core.edu.au/conf-ranks/421/",
+          "note": "ICORE2026"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2027,
+          "name": "30th Design, Automation and Test in Europe Conference",
+          "url": "https://www.date-conference.com/",
+          "location": "Dresden, Germany",
+          "start": "2027-03-22",
+          "end": "2027-03-24",
+          "source": "https://www.date-conference.com/call-for-papers",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-09-20",
+              "abstract": "2026-09-13",
+              "notification": "2026-11-23",
+              "url": "https://www.date-conference.com/call-for-papers",
+              "note": "Research papers, D/A/T/E tracks."
+            },
+            {
+              "track": "papers",
+              "deadline": "2026-11-29",
+              "round": "Late Breaking Results",
+              "notification": "2027-01-13",
+              "url": "https://www.date-conference.com/call-for-papers"
+            }
+          ],
+          "checked": "2026-10-22"
+        },
+        {
+          "year": 2028,
+          "name": "31st Design, Automation and Test in Europe Conference",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2027-09-20",
+              "abstract": "2027-09-13",
+              "notification": "2027-11-23",
+              "estimated": true,
+              "note": "Research papers (projected)."
+            },
+            {
+              "track": "papers",
+              "deadline": "2027-11-29",
+              "round": "Late Breaking Results",
+              "notification": "2028-01-13",
+              "estimated": true
+            }
+          ],
+          "checked": "2026-10-22"
+        }
+      ]
+    },
+    {
+      "key": "iccad",
+      "acronym": "ICCAD",
+      "name": "IEEE/ACM International Conference on Computer-Aided Design",
+      "kind": "conference",
+      "category": "eda",
+      "tags": [],
+      "url": "https://iccad.com/",
+      "dblp": "https://dblp.org/db/conf/iccad/",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "A",
+          "year": 2026,
+          "url": "https://portal.core.edu.au/conf-ranks/783/",
+          "note": "ICORE2026"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "IEEE/ACM International Conference on Computer-Aided Design 2026",
+          "url": "https://iccad.com/2026",
+          "location": "San Jose, California, USA",
+          "start": "2026-11-08",
+          "end": "2026-11-12",
+          "source": "https://iccad.com/2026/authors/call-for-papers",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-04-14",
+              "abstract": "2026-04-07",
+              "notification": "2026-07-11",
+              "url": "https://iccad.com/2026/authors/call-for-papers"
+            }
+          ],
+          "checked": "2026-10-22"
+        },
+        {
+          "year": 2027,
+          "name": "IEEE/ACM International Conference on Computer-Aided Design 2027",
+          "note": "Not yet announced; projected from 2026.",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2027-04-14",
+              "abstract": "2027-04-07",
+              "notification": "2027-07-11",
+              "estimated": true
+            }
+          ],
+          "checked": "2026-10-22"
+        }
+      ]
+    },
+    {
+      "key": "nocs",
+      "acronym": "NOCS",
+      "name": "IEEE/ACM International Symposium on Networks-on-Chip",
+      "kind": "symposium",
+      "category": "eda",
+      "tags": [],
+      "dblp": "https://dblp.org/db/conf/nocs/",
+      "rankings": [],
+      "tracked": true,
+      "note": "Not found in ICORE2026/CORE2023 search. No 2026 edition found: ESWEEK 2026 lists only CASES, CODES, EMSOFT, MEMOCODE.",
+      "editions": [
+        {
+          "year": 2025,
+          "name": "19th IEEE/ACM International Symposium on Networks-on-Chip",
+          "location": "Taipei, Taiwan",
+          "start": "2025-09-28",
+          "end": "2025-10-03",
+          "source": "https://2025.esweek.org/wp-content/uploads/2025/02/ESWeek2025_CFP.pdf",
+          "note": "Co-located with ESWEEK 2025 (dates are ESWEEK's); NOCS-specific deadlines not verified.",
+          "submissions": [],
+          "checked": "2026-10-22"
+        }
+      ]
+    }
+  ]
+}

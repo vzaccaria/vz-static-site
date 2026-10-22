@@ -1,0 +1,164 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.vittoriozaccaria.net/schemas/pubvenues-v1.schema.json",
+  "title": "Publication venues and submission deadlines",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "updated", "categories", "venues"],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "updated": { "$ref": "#/$defs/date" },
+    "categories": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/category" }
+    },
+    "venues": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/venue" }
+    }
+  },
+  "$defs": {
+    "date": {
+      "description": "Calendar date. Submission dates are read as end of day in the submission timezone (default AoE).",
+      "type": "string",
+      "format": "date",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+    },
+    "key": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]*$"
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https?://"
+    },
+    "text": {
+      "type": "string",
+      "minLength": 1
+    },
+    "category": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "label"],
+      "properties": {
+        "id": { "$ref": "#/$defs/key" },
+        "label": { "$ref": "#/$defs/text" }
+      }
+    },
+    "ranking": {
+      "description": "Free-form ranking entry. The page understands source \"CORE\" (value A*, A, B, C, ...) and source \"h5\" (Google Scholar h5-index, numeric value).",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source", "value"],
+      "properties": {
+        "source": { "$ref": "#/$defs/text" },
+        "value": {
+          "oneOf": [{ "$ref": "#/$defs/text" }, { "type": "number" }]
+        },
+        "year": { "type": "integer", "minimum": 1990, "maximum": 2100 },
+        "url": { "$ref": "#/$defs/url" },
+        "note": { "$ref": "#/$defs/text" }
+      }
+    },
+    "submission": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["track", "deadline"],
+      "properties": {
+        "track": {
+          "enum": ["papers", "posters", "artifacts", "workshops"]
+        },
+        "round": {
+          "description": "Label distinguishing multiple rounds of the same track (e.g. Spring, Fall, Cycle 2).",
+          "$ref": "#/$defs/text"
+        },
+        "abstract": { "$ref": "#/$defs/date" },
+        "deadline": { "$ref": "#/$defs/date" },
+        "notification": { "$ref": "#/$defs/date" },
+        "timezone": {
+          "description": "AoE (default), UTC, UTC+HH:MM / UTC-HH:MM, or an IANA timezone name.",
+          "$ref": "#/$defs/text"
+        },
+        "estimated": {
+          "description": "True when dates are projected from a previous edition and not yet announced.",
+          "type": "boolean"
+        },
+        "url": { "$ref": "#/$defs/url" },
+        "note": { "$ref": "#/$defs/text" }
+      }
+    },
+    "edition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["year", "submissions"],
+      "properties": {
+        "year": { "type": "integer", "minimum": 1990, "maximum": 2100 },
+        "name": {
+          "description": "Edition-specific full name, e.g. \"32nd ACM Symposium on Operating Systems Principles\".",
+          "$ref": "#/$defs/text"
+        },
+        "url": { "$ref": "#/$defs/url" },
+        "program": { "$ref": "#/$defs/url" },
+        "location": { "$ref": "#/$defs/text" },
+        "start": { "$ref": "#/$defs/date" },
+        "end": { "$ref": "#/$defs/date" },
+        "submissions": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/submission" }
+        },
+        "checked": {
+          "description": "Date on which this edition was last verified against its source.",
+          "$ref": "#/$defs/date"
+        },
+        "source": { "$ref": "#/$defs/url" },
+        "note": { "$ref": "#/$defs/text" }
+      }
+    },
+    "venue": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "key",
+        "acronym",
+        "name",
+        "kind",
+        "category",
+        "tags",
+        "rankings",
+        "tracked",
+        "editions"
+      ],
+      "properties": {
+        "key": { "$ref": "#/$defs/key" },
+        "acronym": { "$ref": "#/$defs/text" },
+        "name": { "$ref": "#/$defs/text" },
+        "kind": { "enum": ["conference", "symposium", "workshop"] },
+        "category": { "$ref": "#/$defs/key" },
+        "tags": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "$ref": "#/$defs/key" }
+        },
+        "publisher": { "$ref": "#/$defs/text" },
+        "url": { "$ref": "#/$defs/url" },
+        "proceedings": { "$ref": "#/$defs/url" },
+        "dblp": { "$ref": "#/$defs/url" },
+        "rankings": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/ranking" }
+        },
+        "tracked": {
+          "description": "False keeps the venue in the data but lists it under \"No longer tracked\".",
+          "type": "boolean"
+        },
+        "editions": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/edition" }
+        },
+        "note": { "$ref": "#/$defs/text" }
+      }
+    }
+  }
+}
