@@ -1929,6 +1929,16 @@ dd {
   color: var(--ds-colors-fg2);
 }
 
+/* inline-block keeps the past-deadline strike-through off the label */
+.pv-sub__label {
+  display: inline-block;
+  color: var(--ds-colors-fg3);
+  font-size: var(--ds-sizes-print-xxs);
+  font-weight: var(--ds-weight-regular);
+  letter-spacing: var(--ds-tracking-label);
+  text-transform: uppercase;
+}
+
 .pv-sub__countdown {
   background: var(--pv-color, var(--ds-colors-fg));
   padding: 0 0.3rem;

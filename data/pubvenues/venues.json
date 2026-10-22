@@ -5688,6 +5688,1473 @@
           "checked": "2026-10-22"
         }
       ]
+    },
+    {
+      "key": "aspdac",
+      "acronym": "ASP-DAC",
+      "name": "Asia and South Pacific Design Automation Conference",
+      "kind": "conference",
+      "category": "eda",
+      "tags": [],
+      "publisher": "ieee",
+      "url": "https://www.aspdac.com/",
+      "dblp": "https://dblp.org/db/conf/aspdac/",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "B",
+          "year": 2026,
+          "url": "https://portal.core.edu.au/conf-ranks/162/",
+          "note": "ICORE2026"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "31st Asia and South Pacific Design Automation Conference",
+          "url": "https://www.aspdac.com/aspdac2026/",
+          "location": "Hong Kong Disneyland Hotel, Hong Kong, China",
+          "start": "2026-01-19",
+          "end": "2026-01-22",
+          "submissions": [
+            {
+              "track": "papers",
+              "abstract": "2025-07-04",
+              "deadline": "2025-07-11",
+              "notification": "2025-09-05",
+              "url": "https://www.aspdac.com/aspdac2026/cfp/",
+              "note": "Abstract and full paper submissions close at 17:00 AoE."
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://www.aspdac.com/aspdac2026/cfp/"
+        },
+        {
+          "year": 2027,
+          "name": "32nd Asia and South Pacific Design Automation Conference",
+          "url": "https://www.aspdac.com/aspdac2027/",
+          "location": "Hitotsubashi Hall, National Center of Sciences Building, Tokyo, Japan",
+          "start": "2027-01-25",
+          "end": "2027-01-28",
+          "submissions": [
+            {
+              "track": "papers",
+              "abstract": "2026-07-11",
+              "deadline": "2026-07-18",
+              "notification": "2026-09-04",
+              "url": "https://www.aspdac.com/aspdac2027/cfp/",
+              "note": "Abstract and full paper submissions close at 17:00 AoE."
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://www.aspdac.com/aspdac2027/cfp/"
+        },
+        {
+          "year": 2028,
+          "name": "Asia and South Pacific Design Automation Conference 2028",
+          "submissions": [
+            {
+              "track": "papers",
+              "abstract": "2027-07-11",
+              "deadline": "2027-07-18",
+              "notification": "2027-09-04",
+              "estimated": true,
+              "note": "CFP not announced; projected by one year from ASP-DAC 2027, whose abstract and paper cutoffs were 17:00 AoE."
+            }
+          ],
+          "note": "Unannounced edition; submission dates projected from the official ASP-DAC 2027 CFP."
+        }
+      ]
+    },
+    {
+      "key": "iccd",
+      "acronym": "ICCD",
+      "name": "IEEE International Conference on Computer Design",
+      "kind": "conference",
+      "category": "eda",
+      "tags": [],
+      "publisher": "ieee",
+      "url": "https://www.iccd-conf.com/",
+      "dblp": "https://dblp.org/db/conf/iccd/",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "C",
+          "year": 2026,
+          "url": "https://portal.core.edu.au/conf-ranks/2320/",
+          "note": "ICORE2026"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "44th IEEE International Conference on Computer Design",
+          "url": "https://www.iccd-conf.com/2026/home.html",
+          "location": "Hong Kong SAR, China",
+          "start": "2026-11-16",
+          "end": "2026-11-18",
+          "submissions": [
+            {
+              "track": "papers",
+              "abstract": "2026-06-03",
+              "deadline": "2026-06-10",
+              "notification": "2026-08-20",
+              "url": "https://www.iccd-conf.com/2026/Call_for_papers.html",
+              "note": "Extended from 2026-05-22; abstract registration extended from 2026-05-15. Strict final extension; 23:59 AoE."
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://www.iccd-conf.com/2026/Call_for_papers.html"
+        },
+        {
+          "year": 2027,
+          "name": "IEEE International Conference on Computer Design 2027",
+          "submissions": [
+            {
+              "track": "papers",
+              "abstract": "2027-06-03",
+              "deadline": "2027-06-10",
+              "notification": "2027-08-20",
+              "estimated": true,
+              "note": "CFP not announced; projected by one year from the final extended ICCD 2026 submission dates."
+            }
+          ],
+          "note": "Unannounced edition; submission dates projected from the official ICCD 2026 CFP."
+        }
+      ]
+    },
+    {
+      "key": "ispd",
+      "acronym": "ISPD",
+      "name": "ACM International Symposium on Physical Design",
+      "kind": "symposium",
+      "category": "eda",
+      "tags": [],
+      "publisher": "acm",
+      "url": "https://ispd.cc/",
+      "dblp": "https://dblp.org/db/conf/ispd/",
+      "rankings": [],
+      "tracked": true,
+      "note": "No ICORE2026 listing found. The portal has an older CORE2018 C entry under acronym PHYSDES; this is not reported as a 2026 ranking.",
+      "editions": [
+        {
+          "year": 2027,
+          "name": "36th ACM International Symposium on Physical Design",
+          "url": "https://ispd.cc/ispd2027/index.php",
+          "location": "Howard Civil Service International House, Taipei, Taiwan",
+          "start": "2027-03-31",
+          "end": "2027-04-02",
+          "submissions": [
+            {
+              "track": "papers",
+              "abstract": "2026-09-21",
+              "deadline": "2026-09-28",
+              "notification": "2026-11-05",
+              "url": "https://ispd.cc/ispd2027/index.php?page=callforpapers"
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://ispd.cc/ispd2027/index.php?page=callforpapers",
+          "note": "Conference dates follow the official website banner (March 31-April 2). The CFP table and PDF instead say March 30-April 2; the start date remains inconsistent across official material."
+        },
+        {
+          "year": 2028,
+          "name": "ACM International Symposium on Physical Design 2028",
+          "submissions": [
+            {
+              "track": "papers",
+              "abstract": "2027-09-21",
+              "deadline": "2027-09-28",
+              "notification": "2027-11-05",
+              "estimated": true,
+              "note": "CFP not announced; projected by one year from ISPD 2027."
+            }
+          ],
+          "note": "Unannounced edition; submission dates projected from the official ISPD 2027 CFP."
+        }
+      ]
+    },
+    {
+      "key": "isqed",
+      "acronym": "ISQED",
+      "name": "International Symposium on Quality Electronic Design",
+      "kind": "symposium",
+      "category": "eda",
+      "tags": [],
+      "publisher": "ieee",
+      "url": "https://www.isqed.org/",
+      "dblp": "https://dblp.org/db/conf/isqed/",
+      "rankings": [],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2027,
+          "name": "28th International Symposium on Quality Electronic Design",
+          "url": "https://www.isqed.org/",
+          "location": "San Francisco, California, USA (hybrid)",
+          "start": "2027-04-14",
+          "end": "2027-04-16",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-10-25",
+              "notification": "2027-01-22",
+              "timezone": "America/Los_Angeles",
+              "url": "https://www.isqed.org/English/Conference/Call_for_Papers.html",
+              "note": "Extended from 2026-09-17 (original revision-0 CFP). Regular and work-in-progress papers; midnight US Pacific Time."
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://www.isqed.org/English/Conference/Call_for_Papers.html",
+          "note": "Conference dates and hybrid location are stated in the official revision-2 CFP PDF linked from the CFP page."
+        }
+      ]
+    },
+    {
+      "key": "mlcad",
+      "acronym": "MLCAD",
+      "name": "ACM/IEEE International Symposium on Machine Learning for CAD",
+      "kind": "symposium",
+      "category": "eda",
+      "tags": [],
+      "publisher": "acm",
+      "url": "https://mlcad.org/",
+      "dblp": "https://dblp.org/db/conf/mlcad/",
+      "rankings": [],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "8th ACM/IEEE International Symposium on Machine Learning for CAD",
+          "url": "https://mlcad.org/symposium/2026/",
+          "location": "Parnas Hotel Jeju, Seogwipo, Jeju, South Korea",
+          "start": "2026-09-07",
+          "end": "2026-09-09",
+          "submissions": [
+            {
+              "track": "papers",
+              "abstract": "2026-05-29",
+              "deadline": "2026-05-29",
+              "notification": "2026-07-12",
+              "url": "https://mlcad.org/symposium/2026/call-for-contribution/",
+              "note": "Extended from 2026-05-23; abstract extended from 2026-05-16. Notification follows the updated homepage (July 12), superseding July 10 in the linked May CFP PDF."
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://mlcad.org/symposium/2026/"
+        },
+        {
+          "year": 2027,
+          "name": "ACM/IEEE International Symposium on Machine Learning for CAD 2027",
+          "submissions": [
+            {
+              "track": "papers",
+              "abstract": "2027-05-29",
+              "deadline": "2027-05-29",
+              "notification": "2027-07-12",
+              "estimated": true,
+              "note": "CFP not announced; projected by one year from the final extended MLCAD 2026 submission dates and updated notification date."
+            }
+          ],
+          "note": "Unannounced edition; submission dates projected from the official MLCAD 2026 homepage."
+        }
+      ]
+    },
+    {
+      "key": "islped",
+      "acronym": "ISLPED",
+      "name": "ACM/IEEE International Symposium on Low Power Electronics and Design",
+      "kind": "symposium",
+      "category": "eda",
+      "tags": [],
+      "publisher": "acm",
+      "url": "https://www.islped.org/",
+      "dblp": "https://dblp.org/db/conf/islped/",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "A",
+          "year": 2026,
+          "url": "https://portal.core.edu.au/conf-ranks/2331/",
+          "note": "ICORE2026"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "31st ACM/IEEE International Symposium on Low Power Electronics and Design",
+          "url": "https://www.islped.org/2026/",
+          "location": "Northwestern University, Evanston, Illinois, USA",
+          "start": "2026-08-05",
+          "end": "2026-08-07",
+          "submissions": [
+            {
+              "track": "papers",
+              "abstract": "2026-03-11",
+              "deadline": "2026-03-18",
+              "notification": "2026-05-18",
+              "url": "https://www.islped.org/2026/call-for-papers/",
+              "note": "Extended from 2026-03-16; abstract extended from 2026-03-09. Regular and industrial-design papers share the deadline. Updated homepage explicitly gives 23:59 AoE; older linked CFP PDF says PST."
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://www.islped.org/2026/"
+        },
+        {
+          "year": 2027,
+          "name": "ACM/IEEE International Symposium on Low Power Electronics and Design 2027",
+          "submissions": [
+            {
+              "track": "papers",
+              "abstract": "2027-03-11",
+              "deadline": "2027-03-18",
+              "notification": "2027-05-18",
+              "estimated": true,
+              "note": "CFP not announced; projected by one year from the final extended ISLPED 2026 submission dates."
+            }
+          ],
+          "note": "Unannounced edition; submission dates projected from the official ISLPED 2026 homepage."
+        }
+      ]
+    },
+    {
+      "key": "glsvlsi",
+      "acronym": "GLSVLSI",
+      "name": "ACM Great Lakes Symposium on VLSI",
+      "kind": "symposium",
+      "category": "eda",
+      "tags": [],
+      "publisher": "acm",
+      "url": "https://glsvlsi.org/",
+      "dblp": "https://dblp.org/db/conf/glvlsi/",
+      "rankings": [],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "36th Great Lakes Symposium on VLSI",
+          "url": "https://glsvlsi.org/",
+          "location": "Canandaigua, New York, USA",
+          "start": "2026-06-22",
+          "end": "2026-06-24",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-03-23",
+              "notification": "2026-04-30",
+              "timezone": "UTC-05:00",
+              "url": "https://glsvlsi.org/GLSVLSI2026-CFP-update-final-Mar-17-2026.pdf",
+              "note": "Extended from 2026-03-16; 23:59 EST as stated in the CFP."
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://glsvlsi.org/GLSVLSI2026-CFP-update-final-Mar-17-2026.pdf"
+        },
+        {
+          "year": 2027,
+          "name": "Great Lakes Symposium on VLSI 2027",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2027-03-23",
+              "notification": "2027-04-30",
+              "timezone": "UTC-05:00",
+              "estimated": true,
+              "note": "Projected from the 2026 regular-paper dates (+1 year); 2027 CFP not available on the official series site."
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://glsvlsi.org/",
+          "note": "Submission dates are estimates; event dates and location have not been verified."
+        }
+      ]
+    },
+    {
+      "key": "isvlsi",
+      "acronym": "ISVLSI",
+      "name": "IEEE Computer Society Annual Symposium on VLSI",
+      "kind": "symposium",
+      "category": "eda",
+      "tags": [],
+      "publisher": "ieee",
+      "url": "https://ieee-isvlsi.org/",
+      "dblp": "https://dblp.org/db/conf/isvlsi/",
+      "rankings": [],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "IEEE Computer Society Annual Symposium on VLSI 2026",
+          "url": "https://ieee-isvlsi.github.io/ISVLSI_2026_Website/",
+          "location": "Kolkata, India",
+          "start": "2026-07-07",
+          "end": "2026-07-10",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-03-15",
+              "notification": "2026-05-03",
+              "timezone": "Asia/Kolkata",
+              "url": "https://ieee-isvlsi.github.io/ISVLSI_2026_Website/ieee-isvlsi/index.html",
+              "note": "Extended from 2026-03-01; 23:59 IST. Notification moved from 2026-04-30 to 2026-05-03."
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://ieee-isvlsi.github.io/ISVLSI_2026_Website/ieee-isvlsi/index.html"
+        },
+        {
+          "year": 2027,
+          "name": "IEEE Computer Society Annual Symposium on VLSI 2027",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2027-03-15",
+              "notification": "2027-05-03",
+              "timezone": "Asia/Kolkata",
+              "estimated": true,
+              "note": "Projected from the 2026 regular-paper dates (+1 year); 2027 CFP not found."
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://ieee-isvlsi.github.io/ISVLSI_2026_Website/ieee-isvlsi/index.html",
+          "note": "Submission dates are estimates; event dates and location have not been announced in the sources checked."
+        }
+      ]
+    },
+    {
+      "key": "vlsi-soc",
+      "acronym": "VLSI-SoC",
+      "name": "IFIP/IEEE International Conference on Very Large Scale Integration",
+      "kind": "conference",
+      "category": "eda",
+      "tags": [],
+      "publisher": "ieee",
+      "url": "https://vlsi-soc.com/",
+      "dblp": "https://dblp.org/db/conf/vlsi/",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "C",
+          "year": 2026,
+          "url": "https://portal.core.edu.au/conf-ranks/2356/",
+          "note": "ICORE2026"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "34th IFIP/IEEE International Conference on Very Large Scale Integration SoC",
+          "url": "https://vlsi-soc.com/",
+          "location": "Limassol, Cyprus",
+          "start": "2026-10-11",
+          "end": "2026-10-14",
+          "submissions": [
+            {
+              "track": "papers",
+              "abstract": "2026-05-04",
+              "deadline": "2026-05-11",
+              "notification": "2026-06-29",
+              "url": "https://vlsi-soc.com/submission.html"
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://vlsi-soc.com/submission.html"
+        },
+        {
+          "year": 2027,
+          "name": "IFIP/IEEE International Conference on Very Large Scale Integration SoC 2027",
+          "submissions": [
+            {
+              "track": "papers",
+              "abstract": "2027-05-04",
+              "deadline": "2027-05-11",
+              "notification": "2027-06-29",
+              "estimated": true,
+              "note": "Projected from the 2026 regular-paper dates (+1 year); 2027 CFP not found."
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://vlsi-soc.com/submission.html",
+          "note": "Submission dates are estimates; event dates and location have not been announced in the sources checked."
+        }
+      ]
+    },
+    {
+      "key": "socc-ieee",
+      "acronym": "SOCC",
+      "name": "IEEE International System-on-Chip Conference",
+      "kind": "conference",
+      "category": "eda",
+      "tags": [],
+      "publisher": "ieee",
+      "url": "https://ieee-socc.org/",
+      "dblp": "https://dblp.org/db/conf/socc/",
+      "rankings": [],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "39th IEEE International System-on-Chip Conference",
+          "url": "https://ieee-socc.org/",
+          "location": "Heidelberg, Germany",
+          "start": "2026-09-30",
+          "end": "2026-10-02",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-05-04",
+              "notification": "2026-06-15",
+              "url": "https://ieee-cas.org/event/conference/2026-39th-ieee-international-system-chip-conference",
+              "note": "Extended from 2026-04-01. The current IEEE CASS event record gives May 4; the linked CFP PDF retains the original April 1 deadline. Notification is from the linked official CFP."
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://ieee-cas.org/event/conference/2026-39th-ieee-international-system-chip-conference"
+        },
+        {
+          "year": 2027,
+          "name": "IEEE International System-on-Chip Conference 2027",
+          "url": "https://ieee-socc.org/",
+          "location": "Las Vegas, Nevada, USA",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2027-05-04",
+              "notification": "2027-06-15",
+              "estimated": true,
+              "note": "Projected from the 2026 regular-paper dates (+1 year); 2027 CFP not yet published."
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://ieee-socc.org/",
+          "note": "Official homepage announces Las Vegas in September 2027, without exact event dates. Submission dates are estimates."
+        }
+      ]
+    },
+    {
+      "key": "dsd",
+      "acronym": "DSD",
+      "name": "Euromicro Conference on Digital System Design",
+      "kind": "conference",
+      "category": "eda",
+      "tags": [],
+      "publisher": "ieee",
+      "url": "https://dsd-seaa.com/",
+      "dblp": "https://dblp.org/db/conf/dsd/",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "C",
+          "year": 2026,
+          "url": "https://portal.core.edu.au/conf-ranks/2334/",
+          "note": "ICORE2026"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "29th Euromicro Conference Series on Digital System Design",
+          "url": "https://dsd-seaa.com/dsd2026/",
+          "location": "Kraków, Poland",
+          "start": "2026-09-02",
+          "end": "2026-09-04",
+          "submissions": [
+            {
+              "track": "papers",
+              "abstract": "2026-05-25",
+              "deadline": "2026-06-01",
+              "notification": "2026-06-29",
+              "url": "https://dsd-seaa.com/dsd2026/",
+              "note": "Extended from 2026-05-11; final extension separates abstract registration on May 25 from full papers on June 1."
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://dsd-seaa.com/dsd2026/"
+        },
+        {
+          "year": 2027,
+          "name": "Euromicro Conference on Digital System Design 2027",
+          "submissions": [
+            {
+              "track": "papers",
+              "abstract": "2027-05-25",
+              "deadline": "2027-06-01",
+              "notification": "2027-06-29",
+              "estimated": true,
+              "note": "Projected from the 2026 regular-paper dates (+1 year); 2027 CFP not found."
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://dsd-seaa.com/dsd2026/",
+          "note": "Submission dates are estimates; event dates and location have not been announced in the sources checked."
+        }
+      ]
+    },
+    {
+      "key": "samos",
+      "acronym": "SAMOS",
+      "name": "International Conference on Embedded Computer Systems: Architectures, Modeling and Simulation",
+      "kind": "conference",
+      "category": "eda",
+      "tags": [],
+      "publisher": "springer",
+      "url": "https://samos-conference.com/wp/",
+      "dblp": "https://dblp.org/db/conf/samos/",
+      "rankings": [],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2027,
+          "name": "26th International Conference on Embedded Computer Systems: Architectures, Modeling and Simulation",
+          "url": "https://samos-conference.com/wp/",
+          "location": "Samos Island, Greece",
+          "start": "2027-07-03",
+          "end": "2027-07-08",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2027-02-28",
+              "estimated": true,
+              "note": "Officially announced as February 2027; exact date TBA."
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://samos-conference.com/wp/",
+          "note": "The official homepage cancels the July 2026 edition and announces the return in July 2027. Event dates are verified; the February submission deadline is represented by an estimated month-end date. The CFP page still contains superseded 2026 dates."
+        }
+      ]
+    },
+    {
+      "key": "asap",
+      "acronym": "ASAP",
+      "name": "IEEE International Conference on Application-specific Systems, Architectures and Processors",
+      "kind": "conference",
+      "category": "eda",
+      "tags": [],
+      "publisher": "ieee",
+      "url": "https://asap-conf.org/",
+      "dblp": "https://dblp.org/db/conf/asap/",
+      "rankings": [],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "37th IEEE International Conference on Application-specific Systems, Architectures and Processors",
+          "url": "https://2026.asap-conf.org/",
+          "location": "London, United Kingdom",
+          "start": "2026-09-02",
+          "end": "2026-09-04",
+          "submissions": [
+            {
+              "track": "papers",
+              "abstract": "2026-04-03",
+              "deadline": "2026-04-10",
+              "notification": "2026-06-08",
+              "url": "https://2026.asap-conf.org/",
+              "note": "Extended from 2026-04-03; abstract registration extended from 2026-03-27 to 2026-04-03; notification moved from 2026-06-01 to 2026-06-08."
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://2026.asap-conf.org/"
+        },
+        {
+          "year": 2027,
+          "name": "IEEE International Conference on Application-specific Systems, Architectures and Processors 2027",
+          "submissions": [
+            {
+              "track": "papers",
+              "abstract": "2027-04-03",
+              "deadline": "2027-04-10",
+              "notification": "2027-06-08",
+              "estimated": true,
+              "note": "Projected from the 2026 regular-paper dates (+1 year); 2027 CFP not found."
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://2026.asap-conf.org/",
+          "note": "Submission dates are estimates; event dates and location have not been announced in the sources checked."
+        }
+      ]
+    },
+    {
+      "key": "vts",
+      "acronym": "VTS",
+      "name": "IEEE VLSI Test Symposium",
+      "kind": "symposium",
+      "category": "eda",
+      "tags": [],
+      "publisher": "ieee",
+      "url": "https://tttc-vts.org/",
+      "dblp": "https://dblp.org/db/conf/vts/",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "National/Regional",
+          "year": 2026,
+          "url": "https://portal.core.edu.au/conf-ranks/2315/",
+          "note": "ICORE2026"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "44th IEEE VLSI Test Symposium",
+          "url": "https://tttc-vts.org/public_html/new/2026/index.html",
+          "location": "Napa, California, USA",
+          "start": "2026-04-27",
+          "end": "2026-04-29",
+          "submissions": [
+            {
+              "track": "papers",
+              "round": "Regular papers",
+              "abstract": "2025-12-05",
+              "deadline": "2025-12-05",
+              "notification": "2026-01-31",
+              "url": "https://tttc-vts.org/public_html/new/2026/call-for-papers/index.html",
+              "note": "Extended from 2025-11-10 (intermediate deadline 2025-11-24); abstract extended from 2025-11-03 (intermediate 2025-11-17). Final firm dates are in the Key Dates sidebar; the body retains superseded dates."
+            },
+            {
+              "track": "papers",
+              "round": "Late-breaking results",
+              "deadline": "2026-02-17",
+              "notification": "2026-03-06",
+              "url": "https://tttc-vts.org/public_html/new/2026/call-for-papers/index.html",
+              "note": "Extended from 2026-02-07; three-page peer-reviewed papers published in the proceedings."
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://tttc-vts.org/public_html/new/2026/call-for-papers/index.html"
+        },
+        {
+          "year": 2027,
+          "name": "45th IEEE VLSI Test Symposium",
+          "url": "https://tttc-vts.org/public_html/new/2027/",
+          "location": "Napa, California, USA",
+          "start": "2027-04-26",
+          "end": "2027-04-28",
+          "submissions": [
+            {
+              "track": "papers",
+              "round": "Regular papers",
+              "abstract": "2026-11-13",
+              "deadline": "2026-11-20",
+              "notification": "2027-01-29",
+              "url": "https://tttc-vts.org/public_html/new/2027/call-for-papers/"
+            },
+            {
+              "track": "papers",
+              "round": "Late-breaking results",
+              "deadline": "2027-02-05",
+              "notification": "2027-02-26",
+              "url": "https://tttc-vts.org/public_html/new/2027/call-for-papers/",
+              "note": "Three-page peer-reviewed papers published in the proceedings."
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://tttc-vts.org/public_html/new/2027/call-for-papers/"
+        }
+      ]
+    },
+    {
+      "key": "itc",
+      "acronym": "ITC",
+      "name": "IEEE International Test Conference",
+      "kind": "conference",
+      "category": "eda",
+      "tags": [],
+      "publisher": "ieee",
+      "url": "https://www.itctestweek.org/",
+      "dblp": "https://dblp.org/db/conf/itc/",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "A",
+          "year": 2026,
+          "url": "https://portal.core.edu.au/conf-ranks/710/",
+          "note": "ICORE2026"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "IEEE International Test Conference 2026",
+          "url": "https://www.itctestweek.org/",
+          "location": "San Antonio, Texas, USA",
+          "start": "2026-10-11",
+          "end": "2026-10-16",
+          "submissions": [
+            {
+              "track": "papers",
+              "abstract": "2026-03-20",
+              "deadline": "2026-04-24",
+              "notification": "2026-06-19",
+              "url": "https://www.itctestweek.org/wp-content/uploads/2025/12/ITC_2026_CFP.pdf"
+            },
+            {
+              "track": "posters",
+              "deadline": "2026-07-10",
+              "notification": "2026-07-24",
+              "url": "https://www.itctestweek.org/wp-content/uploads/2025/12/ITC_2026_CFP.pdf"
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://www.itctestweek.org/wp-content/uploads/2025/12/ITC_2026_CFP.pdf"
+        },
+        {
+          "year": 2027,
+          "name": "IEEE International Test Conference 2027",
+          "url": "https://www.itctestweek.org/",
+          "location": "San Antonio, Texas, USA",
+          "start": "2027-10-10",
+          "end": "2027-10-15",
+          "submissions": [
+            {
+              "track": "papers",
+              "abstract": "2027-03-05",
+              "deadline": "2027-04-09",
+              "notification": "2027-06-01",
+              "url": "https://www.itctestweek.org/wp-content/uploads/2026/10/ITC_2027_CFP_v2026Oct10.pdf"
+            },
+            {
+              "track": "posters",
+              "deadline": "2027-07-09",
+              "notification": "2027-07-23",
+              "url": "https://www.itctestweek.org/wp-content/uploads/2026/10/ITC_2027_CFP_v2026Oct10.pdf"
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://www.itctestweek.org/wp-content/uploads/2026/10/ITC_2027_CFP_v2026Oct10.pdf"
+        }
+      ]
+    },
+    {
+      "key": "ets",
+      "acronym": "ETS",
+      "name": "IEEE European Test Symposium",
+      "kind": "symposium",
+      "category": "eda",
+      "tags": [],
+      "publisher": "ieee",
+      "url": "https://www.ieee-ets.org/",
+      "dblp": "https://dblp.org/db/conf/ets/",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "B",
+          "year": 2026,
+          "url": "https://portal.core.edu.au/conf-ranks/2316/",
+          "note": "ICORE2026"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "31st IEEE European Test Symposium",
+          "url": "https://ets2026.uniwa.gr/",
+          "location": "Chania, Greece",
+          "start": "2026-05-25",
+          "end": "2026-05-29",
+          "submissions": [
+            {
+              "track": "papers",
+              "abstract": "2025-12-15",
+              "deadline": "2026-01-14",
+              "notification": "2026-02-20",
+              "url": "https://ets2026.uniwa.gr/call-for-papers/",
+              "note": "Extended from 2026-01-12 (date in linked CFP v2.1); current CFP page gives the final extension."
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://ets2026.uniwa.gr/call-for-papers/",
+          "note": "Dates follow the official homepage's full Test Week span, including fringe workshops."
+        },
+        {
+          "year": 2027,
+          "name": "32nd IEEE European Test Symposium",
+          "url": "https://ets2027.co.uk/",
+          "location": "London, United Kingdom",
+          "start": "2027-05-24",
+          "end": "2027-05-28",
+          "submissions": [
+            {
+              "track": "papers",
+              "abstract": "2026-12-08",
+              "deadline": "2026-12-15",
+              "notification": "2027-02-19",
+              "url": "https://ets2027.co.uk/call-for-papers.html"
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://ets2027.co.uk/call-for-papers.html",
+          "note": "Notification year follows the official CFP webpage (2027); the linked preliminary PDF incorrectly prints 2026. Dates include the full Test Week span."
+        }
+      ]
+    },
+    {
+      "key": "iolts",
+      "acronym": "IOLTS",
+      "name": "IEEE International Symposium on On-Line Testing and Robust System Design",
+      "kind": "symposium",
+      "category": "eda",
+      "tags": [],
+      "publisher": "ieee",
+      "url": "https://orion.polito.it/iolts/",
+      "dblp": "https://dblp.org/db/conf/iolts/",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "C",
+          "year": 2026,
+          "url": "https://portal.core.edu.au/conf-ranks/687/",
+          "note": "ICORE2026"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "32nd IEEE International Symposium on On-Line Testing and Robust System Design",
+          "url": "https://orion.polito.it/iolts/",
+          "location": "Polignano a Mare, Italy",
+          "start": "2026-07-01",
+          "end": "2026-07-03",
+          "submissions": [
+            {
+              "track": "papers",
+              "abstract": "2026-03-01",
+              "deadline": "2026-03-08",
+              "url": "https://www.polito.it/en/polito/communication-and-press-office/news/news?idn=28195",
+              "note": "Extended from 2026-02-22; abstract extended from 2026-02-15 (original dates in the organizer's linked flyer). Final submission dates verified in the organizer's announcement; main conference site unavailable."
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://www.polito.it/en/polito/communication-and-press-office/news/news?idn=28195",
+          "note": "Notification omitted: original flyer lists 2026-04-12 but the later submission schedule could not be read from the unavailable conference site."
+        },
+        {
+          "year": 2027,
+          "name": "33rd IEEE International Symposium on On-Line Testing and Robust System Design",
+          "url": "https://orion.polito.it/iolts/",
+          "location": "Larnaca, Cyprus",
+          "start": "2027-07-05",
+          "end": "2027-07-07",
+          "submissions": [
+            {
+              "track": "papers",
+              "abstract": "2027-03-01",
+              "deadline": "2027-03-08",
+              "estimated": true,
+              "note": "Projected from the 2026 submission dates +1 year. The announced 2027 CFP is linked from the homepage, but its download and the paper-submission page were unavailable."
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://orion.polito.it/iolts/",
+          "note": "Dates and location announced on the official homepage, read via https://r.jina.ai/https://orion.polito.it/iolts/ (page published 2026-10-21). Direct host refused connections; CFP download /download/2580/ could not be retrieved. Submission dates remain estimates, not verified CFP dates."
+        }
+      ]
+    },
+    {
+      "key": "dft",
+      "acronym": "DFT",
+      "name": "IEEE International Symposium on Defect and Fault Tolerance in VLSI and Nanotechnology Systems",
+      "kind": "symposium",
+      "category": "eda",
+      "tags": [],
+      "publisher": "ieee",
+      "url": "https://www.dfts.org/",
+      "dblp": "https://dblp.org/db/conf/dft/",
+      "rankings": [],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "39th IEEE International Symposium on Defect and Fault Tolerance in VLSI and Nanotechnology Systems",
+          "url": "https://www.dfts.org/",
+          "location": "Rome, Italy",
+          "start": "2026-09-30",
+          "end": "2026-10-02",
+          "submissions": [
+            {
+              "track": "papers",
+              "abstract": "2026-05-08",
+              "deadline": "2026-05-22",
+              "notification": "2026-07-10",
+              "url": "https://www.dfts.org/cfp.htm",
+              "note": "Extended from 2026-05-01; abstract extended from 2026-04-24. Final dates are populated by the official website's js/website-info.js; linked CFP v4 retains the original dates."
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://www.dfts.org/js/website-info.js"
+        },
+        {
+          "year": 2027,
+          "name": "IEEE International Symposium on Defect and Fault Tolerance in VLSI and Nanotechnology Systems 2027",
+          "submissions": [
+            {
+              "track": "papers",
+              "abstract": "2027-05-08",
+              "deadline": "2027-05-22",
+              "notification": "2027-07-10",
+              "estimated": true,
+              "note": "Projected from the final 2026 submission dates +1 year; 2027 CFP, location, and event dates not announced."
+            }
+          ],
+          "note": "Unannounced annual edition; submission dates are estimates only."
+        }
+      ]
+    },
+    {
+      "key": "fpga",
+      "acronym": "FPGA",
+      "name": "ACM/SIGDA International Symposium on Field-Programmable Gate Arrays",
+      "kind": "symposium",
+      "category": "eda",
+      "tags": [],
+      "publisher": "acm",
+      "url": "https://www.isfpga.org/",
+      "dblp": "https://dblp.org/db/conf/fpga/",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "A",
+          "year": 2026,
+          "url": "https://portal.core.edu.au/conf-ranks/2319/",
+          "note": "ICORE2026"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "34th ACM/SIGDA International Symposium on Field-Programmable Gate Arrays",
+          "url": "https://www.isfpga.org/past/fpga2026/",
+          "location": "Seaside, California, USA",
+          "start": "2026-02-22",
+          "end": "2026-02-24",
+          "submissions": [
+            {
+              "track": "papers",
+              "abstract": "2025-09-24",
+              "deadline": "2025-10-01",
+              "url": "https://www.isfpga.org/past/fpga2026/call-for-papers/",
+              "note": "All papers, including industry track; no extensions. Acceptance notifications were scheduled for November 17-21, 2025; no single notification date is specified."
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://www.isfpga.org/past/fpga2026/call-for-papers/"
+        },
+        {
+          "year": 2027,
+          "name": "35th ACM/SIGDA International Symposium on Field-Programmable Gate Arrays",
+          "url": "https://www.isfpga.org/",
+          "location": "California, USA",
+          "start": "2027-03-14",
+          "end": "2027-03-16",
+          "submissions": [
+            {
+              "track": "papers",
+              "abstract": "2026-10-01",
+              "deadline": "2026-10-08",
+              "notification": "2026-12-08",
+              "url": "https://www.isfpga.org/call-for-papers/",
+              "note": "All papers, including industry track; no extensions. Notification rescheduled from 2026-11-24."
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://www.isfpga.org/call-for-papers/",
+          "note": "Only California is announced as the location; the city is not yet specified."
+        },
+        {
+          "year": 2028,
+          "name": "ACM/SIGDA International Symposium on Field-Programmable Gate Arrays",
+          "submissions": [
+            {
+              "track": "papers",
+              "abstract": "2027-10-01",
+              "deadline": "2027-10-08",
+              "notification": "2027-12-08",
+              "estimated": true,
+              "note": "Projected +1 year from FPGA 2027; CFP not announced."
+            }
+          ],
+          "source": "https://www.isfpga.org/call-for-papers/",
+          "note": "Unannounced edition; dates are estimates based on the previous edition."
+        }
+      ]
+    },
+    {
+      "key": "fccm",
+      "acronym": "FCCM",
+      "name": "IEEE International Symposium on Field-Programmable Custom Computing Machines",
+      "kind": "symposium",
+      "category": "eda",
+      "tags": [],
+      "publisher": "ieee",
+      "url": "https://www.fccm.org/",
+      "dblp": "https://dblp.org/db/conf/fccm/",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "National/Regional",
+          "year": 2026,
+          "url": "https://portal.core.edu.au/conf-ranks/2026/",
+          "note": "ICORE2026"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "34th IEEE International Symposium on Field-Programmable Custom Computing Machines",
+          "url": "https://www.fccm.org/past/2026/",
+          "location": "Atlanta, Georgia, USA",
+          "start": "2026-05-13",
+          "end": "2026-05-16",
+          "submissions": [
+            {
+              "track": "papers",
+              "abstract": "2026-01-10",
+              "deadline": "2026-01-17",
+              "notification": "2026-03-16",
+              "url": "https://www.fccm.org/past/2026/call-for-papers-2026/",
+              "note": "Long and short papers; no extensions."
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://www.fccm.org/past/2026/call-for-papers-2026/"
+        },
+        {
+          "year": 2027,
+          "name": "35th IEEE International Symposium on Field-Programmable Custom Computing Machines",
+          "url": "https://www.fccm.org/",
+          "location": "Provo, Utah, USA",
+          "start": "2027-05-09",
+          "end": "2027-05-12",
+          "submissions": [
+            {
+              "track": "papers",
+              "abstract": "2027-01-10",
+              "deadline": "2027-01-17",
+              "notification": "2027-03-14",
+              "url": "https://www.fccm.org/call-for-papers-2027/",
+              "note": "Long and short papers; no extensions."
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://www.fccm.org/call-for-papers-2027/"
+        }
+      ]
+    },
+    {
+      "key": "fpl",
+      "acronym": "FPL",
+      "name": "International Conference on Field-Programmable Logic and Applications",
+      "kind": "conference",
+      "category": "eda",
+      "tags": [],
+      "publisher": "ieee",
+      "url": "https://fpl.org/",
+      "dblp": "https://dblp.org/db/conf/fpl/",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "B",
+          "year": 2026,
+          "url": "https://portal.core.edu.au/conf-ranks/2318/",
+          "note": "ICORE2026"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "36th International Conference on Field-Programmable Logic and Applications",
+          "url": "https://2026.fpl.org/",
+          "location": "Ghent, Belgium",
+          "start": "2026-09-07",
+          "end": "2026-09-11",
+          "submissions": [
+            {
+              "track": "papers",
+              "round": "Journal track",
+              "deadline": "2026-02-20",
+              "url": "https://2026.fpl.org/calls/call-for-papers-journal-track/",
+              "note": "Extended from 2026-02-06. Original TRETS journal submissions presented at FPL; notification is only specified as mid to late June 2026."
+            },
+            {
+              "track": "papers",
+              "round": "Conference track",
+              "abstract": "2026-03-27",
+              "deadline": "2026-04-03",
+              "notification": "2026-06-01",
+              "url": "https://2026.fpl.org/calls/call-for-papers/",
+              "note": "Extended from 2026-03-27; abstract extended from 2026-03-20."
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://2026.fpl.org/calls/call-for-papers/",
+          "note": "September 7-9 main conference; September 10-11 workshops and tutorials. Journal-track dates verified at https://2026.fpl.org/calls/call-for-papers-journal-track/."
+        },
+        {
+          "year": 2027,
+          "name": "International Conference on Field-Programmable Logic and Applications",
+          "submissions": [
+            {
+              "track": "papers",
+              "round": "Journal track",
+              "deadline": "2027-02-20",
+              "estimated": true,
+              "note": "Projected +1 year from FPL 2026 journal track; CFP not announced."
+            },
+            {
+              "track": "papers",
+              "round": "Conference track",
+              "abstract": "2027-03-27",
+              "deadline": "2027-04-03",
+              "notification": "2027-06-01",
+              "estimated": true,
+              "note": "Projected +1 year from FPL 2026 conference track; CFP not announced."
+            }
+          ],
+          "source": "https://2026.fpl.org/calls/call-for-papers/",
+          "note": "Unannounced edition; dates are estimates based on the previous edition, including its journal track."
+        }
+      ]
+    },
+    {
+      "key": "fpt",
+      "acronym": "FPT",
+      "name": "International Conference on Field-Programmable Technology",
+      "kind": "conference",
+      "category": "eda",
+      "tags": [],
+      "publisher": "ieee",
+      "url": "https://icfpt.org/",
+      "dblp": "https://dblp.org/db/conf/fpt/",
+      "rankings": [],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "International Conference on Field-Programmable Technology",
+          "url": "https://fpt2026.uark.edu/",
+          "location": "Honolulu, Hawaii, USA",
+          "start": "2026-12-07",
+          "end": "2026-12-10",
+          "submissions": [
+            {
+              "track": "papers",
+              "round": "Journal track",
+              "deadline": "2026-05-01",
+              "notification": "2026-08-31",
+              "url": "https://fpt2026.uark.edu/call-for-papers/",
+              "note": "Original TRETS journal submissions presented at FPT; no extension. Revised journal-track papers due 2026-07-27."
+            },
+            {
+              "track": "papers",
+              "round": "Conference track",
+              "abstract": "2026-06-19",
+              "deadline": "2026-06-19",
+              "notification": "2026-08-21",
+              "url": "https://fpt2026.uark.edu/call-for-papers/",
+              "note": "Extended from 2026-06-12; abstract extended from 2026-06-05."
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://fpt2026.uark.edu/call-for-papers/"
+        },
+        {
+          "year": 2027,
+          "name": "International Conference on Field-Programmable Technology",
+          "submissions": [
+            {
+              "track": "papers",
+              "round": "Journal track",
+              "deadline": "2027-05-01",
+              "notification": "2027-08-31",
+              "estimated": true,
+              "note": "Projected +1 year from FPT 2026 journal track; CFP not announced."
+            },
+            {
+              "track": "papers",
+              "round": "Conference track",
+              "abstract": "2027-06-19",
+              "deadline": "2027-06-19",
+              "notification": "2027-08-21",
+              "estimated": true,
+              "note": "Projected +1 year from FPT 2026 conference track; CFP not announced."
+            }
+          ],
+          "source": "https://fpt2026.uark.edu/call-for-papers/",
+          "note": "Unannounced edition; dates are estimates based on the previous edition."
+        }
+      ]
+    },
+    {
+      "key": "arith",
+      "acronym": "ARITH",
+      "name": "IEEE Symposium on Computer Arithmetic",
+      "kind": "symposium",
+      "category": "eda",
+      "tags": [],
+      "publisher": "ieee",
+      "url": "https://www.arithsymposium.org/",
+      "dblp": "https://dblp.org/db/conf/arith/",
+      "rankings": [
+        {
+          "source": "CORE",
+          "value": "C",
+          "year": 2026,
+          "url": "https://portal.core.edu.au/conf-ranks/743/",
+          "note": "ICORE2026"
+        }
+      ],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "33rd IEEE International Symposium on Computer Arithmetic",
+          "url": "https://www.arith2026.org/",
+          "location": "Fulda, Germany",
+          "start": "2026-06-28",
+          "end": "2026-07-01",
+          "submissions": [
+            {
+              "track": "papers",
+              "abstract": "2026-02-06",
+              "deadline": "2026-02-13",
+              "notification": "2026-04-10",
+              "url": "https://www.arith2026.org/call.html",
+              "note": "Extended from 2026-01-30; abstract extended from 2026-01-23."
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://www.arith2026.org/call.html"
+        },
+        {
+          "year": 2027,
+          "name": "IEEE International Symposium on Computer Arithmetic",
+          "submissions": [
+            {
+              "track": "papers",
+              "abstract": "2027-02-06",
+              "deadline": "2027-02-13",
+              "notification": "2027-04-10",
+              "estimated": true,
+              "note": "Projected +1 year from ARITH 2026; CFP not announced."
+            }
+          ],
+          "source": "https://www.arith2026.org/call.html",
+          "note": "Unannounced edition; dates are estimates based on the previous edition."
+        }
+      ]
+    },
+    {
+      "key": "asianhost",
+      "acronym": "AsianHOST",
+      "name": "Asian Hardware Oriented Security and Trust Symposium",
+      "kind": "symposium",
+      "category": "security",
+      "tags": [],
+      "publisher": "ieee",
+      "url": "https://www.asianhost.org/",
+      "dblp": "https://dblp.org/db/conf/asianhost/",
+      "rankings": [],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "Asian Hardware Oriented Security and Trust Symposium",
+          "url": "https://www.asianhost.org/2026/",
+          "location": "IIT Kharagpur Research Park, Kolkata, India",
+          "start": "2026-12-11",
+          "end": "2026-12-13",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-08-09",
+              "notification": "2026-09-13",
+              "url": "https://www.asianhost.org/2026/authors.htm",
+              "note": "Extended from 2026-07-14, then 2026-07-28. The official Author Resources page explicitly states AoE."
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://www.asianhost.org/2026/authors.htm"
+        },
+        {
+          "year": 2027,
+          "name": "Asian Hardware Oriented Security and Trust Symposium",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2027-08-09",
+              "notification": "2027-09-13",
+              "estimated": true,
+              "note": "Projected +1 year from AsianHOST 2026; CFP not announced."
+            }
+          ],
+          "source": "https://www.asianhost.org/2026/authors.htm",
+          "note": "Unannounced edition; dates are estimates based on the previous edition."
+        }
+      ]
+    },
+    {
+      "key": "hasp",
+      "acronym": "HASP",
+      "name": "Workshop on Hardware and Architectural Support for Security and Privacy",
+      "kind": "workshop",
+      "category": "security",
+      "tags": [],
+      "publisher": "acm",
+      "url": "https://www.haspworkshop.org/",
+      "dblp": "https://dblp.org/db/conf/hasp/",
+      "rankings": [],
+      "tracked": true,
+      "editions": [
+        {
+          "year": 2026,
+          "name": "Workshop on Hardware and Architectural Support for Security and Privacy",
+          "url": "https://www.haspworkshop.org/2026/index.html",
+          "location": "Athens, Greece",
+          "start": "2026-10-31",
+          "end": "2026-10-31",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2026-08-17",
+              "notification": "2026-09-16",
+              "url": "https://www.haspworkshop.org/2026/index.html",
+              "note": "Extended from 2026-08-10; final extended deadline."
+            }
+          ],
+          "checked": "2026-10-22",
+          "source": "https://www.haspworkshop.org/2026/index.html",
+          "note": "Co-located with MICRO 2026."
+        },
+        {
+          "year": 2027,
+          "name": "Workshop on Hardware and Architectural Support for Security and Privacy",
+          "submissions": [
+            {
+              "track": "papers",
+              "deadline": "2027-08-17",
+              "notification": "2027-09-16",
+              "estimated": true,
+              "note": "Projected +1 year from HASP 2026; CFP not announced."
+            }
+          ],
+          "source": "https://www.haspworkshop.org/2026/index.html",
+          "note": "Unannounced edition; dates are estimates based on the previous edition."
+        }
+      ]
     }
   ]
 }

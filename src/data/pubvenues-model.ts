@@ -473,19 +473,20 @@ function renderSubmission(submission: TimedSubmission, row: PubRow, now: number,
     submission.round ?? ""
   ].filter(Boolean);
   const timezone = submission.timezone && submission.timezone !== "AoE" ? ` ${submission.timezone}` : "";
+  const label = (text: string) => `<span class="pv-sub__label">${text}</span>`;
   const parts = [
     labels.length ? `<span class="pv-sub__round">${escapeHtml(labels.join(" · "))}</span>` : "",
     submission.abstract
-      ? `<span class="pv-sub__abstract">abs ${formatDate(submission.abstract)}</span>`
+      ? `<span class="pv-sub__abstract">${label("abstract")} ${formatDate(submission.abstract)}</span>`
       : "",
-    `<span class="pv-sub__deadline">${link(submission.url, formatDate(submission.deadline))}${escapeHtml(timezone)}</span>`,
-    submission.notification
-      ? `<span class="pv-sub__notification">→ ${formatDate(submission.notification)}</span>`
-      : "",
+    `<span class="pv-sub__deadline">${label(submission.track === "papers" ? "paper" : "due")} ${link(submission.url, formatDate(submission.deadline))}${escapeHtml(timezone)}</span>`,
     state === "next"
       ? `<span class="pv-sub__countdown">${relativeDays(submission.instant, now)}</span>`
       : "",
-    submission.estimated ? `<span class="pv-sub__estimated" title="Projected from a previous edition">est.</span>` : ""
+    submission.estimated ? `<span class="pv-sub__estimated" title="Projected from a previous edition">est.</span>` : "",
+    submission.notification
+      ? `<span class="pv-sub__notification">${label("notification")} ${formatDate(submission.notification)}</span>`
+      : ""
   ].filter(Boolean);
   const title = submission.note ? ` title="${escapeHtml(submission.note)}"` : "";
   return `<li class="pv-sub pv-sub--${state}${submission.estimated ? " pv-sub--estimated" : ""}" data-urgency="${urgencyOf(submission.instant, now)}"${title}>${parts.join(" ")}</li>`;
@@ -528,7 +529,7 @@ function renderRow(row: PubRow, state: ViewState, categoryLabels: Map<string, st
 const columns: Array<{ id: string; label: string; sort?: SortKey }> = [
   { id: "core", label: "CORE", sort: "core" },
   { id: "venue", label: "Venue", sort: "venue" },
-  { id: "deadlines", label: "Deadlines → notification", sort: "deadline" },
+  { id: "deadlines", label: "Submission deadlines", sort: "deadline" },
   { id: "conference", label: "Conference", sort: "conference" },
   { id: "category", label: "Area" },
   { id: "h5", label: "h5", sort: "h5" }
