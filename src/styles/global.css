@@ -1933,6 +1933,7 @@ dd {
 .pv-sub__label {
   display: inline-block;
   color: var(--ds-colors-fg3);
+  font-style: normal;
   font-size: var(--ds-sizes-print-xxs);
   font-weight: var(--ds-weight-regular);
   letter-spacing: var(--ds-tracking-label);
