@@ -67,6 +67,11 @@ failing that, the most recent edition. Rows are coloured by the next deadline
 grouping, sorting and colouring are stored in the query string, so a view can be
 bookmarked.
 
+The deadline cell lists only submission deadlines (one line per round). Clicking
+a date opens a popover with every track and round of that edition: abstract,
+paper deadline with timezone, notification, CFP link, notes, and the
+`checked`/`source` provenance.
+
 The table is rendered at build time and re-rendered in the browser with the
 current time, so colours stay correct between deploys.
 

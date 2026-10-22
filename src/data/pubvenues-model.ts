@@ -465,31 +465,78 @@ const trackLabels: Record<PubTrack, string> = {
   workshops: "Workshops"
 };
 
-function renderSubmission(submission: TimedSubmission, row: PubRow, now: number, track: TrackFilter) {
+const roundLabel = (submission: PubSubmission, withTrack: boolean) =>
+  [withTrack && submission.track !== "papers" ? trackLabels[submission.track] : "", submission.round ?? ""]
+    .filter(Boolean)
+    .join(" · ");
+
+/** Deadline cell line: round, submission date (opens the details popover), countdown. */
+function renderSubmission(
+  submission: TimedSubmission,
+  row: PubRow,
+  now: number,
+  track: TrackFilter,
+  popoverId: string
+) {
   const state =
     submission === row.next ? "next" : submission.instant < now ? "past" : "later";
-  const labels = [
-    track === "all" && submission.track !== "papers" ? trackLabels[submission.track] : "",
-    submission.round ?? ""
-  ].filter(Boolean);
-  const timezone = submission.timezone && submission.timezone !== "AoE" ? ` ${submission.timezone}` : "";
-  const label = (text: string) => `<span class="pv-sub__label">${text}</span>`;
+  const round = roundLabel(submission, track === "all");
   const parts = [
-    labels.length ? `<span class="pv-sub__round">${escapeHtml(labels.join(" · "))}</span>` : "",
-    submission.abstract
-      ? `<span class="pv-sub__abstract">${label("abstract")} ${formatDate(submission.abstract)}</span>`
-      : "",
-    `<span class="pv-sub__deadline">${label(submission.track === "papers" ? "paper" : "due")} ${link(submission.url, formatDate(submission.deadline))}${escapeHtml(timezone)}</span>`,
+    round ? `<span class="pv-sub__round">${escapeHtml(round)}</span>` : "",
+    `<button type="button" class="pv-sub__deadline" popovertarget="${popoverId}" title="Abstract, notification and CFP">${formatDate(submission.deadline)}</button>`,
     state === "next"
       ? `<span class="pv-sub__countdown">${relativeDays(submission.instant, now)}</span>`
       : "",
-    submission.estimated ? `<span class="pv-sub__estimated" title="Projected from a previous edition">est.</span>` : "",
-    submission.notification
-      ? `<span class="pv-sub__notification">${label("notification")} ${formatDate(submission.notification)}</span>`
+    submission.estimated
+      ? `<span class="pv-sub__estimated" title="Projected from a previous edition">est.</span>`
       : ""
   ].filter(Boolean);
-  const title = submission.note ? ` title="${escapeHtml(submission.note)}"` : "";
-  return `<li class="pv-sub pv-sub--${state}${submission.estimated ? " pv-sub--estimated" : ""}" data-urgency="${urgencyOf(submission.instant, now)}"${title}>${parts.join(" ")}</li>`;
+  return `<li class="pv-sub pv-sub--${state}${submission.estimated ? " pv-sub--estimated" : ""}">${parts.join(" ")}</li>`;
+}
+
+/** Popover with every track and round of the shown edition. */
+function renderDetails(row: PubRow, popoverId: string, now: number) {
+  const { venue, edition } = row;
+  if (!edition) return "";
+  const title = `${escapeHtml(venue.acronym)} ${edition.year}`;
+  const submissions = edition.submissions
+    .map((submission) => ({
+      ...submission,
+      instant: deadlineInstant(submission.deadline, submission.timezone)
+    }))
+    .sort((left, right) => left.instant - right.instant);
+  const dash = `<span class="pv-muted">–</span>`;
+  const rows = submissions
+    .map((submission) => {
+      const past = submission.instant < now ? " pv-details__row--past" : "";
+      return `<tr class="pv-details__row${past}">
+<th scope="row">${escapeHtml(roundLabel(submission, true) || trackLabels[submission.track])}</th>
+<td>${submission.abstract ? formatDate(submission.abstract) : dash}</td>
+<td><strong>${formatDate(submission.deadline)}</strong> <small>${escapeHtml(submission.timezone ?? "AoE")}</small>${submission.estimated ? ` <span class="pv-sub__estimated">est.</span>` : ""}</td>
+<td>${submission.notification ? formatDate(submission.notification) : dash}</td>
+<td>${submission.url ? link(submission.url, "CFP") : dash}</td>
+</tr>`;
+    })
+    .join("");
+  const notes = [
+    ...submissions
+      .filter((submission) => submission.note)
+      .map((submission) => `${escapeHtml(roundLabel(submission, true) || trackLabels[submission.track])}: ${escapeHtml(submission.note!)}`),
+    edition.note ? escapeHtml(edition.note) : ""
+  ].filter(Boolean);
+  const footer = [
+    edition.url ? link(edition.url, "website") : "",
+    edition.program ? link(edition.program, "program") : "",
+    edition.source ? link(edition.source, "source") : "",
+    edition.checked ? `checked ${formatDate(edition.checked)}` : "not verified"
+  ].filter(Boolean);
+
+  return `<div class="pv-popover" id="${popoverId}" popover role="dialog" aria-label="${title} submission details">
+<header><strong>${title}</strong><span>Submission details</span><button type="button" class="pv-popover__close" popovertarget="${popoverId}" popovertargetaction="hide" aria-label="Close">×</button></header>
+<table class="pv-details"><thead><tr><th scope="col">Round</th><th scope="col">Abstract</th><th scope="col">Paper due</th><th scope="col">Notification</th><th scope="col"></th></tr></thead><tbody>${rows}</tbody></table>
+${notes.length ? `<ul class="pv-details__notes">${notes.map((note) => `<li>${note}</li>`).join("")}</ul>` : ""}
+<p class="pv-details__footer">${footer.join(" · ")}</p>
+</div>`;
 }
 
 function renderRow(row: PubRow, state: ViewState, categoryLabels: Map<string, string>, now: number) {
@@ -510,8 +557,9 @@ function renderRow(row: PubRow, state: ViewState, categoryLabels: Map<string, st
   const tags = venue.tags.length
     ? `<span class="pv-tags">${venue.tags.map((tag) => `<span>${escapeHtml(tag)}</span>`).join("")}</span>`
     : "";
+  const popoverId = `pv-details-${venue.key}-${edition?.year ?? "none"}`;
   const submissions = row.submissions.length
-    ? `<ul class="pv-subs">${row.submissions.map((s) => renderSubmission(s, row, now, state.track)).join("")}</ul>`
+    ? `<ul class="pv-subs">${row.submissions.map((s) => renderSubmission(s, row, now, state.track, popoverId)).join("")}</ul>${renderDetails(row, popoverId, now)}`
     : `<span class="pv-muted">TBA</span>`;
   const core = venue.rankings.find((ranking) => ranking.source === "CORE");
   const h5 = venue.rankings.find((ranking) => ranking.source === "h5");
