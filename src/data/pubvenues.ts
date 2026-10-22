@@ -2,7 +2,12 @@ import { readFile } from "node:fs/promises";
 import path from "node:path";
 import Ajv2020 from "ajv/dist/2020.js";
 import addFormats from "ajv-formats";
-import { deadlineInstant, type PubVenuesDocument } from "./pubvenues-model";
+import {
+  deadlineInstant,
+  type PubEdition,
+  type PubVenue,
+  type PubVenuesDocument
+} from "./pubvenues-model";
 
 export class PubVenuesValidationError extends Error {
   readonly issues: string[];
@@ -107,4 +112,114 @@ export async function loadPubVenues(
     JSON.parse(await readFile(filePath, "utf8")),
     filePath
   );
+}
+
+/**
+ * A refresh patch. Unknown keys add a venue (it must then be complete).
+ * Known keys overwrite the given venue fields; `editions` are upserted by year,
+ * replacing a whole edition object and leaving other years untouched.
+ */
+export type PubVenuePatch = Partial<Omit<PubVenue, "editions">> & {
+  key: string;
+  editions?: PubEdition[];
+};
+
+export function mergePubVenues(
+  document: PubVenuesDocument,
+  patches: PubVenuePatch[],
+  updated: string
+): { document: PubVenuesDocument; changes: string[] } {
+  const merged = structuredClone(document);
+  const changes: string[] = [];
+
+  for (const patch of patches) {
+    const venue = merged.venues.find((entry) => entry.key === patch.key);
+    if (!venue) {
+      merged.venues.push(structuredClone(patch) as PubVenue);
+      changes.push(`${patch.key}: added venue`);
+      continue;
+    }
+
+    const { editions = [], ...fields } = patch;
+    for (const [field, value] of Object.entries(fields)) {
+      const target = venue as Record<string, unknown>;
+      if (JSON.stringify(target[field]) === JSON.stringify(value)) continue;
+      target[field] = structuredClone(value);
+      changes.push(`${venue.key}: updated ${field}`);
+    }
+
+    for (const edition of editions) {
+      const index = venue.editions.findIndex((entry) => entry.year === edition.year);
+      if (index === -1) {
+        venue.editions.push(structuredClone(edition));
+        changes.push(`${venue.key} ${edition.year}: added edition`);
+      } else if (JSON.stringify(venue.editions[index]) !== JSON.stringify(edition)) {
+        venue.editions[index] = structuredClone(edition);
+        changes.push(`${venue.key} ${edition.year}: replaced edition`);
+      }
+    }
+    venue.editions.sort((left, right) => left.year - right.year);
+  }
+
+  if (changes.length) merged.updated = updated;
+  return { document: merged, changes };
+}
+
+export type RefreshReason = "no-open-deadline" | "estimated" | "stale-check";
+
+export type RefreshCandidate = {
+  key: string;
+  acronym: string;
+  reasons: RefreshReason[];
+  latestYear?: number;
+  lastChecked?: string;
+};
+
+/**
+ * Tracked venues worth re-verifying: no open paper deadline in any edition,
+ * open deadlines that are still projections, or editions last checked more
+ * than `maxAgeDays` ago (or never).
+ */
+export function venuesNeedingRefresh(
+  document: PubVenuesDocument,
+  now: number,
+  maxAgeDays: number
+): RefreshCandidate[] {
+  const reasonOrder: RefreshReason[] = ["no-open-deadline", "estimated", "stale-check"];
+  const oldestFreshCheck = new Date(now - maxAgeDays * 86_400_000).toISOString().slice(0, 10);
+
+  return document.venues
+    .filter((venue) => venue.tracked)
+    .map((venue) => {
+      const open = venue.editions
+        .flatMap((edition) => edition.submissions)
+        .filter(
+          (submission) =>
+            submission.track === "papers" &&
+            deadlineInstant(submission.deadline, submission.timezone) >= now
+        );
+      const lastChecked = venue.editions
+        .map((edition) => edition.checked)
+        .filter((checked): checked is string => checked !== undefined)
+        .sort()
+        .at(-1);
+      const reasons: RefreshReason[] = [];
+      if (open.length === 0) reasons.push("no-open-deadline");
+      if (open.some((submission) => submission.estimated)) reasons.push("estimated");
+      if (!lastChecked || lastChecked < oldestFreshCheck) reasons.push("stale-check");
+      return {
+        key: venue.key,
+        acronym: venue.acronym,
+        reasons,
+        latestYear: venue.editions.at(-1)?.year,
+        lastChecked
+      };
+    })
+    .filter((candidate) => candidate.reasons.length > 0)
+    .sort(
+      (left, right) =>
+        reasonOrder.indexOf(left.reasons[0]) - reasonOrder.indexOf(right.reasons[0]) ||
+        (left.lastChecked ?? "").localeCompare(right.lastChecked ?? "") ||
+        left.key.localeCompare(right.key)
+    );
 }

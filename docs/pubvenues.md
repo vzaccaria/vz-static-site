@@ -43,10 +43,20 @@ submission track, round?, abstract?, deadline, notification?, timezone?,
 
 ## Updating
 
-1. Add a new `editions[]` entry for the next year rather than overwriting the
-   previous one; keep past editions.
-2. Bump `updated` at the top of the file.
-3. Run `npm run venues:check`.
+The project skill `.omp/skills/pubvenues-refresh/SKILL.md` describes the full
+refresh procedure for agents. The tooling it relies on:
+
+- `npm run venues:stale -- [--days N] [--json]` lists tracked venues with no
+  open paper deadline, open deadlines that are still `estimated`, or editions
+  last `checked` more than N (default 60) days ago.
+- `npm run venues:merge -- [--dry-run] <patch.json>...` applies patches: a JSON
+  array of objects with a `key`. Unknown keys add a complete venue; known keys
+  overwrite the given venue fields, and `editions` are upserted by `year` (a
+  patched edition replaces that year's edition entirely; other years are kept).
+  The merged document is validated before writing and `updated` is set to today.
+
+Add next-year editions instead of overwriting past ones, then run
+`npm run venues:check`.
 
 ## Page behaviour
 

@@ -5,7 +5,9 @@ import test from "node:test";
 import {
   createPubVenuesValidator,
   loadPubVenues,
-  PubVenuesValidationError
+  mergePubVenues,
+  PubVenuesValidationError,
+  venuesNeedingRefresh
 } from "../src/data/pubvenues";
 import {
   buildRows,
@@ -156,5 +158,91 @@ test("committed venues validate and broken invariants are reported", async () =>
       error.issues.some((issue) => issue.includes("missing category missing")) &&
       error.issues.some((issue) => issue.includes("notification precedes")) &&
       error.issues.some((issue) => issue.includes("without a distinct round label"))
+  );
+});
+
+test("merging upserts editions by year and leaves other years alone", () => {
+  const original = documentWith([
+    venue({
+      editions: [
+        { year: 2026, location: "Old", submissions: [{ track: "papers", deadline: "2026-01-01" }] },
+        { year: 2027, submissions: [{ track: "papers", deadline: "2026-12-01", estimated: true }] }
+      ]
+    })
+  ]);
+  const { document, changes } = mergePubVenues(
+    original,
+    [
+      {
+        key: "demo",
+        tags: ["mine"],
+        editions: [
+          { year: 2028, submissions: [] },
+          { year: 2027, submissions: [{ track: "papers", deadline: "2026-12-05" }] }
+        ]
+      }
+    ],
+    "2026-11-01"
+  );
+
+  const [merged] = document.venues;
+  assert.deepEqual(merged.editions.map((edition) => edition.year), [2026, 2027, 2028]);
+  assert.equal(merged.editions[0].location, "Old");
+  assert.deepEqual(merged.editions[1].submissions, [{ track: "papers", deadline: "2026-12-05" }]);
+  assert.deepEqual(merged.tags, ["mine"]);
+  assert.equal(document.updated, "2026-11-01");
+  assert.equal(original.venues[0].editions.length, 2);
+  assert.deepEqual(changes, [
+    "demo: updated tags",
+    "demo 2028: added edition",
+    "demo 2027: replaced edition"
+  ]);
+
+  const unchanged = mergePubVenues(original, [{ key: "demo", tags: [] }], "2026-11-01");
+  assert.deepEqual(unchanged.changes, []);
+  assert.equal(unchanged.document.updated, original.updated);
+});
+
+test("refresh candidates flag closed, projected and unchecked venues", () => {
+  const now = Date.parse("2026-10-22T00:00:00Z");
+  const document = documentWith([
+    venue({
+      key: "fresh",
+      editions: [
+        { year: 2027, checked: "2026-10-01", submissions: [{ track: "papers", deadline: "2027-01-10" }] }
+      ]
+    }),
+    venue({
+      key: "closed",
+      editions: [
+        { year: 2026, checked: "2026-10-01", submissions: [{ track: "papers", deadline: "2026-03-01" }] }
+      ]
+    }),
+    venue({
+      key: "projected",
+      editions: [
+        {
+          year: 2027,
+          checked: "2026-10-01",
+          submissions: [{ track: "papers", deadline: "2027-03-01", estimated: true }]
+        }
+      ]
+    }),
+    venue({
+      key: "old",
+      editions: [
+        { year: 2027, checked: "2026-07-01", submissions: [{ track: "papers", deadline: "2027-03-01" }] }
+      ]
+    }),
+    venue({ key: "archived", tracked: false })
+  ]);
+
+  assert.deepEqual(
+    venuesNeedingRefresh(document, now, 60).map(({ key, reasons }) => ({ key, reasons })),
+    [
+      { key: "closed", reasons: ["no-open-deadline"] },
+      { key: "projected", reasons: ["estimated"] },
+      { key: "old", reasons: ["stale-check"] }
+    ]
   );
 });
