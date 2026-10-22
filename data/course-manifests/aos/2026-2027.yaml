@@ -536,6 +536,17 @@ schedule:
       artifacts: [slides-virtualization]
       external_links: []
 
+    - id: event-2026-11-23-seminar
+      start: "2026-11-23T17:30:00+01:00"
+      end: "2026-11-23T18:30:00+01:00"
+      kind: seminar
+      status: scheduled
+      location: Online only (Webex room)
+      topic: Kernel security
+      people: [vittorio-zaccaria]
+      artifacts: []
+      external_links: [webex-room]
+
     - id: event-2026-11-27
       start: "2026-11-27T12:15:00+01:00"
       end: "2026-11-27T14:15:00+01:00"
