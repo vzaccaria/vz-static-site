@@ -213,6 +213,10 @@ resource_groups:
       - slides-os-development-part-2
 
 external_links:
+  - id: recording-2026-10-23
+    title: Lecture recording — 23 October 2026
+    href: https://politecnicomilano.webex.com/politecnicomilano/ldr.php?RCID=9fcd8016ca8ec95d151ea01de96686c4
+
   - id: recording-2026-10-19
     title: Lecture recording — 19 October 2026
     href: https://politecnicomilano.webex.com/politecnicomilano/ldr.php?RCID=157e1d65cd821147db06e4b74e527f3c
@@ -261,6 +265,14 @@ external_links:
     title: Lab environment and setup instructions
     href: https://github.com/polimi-aos-lab/course-labs-2627
 
+  - id: lab-materials-github
+    title: Laboratory slides and sources — GitHub repository
+    href: https://github.com/polimi-aos-lab/course-labs-2627/tree/main/labs
+
+  - id: lab-4-slides-github
+    title: Lab 4 slides — kernel allocation and userspace access
+    href: https://github.com/polimi-aos-lab/course-labs-2627/blob/main/labs/lab-4.pdf
+
   - id: webex-room
     title: Course instructor Webex room
     href: https://politecnicomilano.webex.com/meet/vittorio.zaccaria
@@ -284,6 +296,17 @@ external_links:
     href: https://elixir.bootlin.com/linux/v5.16-rc1/source/kernel
 
 announcements:
+  - id: lab-slides-and-lab-4-self-study
+    published_at: "2026-10-23T15:15:00+02:00"
+    title: Laboratory slides published; lab 4 is self-study
+    body: >-
+      Slides and source material for the laboratories are now published in the
+      public GitHub repository. Lab 4 — kernel memory allocation and userspace
+      access — will not be run in class: please complete it on your own using
+      the published slides, the lab-4 notes, and the lab-4-vm-memalloc module.
+    artifacts: []
+    external_links: [lab-materials-github, lab-4-slides-github]
+
   - id: course-materials-policy
     published_at: "2026-09-13T11:20:00+02:00"
     title: Course materials and recordings
@@ -430,12 +453,12 @@ schedule:
       start: "2026-10-23T12:15:00+02:00"
       end: "2026-10-23T14:15:00+02:00"
       kind: lecture
-      status: scheduled
+      status: completed
       location: 3.1.8
-      topic: Virtual memory (continued)
+      topic: Virtual memory (continued) — lecture and laboratory
       people: [vittorio-zaccaria]
       artifacts: [slides-virtual-memory]
-      external_links: []
+      external_links: [recording-2026-10-23]
 
     - id: event-2026-10-26
       start: "2026-10-26T12:15:00+01:00"

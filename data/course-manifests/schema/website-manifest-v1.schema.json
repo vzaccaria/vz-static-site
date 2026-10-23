@@ -282,6 +282,13 @@
           "items": {
             "$ref": "#/$defs/identifier"
           }
+        },
+        "external_links": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/identifier"
+          }
         }
       }
     },

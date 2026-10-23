@@ -136,11 +136,16 @@ const editionsSection = nextSection;
                 </p>
                 <h3>{announcement.title}</h3>
                 <p>{announcement.body}</p>
-                {announcement.artifacts.length > 0 && (
+                {(announcement.artifacts.length > 0 ||
+                  (announcement.external_links ?? []).length > 0) && (
                   <ul class="course-link-list">
                     {announcement.artifacts.map((artifactId) => {
                       const artifact = artifactsById.get(artifactId)!;
                       return <li><a href={artifact.href}>{artifact.title}</a></li>;
+                    })}
+                    {(announcement.external_links ?? []).map((linkId) => {
+                      const link = externalLinksById.get(linkId)!;
+                      return <li><a href={link.href}>{link.title}</a></li>;
                     })}
                   </ul>
                 )}
@@ -236,7 +241,13 @@ const editionsSection = nextSection;
                   </div>
                   <article>
                     <p class="meta">
-                      {event.kind} · <strong>{event.status}</strong>
+                      <span
+                        class={`status-dot status-dot--${event.status}`}
+                        title={event.status}
+                        aria-hidden="true"
+                      />
+                      <span class="visually-hidden">{event.status}</span>
+                      {event.kind}
                     </p>
                     <h3>{event.topic}</h3>
                     {(slides || notes || recording) && (

@@ -1188,17 +1188,49 @@ dd {
   text-decoration: line-through;
 }
 
-.course-event--cancelled .meta strong,
-.course-event--tentative .meta strong {
+.course-event .meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55em;
+}
+
+.status-dot {
+  flex: 0 0 auto;
+  width: 0.6em;
+  height: 0.6em;
+  border: var(--ds-border_width-bw1) solid currentColor;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.status-dot--completed {
+  color: var(--ds-colors-success);
+}
+
+.status-dot--scheduled {
   color: var(--ds-colors-accent);
+  background: transparent;
+}
+
+.status-dot--tentative {
+  color: var(--ds-colors-warning);
+}
+
+.status-dot--cancelled {
+  color: var(--ds-colors-danger);
 }
 
 .course-event__actions {
   display: none;
 }
 
+.course-events--compact {
+  grid-template-columns: max-content max-content minmax(0, 1fr) max-content;
+}
+
 .course-events--compact .course-event {
-  grid-template-columns: minmax(15rem, 0.28fr) minmax(0, 1fr);
+  grid-column: 1 / -1;
+  grid-template-columns: subgrid;
   align-items: center;
   gap: 1rem;
   padding-block: 0.65rem;
@@ -1217,7 +1249,8 @@ dd {
 
 .course-events--compact .course-event article {
   display: grid;
-  grid-template-columns: minmax(10rem, 0.22fr) minmax(0, 1fr) auto;
+  grid-column: 2 / -1;
+  grid-template-columns: subgrid;
   align-items: center;
   gap: 1rem;
 }
@@ -1237,6 +1270,7 @@ dd {
 .course-events--compact .course-event__actions {
   display: flex;
   justify-content: flex-end;
+  justify-self: end;
   gap: 0.35rem;
 }
 
@@ -2253,6 +2287,7 @@ dd {
   }
 
   .course-events--compact .course-event article {
+    grid-column: 1 / -1;
     grid-template-columns: minmax(6.5rem, auto) minmax(0, 1fr);
     gap: 0.6rem;
   }
@@ -2260,5 +2295,6 @@ dd {
   .course-events--compact .course-event__actions {
     grid-column: 1 / -1;
     justify-content: flex-start;
+    justify-self: stretch;
   }
 }

@@ -43,6 +43,7 @@ export type CourseAnnouncement = {
   title: string;
   body: string;
   artifacts: string[];
+  external_links?: string[];
 };
 
 export type CourseEvent = {
@@ -156,6 +157,11 @@ function checkReferences(manifest: CourseManifest, issues: string[]) {
 
   manifest.announcements.forEach((announcement, index) => {
     check(announcement.artifacts, artifacts, `announcements[${index}].artifacts`);
+    check(
+      announcement.external_links ?? [],
+      externalLinks,
+      `announcements[${index}].external_links`,
+    );
   });
 
   manifest.schedule.events.forEach((event, index) => {
