@@ -22,6 +22,8 @@ export type PubEdition = {
   url?: string;
   program?: string;
   location?: string;
+  /** ISO 3166-1 alpha-2 code of the host country. */
+  country?: string;
   start?: string;
   end?: string;
   submissions: PubSubmission[];
@@ -143,6 +145,7 @@ export type PubRow = {
   conferenceEndInstant?: number;
   core?: string;
   h5?: number;
+  continent?: Continent;
 };
 
 /**
@@ -202,6 +205,9 @@ export function buildRows(
           ? dayStart(chosen.edition.start)
           : undefined;
         row.conferenceEndInstant = chosen.conferenceEndInstant;
+        row.continent = chosen.edition.country
+          ? countryContinents[chosen.edition.country]
+          : undefined;
       }
       return row;
     });
@@ -209,7 +215,7 @@ export function buildRows(
 
 export const sortKeys = ["deadline", "conference", "venue", "core", "h5"] as const;
 export type SortKey = (typeof sortKeys)[number];
-export const groupKeys = ["none", "category", "core", "urgency", "month", "publisher"] as const;
+export const groupKeys = ["none", "category", "core", "urgency", "month", "continent", "publisher"] as const;
 export type GroupKey = (typeof groupKeys)[number];
 export const colorKeys = ["deadline", "conference", "none"] as const;
 export type ColorKey = (typeof colorKeys)[number];
@@ -219,6 +225,7 @@ export type ViewState = {
   categories: string[];
   core: string[];
   tags: string[];
+  continents: string[];
   track: TrackFilter;
   upcoming: boolean;
   group: GroupKey;
@@ -232,6 +239,7 @@ export const defaultViewState: ViewState = {
   categories: [],
   core: [],
   tags: [],
+  continents: [],
   track: "papers",
   upcoming: false,
   group: "category",
@@ -248,6 +256,48 @@ export function coreBucket(core: string | undefined): string {
   return (coreBuckets as readonly string[]).includes(core) ? core : "other";
 }
 
+export const continents = [
+  "europe",
+  "north-america",
+  "south-america",
+  "asia",
+  "africa",
+  "oceania"
+] as const;
+export type Continent = (typeof continents)[number];
+
+/** Continent filter buckets; "tba" collects rows whose shown edition has no country. */
+export const continentLabels: Record<Continent | "tba", string> = {
+  europe: "Europe",
+  "north-america": "North America",
+  "south-america": "South America",
+  asia: "Asia",
+  africa: "Africa",
+  oceania: "Oceania",
+  tba: "TBA"
+};
+
+/** Host-country lookup; the validator rejects edition countries missing here. */
+export const countryContinents: Record<string, Continent> = {
+  AT: "europe", BE: "europe", BG: "europe", CH: "europe", CY: "europe", CZ: "europe",
+  DE: "europe", DK: "europe", EE: "europe", ES: "europe", FI: "europe", FR: "europe",
+  GB: "europe", GR: "europe", HR: "europe", HU: "europe", IE: "europe", IS: "europe",
+  IT: "europe", LT: "europe", LU: "europe", LV: "europe", MT: "europe", NL: "europe",
+  NO: "europe", PL: "europe", PT: "europe", RO: "europe", RS: "europe", SE: "europe",
+  SI: "europe", SK: "europe", TR: "europe", UA: "europe",
+  CA: "north-america", CR: "north-america", MX: "north-america", PA: "north-america",
+  US: "north-america",
+  AR: "south-america", BR: "south-america", CL: "south-america", CO: "south-america",
+  EC: "south-america", PE: "south-america", UY: "south-america",
+  AE: "asia", BD: "asia", CN: "asia", HK: "asia", ID: "asia", IL: "asia", IN: "asia",
+  JP: "asia", KR: "asia", KZ: "asia", LK: "asia", MO: "asia", MY: "asia", NP: "asia",
+  PH: "asia", PK: "asia", QA: "asia", SA: "asia", SG: "asia", TH: "asia", TW: "asia",
+  VN: "asia",
+  CI: "africa", EG: "africa", ET: "africa", GH: "africa", KE: "africa", MA: "africa",
+  NG: "africa", RW: "africa", TN: "africa", ZA: "africa",
+  AU: "oceania", NZ: "oceania"
+};
+
 const isOneOf = <T extends string>(values: readonly T[], value: string | null): value is T =>
   value !== null && (values as readonly string[]).includes(value);
 
@@ -262,6 +312,7 @@ export function parseViewState(params: URLSearchParams): ViewState {
     categories: list("cat"),
     core: list("core"),
     tags: list("tag"),
+    continents: list("continent"),
     track: params.get("track") === "all" ? "all" : "papers",
     upcoming: params.get("upcoming") === "1",
     group: isOneOf(groupKeys, group) ? group : defaultViewState.group,
@@ -277,6 +328,7 @@ export function serializeViewState(state: ViewState): URLSearchParams {
   if (state.categories.length) params.set("cat", state.categories.join(","));
   if (state.core.length) params.set("core", state.core.join(","));
   if (state.tags.length) params.set("tag", state.tags.join(","));
+  if (state.continents.length) params.set("continent", state.continents.join(","));
   if (state.track !== defaultViewState.track) params.set("track", state.track);
   if (state.upcoming) params.set("upcoming", "1");
   if (state.group !== defaultViewState.group) params.set("group", state.group);
@@ -314,6 +366,9 @@ export function filterRows(
     }
     if (state.core.length && !state.core.includes(coreBucket(row.core))) return false;
     if (state.tags.length && !state.tags.some((tag) => row.venue.tags.includes(tag))) {
+      return false;
+    }
+    if (state.continents.length && !state.continents.includes(row.continent ?? "tba")) {
       return false;
     }
     if (state.upcoming && !row.next) return false;
@@ -398,6 +453,11 @@ export function groupRows(
         const date = new Date(row.next.instant - 12 * HOUR_MS);
         const id = row.next.deadline.slice(0, 7);
         return { id, label: monthFormat.format(date), rank: id };
+      }
+      case "continent": {
+        const id = row.continent ?? "tba";
+        const rank = row.continent ? continents.indexOf(row.continent) : continents.length;
+        return { id, label: continentLabels[id], rank: String(rank) };
       }
       case "publisher": {
         const publisher = row.venue.publisher;

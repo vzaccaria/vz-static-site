@@ -12,7 +12,8 @@ invariants:
 - at most one edition per `year` per venue; `end` needs `start`, `end ≥ start`;
 - within an edition, a track appears twice only with distinct `round` labels;
 - `abstract ≤ deadline ≤ notification`, and no deadline after the conference start;
-- `timezone` is `AoE`, `UTC`, `UTC±HH:MM` or an IANA zone.
+- `timezone` is `AoE`, `UTC`, `UTC±HH:MM` or an IANA zone;
+- `country` is a code listed in `countryContinents` (`src/data/pubvenues-model.ts`).
 
 ## Model
 
@@ -21,7 +22,7 @@ document  schema_version, updated, categories[{id,label}], venues[]
 venue     key, acronym, name, kind, category, tags[], publisher?, url?,
           proceedings?, dblp?, rankings[], tracked, editions[], note?
 ranking   source, value, year?, url?, note?
-edition   year, name?, url?, program?, location?, start?, end?,
+edition   year, name?, url?, program?, location?, country?, start?, end?,
           submissions[], checked?, source?, note?
 submission track, round?, abstract?, deadline, notification?, timezone?,
           estimated?, url?, note?
@@ -39,6 +40,8 @@ submission track, round?, abstract?, deadline, notification?, timezone?,
 - `estimated: true` marks a date projected from the previous edition; replace it
   and drop the flag once the CFP is published.
 - `checked`/`source` record when and where an edition was last verified.
+- `country` (ISO 3166-1 alpha-2) of the shown edition drives the continent
+  filter/grouping; editions without it (unannounced or online-only) count as TBA.
 - `tracked: false` keeps a venue in the archive list without a table row.
 
 ## Updating
@@ -63,9 +66,11 @@ Add next-year editions instead of overwriting past ones, then run
 Each tracked venue gets one row. The shown edition is the one with the earliest
 open deadline; failing that, the earliest edition whose conference has not ended;
 failing that, the most recent edition. Rows are coloured by the next deadline
-(> 60 days, ≤ 60, ≤ 30, past) or, optionally, by the conference date. Filters,
-grouping, sorting and colouring are stored in the query string, so a view can be
-bookmarked.
+(> 60 days, ≤ 60, ≤ 30, past) or, optionally, by the conference date. The
+"Group by area" switch toggles between grouping by area and no grouping; the
+"Group by" select also offers CORE rank, deadline window/month, continent and
+publisher. Filters, grouping, sorting and colouring are stored in the query
+string, so a view can be bookmarked.
 
 The deadline cell lists only submission deadlines (one line per round). Clicking
 a date opens a popover with every track and round of that edition: abstract,

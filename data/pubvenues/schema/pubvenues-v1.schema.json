@@ -102,6 +102,11 @@
         "url": { "$ref": "#/$defs/url" },
         "program": { "$ref": "#/$defs/url" },
         "location": { "$ref": "#/$defs/text" },
+        "country": {
+          "description": "ISO 3166-1 alpha-2 code of the host country (e.g. US, IT, JP); drives the continent filter. Omit for online-only or unannounced locations.",
+          "type": "string",
+          "pattern": "^[A-Z]{2}$"
+        },
         "start": { "$ref": "#/$defs/date" },
         "end": { "$ref": "#/$defs/date" },
         "submissions": {

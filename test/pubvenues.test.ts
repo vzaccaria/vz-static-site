@@ -12,6 +12,9 @@ import {
 import {
   buildRows,
   deadlineInstant,
+  defaultViewState,
+  filterRows,
+  groupRows,
   sortRows,
   type PubVenue,
   type PubVenuesDocument
@@ -142,6 +145,7 @@ test("committed venues validate and broken invariants are reported", async () =>
       editions: [
         {
           year: 2027,
+          country: "XX",
           submissions: [
             { track: "papers", deadline: "2026-09-01", notification: "2026-08-01" },
             { track: "papers", deadline: "2026-12-01" }
@@ -157,7 +161,8 @@ test("committed venues validate and broken invariants are reported", async () =>
       error instanceof PubVenuesValidationError &&
       error.issues.some((issue) => issue.includes("missing category missing")) &&
       error.issues.some((issue) => issue.includes("notification precedes")) &&
-      error.issues.some((issue) => issue.includes("without a distinct round label"))
+      error.issues.some((issue) => issue.includes("without a distinct round label")) &&
+      error.issues.some((issue) => issue.includes("country XX is not in countryContinents"))
   );
 });
 
@@ -244,5 +249,40 @@ test("refresh candidates flag closed, projected and unchecked venues", () => {
       { key: "projected", reasons: ["estimated"] },
       { key: "old", reasons: ["stale-check"] }
     ]
+  );
+});
+
+test("continent filter and grouping follow the shown edition's country", () => {
+  const now = Date.parse("2026-10-22T00:00:00Z");
+  const document = documentWith([
+    venue({
+      key: "moved",
+      acronym: "MOVED",
+      editions: [
+        { year: 2026, country: "US", start: "2026-06-01", submissions: [{ track: "papers", deadline: "2026-01-01" }] },
+        { year: 2027, country: "IT", submissions: [{ track: "papers", deadline: "2027-01-01" }] }
+      ]
+    }),
+    venue({
+      key: "tokyo",
+      acronym: "TOKYO",
+      editions: [{ year: 2027, country: "JP", submissions: [{ track: "papers", deadline: "2027-02-01" }] }]
+    }),
+    venue({
+      key: "tba",
+      acronym: "TBA",
+      editions: [{ year: 2027, submissions: [{ track: "papers", deadline: "2027-03-01" }] }]
+    })
+  ]);
+  const rows = buildRows(document, now, "papers");
+  const keys = (continents: string[]) =>
+    filterRows(rows, { ...defaultViewState, continents }, new Map()).map((row) => row.venue.key);
+
+  assert.deepEqual(keys(["europe"]), ["moved"]);
+  assert.deepEqual(keys(["north-america"]), []);
+  assert.deepEqual(keys(["asia", "tba"]), ["tokyo", "tba"]);
+  assert.deepEqual(
+    groupRows(rows, "continent", document.categories, now).map((group) => `${group.id}:${group.rows.length}`),
+    ["europe:1", "asia:1", "tba:1"]
   );
 });

@@ -2,6 +2,8 @@
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import { loadPubVenues } from "../../../data/pubvenues";
 import {
+  continentLabels,
+  continents,
   coreBuckets,
   defaultViewState,
   renderTable,
@@ -55,6 +57,7 @@ const serializedData = JSON.stringify(pubVenues).replaceAll("<", "\\u003c");
             <option value="core">CORE rank</option>
             <option value="urgency">Deadline window</option>
             <option value="month">Deadline month</option>
+            <option value="continent">Continent</option>
             <option value="publisher">Publisher</option>
           </select>
         </label>
@@ -90,10 +93,16 @@ const serializedData = JSON.stringify(pubVenues).replaceAll("<", "\\u003c");
             <option value="all">All (posters, artifacts…)</option>
           </select>
         </label>
-        <label class="pv-check">
-          <input type="checkbox" name="upcoming" value="1" />
-          <span>Upcoming deadline only</span>
-        </label>
+        <div class="pv-toggles">
+          <label class="pv-check">
+            <input type="checkbox" name="grouparea" role="switch" />
+            <span>Group by area</span>
+          </label>
+          <label class="pv-check">
+            <input type="checkbox" name="upcoming" value="1" />
+            <span>Upcoming deadline only</span>
+          </label>
+        </div>
 
         <fieldset class="pv-chips">
           <legend>Area</legend>
@@ -113,6 +122,17 @@ const serializedData = JSON.stringify(pubVenues).replaceAll("<", "\\u003c");
               <label>
                 <input type="checkbox" name="core" value={bucket} />
                 <span>{coreLabels[bucket] ?? bucket}</span>
+              </label>
+            ))
+          }
+        </fieldset>
+        <fieldset class="pv-chips">
+          <legend>Continent</legend>
+          {
+            [...continents, "tba" as const].map((continent) => (
+              <label>
+                <input type="checkbox" name="continent" value={continent} />
+                <span>{continentLabels[continent]}</span>
               </label>
             ))
           }
@@ -200,13 +220,15 @@ const serializedData = JSON.stringify(pubVenues).replaceAll("<", "\\u003c");
       field<HTMLSelectElement>("color").value = state.color;
       field<HTMLSelectElement>("track").value = state.track;
       field<HTMLInputElement>("upcoming").checked = state.upcoming;
+      field<HTMLInputElement>("grouparea").checked = state.group === "category";
       const selected: Record<string, string[]> = {
         cat: state.categories,
         core: state.core,
-        tag: state.tags
+        tag: state.tags,
+        continent: state.continents
       };
       for (const input of form.querySelectorAll<HTMLInputElement>(
-        'input[name="cat"], input[name="core"], input[name="tag"]'
+        'input[name="cat"], input[name="core"], input[name="tag"], input[name="continent"]'
       )) {
         input.checked = selected[input.name].includes(input.value);
       }
@@ -219,6 +241,7 @@ const serializedData = JSON.stringify(pubVenues).replaceAll("<", "\\u003c");
           categories: checked("cat"),
           core: checked("core"),
           tags: checked("tag"),
+          continents: checked("continent"),
           track: field<HTMLSelectElement>("track").value as ViewState["track"],
           upcoming: field<HTMLInputElement>("upcoming").checked,
           group: field<HTMLSelectElement>("group").value as ViewState["group"],
@@ -237,7 +260,17 @@ const serializedData = JSON.stringify(pubVenues).replaceAll("<", "\\u003c");
       history.replaceState(null, "", query ? `?${query}` : location.pathname);
     }
 
-    form.addEventListener("input", () => render(readForm()));
+    form.addEventListener("input", (event) => {
+      // The area switch is a shortcut for the "Group by" select (Area ↔ None).
+      if ((event.target as HTMLInputElement).name === "grouparea") {
+        field<HTMLSelectElement>("group").value = field<HTMLInputElement>("grouparea").checked
+          ? "category"
+          : "none";
+      }
+      const state = readForm();
+      field<HTMLInputElement>("grouparea").checked = state.group === "category";
+      render(state);
+    });
     form.addEventListener("submit", (event) => event.preventDefault());
     form.addEventListener("reset", (event) => {
       event.preventDefault();

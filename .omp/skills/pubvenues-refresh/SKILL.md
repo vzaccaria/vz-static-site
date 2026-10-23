@@ -42,6 +42,7 @@ Il file è un array JSON:
         "name": "21st USENIX Symposium on Operating Systems Design and Implementation",
         "url": "https://www.usenix.org/conference/osdi27",
         "location": "Baltimore, MD, USA",
+        "country": "US",
         "start": "2027-07-07",
         "end": "2027-07-09",
         "submissions": [
@@ -118,6 +119,7 @@ Oltre circa 8 venue, dividi il lavoro in lotti da circa 8 e dai ogni lotto a un 
 - **Fuso orario.** Il default è AoE. Se la CFP indica un altro fuso, aggiungi `timezone`: `"UTC"`, `"UTC+01:00"` o un nome IANA come `"America/Los_Angeles"`.
 - **Abstract registration.** Va in `abstract`, non in una submission separata.
 - **Tracciabilità.** In ogni edizione verificata metti `checked` (la data di oggi) e `source` (l'URL letto).
+- **Paese.** Quando `location` è nota, aggiungi `country` con il codice ISO 3166-1 alpha-2 del paese ospitante (`US`, `IT`, `JP`…). Il filtro per continente usa questo campo. Le edizioni senza `country` finiscono sotto "TBA". Il codice deve esistere in `countryContinents` (`src/data/pubvenues-model.ts`); se manca, `venues:check` fallisce e va aggiunto lì. Per gli eventi solo online, ometti `country`.
 - **Ranking.**
   - CORE: `{"source":"CORE","value":"A*","year":2026,"url":"https://portal.core.edu.au/conf-ranks/<id>/"}` con l'edizione ICORE/CORE corrente (in `note` se serve, per esempio "ICORE2026").
   - h5: `{"source":"h5","value":<int>,"year":<anno GS>,"url":...}` **solo** se letto davvero da Google Scholar Metrics.

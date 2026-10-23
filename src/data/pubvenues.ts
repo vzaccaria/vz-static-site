@@ -3,6 +3,7 @@ import path from "node:path";
 import Ajv2020 from "ajv/dist/2020.js";
 import addFormats from "ajv-formats";
 import {
+  countryContinents,
   deadlineInstant,
   type PubEdition,
   type PubVenue,
@@ -47,6 +48,11 @@ function checkInvariants(document: PubVenuesDocument, issues: string[]) {
       if (edition.end && !edition.start) issues.push(`${editionPath} has end without start`);
       if (edition.start && edition.end && edition.end < edition.start) {
         issues.push(`${editionPath}.end precedes start`);
+      }
+      if (edition.country && !(edition.country in countryContinents)) {
+        issues.push(
+          `${editionPath}.country ${edition.country} is not in countryContinents (pubvenues-model.ts)`
+        );
       }
 
       const rounds = new Set<string>();
