@@ -1538,6 +1538,11 @@
         {
           "year": 2027,
           "name": "32nd European Symposium on Research in Computer Security",
+          "url": "https://www.esorics2027.org/home",
+          "location": "Vienna, Austria",
+          "country": "AT",
+          "start": "2027-09-13",
+          "end": "2027-09-17",
           "submissions": [
             {
               "track": "papers",
@@ -1553,7 +1558,9 @@
               "notification": "2027-06-12",
               "estimated": true
             }
-          ]
+          ],
+          "checked": "2026-10-23",
+          "source": "https://www.esorics2027.org/home"
         }
       ]
     },
@@ -1990,6 +1997,8 @@
           "year": 2027,
           "name": "32nd ACM Symposium on Access Control Models and Technologies",
           "url": "https://sacmat.org/2027/",
+          "location": "Durham, England, United Kingdom",
+          "country": "GB",
           "start": "2027-07-19",
           "end": "2027-07-21",
           "submissions": [
@@ -2008,8 +2017,8 @@
               "url": "https://sacmat.org/2027/call-for-papers.php"
             }
           ],
-          "checked": "2026-10-22",
-          "source": "https://sacmat.org/2027/call-for-papers.php"
+          "checked": "2026-10-23",
+          "source": "https://www.sacmat.org/2027/call-for-papers.php"
         }
       ]
     },
@@ -2197,6 +2206,11 @@
         },
         {
           "year": 2027,
+          "url": "https://www.usenix.org/conference/woot27",
+          "location": "Denver, CO, United States",
+          "country": "US",
+          "start": "2027-08-09",
+          "end": "2027-08-10",
           "submissions": [
             {
               "track": "papers",
@@ -2217,7 +2231,9 @@
               "deadline": "2027-07-02",
               "estimated": true
             }
-          ]
+          ],
+          "checked": "2026-10-23",
+          "source": "https://www.usenix.org/conferences"
         }
       ]
     },
@@ -2377,6 +2393,10 @@
         },
         {
           "year": 2028,
+          "location": "Waikoloa Village, HI, United States",
+          "country": "US",
+          "start": "2028-04-30",
+          "end": "2028-05-06",
           "submissions": [
             {
               "track": "papers",
@@ -2386,7 +2406,8 @@
               "estimated": true
             }
           ],
-          "checked": "2026-10-22",
+          "checked": "2026-10-23",
+          "source": "https://r6.ieee.org/hawaii/event/2028-ieee-acm-50th-international-conference-on-software-engineering-icse/",
           "note": "Projected from ICSE 2027; ICSE 2028 site not public yet."
         }
       ]
@@ -2439,6 +2460,8 @@
         },
         {
           "year": 2028,
+          "location": "Milan, Italy",
+          "country": "IT",
           "submissions": [
             {
               "track": "papers",
@@ -2447,7 +2470,8 @@
               "estimated": true
             }
           ],
-          "checked": "2026-10-22",
+          "checked": "2026-10-23",
+          "source": "https://www.esec-fse.org/upcoming_events",
           "note": "Projected from FSE 2027 (original deadline); FSE 2028 site not published yet."
         }
       ]
@@ -2528,9 +2552,13 @@
               "estimated": true
             }
           ],
-          "checked": "2026-10-22",
-          "source": "https://conf.researchr.org/series/ase",
-          "note": "ASE 2027 not yet announced; deadlines projected from ASE 2026."
+          "checked": "2026-10-23",
+          "source": "https://www.linkedin.com/posts/marcelo-frias-97455016_ase-2027-will-take-place-in-el-paso-texas-activity-7517002600647536640-6Rpm",
+          "note": "Location and dates announced by the ASE 2027 general chair; deadlines projected from ASE 2026.",
+          "location": "El Paso, Texas, United States",
+          "country": "US",
+          "start": "2027-10-24",
+          "end": "2027-10-28"
         }
       ]
     },
@@ -2713,9 +2741,13 @@
               "estimated": true
             }
           ],
-          "checked": "2026-10-22",
-          "source": "https://services.conferences.computer.org/2026/cloud/cloud-call-for-papers/",
-          "note": "SERVICES 2027 not yet announced; projected from CLOUD 2026."
+          "checked": "2026-10-23",
+          "source": "https://www.computer.org/conferences/top-computer-science-events",
+          "note": "Location and dates are those announced for the parent SERVICES 2027 congress; CLOUD CFP not yet published, submission dates projected from CLOUD 2026.",
+          "location": "Abu Dhabi, United Arab Emirates",
+          "country": "AE",
+          "start": "2027-07-05",
+          "end": "2027-07-09"
         }
       ]
     },
@@ -2828,14 +2860,20 @@
           "submissions": [
             {
               "track": "papers",
-              "deadline": "2027-05-15",
-              "notification": "2027-07-14",
-              "estimated": true
+              "deadline": "2027-04-23",
+              "notification": "2027-06-19",
+              "abstract": "2027-04-16",
+              "url": "https://conferences.computer.org/IC2E/2027/cfp-main.html"
             }
           ],
-          "checked": "2026-10-22",
-          "source": "https://conferences.computer.org/IC2E/2026/cfp-main.html",
-          "note": "IC2E 2027 not yet announced; projected from IC2E 2026."
+          "checked": "2026-10-23",
+          "source": "https://conferences.computer.org/IC2E/2027/",
+          "note": "Submission dates from the official IC2E 2027 call for papers.",
+          "location": "Hannover, Germany",
+          "country": "DE",
+          "start": "2027-09-28",
+          "end": "2027-10-01",
+          "url": "https://conferences.computer.org/IC2E/2027/"
         }
       ]
     },
@@ -2960,6 +2998,11 @@
         {
           "year": 2028,
           "name": "26th USENIX Conference on File and Storage Technologies",
+          "url": "https://www.usenix.org/conference/fast28",
+          "location": "Seattle, WA, United States",
+          "country": "US",
+          "start": "2028-02-28",
+          "end": "2028-03-01",
           "submissions": [
             {
               "track": "papers",
@@ -2978,8 +3021,8 @@
               "note": "Projected from FAST '27"
             }
           ],
-          "checked": "2026-10-22",
-          "source": "https://www.usenix.org/conference/fast27/call-for-papers"
+          "checked": "2026-10-23",
+          "source": "https://www.usenix.org/conferences?order=field_conference_date&sort=asc"
         }
       ]
     },
@@ -3165,6 +3208,11 @@
         {
           "year": 2028,
           "name": "25th USENIX Symposium on Networked Systems Design and Implementation",
+          "url": "https://www.usenix.org/conference/nsdi28",
+          "location": "Santa Clara, CA, United States",
+          "country": "US",
+          "start": "2028-05-09",
+          "end": "2028-05-11",
           "submissions": [
             {
               "track": "papers",
@@ -3183,8 +3231,8 @@
               "note": "Projected from NSDI '27"
             }
           ],
-          "checked": "2026-10-22",
-          "source": "https://www.usenix.org/conference/nsdi27/call-for-papers"
+          "checked": "2026-10-23",
+          "source": "https://www.usenix.org/conferences?order=field_conference_date&sort=asc"
         }
       ]
     },
@@ -4197,7 +4245,13 @@
               "note": "talk proposals",
               "estimated": true
             }
-          ]
+          ],
+          "location": "Bochum, Germany",
+          "country": "DE",
+          "start": "2028-03-29",
+          "end": "2028-03-31",
+          "checked": "2026-10-23",
+          "source": "https://casa.rub.de/en/news/casa/news/renowned-real-world-crypto-symposium-coming-to-bochum-in-2028"
         }
       ]
     },
@@ -4401,7 +4455,10 @@
               "round": "Cycle 2"
             }
           ],
-          "checked": "2026-10-22"
+          "checked": "2026-10-23",
+          "location": "Victoria, BC, Canada",
+          "country": "CA",
+          "source": "https://sacworkshop.org/"
         }
       ]
     },
@@ -6295,6 +6352,8 @@
         {
           "year": 2027,
           "name": "IFIP/IEEE International Conference on Very Large Scale Integration SoC 2027",
+          "location": "Beijing, China",
+          "country": "CN",
           "submissions": [
             {
               "track": "papers",
@@ -6305,9 +6364,9 @@
               "note": "Projected from the 2026 regular-paper dates (+1 year); 2027 CFP not found."
             }
           ],
-          "checked": "2026-10-22",
-          "source": "https://vlsi-soc.com/submission.html",
-          "note": "Submission dates are estimates; event dates and location have not been announced in the sources checked."
+          "checked": "2026-10-23",
+          "source": "https://cyprusconferences.org/portfolio/ieee-international-conference-2026/",
+          "note": "Location announced as next venue in the 2026 organizer recap; event dates and CFP not yet published."
         }
       ]
     },
