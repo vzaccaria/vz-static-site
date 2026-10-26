@@ -213,6 +213,10 @@ resource_groups:
       - slides-os-development-part-2
 
 external_links:
+  - id: recording-2026-10-26
+    title: Lecture recording — 26 October 2026
+    href: https://politecnicomilano.webex.com/politecnicomilano/ldr.php?RCID=a71175f169e5f606157e871959fd3a29
+
   - id: recording-2026-10-23
     title: Lecture recording — 23 October 2026
     href: https://politecnicomilano.webex.com/politecnicomilano/ldr.php?RCID=9fcd8016ca8ec95d151ea01de96686c4
@@ -464,12 +468,12 @@ schedule:
       start: "2026-10-26T12:15:00+01:00"
       end: "2026-10-26T14:15:00+01:00"
       kind: lecture
-      status: scheduled
+      status: completed
       location: 7.1.3
       topic: MMIO, port I/O, and interrupts
       people: [vittorio-zaccaria]
       artifacts: [slides-io]
-      external_links: []
+      external_links: [recording-2026-10-26]
 
     - id: event-2026-10-30
       start: "2026-10-30T12:15:00+01:00"
