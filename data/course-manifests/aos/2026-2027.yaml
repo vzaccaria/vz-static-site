@@ -184,7 +184,8 @@ resource_groups:
   - id: course-links
     title: Useful links
     artifacts: []
-    external_links: [webex-room, research-group, poul-git-course, linux-kernel-source]
+    external_links:
+      [webex-room, research-group, poul-git-course, linux-kernel-source]
 
   - id: exam-preparation
     title: Exam preparation
@@ -214,7 +215,7 @@ resource_groups:
 
 external_links:
   - id: recording-2026-11-06
-    title: Laboratory recording — 6 November 2026
+    title: Lecture recording — 6 November 2026
     href: https://politecnicomilano.webex.com/politecnicomilano/ldr.php?RCID=560c007382340aab4434322e5e63df37
 
   - id: recording-2026-10-26
@@ -308,7 +309,7 @@ announcements:
     published_at: "2026-11-06T15:35:00+01:00"
     title: "Attendance warning: recordings at risk"
     body: >-
-      In-room attendance at today's laboratory (6 November) was below 50% of the
+      In-room attendance at today's lecture (6 November) was below 50% of the
       178 registered students. As stated in the
       course syllabus, lecture recordings will no longer be made available if
       attendance falls below this threshold for two consecutive classes, whether
@@ -517,24 +518,22 @@ schedule:
     - id: event-2026-11-06
       start: "2026-11-06T12:15:00+01:00"
       end: "2026-11-06T14:15:00+01:00"
-      kind: laboratory
+      kind: lecture
       status: completed
       location: 3.1.8
       topic: >-
-        MMIO, port I/O, interrupts, and UART driver. Note: in-room attendance was
-        below 50% of registered students; if this happens again at the next
-        class, recordings will no longer be shared (see announcements).
+        MMIO, port I/O, interrupts, and UART driver. Note: in-room attendance warning, see above announcements.
       people: [vittorio-zaccaria]
-      artifacts: [] # Laboratory slides: TBD
+      artifacts: [slides-io]
       external_links: [recording-2026-11-06]
 
     - id: event-2026-11-09
       start: "2026-11-09T12:15:00+01:00"
       end: "2026-11-09T14:15:00+01:00"
-      kind: lecture
+      kind: laboratory
       status: scheduled
       location: 7.1.3
-      topic: Block devices
+      topic: Device drivers
       people: [vittorio-zaccaria]
       artifacts: [] # Laboratory slides: TBD
       external_links: []
@@ -545,7 +544,7 @@ schedule:
       kind: lecture
       status: scheduled
       location: 3.1.8
-      topic: Linux device model and PCIe
+      topic: Block drivers and the Linux device model
       people: [vittorio-zaccaria]
       artifacts: [slides-io]
       external_links: []
