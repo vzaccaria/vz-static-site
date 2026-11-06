@@ -213,6 +213,10 @@ resource_groups:
       - slides-os-development-part-2
 
 external_links:
+  - id: recording-2026-11-06
+    title: Laboratory recording — 6 November 2026
+    href: https://politecnicomilano.webex.com/politecnicomilano/ldr.php?RCID=560c007382340aab4434322e5e63df37
+
   - id: recording-2026-10-26
     title: Lecture recording — 26 October 2026
     href: https://politecnicomilano.webex.com/politecnicomilano/ldr.php?RCID=a71175f169e5f606157e871959fd3a29
@@ -300,6 +304,19 @@ external_links:
     href: https://elixir.bootlin.com/linux/v5.16-rc1/source/kernel
 
 announcements:
+  - id: attendance-warning-2026-11-06
+    published_at: "2026-11-06T15:35:00+01:00"
+    title: "Attendance warning: recordings at risk"
+    body: >-
+      In-room attendance at today's laboratory (6 November) was below 50% of the
+      178 registered students. As stated in the
+      course syllabus, lecture recordings will no longer be made available if
+      attendance falls below this threshold for two consecutive classes, whether
+      lectures or laboratories. If this happens again at the next class, links
+      to the recordings will no longer be shared on this website. Classes held
+      on days affected by public transport strikes are excluded from this count.
+    artifacts: [syllabus]
+
   - id: lab-slides-and-lab-4-self-study
     published_at: "2026-10-23T15:15:00+02:00"
     title: Laboratory slides published; lab 4 is self-study
@@ -320,9 +337,9 @@ announcements:
       study guide. Speaker notes are reserved for the instructor's use and are
       not distributed. Teaching is normally in person. Recordings will no longer
       be made available if in-room attendance falls below 50% of registered
-      students for two consecutive lectures. Lectures held on days affected by
-      public transport strikes are excluded from this count, as specified in
-      the course syllabus.
+      students for two consecutive classes, whether lectures or laboratories.
+      Classes held on days affected by public transport strikes are excluded
+      from this count, as specified in the course syllabus.
     artifacts: [syllabus, study-guide]
 
 schedule:
@@ -501,12 +518,15 @@ schedule:
       start: "2026-11-06T12:15:00+01:00"
       end: "2026-11-06T14:15:00+01:00"
       kind: laboratory
-      status: scheduled
+      status: completed
       location: 3.1.8
-      topic: MMIO, port I/O, interrupts, and UART driver
+      topic: >-
+        MMIO, port I/O, interrupts, and UART driver. Note: in-room attendance was
+        below 50% of registered students; if this happens again at the next
+        class, recordings will no longer be shared (see announcements).
       people: [vittorio-zaccaria]
       artifacts: [] # Laboratory slides: TBD
-      external_links: []
+      external_links: [recording-2026-11-06]
 
     - id: event-2026-11-09
       start: "2026-11-09T12:15:00+01:00"
