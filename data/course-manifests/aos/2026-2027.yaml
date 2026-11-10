@@ -120,35 +120,35 @@ artifacts:
     title: Course projects slides
     href: https://drive.google.com/file/d/1GtGtLlbDCozcKczsRYezvC4-qRMidLHj/view?usp=sharing
 
+  - id: slides-embedded-intro
+    kind: file
+    media_type: application/pdf
+    title: Introduction to part 2 slides
+    href: https://drive.google.com/file/d/1tbR9Pf4_rhk5AMCDrWMWVOtbHMPZXj-m/view?usp=sharing
+
   - id: slides-cpp-intro
     kind: file
     media_type: application/pdf
     title: Introduction to C++ slides
-    href: https://drive.google.com/file/d/1jdINXDTo3pk7BnYdFPdFhOdp32PzMCFt/view?usp=sharing
+    href: https://drive.google.com/file/d/1vlMrbxaFtLjuoj7sRZq4h0jRk3m83d8M/view?usp=sharing
 
   - id: slides-cpp-threads
     kind: file
     media_type: application/pdf
     title: Multithreading in C++ slides
-    href: https://drive.google.com/file/d/17844kn1ASpDAl9NofD35WQpbrM7UA11B/view?usp=sharing
+    href: https://drive.google.com/file/d/1lPG0bwbJ8Ed711R0lRu-DthOi-dzXnlk/view?usp=sharing
 
   - id: slides-embedded-rtos
     kind: file
     media_type: application/pdf
     title: Embedded systems and RTOS slides
-    href: https://drive.google.com/file/d/1mebwdmr3165GCkAJ6A1xszn0kLLS4PT_/view?usp=sharing
+    href: https://drive.google.com/file/d/1kolORmoHnt44S8Se4bIvhQiKg1Yhfl5C/view?usp=sharing
 
-  - id: slides-os-development-part-1
+  - id: slides-embedded-exercises
     kind: file
     media_type: application/pdf
-    title: Hands-on operating-system development — part 1
-    href: https://drive.google.com/file/d/1tQqbZ9C5g3T9tmCNRhCskjM8GNvkOoyK/view?usp=sharing
-
-  - id: slides-os-development-part-2
-    kind: file
-    media_type: application/pdf
-    title: Hands-on operating-system development — part 2
-    href: https://drive.google.com/file/d/1qaZQrwOKlJEsY8SHf0It3gdJB1CkW_6L/view?usp=sharing
+    title: Microcontroller OS exercises slides
+    href: https://drive.google.com/file/d/1dIBengK_22-t6BWyK-aUTzYSL32QNS_Y/view?usp=sharing
 
   - id: slides-mcs-intro
     kind: file
@@ -207,11 +207,11 @@ resource_groups:
       - slides-virtualization
       - slides-mcs-intro
       - slides-mcs-taxonomy
+      - slides-embedded-intro
       - slides-cpp-intro
       - slides-cpp-threads
       - slides-embedded-rtos
-      - slides-os-development-part-1
-      - slides-os-development-part-2
+      - slides-embedded-exercises
 
 external_links:
   - id: recording-2026-11-09
@@ -627,7 +627,7 @@ schedule:
       location: 3.1.8
       topic: Microcontroller OS programming — C++ introduction
       people: [federico-terraneo]
-      artifacts: [slides-cpp-intro]
+      artifacts: [slides-embedded-intro, slides-cpp-intro]
       external_links: []
 
     - id: event-2026-12-07
@@ -682,5 +682,5 @@ schedule:
       location: 7.1.3
       topic: Microcontroller OS programming — exercises
       people: [federico-terraneo]
-      artifacts: [slides-os-development-part-1, slides-os-development-part-2]
+      artifacts: [slides-embedded-exercises]
       external_links: []
