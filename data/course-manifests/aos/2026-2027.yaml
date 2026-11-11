@@ -179,7 +179,13 @@ resource_groups:
   - id: laboratories
     title: Laboratories
     artifacts: []
-    external_links: [course-labs]
+    external_links:
+      - course-labs
+      - lab-1-slides-github
+      - lab-2-slides-github
+      - lab-3-slides-github
+      - lab-4-slides-github
+      - lab-5-slides-github
 
   - id: course-links
     title: Useful links
@@ -282,9 +288,25 @@ external_links:
     title: Laboratory slides and sources — GitHub repository
     href: https://github.com/polimi-aos-lab/course-labs-2627/tree/main/labs
 
+  - id: lab-1-slides-github
+    title: Lab 1 slides — kernel development and debugging
+    href: https://github.com/polimi-aos-lab/course-labs-2627/blob/main/labs/lab-1.pdf
+
+  - id: lab-2-slides-github
+    title: Lab 2 slides — system-wide tracing
+    href: https://github.com/polimi-aos-lab/course-labs-2627/blob/main/labs/lab-2.pdf
+
+  - id: lab-3-slides-github
+    title: Lab 3 slides — locking and lockless reads
+    href: https://github.com/polimi-aos-lab/course-labs-2627/blob/main/labs/lab-3.pdf
+
   - id: lab-4-slides-github
     title: Lab 4 slides — kernel allocation and userspace access
     href: https://github.com/polimi-aos-lab/course-labs-2627/blob/main/labs/lab-4.pdf
+
+  - id: lab-5-slides-github
+    title: Lab 5 slides — writing a UART driver for Linux
+    href: https://github.com/polimi-aos-lab/course-labs-2627/blob/main/labs/lab-5.pdf
 
   - id: webex-room
     title: Course instructor Webex room
@@ -395,8 +417,8 @@ schedule:
       location: 3.1.8
       topic: Kernel modules and debugging
       people: [vittorio-zaccaria]
-      artifacts: [] # Laboratory slides: TBD
-      external_links: [course-labs, recording-2026-09-25]
+      artifacts: []
+      external_links: [course-labs, lab-1-slides-github, recording-2026-09-25]
 
     - id: event-2026-09-28
       start: "2026-09-28T12:15:00+02:00"
@@ -406,8 +428,8 @@ schedule:
       location: 7.1.3
       topic: Kernel debugging
       people: [vittorio-zaccaria]
-      artifacts: [] # Laboratory slides: TBD
-      external_links: [course-labs, recording-2026-09-28]
+      artifacts: []
+      external_links: [course-labs, lab-2-slides-github, recording-2026-09-28]
 
     - id: event-2026-10-02
       start: "2026-10-02T12:15:00+02:00"
@@ -462,7 +484,7 @@ schedule:
       topic: Kernel lists, atomic access, RCU, and memory model
       people: [vittorio-zaccaria]
       artifacts: []
-      external_links: [recording-2026-10-16]
+      external_links: [lab-3-slides-github, recording-2026-10-16]
 
     - id: event-2026-10-19
       start: "2026-10-19T12:15:00+02:00"
@@ -539,8 +561,8 @@ schedule:
       location: 7.1.3
       topic: Device drivers
       people: [vittorio-zaccaria]
-      artifacts: [] # Laboratory slides: TBD
-      external_links: [recording-2026-11-09]
+      artifacts: []
+      external_links: [lab-5-slides-github, recording-2026-11-09]
 
     - id: event-2026-11-13
       start: "2026-11-13T12:15:00+01:00"
