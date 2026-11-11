@@ -54,7 +54,10 @@ test("resource groups preserve explicit membership regardless of events and URLs
   const groups = resolveCourseResourceGroups(manifest);
   assert.deepEqual(groups.map((g) => g.id), manifest.resource_groups.map((g) => g.id));
   assert.ok(groups.some((g) => g.id === "teaching-material"));
-  assert.deepEqual(groups.find((g) => g.id === "laboratories")!.external_links.map((l) => l.id), ["course-labs"]);
+  assert.deepEqual(
+    groups.find((g) => g.id === "laboratories")!.external_links.map((l) => l.id),
+    manifest.resource_groups.find((g) => g.id === "laboratories")!.external_links,
+  );
   const projects = groups.find((g) => g.id === "projects")!;
   assert.ok(projects.artifacts.some((a) => a.id === "slides-projects"));
   assert.ok(projects.external_links.some((l) => l.id === "project-report-template"));
