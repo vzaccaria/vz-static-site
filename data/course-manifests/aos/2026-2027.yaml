@@ -333,6 +333,19 @@ external_links:
     href: https://elixir.bootlin.com/linux/v5.16-rc1/source/kernel
 
 announcements:
+  - id: project-form-open-2026-11-11
+    published_at: "2026-11-11T17:10:00+01:00"
+    title: Project proposal form is open
+    body: >-
+      The proposal form for the optional development project is now open (see
+      Projects). Deadline: 31 December 2026, 23:59 CET. Every student submits
+      their own form, including each member of a group (at most two students);
+      responses can be edited until the deadline. A timely proposal is approved
+      unless the instructor sends an explicit, reasoned rejection by 10 January
+      2027. Rules are in the syllabus and in the project slides.
+    artifacts: [syllabus, slides-projects]
+    external_links: [project-registration-form]
+
   - id: attendance-warning-2026-11-06
     published_at: "2026-11-06T15:35:00+01:00"
     title: "Attendance warning: recordings at risk"
