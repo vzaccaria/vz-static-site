@@ -13,8 +13,10 @@ Replaces the legacy private Next.js site.
 - Public AOS course manifests remain canonical in `../materiale-corsi/aos/`;
   validated snapshots under `data/course-manifests/` keep CI builds deterministic.
 - Build-time helpers: `src/data/public-content.ts` (profile pages),
-  `src/data/course-manifests.ts` (course editions), `src/data/blog.ts`
-  (post/tag paths), `src/data/site.ts` (`withBasePath`, canonical URLs).
+  `src/data/course-manifests.ts` (course editions), `src/data/course-schedule.ts`
+  (AOS timetable: weekly slots, next class, per-event materials),
+  `src/data/blog.ts` (post/tag paths), `src/data/site.ts` (`withBasePath`,
+  canonical URLs).
 - Routes: home, bio, research, courses and per-edition AOS pages, theses, blog
   + tags, `/feed.xml`, `/sitemap.xml`, SEO metadata.
 - Deploy: GitHub Pages via `.github/workflows/pages.yml`. Production serves
