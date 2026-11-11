@@ -172,7 +172,7 @@ resource_groups:
 
   - id: projects
     title: Projects
-    external_links: [project-report-template]
+    external_links: [project-registration-form, project-report-template]
     artifacts:
       - slides-projects
 
@@ -316,7 +316,9 @@ external_links:
     title: Vittorio Zaccaria research group
     href: https://www.vittoriozaccaria.net/research
 
-  # Project registration form: TBD
+  - id: project-registration-form
+    title: Project proposal form
+    href: https://forms.office.com/Pages/ResponsePage.aspx?id=K3EXCvNtXUKAjjCd8ope65c-_PYFR0ZKtf-DhII6aBRUNExYODQxRTIyTFk4ODVXM1Y1MTU5NzA3Ry4u
 
   - id: project-report-template
     title: Course project report template
