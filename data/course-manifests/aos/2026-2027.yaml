@@ -220,6 +220,10 @@ resource_groups:
       - slides-embedded-exercises
 
 external_links:
+  - id: recording-2026-11-23-seminar
+    title: Seminar recording — Kernel security, 23 November 2026
+    href: https://politecnicomilano.webex.com/politecnicomilano/ldr.php?RCID=49f5b719ef3dd67bb70762813ea21e0f
+
   - id: recording-2026-11-23
     title: Lecture recording — 23 November 2026
     href: https://politecnicomilano.webex.com/politecnicomilano/ldr.php?RCID=ce3f02a112fc23051e441afb313f129f
@@ -643,12 +647,12 @@ schedule:
       start: "2026-11-23T17:30:00+01:00"
       end: "2026-11-23T18:30:00+01:00"
       kind: seminar
-      status: scheduled
+      status: completed
       location: Online only (Webex room)
       topic: Kernel security
       people: [vittorio-zaccaria]
       artifacts: []
-      external_links: [webex-room]
+      external_links: [recording-2026-11-23-seminar]
 
     - id: event-2026-11-27
       start: "2026-11-27T12:15:00+01:00"
